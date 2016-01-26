@@ -79,7 +79,7 @@ var data = {
                 },
                 {
                     text: "Non je dois rêver, ce n’est pas possible.",
-                    data_event: "a2_5_1",
+                    data_event: "a2_4_2",
                     naration: false,
                 },
             ],
@@ -160,14 +160,58 @@ var data = {
             question: 'Rose : ... alors c’est toi le nouveau « disciple » ?',
             choix: [
                 {
+                    text: "Euh ouais à priori.",
+                    data_event: "a2_10_0",
+                    naration: false,
+                },
+                {
+                    text: "Vous êtes Rose ?",
+                    data_event: "a2_10_1",
+                    naration: false,
+                },
+            ],
+        },
+        'a2_10_0': {
+            question: 'Rose : Haha, t’es encore dans les vapes ? C’est normal.',
+            choix: [
+                {
                     text: "",
-                    data_event: "a2_9",
+                    data_event: "a2_11",
                     naration: true,
                 },
-
             ],
         },
 
+        'a2_10_1': {
+            question: 'Rose : Ouais, l’unique, la vraie. Rose.',
+            choix: [
+                {
+                    text: "",
+                    data_event: "a2_11",
+                    naration: true,
+                },
+            ],
+        },
+        'a2_11': {
+            question: 'C\'est une jeune femme blonde aux cheveux courts avec des pansements sur le visage. Elle a une tenue venant d\'un monde perdu. Tout est en lanières de cuir. Elle possède un casque d\'avion sur sa tête avec une vitre cassée. Elle semble avoir 20 ans.',
+            choix: [
+                {
+                    text: "",
+                    data_event: "a2_12",
+                    naration: true,
+                },
+            ],
+        },
+        'a2_12': {
+            question: 'Rose : Je t\'aurais vu plus vieux.. et plus grand. Bon enfin c\'est pas grave ! Chronos a dû sûrement te parler du pourquoi tu es là. Je sais que c\'est encore flou et que tu as plein de questions, mais on a pas vraiment le "temps". Le comble.Tiens je vais te donner quelque chose qui s\'appelle "Appareil d\'Eclaircissement Biologique". C\'est un petit cube auquel tu dois te concentrer dessus pour libérer ton potentiel.Attention le choc est fatal, il connecte tous tes points vitaux pour libérer ce qu\'on appelle la "deuxième forme".Tu es prêt ?',
+            choix: [
+                {
+                    text: "",
+                    data_event: "a2_13",
+                    naration: true,
+                },
+            ],
+        },
     },
 
 
