@@ -1,5 +1,6 @@
 body {
   font-size: 20px;
+  font-family: "Arial";
 }
 
 .story {
@@ -30,4 +31,23 @@ body {
 .questions .arrow_naration a {
   color: red;
   text-decoration: none;
+}
+
+.questions ul {
+  text-align: center;
+}
+
+.questions .timer {
+  width: 200px;
+  height: 10px;
+  background: black;
+  margin: auto;
+}
+
+.questions .timer span {
+  width: 100%;
+  height: 100%;
+  background: red;
+  display: block;
+  transition: transform 1s linear;
 }
