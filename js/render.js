@@ -26,6 +26,7 @@ function render(event) {
             // push all choices
             text(index.text)
         }
+
         $.commands = $.pad.querySelectorAll('ul li a');
 
     });
@@ -44,9 +45,10 @@ function render(event) {
 
         var tic_toc = setInterval(function (e) {
             time_left--;
-            //display time
-            $.pad.querySelector('.timer span').style.transform = ' scale(' + (time_left / event.timer) + ',1)';
-
+            //display time //Yay there is prefix
+            $.pad.querySelector('.timer span').style.webkitTransform = ' scale(' + (time_left / event.timer) + ',1) translate3D(0,0,0)';
+            $.pad.querySelector('.timer span').style.msTransform = ' scale(' + (time_left / event.timer) + ',1) translate3D(0,0,0)';
+            $.pad.querySelector('.timer span').style.transform = ' scale(' + (time_left / event.timer) + ',1) translate3D(0,0,0)';
 
             if (time_left === -1) {
                 //if time is up, we simulate a click on a random answer
