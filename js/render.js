@@ -39,22 +39,21 @@ function render(event) {
     // setting onclick to lead to the right event, on each link
         [].forEach.call($.commands, function (elem, index) {
         elem.addEventListener('click', function () {
-            if (elem.getAttribute('data-stats')) {
-                //looping througe change, thanks to the index argument
-                var abilities_targeted = event.choix[index].stats_change;
-                //here we go, we iterate throught the keys to change and adds the news values, wich can negative
-                Object.keys(abilities_targeted).forEach(function (capacity, val) {
-                        user.stats[capacity] += abilities_targeted[capacity];
-                    })
-                    //debug
-                console.log(user.stats);
-            }
             //call the render function by getting data event attribute
             render(current_act[this.getAttribute('data-event')]);
         });
 
         //if data-stats , the user's stats will be modified    
-
+        if (elem.getAttribute('data-stats')) {
+            //looping througe change, thanks to the index argument
+            var abilities_targeted = event.choix[index].stats_change;
+            //here we go, we iterate throught the keys to change and adds the news values, wich can negative
+            Object.keys(abilities_targeted).forEach(function (capacity, val) {
+                    user.stats[capacity] += abilities_targeted[capacity];
+                })
+                //debug
+            console.log(user.stats);
+        }
     });
 
     // remove unused timers
