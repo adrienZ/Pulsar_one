@@ -48,7 +48,7 @@ var data = {
 
         'a2_3': {
             question: 'Chronos : ' + user.name + ' ! Destinée m’a annoncée ta fin prochaine. J’ai besoin de ton aide. Je veux te laisser une seconde chance.',
-            timer: 56,
+            timer: 5,
             choix: [
                 {
                     text: "Je suis déjà mort ?",

@@ -1,8 +1,6 @@
 //console.clear();
 $.histoire = $.el('.story');
 $.pad = $.el('.questions');
-//var padding = window.getComputedStyle($.histoire).paddingTop;
-//padding = parseInt(padding.match(/\d/g).join(''));
 
 var current_act = data.act_2;
 
@@ -25,7 +23,7 @@ function render(event) {
             $.pad.querySelector('li').classList.add('arrow_naration');
         } else {
             // push all choices
-            text(choice.text)
+            text(choice.text);
         }
 
         $.commands = $.pad.querySelectorAll('ul li a');
@@ -34,14 +32,17 @@ function render(event) {
     // setting onclick to lead to the right event, on each link
         [].forEach.call($.commands, function (elem) {
         elem.addEventListener('click', function () {
-            console.log('ok');
             //call the render function by getting data event attribute
             render(current_act[this.getAttribute('data-event')]);
         });
     });
 
+
+    if ($.pad.querySelector('.timer')) {
+        $.pad.querySelector('.timer').remove();
+    }
+
     if (event.hasOwnProperty('timer')) {
-        //        var timer_DOM = '<div class="timer"><span></span></div>';
         //creating timer DOM with a proper wat
         var timer_DOM = document.createElement('div');
         timer_DOM.classList.add('timer');
@@ -62,14 +63,20 @@ function render(event) {
             if (time_left === -1) {
                 //if time is up, we simulate a click on a random answer
                 //simulating click like that // code can be improved
-                $.pad.removeChild($.el('.timer'))
+                $.pad.removeChild($.el('.timer'));
                 render(current_act[$.commands[random].getAttribute('data-event')]);
-
                 //Stop timer
                 clearInterval(tic_toc);
             }
+        }, 1000);
 
-        }, 1000)
+        // interupt timer onclick
+        [].forEach.call($.commands, function (elem) {
+            elem.addEventListener('click', function () {
+                //call the render function by getting data event attribute
+                clearInterval(tic_toc);
+            });
+        });
     }
 };
 
