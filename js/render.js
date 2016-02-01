@@ -34,17 +34,23 @@ function render(event) {
     // setting onclick to lead to the right event, on each link
         [].forEach.call($.commands, function (elem) {
         elem.addEventListener('click', function () {
+            console.log('ok');
             //call the render function by getting data event attribute
             render(current_act[this.getAttribute('data-event')]);
         });
     });
 
     if (event.hasOwnProperty('timer')) {
-        var timer_DOM = '<div class="timer"><span></span></div>';
+        //        var timer_DOM = '<div class="timer"><span></span></div>';
+        //creating timer DOM with a proper wat
+        var timer_DOM = document.createElement('div');
+        timer_DOM.classList.add('timer');
+        timer_DOM.appendChild(document.createElement('span'));
         var time_left = event.timer;
         var random = parseInt(Math.random() * $.pad.querySelectorAll('li a').length);
 
-        $.pad.innerHTML += timer_DOM;
+
+        $.pad.appendChild(timer_DOM);
 
         var tic_toc = setInterval(function (e) {
             time_left--;
