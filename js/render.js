@@ -1,10 +1,12 @@
+//console.clear();
 $.histoire = $.el('.story');
 $.pad = $.el('.questions');
+//var padding = window.getComputedStyle($.histoire).paddingTop;
+//padding = parseInt(padding.match(/\d/g).join(''));
 
 var current_act = data.act_2;
 
 function render(event) {
-
     //cleaning previous answers
     $.pad.querySelector('ul').innerHTML = "";
     //pushing story's text in the div
@@ -12,19 +14,18 @@ function render(event) {
     //scroll to the bottom of the div
     $.histoire.scrollTop = $.histoire.scrollHeight;
     //iterate trought players
-    event.choix.forEach(function (index) {
-
+    event.choix.forEach(function (choice) {
         //link function generator
         var text = function (content) {
-            return $.pad.querySelector('ul').innerHTML += '<li><a href="#" data-event="' + index.data_event + '">' + content + '</a></li>';
+            return $.pad.querySelector('ul').innerHTML += '<li><a href="#" data-event="' + choice.data_event + '">' + content + '</a></li>';
         }; // if this is narration , there could be only one choice for the player --> skip the dialogue
-        if (index.naration) {
+        if (choice.naration) {
             // push an arrow who lead to the following sibling event
             text('&gt');
             $.pad.querySelector('li').classList.add('arrow_naration');
         } else {
             // push all choices
-            text(index.text)
+            text(choice.text)
         }
 
         $.commands = $.pad.querySelectorAll('ul li a');
@@ -41,6 +42,8 @@ function render(event) {
     if (event.hasOwnProperty('timer')) {
         var timer_DOM = '<div class="timer"><span></span></div>';
         var time_left = event.timer;
+        var random = parseInt(Math.random() * $.pad.querySelectorAll('li a').length);
+
         $.pad.innerHTML += timer_DOM;
 
         var tic_toc = setInterval(function (e) {
@@ -52,10 +55,10 @@ function render(event) {
 
             if (time_left === -1) {
                 //if time is up, we simulate a click on a random answer
-                var random = parseInt(Math.random() * $.pad.querySelectorAll('li a').length);
                 //simulating click like that // code can be improved
                 $.pad.removeChild($.el('.timer'))
                 render(current_act[$.commands[random].getAttribute('data-event')]);
+
                 //Stop timer
                 clearInterval(tic_toc);
             }
@@ -63,4 +66,11 @@ function render(event) {
         }, 1000)
     }
 };
+
+
+
+
+
+
+//render test
 render(current_act.a2_0);
