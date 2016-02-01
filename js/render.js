@@ -26,18 +26,37 @@ function render(event) {
             text(choice.text);
         }
 
+        // detect if user stats will change
+        if (choice.hasOwnProperty('stats_change')) {
+            //we may need a variable here
+            $.pad.querySelector('ul').lastChild.querySelector('a').setAttribute('data-stats', 'true');
+
+        }
+
         $.commands = $.pad.querySelectorAll('ul li a');
 
     });
     // setting onclick to lead to the right event, on each link
-        [].forEach.call($.commands, function (elem) {
+        [].forEach.call($.commands, function (elem, index) {
         elem.addEventListener('click', function () {
             //call the render function by getting data event attribute
             render(current_act[this.getAttribute('data-event')]);
         });
+
+        //if data-stats , the user's stats will be modified    
+        if (elem.getAttribute('data-stats')) {
+            //looping througe change, thanks to the index argument
+            var abilities_targeted = event.choix[index].stats_change;
+            //here we go, we iterate throught the keys to change and adds the news values, wich can negative
+            Object.keys(abilities_targeted).forEach(function (capacity, val) {
+                    user.stats[capacity] += abilities_targeted[capacity];
+                })
+                //debug
+            console.log(user.stats);
+        }
     });
 
-
+    // remove unused timers
     if ($.pad.querySelector('.timer')) {
         $.pad.querySelector('.timer').remove();
     }
@@ -69,7 +88,6 @@ function render(event) {
                 clearInterval(tic_toc);
             }
         }, 1000);
-
         // interupt timer onclick
         [].forEach.call($.commands, function (elem) {
             elem.addEventListener('click', function () {

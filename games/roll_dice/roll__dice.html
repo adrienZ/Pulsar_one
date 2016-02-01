@@ -46,12 +46,22 @@
             },
             // one round
             match: function (player_1, player_2, state) {
+
+
+                document.write(roll_dice.round + ' tour(s) restant(s) <br>');
+
+
+
+
+
                 // new value for player dices
                 for (var i = 0; i < arguments.length - 1; i++) {
                     arguments[i].dice_0 = arguments[i].getValue();
                     arguments[i].dice_1 = arguments[i].getValue();
-                    arguments[i].value = arguments[i].dice_0 + player_1.dice_1
+                    arguments[i].value = arguments[i].dice_0 + arguments[i].dice_1;
+                    document.write(arguments[i].name + ' a tiré ' + arguments[i].value + '<br>');
                 };
+
 
                 //who win
                 if (player_1.value > player_2.value) {
@@ -67,20 +77,25 @@
                 }
                 //if equality reload
                 else {
-                    roll_dice.match(roll_dice.opponents, roll_dice.hero, roll_dice.round);
+                    console.log('égalité');
+                    // roll_dice.match(roll_dice.opponents, roll_dice.hero, roll_dice.round);
                 }
                 if (state === 0) {
                     if (player_1.victory > player_2.victory) {
-                        console.log(player_1.name + ' a gagné');
+                        console.log(player_1.name + ' a gagné la partie ' + player_1.victory + ' à ' + player_2.victory);
+                        document.write(player_1.name + ' a gagné la partie ' + player_1.victory + ' à ' + player_2.victory)
                     } else {
-                        console.log(player_2.name + ' a gagné');
+                        console.log(player_2.name + ' a gagné la partie ' + player_2.victory + ' à ' + player_1.victory);
 
                     }
+                } else {
+                    roll_dice.match(roll_dice.opponents, roll_dice.hero, roll_dice.round);
+
                 }
 
             },
         }
-        roll_dice.opponents = new roll_dice.dice_player('bastard');
+        roll_dice.opponents = new roll_dice.dice_player('bastardo');
         roll_dice.hero = new roll_dice.dice_player('you');
         roll_dice.match(roll_dice.opponents, roll_dice.hero, roll_dice.round);
     </script>

@@ -54,6 +54,10 @@ var data = {
                     text: "Je suis déjà mort ?",
                     data_event: "a2_4_0",
                     naration: false,
+                    stats_change: {
+                        strenght: 1,
+                        luck: -2,
+                    },
                 },
                 {
                     text: "Quoi ? Qui êtes-vous ?",
