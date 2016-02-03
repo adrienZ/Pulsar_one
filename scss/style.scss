@@ -1,17 +1,15 @@
 @import 'variables';
-$_panel_act_height: 50px;
-$_panel_date_day_height: 20px;
-$_panel_date_hour_height: 50px;
-$_panel_remappage_height: 50px;
-$_panel_pulsars_height: 50px;
-$_panel_button_height: 30px;
-$_game_story_height: 274px;
 body {
     font-size: 18px;
     font-family: "Arial";
     color: #fff;
     background: #0b0506;
     overflow: hidden;
+}
+
+.main,
+.bottom-bar {
+    transition: transform 0.15s;
 }
 
 .main {
@@ -38,9 +36,9 @@ body {
         &:before {
             content: '';
             position: absolute;
-            top: 0;
+            top: $_panel_act_height + $_panel_date_day_height +$_panel_date_hour_height +$_panel_remappage_height +$_panel_pulsars_height;
             left: 0;
-            //box-shadow: inset 0px 30px 80px black, inset 0px -30px 80px black;
+            box-shadow: inset 0px 0px 80px black, inset 0px -30px 80px black;
             width: 75vw;
             height: $_game_story_height;
         }
@@ -75,14 +73,14 @@ body {
             height: 8px;
             background: #373637;
             margin: auto;
-            border-radius: 1rem;
             span {
                 width: 100%;
-                height: 100%;
+                height: 80%;
                 background: #edb424;
                 display: block;
+                position: relative;
+                top: 10%;
                 transition: transform 1s linear;
-                border-radius: 1rem;
             }
         }
     }
@@ -95,6 +93,7 @@ body {
     text-align: center;
     text-transform: uppercase;
     border-left: 2px solid white;
+    overflow-y: auto;
     .act {
         height: $_panel_act_height;
         background: green;
@@ -157,7 +156,7 @@ body {
         .icon {
             width: 20px;
             height: 20px;
-            background: url(http://www.iconarchive.com/download/i3020/arrioch/halloween/jason.ico) no-repeat center center;
+            background: url(../img/icons/temporel.png) no-repeat center center;
             background-size: cover;
             display: block;
             float: left;
@@ -192,7 +191,6 @@ body {
         bottom: 0;
         float: left;
         width: 25%;
-        overflow-y: auto;
         button {
             display: block;
             background: #353732;
@@ -216,5 +214,28 @@ body {
                 }
             }
         }
+    }
+}
+
+.bottom-bar {
+    width: 75%;
+    height: 40px;
+    background: rgba(255, 0, 0, 0.18);
+    position: absolute;
+    bottom: 0;
+    span {
+        height: 4px;
+        margin: 10px 0;
+        display: inline-block;
+        width: calc(50% - 30px);
+        float: left;
+        background: white;
+        &:last-child {
+            margin-left: 30px;
+        }
+    }
+    a {
+        float: left;
+        transform: translateX(15px);
     }
 }
