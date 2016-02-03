@@ -9,6 +9,7 @@ user.stats = {
     agility: 0,
     loyalty: 0,
 };
+user.pulsars = 5;
 
 
 
