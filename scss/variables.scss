@@ -1,12 +1,12 @@
 //ui-panel//
-$_panel_act_height: 50px;
-$_panel_date_day_height: 20px;
-$_panel_date_hour_height: 50px;
-$_panel_remappage_height: 50px;
-$_panel_pulsars_height: 50px;
+$_panel_act_height: 65px;
+$_panel_date_day_height: 30px;
+$_panel_date_hour_height: 60px;
+$_panel_remappage_height: 60px;
+$_panel_pulsars_height: 60px;
 $_panel_button_height: 30px;
 //ui-game (main)//
-$_game_story_height: 274px;
+$_game_story_height: 480px;
 //function to em
 $browser-context: 16;
 @function em($pixels, $context: $browser-context) {
