@@ -1,4 +1,5 @@
     @import 'variables';
+    @import 'animations';
     body {
         font-size: 18px;
         font-family: "Arial";
@@ -21,10 +22,31 @@
         .illustration {
             width: 100%;
             height: $_panel_act_height + $_panel_date_day_height +$_panel_date_hour_height +$_panel_remappage_height +$_panel_pulsars_height;
+            background: #4b6cb7;
+            background: -webkit-linear-gradient(to right, #4b6cb7, #182848);
+            background: linear-gradient(to right, #4b6cb7, #182848);
+            // i just like blue, this isnt vital for the code
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 75%;
+                height: $_panel_act_height + $_panel_date_day_height +$_panel_date_hour_height +$_panel_remappage_height +$_panel_pulsars_height;
+                background: #4b6cb7;
+                background: -webkit-linear-gradient(to right, #4b6cb7, #182848);
+                background: linear-gradient(to right, #4b6cb7, #182848);
+                opacity: 0.6;
+            }
+            //this is 
             img {
                 max-height: 100%;
+                max-width: 100%;
+                min-height: 100%;
                 display: block;
                 margin: auto;
+                opacity: 0.5;
+                animation: pulsar-blink 1s reverse 1s forwards;
             }
         }
         .story {
@@ -103,7 +125,9 @@
     .ui-panel {
         font-family: 'Gotham', 'Arial', sans-serif;
         height: 100vh;
+        float: right;
         width: 25vw;
+        min-width: 320px;
         background-color: rgba(0, 0, 0, 0.6);
         float: left;
         text-align: center;
@@ -188,6 +212,7 @@
             span img {
                 position: relative;
                 top: 7.5px;
+                animation: pulsar-blink 2.5s infinite 10s alternate ease-in;
             }
             .pulsar-remainging {
                 font-weight: bold;
@@ -218,8 +243,31 @@
                 width: 70%;
                 margin: auto;
                 li {
+                    opacity: 0;
                     font-size: 16px;
                     padding: 8px 0;
+                    animation: fade-in 2s forwards;
+                    &:nth-child(1) {
+                        animation-delay: $_ui_stats_delay * 1;
+                    }
+                    &:nth-child(2) {
+                        animation-delay: $_ui_stats_delay * 2;
+                    }
+                    &:nth-child(3) {
+                        animation-delay: $_ui_stats_delay * 3;
+                    }
+                    &:nth-child(4) {
+                        animation-delay: $_ui_stats_delay * 4;
+                    }
+                    &:nth-child(5) {
+                        animation-delay: $_ui_stats_delay * 5;
+                    }
+                    &:nth-child(6) {
+                        animation-delay: $_ui_stats_delay * 6;
+                    }
+                    &:nth-child(7) {
+                        animation-delay: $_ui_stats_delay * 6;
+                    }
                     p {
                         display: inline-block;
                     }
@@ -254,8 +302,16 @@
                     width: calc(100% / 4);
                     float: left;
                     border-right: 1px solid white;
+                    transition: 0.15s;
+                    &:hover {
+                        background: #263238;
+                        img {
+                            opacity: 0.5;
+                        }
+                    }
                     img {
                         margin: ($_panel_button_height - 20) / 2;
+                        transition: opacity 0.3s;
                     }
                 }
             }
@@ -306,24 +362,15 @@
         }
     }
     
-    @media only screen and (max-width: 800px) {
-        .main {
-            width: 100%;
-            height: auto;
-            float: none;
-        }
-        .ui-panel {
-            width: 100%;
-            height: auto;
-            float: none;
-        }
-    }
-    
-    @include keyframes(move-the-object) {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
+    //    @media only screen and (max-width: 800px) {
+    //        .main {
+    //            width: 100%;
+    //            height: auto;
+    //            float: none;
+    //        }
+    //        .ui-panel {
+    //            width: 100%;
+    //            height: auto;
+    //            float: none;
+    //        }
+    //    }

@@ -158,3 +158,21 @@ $.el('.ui-panel .pulsars span').innerHTML = '[' + user.pulsars + ']';
 
 //render test
 render(current_act.a2_0);
+
+
+
+//not render
+
+$.ui = $.el('.ui-panel');
+$.ui.menu_icons = $.ui.querySelectorAll('.menu li');
+
+var ui = {
+    icon_help_text: ['sauvegardez votre partie', 'musique', 'son', 'plein écran'],
+};
+        [].forEach.call($.ui.menu_icons, function (icon, index) {
+    icon.addEventListener('mouseenter', function () {
+        console.log(ui.icon_help_text[index]);
+        $.ui.querySelector('.menu button').innerHTML = ui.icon_help_text[index];
+    });
+    console.log(icon, index);
+});

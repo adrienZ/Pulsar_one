@@ -7,5 +7,6 @@
   "main": "index.html",
   "moduleType": [],
   "license": "MIT",
-  "homepage": "index.html"
+  "homepage": "index.html",
+  "dependencies": {}
 }
