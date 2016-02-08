@@ -69,7 +69,13 @@ function render(event) {
                 Object.keys(abilities_targeted).forEach(function (capacity, val) {
                         [].forEach.call($.all('.user-stats ul li'), function (element, index) {
                         if (capacity === element.querySelector('p').innerHTML) {
-                            element.querySelector('p:last-child').innerHTML = abilities_targeted[capacity];
+                            element.querySelector('p:last-child').style.opacity = 0;
+
+                            setTimeout(function () {
+                                element.querySelector('p:last-child').innerHTML = abilities_targeted[capacity];
+                                element.querySelector('p:last-child').style.opacity = '';
+                            }, 300)
+
                         }
                     });
                 });

@@ -1,6 +1,6 @@
     @import 'variables';
     body {
-        font-size: 18px;
+        font-size: em(18);
         font-family: "Arial";
         color: #fff;
         background: #0b0506;
@@ -27,11 +27,11 @@
         .story {
             width: 100%;
             height: $_game_story_height;
-            border: 1px solid rgba(255, 0, 0, 0.28);
+            border: em(1) solid rgba(255, 0, 0, 0.28);
             overflow: auto;
-            padding: 40px 0;
+            padding: em(40) 0;
             p {
-                padding: 7.5px 30px;
+                padding: em(7.5) em(30);
             }
             &:before {
                 content: '';
@@ -45,14 +45,14 @@
         }
         .questions {
             width: 100%;
-            height: 500px;
-            border-top: 1px solid rgba(255, 255, 255, 0.0);
+            height: em(500);
+            border-top: em(1) solid rgba(255, 255, 255, 0.0);
             .arrow_naration {
                 position: absolute;
-                right: calc(25% + 30px);
-                bottom: 100px;
+                right: calc(25% + 30em /16);
+                bottom: em(100);
                 transform: rotate(90deg);
-                font-size: 30px;
+                font-size: em(30);
                 a {
                     color: red;
                     text-decoration: none;
@@ -62,15 +62,15 @@
                 text-align: center;
                 //padding-top: 80px;
                 li:not(.arrow_naration) {
-                    margin: 5px 0px;
+                    margin: em(5) 0px;
                     a:hover {
                         color: red;
                     }
                 }
             }
             .timer {
-                width: 200px;
-                height: 8px;
+                width: em(200);
+                height: em(8);
                 background: #373637;
                 margin: auto;
                 span {
@@ -92,7 +92,7 @@
         float: left;
         text-align: center;
         text-transform: uppercase;
-        border-left: 2px solid white;
+        border-left: em(2) solid white;
         overflow-y: auto;
         .act {
             height: $_panel_act_height;
@@ -100,25 +100,25 @@
             text-align: left;
             p {
                 line-height: $_panel_act_height;
-                padding-left: 20px;
+                padding-left: em(20);
             }
         }
         .date {
             .day {
-                font-size: 12px;
+                font-size: em(12);
                 height: $_panel_date_day_height;
                 line-height: $_panel_date_day_height;
                 background: #153059;
             }
             .hour {
-                font-size: 24px;
+                font-size: em(24);
                 height: $_panel_date_hour_height;
                 line-height: $_panel_date_hour_height;
                 background: #001328;
             }
         }
         .remappage {
-            font-size: 12px;
+            font-size: em(12);
             height: $_panel_remappage_height;
             //line-height: $_panel_remappage_height;
             background: #1a3b5c;
@@ -126,14 +126,14 @@
             img {
                 float: left;
                 position: relative;
-                right: 20px;
-                margin: 5px 0;
+                right: em(20);
+                margin: em(5) 0;
             }
             .state {
-                margin: 10px 0 5px 0px;
+                margin: em(10) 0 em(5) 0px;
             }
             p:not(.state) {
-                font-size: 9px;
+                font-size: em(9);
                 span {
                     font-weight: bold;
                 }
@@ -144,25 +144,25 @@
             background: red;
             p {
                 line-height: $_panel_pulsars_height;
-                padding-left: 20px;
+                padding-left: em(20);
             }
             span img {
                 position: relative;
-                top: 7.5px;
+                top: em(7.5);
             }
         }
         .user-stats {
             // background: green;
             .icon {
-                width: 20px;
-                height: 20px;
+                width: em(20);
+                height: em(20);
                 background: url(../img/icons/temporel.png) no-repeat center center;
                 background-size: cover;
                 display: block;
                 float: left;
-                margin: 15px 0;
+                margin: em(15) 0;
                 position: relative;
-                left: 60px;
+                left: em(60);
             }
             > p {
                 line-height: $_panel_pulsars_height;
@@ -171,18 +171,17 @@
                 }
             }
             ul {
-                font-size: 14px;
+                font-size: em(14);
                 text-align: left;
                 width: 70%;
                 margin: auto;
                 li {
-                    padding: 4px 0;
+                    padding: em(4) 0;
                     p {
                         display: inline-block;
                     }
                     p:last-child {
                         float: right;
-                        transition: opacity 0.3s;
                     }
                 }
             }
@@ -195,10 +194,10 @@
             button {
                 display: block;
                 background: #353732;
-                font-size: 12px;
+                font-size: em(12);
                 width: 100%;
                 text-align: left;
-                padding-left: 30px;
+                padding-left: em(30);
                 height: $_panel_button_height;
                 line-height: $_panel_button_height;
             }
@@ -209,7 +208,7 @@
                     background: #252a2d;
                     width: calc(100% / 4);
                     float: left;
-                    border-right: 1px solid white;
+                    border-right: em(1) solid white;
                     img {
                         margin: ($_panel_button_height - 20) / 2;
                     }
@@ -220,44 +219,44 @@
     
     .bottom-bar {
         width: 75%;
-        height: 40px;
+        height: em(40);
         background: rgba(255, 0, 0, 0.18);
         position: absolute;
         bottom: 0;
         span {
-            height: 4px;
-            margin: 10px 0;
+            height: em(4);
+            margin: em(10) 0;
             display: inline-block;
-            width: calc(50% - 30px);
+            width: calc(50% - em(30));
             float: left;
             background: white;
             &:last-child {
-                margin-left: 30px;
+                margin-left: em(30);
             }
         }
         a {
             float: left;
-            transform: translateX(15px);
+            transform: translateX(em(15));
         }
     }
     
     @media only screen and (max-width: 1100px) {
         border: 2px solid red;
         .pulsars {
-            font-size: 12px;
+            font-size: em(12);
             p {
                 padding-left: 0px;
             }
         }
         .user-stats {
             .icon {
-                left: 10px;
-                height: 15px;
-                width: 15px;
-                margin: 17.5px 0;
+                left: em(10);
+                height: em(15);
+                width: em(15);
+                margin: em(17.5) 0;
             }
             > p {
-                font-size: 12px;
+                font-size: em(12);
             }
         }
     }
@@ -272,14 +271,5 @@
             width: 100%;
             height: auto;
             float: none;
-        }
-    }
-    
-    @include keyframes(move-the-object) {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
         }
     }

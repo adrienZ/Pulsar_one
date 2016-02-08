@@ -29,7 +29,4 @@ $.el('.ui-panel #fullscreen').addEventListener('click', function () {
             document.body.msRequestFullscreen();
         }
     }
-
-
-    console.log(document.body.className);
 });
