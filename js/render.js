@@ -2,14 +2,16 @@
 $.histoire = $.el('.story');
 $.pad = $.el('.questions');
 var current_act = data.act_2;
-
+var skip = false;
 
 function render(event) {
 
     //cleaning previous answers
     $.pad.querySelector('ul').innerHTML = "";
     //pushing story's text in the div
-    $.histoire.innerHTML += '<p>' + event.question + '</p>';
+    //$.histoire.innerHTML += '<p>' + event.question + '</p>';
+    write(event.question, $.histoire)
+
     //scroll to the bottom of the div
     $.histoire.scrollTop = $.histoire.scrollHeight;
     //iterate trought players
@@ -57,7 +59,10 @@ function render(event) {
         elem.addEventListener('click', function () {
             //call the render function by getting data event attribute
             render(current_act[this.getAttribute('data-event')]);
-
+            if (skip == false) {
+                skip = true;
+            }
+            console.log(skip);
             if (elem.getAttribute('data-stats')) {
 
 
@@ -143,11 +148,40 @@ function render(event) {
             });
         });
     }
+
 };
 
 
 
 
+function write(txt, parent) {
+    if (txt.length == 0) return false;
+    else if (typeof txt == "string") {
+        //var audio = new Audio(["https://www.freesound.org/data/previews/319/319888_1125482-lq.mp3"]);
+        var content = document.createElement('p');
+        parent.appendChild(content);
+        var index_text = -1;
+        var writing = setInterval(function () {
+            index_text++;
+            if (skip) {
+                content.innerHTML = "";
+
+                content.innerHTML += txt;
+                skip = false;
+                clearInterval(writing);
+
+            } else {
+                //audio.play();
+                content.innerHTML += txt[index_text];
+            }
+
+            if (index_text == txt.length - 1) {
+                clearInterval(writing);
+            }
+        }, 15);
+
+    }
+}
 
 
 
@@ -157,8 +191,9 @@ for (var key in user.stats) {
 $.el('.ui-panel .pulsars span').innerHTML = '[' + user.pulsars + ']';
 
 //render test
-render(current_act.a2_0);
-
+setTimeout(function () {
+    render(current_act.a2_0)
+}, 1000);
 
 
 //not render
@@ -174,5 +209,4 @@ var ui = {
         console.log(ui.icon_help_text[index]);
         $.ui.querySelector('.menu button').innerHTML = ui.icon_help_text[index];
     });
-    console.log(icon, index);
 });
