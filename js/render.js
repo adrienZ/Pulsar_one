@@ -156,6 +156,5 @@ for (var key in user.stats) {
 };
 $.el('.ui-panel .pulsars span').innerHTML = '[' + user.pulsars + ']';
 
-
 //render test
 render(current_act.a2_0);

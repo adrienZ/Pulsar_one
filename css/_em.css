@@ -8,8 +8,9 @@ body {
 
 .main,
 .bottom-bar {
-  -webkit-transition: -webkit-transform 0.15s;
-          transition: transform 0.15s;
+  transition: -webkit-transform 0.15s;
+  transition: transform 0.15s;
+  transition: transform 0.15s, -webkit-transform 0.15s;
 }
 
 .main {
@@ -30,7 +31,7 @@ body {
 
 .main .story {
   width: 100%;
-  height: 480px;
+  height: 40vh;
   border: 0.0625em solid rgba(255, 0, 0, 0.28);
   overflow: auto;
   padding: 2.5em 0;
@@ -47,7 +48,7 @@ body {
   left: 0;
   box-shadow: inset 0px 30px 80px black, inset 0px -30px 80px black;
   width: 75vw;
-  height: 480px;
+  height: 40vh;
 }
 
 .main .questions {
@@ -58,7 +59,6 @@ body {
 
 .main .questions .arrow_naration {
   position: absolute;
-  right: -webkit-calc(25% + 30em /16);
   right: calc(25% + 30em /16);
   bottom: 6.25em;
   -webkit-transform: rotate(90deg);
@@ -98,8 +98,9 @@ body {
   display: block;
   position: relative;
   top: 10%;
-  -webkit-transition: -webkit-transform 1s linear;
-          transition: transform 1s linear;
+  transition: -webkit-transform 1s linear;
+  transition: transform 1s linear;
+  transition: transform 1s linear, -webkit-transform 1s linear;
 }
 
 .ui-panel {
@@ -239,7 +240,6 @@ body {
   display: inline-block;
   height: 30px;
   background: #252a2d;
-  width: -webkit-calc(100% / 4);
   width: calc(100% / 4);
   float: left;
   border-right: 0.0625em solid white;
@@ -261,7 +261,6 @@ body {
   height: 0.25em;
   margin: 0.625em 0;
   display: inline-block;
-  width: -webkit-calc(50% - em(30));
   width: calc(50% - em(30));
   float: left;
   background: white;

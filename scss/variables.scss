@@ -6,7 +6,7 @@ $_panel_remappage_height: 60px;
 $_panel_pulsars_height: 60px;
 $_panel_button_height: 30px;
 //ui-game (main)//
-$_game_story_height: 480px;
+$_game_story_height: 40vh;
 //function to em
 $browser-context: 16;
 @function em($pixels, $context: $browser-context) {
