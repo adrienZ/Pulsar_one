@@ -1,19 +1,20 @@
-//console.clear();
 $.histoire = $.el('.story');
 $.pad = $.el('.questions');
 var current_act = data.act_2;
+// all the data i need to stop the typed effect with write()
+ui.skip = [];
 var skip = false;
-
+//function render
 function render(event) {
 
     //cleaning previous answers
     $.pad.querySelector('ul').innerHTML = "";
     //pushing story's text in the div
     //$.histoire.innerHTML += '<p>' + event.question + '</p>';
-    write(event.question, $.histoire)
+    write(event.question, $.histoire);
 
     //scroll to the bottom of the div
-    $.histoire.scrollTop = $.histoire.scrollHeight;
+    //$.histoire.scrollTop = $.histoire.scrollHeight;
     //iterate trought players
 
 
@@ -59,10 +60,8 @@ function render(event) {
         elem.addEventListener('click', function () {
             //call the render function by getting data event attribute
             render(current_act[this.getAttribute('data-event')]);
-            if (skip == false) {
-                skip = true;
-            }
-            console.log(skip);
+            // SKIP HERE / be careful with this global
+            skip = true;
             if (elem.getAttribute('data-stats')) {
 
 
@@ -85,8 +84,6 @@ function render(event) {
                     });
                 });
 
-                //debug
-                console.log(user.stats);
             }
         });
 
@@ -153,32 +150,61 @@ function render(event) {
 
 
 
-
 function write(txt, parent) {
-    if (txt.length == 0) return false;
-    else if (typeof txt == "string") {
-        //var audio = new Audio(["https://www.freesound.org/data/previews/319/319888_1125482-lq.mp3"]);
+    if (txt.length === 0) return false;
+    else if (typeof txt === "string") {
         var content = document.createElement('p');
         parent.appendChild(content);
+
+        // when previous text doesnt exist
+        if (ui.skip.length === 0) {
+            var first = {
+                text: txt,
+                state: false,
+                first: true,
+            };
+            ui.skip.push(first);
+        }
+
+
         var index_text = -1;
         var writing = setInterval(function () {
-            index_text++;
-            if (skip) {
-                content.innerHTML = "";
-
-                content.innerHTML += txt;
+            // detect if user click on a arrow/answer
+            if (skip == true) {
+                //cut typed effect on previous <p>
+                clearInterval(ui.skip[ui.skip.length - 2].interval);
+                //clear <p>
+                parent.childNodes[parent.childNodes.length - 2].innerHTML = "";
+                //fill the previous text on one shot <p>
+                parent.childNodes[parent.childNodes.length - 2].innerHTML = ui.skip[ui.skip.length - 2].text;
+                // reboot skip global
                 skip = false;
-                clearInterval(writing);
-
+                //else --> typed effect
             } else {
-                //audio.play();
+
+                index_text++;
                 content.innerHTML += txt[index_text];
             }
 
-            if (index_text == txt.length - 1) {
+            if (index_text === txt.length - 1) {
                 clearInterval(writing);
             }
+            $.histoire.scrollTop = $.histoire.scrollHeight;
         }, 15);
+
+
+
+
+        var previous = {
+            text: txt,
+            state: false,
+            interval: writing,
+            node: content,
+        }
+        if (ui.skip[0].hasOwnProperty(('first'))) {
+            ui.skip.shift();
+        }
+        ui.skip.push(previous);
 
     }
 }
@@ -194,19 +220,3 @@ $.el('.ui-panel .pulsars span').innerHTML = '[' + user.pulsars + ']';
 setTimeout(function () {
     render(current_act.a2_0)
 }, 1000);
-
-
-//not render
-
-$.ui = $.el('.ui-panel');
-$.ui.menu_icons = $.ui.querySelectorAll('.menu li');
-
-var ui = {
-    icon_help_text: ['sauvegardez votre partie', 'musique', 'son', 'plein écran'],
-};
-        [].forEach.call($.ui.menu_icons, function (icon, index) {
-    icon.addEventListener('mouseenter', function () {
-        console.log(ui.icon_help_text[index]);
-        $.ui.querySelector('.menu button').innerHTML = ui.icon_help_text[index];
-    });
-});
