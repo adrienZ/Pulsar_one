@@ -4,9 +4,8 @@
         font-size: 18px;
         font-family: "Arial";
         color: #fff;
-        background-image: url('../img/background_ingame.jpg');
-        background-size: 100%;
-        background-repeat: no-repeat;
+        background: url('../img/background_ingame.jpg') no-repeat center center;
+        background-size: cover;
         overflow: hidden;
     }
     
@@ -36,7 +35,7 @@
                 background: #4b6cb7;
                 background: -webkit-linear-gradient(to right, #4b6cb7, #182848);
                 background: linear-gradient(to right, #4b6cb7, #182848);
-                opacity: 0.6;
+                opacity: 1;
             }
             //this is 
             img {
@@ -66,7 +65,7 @@
                 position: absolute;
                 top: $_panel_act_height + $_panel_date_day_height +$_panel_date_hour_height +$_panel_remappage_height +$_panel_pulsars_height;
                 left: 0;
-                box-shadow: inset 0px 30px 80px black, inset 0px -30px 80px black;
+                box-shadow: inset 0px 30px 80px rgba(0, 0, 0, 0.75), inset 0px -30px 80px rgba(0, 0, 0, 0.75);
                 width: 75vw;
                 height: $_game_story_height;
             }
@@ -229,7 +228,7 @@
                 float: left;
                 margin: 18px 0;
                 position: relative;
-                left: 70px;
+                left: 15%;
             }
             > p {
                 line-height: $_panel_pulsars_height;
@@ -360,6 +359,48 @@
                 font-size: 12px;
             }
         }
+    }
+    
+    ::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+    
+    ::-webkit-scrollbar-button {
+        width: 0px;
+        height: 0px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: #c3c3c3;
+        border: 0px none #ffffff;
+        border-radius: 50px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: #ffffff;
+    }
+    
+    ::-webkit-scrollbar-thumb:active {
+        background: #ffffff;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #343537;
+        border: 0px none #ffffff;
+        border-radius: 57px;
+    }
+    
+    ::-webkit-scrollbar-track:hover {
+        background: #343537;
+    }
+    
+    ::-webkit-scrollbar-track:active {
+        background: transparent;
+    }
+    
+    ::-webkit-scrollbar-corner {
+        background: transparent;
     }
     
     //    @media only screen and (max-width: 800px) {
