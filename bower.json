@@ -1,12 +1,14 @@
 {
-  "name": "projet-algo-T1-p2019",
-  "authors": [
-    "adrienZ <adrienzaganelli@gmail.com>"
+    "name": "projet-algo-T1-p2019",
+    "authors": [
+    "adrienZ <adrienzaganelli@gmail.com>",
+    "AudeFi <odefi@hotmail.fr>",
+    "FrostOne <tansuongkevin@gmail.com>",
   ],
-  "description": "to do...",
-  "main": "index.html",
-  "moduleType": [],
-  "license": "MIT",
-  "homepage": "index.html",
-  "dependencies": {}
+    "description": "to do...",
+    "main": "index.html",
+    "moduleType": [],
+    "license": "MIT",
+    "homepage": "index.html",
+    "dependencies": {}
 }
