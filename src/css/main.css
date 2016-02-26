@@ -311,10 +311,12 @@ h2 span .red {
   text-decoration: none;
   font-family: 'Gotham', 'Arial', sans-serif;
   text-transform: uppercase;
+  width: 50%;
   position: absolute;
   bottom: 25px;
+  left: 25%;
+  text-align: center;
   z-index: 3;
-  left: 46vw;
   opacity: 0;
   -webkit-animation: fadeIn-alphaSix 1.5s ease-in-out 3s normal 1 running forwards;
           animation: fadeIn-alphaSix 1.5s ease-in-out 3s normal 1 running forwards;

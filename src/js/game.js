@@ -1,3 +1,14 @@
+user.set_name = function (new_name) {
+    user.name = new_name;
+    user = JSON.stringify(user);
+    savegame.delete_save('user_save');
+    savegame.create_save('user_save', user, 7);
+    user = JSON.parse(user);
+
+}
+
+
+
 for (var key in user.stats) {
     $.el('.ui-panel .user-stats ul').innerHTML += '<li><p>' + key + '</p><p>' + user.stats[key] + '</p></li>'
 };
@@ -7,8 +18,6 @@ $.el('.ui-panel .pulsars span').innerHTML = '[' + user.pulsars + ']';
 setTimeout(function () {
     render(current_act.a2_0)
 }, 1000);
-
-
 
 
 $.el('.bottom-bar a').addEventListener('click', function () {

@@ -25,7 +25,7 @@ savegame.get_save = function (name) {
 }
 
 
-savegame.erase_save = function (name) {
+savegame.delete_save = function (name) {
     savegame.create_save(name, "", -1);
 }
 
@@ -36,6 +36,7 @@ if (document.cookie.indexOf("user_save") >= 0) { //detect the cookie we want
     if (user == "none") {
         ("empy cookie !");
     } else {
+        //restore user data as object from the cookie's strting
         user = JSON.parse(savegame.get_save('user_save'));
         //console.log('cookie detected : ' + document.cookie + '<br>' + user);
         console.log('Welcome ' + user.name);
@@ -44,6 +45,7 @@ if (document.cookie.indexOf("user_save") >= 0) { //detect the cookie we want
 } else {
     // set a new cookie
     console.log(' no cookies ! <br>');
+    //basics setup of user data
     user.name = "JOOOOOOOOHN Cena !";
     user.stats = {
         strenght: 0,
@@ -56,10 +58,8 @@ if (document.cookie.indexOf("user_save") >= 0) { //detect the cookie we want
     };
     user.pulsars = 5;
 
-
+    //to sting, imperative to get save in cookies, they only read strings
     user = JSON.stringify(user);
     user = savegame.create_save('user_save', user, 7);
-
-
     console.log('new cookie : ' + document.cookie);
 }
