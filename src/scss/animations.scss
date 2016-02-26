@@ -1,0 +1,17 @@
+    @include keyframes(pulsar-blink) {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0.5;
+        }
+    }
+    
+    @include keyframes(fade-in) {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
