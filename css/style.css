@@ -150,10 +150,6 @@ body {
   margin: 5px 0px;
 }
 
-.main .questions ul li:not(.arrow_naration) a:hover {
-  color: red;
-}
-
 .main .questions .timer {
   width: 200px;
   height: 8px;
@@ -279,6 +275,10 @@ body {
 
 .ui-panel .pulsars .pulsar-remainging {
   font-weight: bold;
+}
+
+.ui-panel .pulsars .pulsar-remainging:hover {
+  letter-spacing: 2px;
 }
 
 .ui-panel .user-stats .icon {

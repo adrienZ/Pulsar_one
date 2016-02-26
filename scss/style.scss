@@ -94,13 +94,11 @@
                 }
             }
             ul {
-                text-align: center;
+                text-align: center; 
                 //padding-top: 80px;
                 li:not(.arrow_naration) {
                     margin: 5px 0px;
-                    a:hover {
-                        color: red;
-                    }
+                    a:hover {}
                 }
             }
             .timer {
@@ -215,6 +213,10 @@
             }
             .pulsar-remainging {
                 font-weight: bold;
+            
+                &:hover {
+                    letter-spacing: 2px;
+                }
             }
         }
         .user-stats {

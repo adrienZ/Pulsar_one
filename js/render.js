@@ -165,11 +165,13 @@ function write(txt, parent) {
             };
             ui.skip.push(first);
         }
+        var audio = null;
 
 
         var index_text = -1;
         var writing = setInterval(function () {
             // detect if user click on a arrow/answer
+            audio = new Audio(['http://www.hotchkiss.co.jp/sound/1.mp3']);
             if (skip == true) {
                 //cut typed effect on previous <p>
                 clearInterval(ui.skip[ui.skip.length - 2].interval);
