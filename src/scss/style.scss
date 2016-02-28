@@ -23,6 +23,7 @@
             width: 85%;
             margin: auto;
             text-align: center;
+            animation: remove 5s paused forwards;
             .motion-glow {
                 margin: 15vh auto!important;
                 background: #4a4abc;
@@ -33,6 +34,7 @@
             p {
                 animation: remove 1s forwards;
                 animation-play-state: paused;
+                line-height: 1.25;
             }
             p:last-of-type {
                 margin-top: -10px;

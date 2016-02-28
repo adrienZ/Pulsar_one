@@ -81,6 +81,8 @@ body {
   width: 85%;
   margin: auto;
   text-align: center;
+  -webkit-animation: remove 5s paused forwards;
+          animation: remove 5s paused forwards;
 }
 
 .intro .container .motion-glow {
@@ -96,6 +98,7 @@ body {
           animation: remove 1s forwards;
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
+  line-height: 1.25;
 }
 
 .intro .container p:last-of-type {

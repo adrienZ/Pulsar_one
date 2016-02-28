@@ -12,29 +12,65 @@ var ui = {
 
 
 
-
 $.histoire = $.el('.story');
 $.pad = $.el('.questions');
-var current_act = data.act_2;
+var current_act = data.act_1;
 // all the data i need to stop the typed effect with write()
 ui.skip = [];
 var skip = false;
 //function render
 function render(event) {
+    console.log(event);
+
+    if (event.hasOwnProperty('citation')) {
+        $.prologue = $.el('.prologue');
+        $.prologue.style.display = 'block';
+        var citation = document.querySelector('.citation');
+        var splashScreen = document.querySelector('.splash-screen');
+
+        var prologue_texts = {
+            citation: $.prologue.querySelector('.citation p'),
+            author: $.prologue.querySelector('.citation p:last-child'),
+            title: $.prologue.querySelector('.splash-screen h2'),
+            act: $.prologue.querySelector('.splash-screen h1'),
+            dots: $.prologue.querySelectorAll('.pagination-acte .dots'),
+
+        }
+
+        prologue_texts.citation.innerHTML = event.citation;
+        prologue_texts.author.innerHTML = event.author;
+        prologue_texts.title.innerHTML = event.title;
+        prologue_texts.act.innerHTML = 'Acte ' + event.number;
+        for (var i = 0; i < event.number; i++) {
+            prologue_texts.dots[i].classList.add('active');
+            console.log(prologue_texts.dots[i]);
+
+        }
+
+        window.setTimeout(function () {
+            citation.remove();
+            splashScreen.classList.remove('hide');
+            window.setTimeout(function () {
+                splashScreen.remove();
+                console.log('obj');
+            }, 5000);
+        }, 6500);
+
+        console.log('stop');
+        return false;
+    }
 
     //cleaning previous answers
     $.pad.querySelector('ul').innerHTML = "";
     //pushing story's text in the div
-    //$.histoire.innerHTML += '<p>' + event.question + '</p>';
     write(event.question, $.histoire);
 
-    //scroll to the bottom of the div
-    //$.histoire.scrollTop = $.histoire.scrollHeight;
+
+
+
+
+
     //iterate trought players
-
-
-
-
     event.choix.forEach(function (choice) {
 
         //link function generator

@@ -1,4 +1,12 @@
 var data = {
+    act_1: {
+        prologue: {
+            citation: '« J’aime la science-fiction, j’aime la fantaisie, j’aime le voyage dans le temps, c’est pourquoi j’ai eu cette idée : et si vous aviez la possibilité de retourner dans votre passé par un simple coup de fil.<br>Que changerez-vous ? »',
+            author: '- Rainbow Rowell',
+            number: 1,
+            title: 'Le début de la fin',
+        },
+    },
     act_2: {
         'a2_0': {
             question: 'Vous êtes à terre, les yeux fermés avec une très grosse migraine. Tout autour de vous semble être que du vide. Vous ne pouvez que sentir un sol très lisse avec vos mains. Il est temps de se lever. Vous essayez d’ouvrir vos yeux...',

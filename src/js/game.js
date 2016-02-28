@@ -20,6 +20,7 @@ if (user.game === 'intro') {
             if ($.el('input').value.length === 0) {
                 $.el('input').classList.add('required');
             } else {
+                // #badCode
                 user.set_name($.el('input').value);
                 $.el('.intro p:first-of-type').style.animationPlayState = 'running';
                 $.el('.intro br').style.animationPlayState = 'running';
@@ -27,8 +28,16 @@ if (user.game === 'intro') {
                 $.el('.intro input').classList.add('confirmed', 'translate');
                 $.el('.intro input').setAttribute('disabled', '');
                 $.el('.intro input').setAttribute('value', user.name);
-                $.el('.intro .container').innerHTML += '<p class="translate"> Votre histoire est sur le point de trouver un nouveau tournant. Ce n’est pas terminé. </p> <br> <p class="translate">Réveillez-vous.</p>'
+                $.el('.intro .container').innerHTML += '<p class="translate"> Votre histoire est sur le point de trouver un nouveau tournant. Ce n’est pas terminé. <br> Réveillez-vous.</p>';
+                window.setTimeout(function () {
+                    //get animation duration
+                    var fade_out_delay = window.getComputedStyle($.el('.intro .container')).getPropertyValue('animation-duration').charAt(0);
 
+                    $.el('.intro .container').style.animationPlayState = 'running';
+                    window.setTimeout(function () {
+                        render(current_act.prologue)
+                    }, fade_out_delay * 1000)
+                }, 2000);
             }
         }
     });
@@ -43,9 +52,9 @@ if (user.game === 'intro') {
 
 
     //render test
-    setTimeout(function () {
-        render(current_act.a2_0)
-    }, 1000);
+    //    setTimeout(function () {
+    //        render(current_act.prologue)
+    //    }, 1000);
 
 
     $.el('.bottom-bar a').addEventListener('click', function () {
