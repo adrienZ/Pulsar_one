@@ -1,8 +1,8 @@
 var data = {
     act_1: {
         prologue: {
-            citation: '« J’aime la science-fiction, j’aime la fantaisie, j’aime le voyage dans le temps, c’est pourquoi j’ai eu cette idée : et si vous aviez la possibilité de retourner dans votre passé par un simple coup de fil.<br>Que changerez-vous ? »',
-            author: '- Rainbow Rowell',
+            citation: null,
+            author: null,
             number: 1,
             title: 'Le début de la fin',
         },
@@ -46,7 +46,7 @@ var data = {
                 {
                     text: "Je suis déjà mort ?",
                     data_event: "a2_4_0",
-                    naration: false,
+
                     stats_change: {
                         strenght: 1,
                         luck: -2,
@@ -55,12 +55,12 @@ var data = {
                 {
                     text: "Quoi ? Qui êtes-vous ?",
                     data_event: "a2_4_1",
-                    naration: false,
+
                 },
                 {
                     text: "Mais attendez où je suis ?",
                     data_event: "a2_4_2",
-                    naration: false,
+
                 },
             ],
         },
@@ -81,12 +81,12 @@ var data = {
                 {
                     text: "Quel est le problème alors ?",
                     data_event: "a2_5_0",
-                    naration: false,
+
                 },
                 {
                     text: "Non je dois rêver, ce n’est pas possible.",
                     data_event: "a2_4_2",
-                    naration: false,
+
                 },
             ],
         },
@@ -106,7 +106,7 @@ var data = {
                 {
                     text: "Et pourquoi moi ?",
                     data_event: "a2_6",
-                    naration: false,
+
                 },
             ],
         },
@@ -116,12 +116,12 @@ var data = {
                 {
                     text: "Bah le problème c’est que je n’ai pas que ça à faire et vous savez...",
                     data_event: "a2_7_0",
-                    naration: false,
+
                 },
                 {
                     text: "Et pourquoi D’accord. Je vous aiderai. J’essayerai.",
                     data_event: "a2_7_1",
-                    naration: false,
+
                 },
             ],
         },
@@ -131,12 +131,12 @@ var data = {
                 {
                     text: "Oui",
                     data_event: "a2_7_0",
-                    naration: false,
+
                 },
                 {
                     text: "Bon en fait, je veux bien vous aider. J’ai eu peur sur le coup.",
                     data_event: "a2_4_1",
-                    naration: false,
+
                 },
             ],
         },
@@ -168,12 +168,12 @@ var data = {
                 {
                     text: "Euh ouais à priori.",
                     data_event: "a2_10_0",
-                    naration: false,
+
                 },
                 {
                     text: "Vous êtes Rose ?",
                     data_event: "a2_10_1",
-                    naration: false,
+
                 },
             ],
         },

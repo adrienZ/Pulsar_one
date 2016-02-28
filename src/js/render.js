@@ -1,6 +1,9 @@
+//catch useful DOM
 $.ui = $.el('.ui-panel');
 $.ui.menu_icons = $.ui.querySelectorAll('.menu li');
-
+$.histoire = $.el('.story');
+$.pad = $.el('.questions');
+//icon hover helper
 var ui = {
     icon_help_text: ['sauvegardez votre partie', 'musique', 'son', 'plein écran'],
 };
@@ -12,52 +15,68 @@ var ui = {
 
 
 
-$.histoire = $.el('.story');
-$.pad = $.el('.questions');
+
 var current_act = data.act_1;
+
+
 // all the data i need to stop the typed effect with write()
 ui.skip = [];
 var skip = false;
 //function render
 function render(event) {
-    console.log(event);
-
+    //this when the user begin a new act
     if (event.hasOwnProperty('citation')) {
         $.prologue = $.el('.prologue');
         $.prologue.style.display = 'block';
         var citation = document.querySelector('.citation');
         var splashScreen = document.querySelector('.splash-screen');
 
+
+        // catch all the DOM to template
         var prologue_texts = {
             citation: $.prologue.querySelector('.citation p'),
             author: $.prologue.querySelector('.citation p:last-child'),
             title: $.prologue.querySelector('.splash-screen h2'),
             act: $.prologue.querySelector('.splash-screen h1'),
             dots: $.prologue.querySelectorAll('.pagination-acte .dots'),
-
         }
 
+
+
+        //templating with data
         prologue_texts.citation.innerHTML = event.citation;
         prologue_texts.author.innerHTML = event.author;
         prologue_texts.title.innerHTML = event.title;
         prologue_texts.act.innerHTML = 'Acte ' + event.number;
         for (var i = 0; i < event.number; i++) {
             prologue_texts.dots[i].classList.add('active');
-            console.log(prologue_texts.dots[i]);
-
         }
 
-        window.setTimeout(function () {
+
+        //exception : the user is playing for the first time
+        if (user.game == 'intro') {
+            //already shown in game.js
             citation.remove();
+            //but show the act title
             splashScreen.classList.remove('hide');
             window.setTimeout(function () {
                 splashScreen.remove();
-                console.log('obj');
+                //RENDER NEXT EVENT HERE
             }, 5000);
-        }, 6500);
-
-        console.log('stop');
+        }
+        //normal case , the user begin a act wich is not act 1
+        else {
+            window.setTimeout(function () {
+                citation.remove();
+                splashScreen.classList.remove('hide');
+                window.setTimeout(function () {
+                    splashScreen.remove();
+                }, 5000);
+            }, 6500);
+        }
+        //avoid console errors
         return false;
+
     }
 
     //cleaning previous answers

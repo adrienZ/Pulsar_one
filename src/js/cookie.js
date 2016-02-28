@@ -1,8 +1,12 @@
 var user = {};
-
-
 var savegame = {};
+//expire date for cookies
 var dtExpire = new Date();
+dtExpire.setTime(dtExpire.getTime() + 3600 * 1000);
+
+
+
+
 savegame.create_save = function (name, value, days) {
     if (days) {
         var date = new Date();
@@ -11,7 +15,7 @@ savegame.create_save = function (name, value, days) {
     } else var expires = "";
     document.cookie = name + "=" + value + expires + "; path=/";
 }
-dtExpire.setTime(dtExpire.getTime() + 3600 * 1000);
+
 
 savegame.get_save = function (name) {
     var nameEQ = name + "=";

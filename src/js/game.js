@@ -7,20 +7,30 @@ user.set_name = function (new_name) {
 
 }
 
+//the user is begining a new game
 if (user.game === 'intro') {
-    console.log('intro');
+    // EXEPTION --> citatation appears first , but i cant render it so i use an extra div
+    $.el('section.new').style.display = 'block';
+    window.setTimeout(function () {
+        $.el('section.new').remove();
+    }, 4000);
+    //remove the extra div lead to the input part where the player have to give his name
+
     $.el('input').addEventListener('keyup', function (e) {
+        //UX for the input
         if ($.el('input').classList.contains('required')) {
             $.el('input').classList.remove('required');
-
         }
     });
     window.addEventListener('keyup', function (e) {
+        //if he press enter
         if (e.keyCode === 13) {
+            //check if the input is empty
             if ($.el('input').value.length === 0) {
                 $.el('input').classList.add('required');
             } else {
                 // #badCode
+                //intro text , without the render function
                 user.set_name($.el('input').value);
                 $.el('.intro p:first-of-type').style.animationPlayState = 'running';
                 $.el('.intro br').style.animationPlayState = 'running';
@@ -29,34 +39,37 @@ if (user.game === 'intro') {
                 $.el('.intro input').setAttribute('disabled', '');
                 $.el('.intro input').setAttribute('value', user.name);
                 $.el('.intro .container').innerHTML += '<p class="translate"> Votre histoire est sur le point de trouver un nouveau tournant. Ce n’est pas terminé. <br> Réveillez-vous.</p>';
+
+
+                //now that the name is set , we remove the input part and render the first event
                 window.setTimeout(function () {
                     //get animation duration
                     var fade_out_delay = window.getComputedStyle($.el('.intro .container')).getPropertyValue('animation-duration').charAt(0);
 
                     $.el('.intro .container').style.animationPlayState = 'running';
                     window.setTimeout(function () {
-                        render(current_act.prologue)
-                    }, fade_out_delay * 1000)
+                        render(current_act.prologue);
+                    }, fade_out_delay * 1000);
                 }, 2000);
             }
         }
     });
-} else {
+}
+// if the user has pass the intro
+else {
+    //remove extra div
     $.el('section.intro').remove();
+
+    //set up for the UI//
+    //display user stats
     for (var key in user.stats) {
         $.el('.ui-panel .user-stats ul').innerHTML += '<li><p>' + key + '</p><p>' + user.stats[key] + '</p></li>'
     };
+    //display user pulsars
     $.el('.ui-panel .pulsars span').innerHTML = '[' + user.pulsars + ']';
 
 
-
-
-    //render test
-    //    setTimeout(function () {
-    //        render(current_act.prologue)
-    //    }, 1000);
-
-
+    //static bullshit interaction
     $.el('.bottom-bar a').addEventListener('click', function () {
         console.log(document.body.children);
         document.body.children[0].style.transform = "translate3D(0,-100px,0)";
@@ -65,6 +78,7 @@ if (user.game === 'intro') {
 
     });
 
+    //Full screen mode
     $.el('.ui-panel #fullscreen').addEventListener('click', function () {
         if (document.body.classList.contains('expand')) {
             document.body.classList.remove('expand');
