@@ -22,7 +22,7 @@ h2 {
   display: inline-block;
   color: white;
   font-family: 'Gotham', sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 16px;
   padding-top: 1rem;
   opacity: 0.9;
@@ -187,9 +187,9 @@ h2 span .red {
 .logo_pulsar h2 {
   color: rgba(255, 255, 255, 0.7);
   font-family: 'Gotham', Arial, sans-serif;
-  font-size: 32px;
-  margin-top: .5rem;
-  font-weight: 200;
+  font-size: 26px;
+  margin-top: .15rem;
+  font-weight: 300;
   text-transform: uppercase;
   margin-left: 1.4rem;
   opacity: 0;
@@ -241,7 +241,7 @@ h2 span .red {
   color: white;
   width: 100%;
   z-index: 2;
-  top: 55vh;
+  top: 57.5vh;
   font-weight: 300;
   text-transform: uppercase;
   font-size: 21px;
@@ -258,16 +258,17 @@ h2 span .red {
   display: block;
   opacity: 0.5;
   text-decoration: none;
-  box-shadow: 0px 0px 0px 0px white inset;
+  border: 1px solid transparent;
   padding: .7rem 0rem;
   width: 50%;
   margin: auto;
   margin-top: 1rem;
   transition: all 0.3s;
+  box-sizing: border-box;
 }
 
 .menu a:hover {
-  box-shadow: 0px 0px 0px 1.5px white inset;
+  border: 1px solid white;
   opacity: 1;
   cursor: pointer;
 }
@@ -275,6 +276,15 @@ h2 span .red {
 .menu a:active {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+.menu a:nth-child(2).unavailable {
+  opacity: 0.2;
+}
+
+.menu a:nth-child(2).unavailable:hover {
+  cursor: not-allowed;
+  border: 1px solid transparent;
 }
 
 .menu .selection .lines {

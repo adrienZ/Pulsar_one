@@ -1,3 +1,18 @@
+$.ui = $.el('.ui-panel');
+$.ui.menu_icons = $.ui.querySelectorAll('.menu li');
+
+var ui = {
+    icon_help_text: ['sauvegardez votre partie', 'musique', 'son', 'plein écran'],
+};
+        [].forEach.call($.ui.menu_icons, function (icon, index) {
+    icon.addEventListener('mouseenter', function () {
+        $.ui.querySelector('.menu button').innerHTML = ui.icon_help_text[index];
+    });
+});
+
+
+
+
 $.histoire = $.el('.story');
 $.pad = $.el('.questions');
 var current_act = data.act_2;

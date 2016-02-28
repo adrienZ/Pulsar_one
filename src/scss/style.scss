@@ -9,6 +9,73 @@
         overflow: hidden;
     }
     
+    .intro {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #000000;
+        font-family: 'Gotham Book';
+        font-size: 16px;
+        z-index: 1;
+        .container {
+            width: 85%;
+            margin: auto;
+            text-align: center;
+            .motion-glow {
+                margin: 15vh auto!important;
+                background: #4a4abc;
+                height: 40vh;
+                width: 40vh;
+                margin: auto;
+            }
+            p {
+                animation: remove 1s forwards;
+                animation-play-state: paused;
+            }
+            p:last-of-type {
+                margin-top: -10px;
+            }
+            input[type=text] {
+                margin: 10px auto;
+                background: none;
+                width: auto;
+                height: 2em;
+                color: inherit;
+                font-size: inherit;
+                font-style: inherit;
+                text-align: center;
+                font-family: inherit;
+                -webkit-border-radius: 0;
+                border-radius: 0;
+                border: 1px solid transparent;
+                -webkit-padding-start: 0;
+                align-items: flex-start;
+                line-height: 1em;
+                outline: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                transition: 0.15s;
+                &:focus {
+                    border-bottom: 1px solid white;
+                }
+                &.required {
+                    border: 1px solid white;
+                }
+                &.confirmed {
+                    color: #feceab;
+                    border-color: transparent;
+                }
+            }
+            .translate {
+                animation: fadeIn 1s;
+                transform: translateY(-65px);
+            }
+        }
+    }
+    
     .main,
     .bottom-bar {
         transition: transform 0.15s;
@@ -94,7 +161,7 @@
                 }
             }
             ul {
-                text-align: center; 
+                text-align: center;
                 //padding-top: 80px;
                 li:not(.arrow_naration) {
                     margin: 5px 0px;
@@ -213,7 +280,6 @@
             }
             .pulsar-remainging {
                 font-weight: bold;
-            
                 &:hover {
                     letter-spacing: 2px;
                 }

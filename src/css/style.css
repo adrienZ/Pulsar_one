@@ -34,6 +34,28 @@
   }
 }
 
+@-webkit-keyframes remove {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@keyframes remove {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+  }
+}
+
 body {
   font-size: 18px;
   font-family: "Arial";
@@ -41,6 +63,88 @@ body {
   background: url("../img/background_ingame.jpg") no-repeat center center;
   background-size: cover;
   overflow: hidden;
+}
+
+.intro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000000;
+  font-family: 'Gotham Book';
+  font-size: 16px;
+  z-index: 1;
+}
+
+.intro .container {
+  width: 85%;
+  margin: auto;
+  text-align: center;
+}
+
+.intro .container .motion-glow {
+  margin: 15vh auto !important;
+  background: #4a4abc;
+  height: 40vh;
+  width: 40vh;
+  margin: auto;
+}
+
+.intro .container p {
+  -webkit-animation: remove 1s forwards;
+          animation: remove 1s forwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.intro .container p:last-of-type {
+  margin-top: -10px;
+}
+
+.intro .container input[type=text] {
+  margin: 10px auto;
+  background: none;
+  width: auto;
+  height: 2em;
+  color: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  text-align: center;
+  font-family: inherit;
+  border-radius: 0;
+  border: 1px solid transparent;
+  -webkit-padding-start: 0;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  line-height: 1em;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: 0.15s;
+}
+
+.intro .container input[type=text]:focus {
+  border-bottom: 1px solid white;
+}
+
+.intro .container input[type=text].required {
+  border: 1px solid white;
+}
+
+.intro .container input[type=text].confirmed {
+  color: #feceab;
+  border-color: transparent;
+}
+
+.intro .container .translate {
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
+  -webkit-transform: translateY(-65px);
+      -ms-transform: translateY(-65px);
+          transform: translateY(-65px);
 }
 
 .main,

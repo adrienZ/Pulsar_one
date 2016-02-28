@@ -29,23 +29,34 @@ savegame.delete_save = function (name) {
     savegame.create_save(name, "", -1);
 }
 
+savegame.erase_save = function (name, datas) {
+    savegame.delete_save(name);
+    datas = JSON.stringify(datas);
+    savegame.create_save(name, datas, 7);
+    datas = JSON.parse(datas);
+    savegame.get_save(name);
+};
+
 
 if (document.cookie.indexOf("user_save") >= 0) { //detect the cookie we want
     //DEFINE VARIABLE HERE
     user = savegame.get_save('user_save');
-    if (user == "none") {
-        ("empy cookie !");
-    } else {
-        //restore user data as object from the cookie's strting
-        user = JSON.parse(savegame.get_save('user_save'));
-        //console.log('cookie detected : ' + document.cookie + '<br>' + user);
-        console.log('Welcome ' + user.name);
+    //restore user data as object from the cookie's strting
+    user = JSON.parse(savegame.get_save('user_save'));
+    if ($.el('.welcome-screen') && user.game === null) {
+        $.el('.welcome-screen .menu a:nth-child(2)').classList.add('unavailable');
     }
+    //console.log('cookie detected : ' + document.cookie + '<br>' + user);
+    console.log('Welcome ' + user.name);
+
 
 } else {
     // set a new cookie
     console.log(' no cookies ! <br>');
     //basics setup of user data
+    if ($.el('.welcome-screen')) {
+        $.el('.welcome-screen .menu a:nth-child(2)').classList.add('unavailable');
+    }
     user.name = "JOOOOOOOOHN Cena !";
     user.stats = {
         strenght: 0,
@@ -56,8 +67,8 @@ if (document.cookie.indexOf("user_save") >= 0) { //detect the cookie we want
         agility: 0,
         loyalty: 0,
     };
+    user.game = null;
     user.pulsars = 5;
-
     //to sting, imperative to get save in cookies, they only read strings
     user = JSON.stringify(user);
     user = savegame.create_save('user_save', user, 7);
