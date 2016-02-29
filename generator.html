@@ -268,7 +268,7 @@
             <div class="normal">
                 <fieldset>
                     <label for="question">Nature de la question : </label>
-                    <input id="question" type="text" class='question'>
+                    <textarea id="question" type="text" class='question'></textarea>
                     <table>
                         <tr class="header_table">
                             <td>Nature du choix</td>
@@ -418,11 +418,14 @@
         function prologue_yes() {
             $.el('.prologue .hide').style.display = 'block';
             $.el('.normal').style.display = 'none';
+            $.el('.options').style.display = 'none';
         }
 
         function prologue_no() {
             $.el('.prologue .hide').style.display = 'none';
             $.el('.normal').style.display = 'block';
+            $.el('.options').style.display = 'block';
+
         }
 
         function features(a) {
@@ -455,7 +458,6 @@
             if (e.preventDefault) e.preventDefault();
             var target = '';
             if ($.el('.prologue .hide').style.display === 'none') {
-                // target = '.normal input, .normal textarea, .options input:not(.ignore)';
                 target = '.normal input, .normal textarea, .options input:not(.ignore)';
                 var index_question = 0;
                 resu = {
