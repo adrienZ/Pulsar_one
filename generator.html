@@ -239,10 +239,23 @@
             };
             var resu;
 
+<<<<<<< HEAD
             function prologue_yes() {
                 $.el('.prologue .hide').style.display = 'block';
                 $.el('.normal').style.display = 'none';
             }
+=======
+        function features(a) {
+            if (a.checked) {
+                if (a.value === 'naration') {
+                    $.el('.normal table').style.display = 'none';
+                    $.el('input.naration').style.display = 'block';
+                } else if (a.value === 'stats_change') {
+                    $.el('.stats').style.display = 'block';
+                } else {
+                    $.el('input.' + a.value).style.display = 'block';
+                }
+>>>>>>> origin/master
 
             function prologue_no() {
                 $.el('.prologue .hide').style.display = 'none';
@@ -275,6 +288,30 @@
                     }
                 }
             }
+<<<<<<< HEAD
+=======
+        }
+
+        function processForm(e) {
+            resu = {};
+            if (e.preventDefault) e.preventDefault();
+            var target = '';
+            if ($.el('.prologue .hide').style.display === 'none') {
+                target = '.normal input, .normal textarea, .options input:not(.ignore)';
+                var index_question = 0;
+                resu = {
+                    question: null,
+                    choix: [],
+                }
+            } else {
+                target = '.prologue .hide input,.prologue textarea';
+                resu = {
+                    citation: null,
+                    author: null,
+                    number: null,
+                    title: null,
+                };
+>>>>>>> origin/master
 
             function processForm(e) {
                 resu = {};
