@@ -248,7 +248,6 @@
         }
 
         function features(a) {
-            console.log($.el('input.' + a.value));
             if (a.checked) {
                 if (a.value === 'naration') {
                     $.el('.normal table').style.display = 'none';
@@ -278,8 +277,6 @@
         function processForm(e) {
             resu = {};
             if (e.preventDefault) e.preventDefault();
-            console.clear();
-            console.log(e, this);
             var target = '';
             if ($.el('.prologue .hide').style.display === 'none') {
                 target = '.normal input, .normal textarea, .options input:not(.ignore)';
