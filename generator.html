@@ -7,216 +7,238 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="src/fonts/font_import.css">
+    <link rel="stylesheet" href="generator-style.css">
     <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">           </script>
         <![endif]-->
-</head>
+    </head>
 
-<body>
+    <body>
+        <header>
+            <div class="badge">Révision centauris</div>
+            <div class="icon">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" viewBox="0 0 355.7 295.7" style="enable-background:new 0 0 355.7 295.7;" xml:space="preserve">
+                    <style type="text/css">
+                        .st0 {
+                            fill: #F2F2F2;
+                        }
+                        
+                        .st1 {
+                            fill: none;
+                            stroke: #F2F2F2;
+                            stroke-width: 14;
+                            stroke-miterlimit: 10;
+                        }
+                        
+                        .st2 {
+                            fill: #E6E6E6;
+                        }
+                    </style>
+                    <defs>
+                    </defs>
+                    <g>
+                        <path class="st0 circle_pulsar" d="M178.3,220.8c-40.5,0-73.5-33-73.5-73.5c0-40.5,33-73.5,73.5-73.5c40.5,0,73.5,33,73.5,73.5
+                        C251.8,187.9,218.9,220.8,178.3,220.8z M178.3,88.8c-32.3,0-58.5,26.2-58.5,58.5s26.2,58.5,58.5,58.5s58.5-26.2,58.5-58.5
+                        S210.6,88.8,178.3,88.8z" />
+                    </g>
+                    <line class="st1 line_pulsar" x1="252.8" y1="72.8" x2="103.8" y2="221.8" />
+                    <polygon class="st2 brackets_pulsar-right" points="355.7,0 208.8,0 208.8,20 335.7,20 335.7,275.7 208.8,275.7 208.8,295.7 355.7,295.7 " />
+                    <polygon class="st2 brackets_pulsar-left" points="20,275.7 20,20 148.8,20 148.8,0 0,0 0,295.7 148.8,295.7 148.8,275.7 " />
+                </svg>
+            </div>
+            <div class="texte">
+                <h1>Pulsar</h1>
+                <h2>Générateur d'histoire - Greenlight</h2>
+                <h3>Adrien Zaganelli - Suong Kévin Tan - Aude Ficheux - Jennyfer Millet - Aymeric Chappuy</h3>
+            </div>
+            <div class="clear"></div>
+        </header>
+        <div class="note">
+            <h4>Notification</h4>
+            <p> Pensez à vider les formulaires des choix avant de cocher <i>narration</i> et pareil si vous voulez le décocher : vider son input. <br> Soyez vigilant et ne remplissez que ce dont vous avez besoin, les changements de stats seront bientôt développés.
+            </p>
+        </div>
+        <h1 class="title_info">Définition de la nature de l'évènement</h1>
+        <form action="">
+            <div class="prologue">
+                <div class="question_prologue">
+                    <label for="">1 ) L'évenement est-il un prologue ?</label>
+                    <div class="options">
+                        <input type="radio" name="isPrologue" value="prologue" onclick="prologue_yes()"> 
+                        <label for="prologue">oui</label>
+                        <input type="radio" name="isPrologue" value="value" onclick="prologue_no()" checked>
+                        <label for="value">non</label>
+                    </div>
+                </div>
+                <div class="hide" style="display:none">
+                    <fieldset>
+                        <label for="citation">Citation : </label>
+                        <textarea rows="4" cols="100" id='citation' class="citation" placeholder="Do or do not, there is no try."></textarea>
+                        <br>
+                        <label for="author">Auteur : </label>
+                        <input type="text" id="author" placeholder="John Cena" class="author">
+                        <br>
+                        <label for="act_numbeur">Numéro de l'acte : </label>
+                        <input type="number" id="act_number" value="1" class="number">
+                        <br>
+                        <label for="act_title">Titre de l'acte : </label>
+                        <input type="text" id="act_title" placeholder="Chimichangas" class="title">
+                    </fieldset>
+                </div>
+            </div>
 
-    <style>
-        .prologue input[type="radio"] {
-            display: inline-block;
-        }
-        
-        input + input {
-            display: none;
-        }
-        
-        .stats {
-            display: none;
-        }
-        
-        .hide {
-            display: none;
-        }
-        
-        table td {
-            width: 300px;
-        }
-        
-        button {
-            text-align: center;
-            padding: 30px 40px;
-            display: block;
-            margin: auto;
-        }
-        
-        textarea {
-            vertical-align: middle;
-        }
-        
-        input {
-            margin-top: 10px;
-            height: 1.25em;
-        }
-        
-        .hide label {
-            width: 150px;
-            display: inline-block;
-            text-align: right;
-        }
-    </style>
-    <pre></pre>
-
-    <form action="">
-        <div class="prologue">
-            <label for="">L'évenement est il un prologue ?</label>
-            <input type="radio" name="isPrologue" value="prologue" onclick="prologue_yes()"> oui
-            <input type="radio" name="isPrologue" value="value" onclick="prologue_no()" checked> non
-            <div class="hide" style="display:none">
+            <h1 class="title_info">Détermination des éléments de l'événement</h1>
+            <div class="normal">
                 <fieldset>
-                    <label for="citation">Citation : </label>
-                    <textarea rows="4" cols="50" id='citation' class="citation">Do or do not, there is no try.
-                    </textarea>
-                    <br>
-                    <label for="author">Auteur : </label>
-                    <input type="text" id="author" placeholder="JOHN CENAAAA !" class="author">
-                    <br>
-                    <label for="act_numbeur">Numéro de l'acte : </label>
-                    <input type="number" id="act_number" value="1" class="number">
-                    <br>
-                    <label for="act_title">Titre de l'acte : </label>
-                    <input type="text" id="act_title" placeholder="justgirlythings" class="title">
+                    <label for="question">Nature de la question : </label>
+                    <input id="question" type="text" class='question'>
+                    <table>
+                        <tr class="header_table">
+                            <td>Nature du choix</td>
+                            <td>Champ du texte</td>
+                            <td>Trigger next event (data_event)</td>
+                            <td>Narration (True = OUI / False = NON)</td>
+                        </tr>
+                        <tr>
+                            <td class="choice choiceA">Choix A</td>
+                            <td>
+                                <input type="text" class='text'>
+                            </td>
+                            <td>
+                                <input type="text" class='data_event'>
+                            </td>
+                            <td>
+                                <select name="" id="naration">
+                                    <option value="false">False</option>
+
+                                    <option value="true">True</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="choice choiceB">Choix B</td>
+                            <td>
+                                <input type="text" class='text'>
+                            </td>
+                            <td>
+                                <input type="text" class='data_event'>
+                            </td>
+                            <td>
+                                <select name="" id="naration">
+                                    <option value="false">False</option>
+
+                                    <option value="true">True</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="choice choiceC">Choix C</td>
+                            <td>
+                                <input type="text" class='text'>
+                            </td>
+                            <td>
+                                <input type="text" class='data_event'>
+                            </td>
+                            <td>
+                                <select name="" id="naration">
+                                    <option value="false">False</option>
+
+                                    <option value="true">True</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="choice choiceD">Choix D</td>
+                            <td>
+                                <input type="text" class='text'>
+                            </td>
+                            <td>
+                                <input type="text" class='data_event'>
+                            </td>
+                            <td>
+                                <select name="" id="naration">
+                                    <option value="false">False</option>
+
+                                    <option value="true">True</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
                 </fieldset>
+
             </div>
-        </div>
-
-
-        <div class="normal">
-            <fieldset>
-                <label for="question">Question</label>
-                <textarea id="question" class="question"></textarea>
-                <table>
-                    <tr>
-                        <td>Infos</td>
-                        <td>Texte</td>
-                        <td>data_event</td>
-                        <td>Narration</td>
-                    </tr>
-                    <tr>
-                        <td>Choix 1</td>
-                        <td>
-                            <input type="text" class='text'>
-                        </td>
-                        <td>
-                            <input type="text" class='data_event'>
-                        </td>
-                        <td>
-                            <select name="" id="naration">
-                                <option value="false">False</option>
-
-                                <option value="true">True</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Choix 2</td>
-                        <td>
-                            <input type="text" class='text'>
-                        </td>
-                        <td>
-                            <input type="text" class='data_event'>
-                        </td>
-                        <td>
-                            <select name="" id="naration">
-                                <option value="false">False</option>
-
-                                <option value="true">True</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Choix 3</td>
-                        <td>
-                            <input type="text" class='text'>
-                        </td>
-                        <td>
-                            <input type="text" class='data_event'>
-                        </td>
-                        <td>
-                            <select name="" id="naration">
-                                <option value="false">False</option>
-
-                                <option value="true">True</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Choix 4</td>
-                        <td>
-                            <input type="text" class='text'>
-                        </td>
-                        <td>
-                            <input type="text" class='data_event'>
-                        </td>
-                        <td>
-                            <select name="" id="naration">
-                                <option value="false">False</option>
-
-                                <option value="true">True</option>
-                            </select>
-                        </td>
-                    </tr>
-                </table>
-            </fieldset>
-
-        </div>
-        <div class="options">
-            <p><b><i>Options suplémentaires ? (facultatif)</i></b></p>
-            <input type='checkbox' value="timer" class="ignore" onclick="features(this)"> Timer
-            <input type="number" id="timer" class='timer' value="0">
-            <br>
-
-            <input type='checkbox' value="naration" class="ignore" onclick="features(this)"> Naration
-            <input type="text" id="naration" placeholder="insert data_event" class="naration">
-
-            <br>
-            <input type='checkbox' value="stats_change" class="ignore" onclick="features(this)"> Change stats
-            <br>
-            <div class="stats">
-
-                <label for="strenght">Force</label>
-                <input type="number" id="strenght" class="stats_change" value="0">
+            <div class="options_dlc">
+                <p>Options additionnelles (DLC)</p>
+                <input type='checkbox' value="timer" class="ignore" onclick="features(this)"> Timer
+                <input type="number" id="timer" class='timer' value="0">
                 <br>
 
-                <label for="perception">Perception</label>
-                <input type="number" id="perception" class="stats_change" value="0">
+                <input type='checkbox' value="naration" class="ignore" onclick="features(this)"> Naration
+                <input type="text" id="naration" placeholder="insert data_event" class="naration">
+
                 <br>
-                <label for="stamania">Endurance</label>
-                <input type="number" id="stamania" class="stats_change" value="0">
+                <input type='checkbox' value="stats_change" class="ignore" onclick="features(this)"> Change stats
                 <br>
-                <label for="luck">Chance</label>
-                <input type="number" id="luck" class="stats_change" value="0">
-                <br>
-                <label for="intelligence">Intelligence</label>
-                <input type="number" id="intelligence" class="stats_change" value="0">
-                <br>
-                <label for="agility">Agilité</label>
-                <input type="number" id="agility" class="stats_change" value="0">
-                <br>
-                <label for="lotalty">Loyauté</label>
-                <input type="number" id="loyalty" class="stats_change" value="0">
+                <div class="stats">
+
+                    <label for="strenght">Force</label>
+                    <input type="number" id="strenght" class="stats_change" value="0">
+                    <br>
+
+                    <label for="perception">Perception</label>
+                    <input type="number" id="perception" class="stats_change" value="0">
+                    <br>
+                    <label for="stamania">Endurance</label>
+                    <input type="number" id="stamania" class="stats_change" value="0">
+                    <br>
+                    <label for="luck">Chance</label>
+                    <input type="number" id="luck" class="stats_change" value="0">
+                    <br>
+                    <label for="intelligence">Intelligence</label>
+                    <input type="number" id="intelligence" class="stats_change" value="0">
+                    <br>
+                    <label for="agility">Agilité</label>
+                    <input type="number" id="agility" class="stats_change" value="0">
+                    <br>
+                    <label for="lotalty">Loyauté</label>
+                    <input type="number" id="loyalty" class="stats_change" value="0">
+
+                </div>
 
             </div>
 
-        </div>
+            <pre>
+            </pre>
+            <button type="submit">Création de l'objet</button>
 
-
-        <button type="submit">Create</button>
-
-
-        <h4>NOTE --> A LIRE</h4>
-        <p> Veulliez bien pensez a vider les formulaires des choix avant de cocher <i>narration</i> et pareil si vous voulez le décocher : vider son input. Soyez vigilant et ne remplissez que ce dont vous avez besoin, les changements de stats seront bientôt dev
-        </p>
-    </form>
+        </form>
 
 
 
 
 
 
-<<<<<<< HEAD
+        <!--          scripts           -->
+        <script>
+            var $ = {
+                id: function (id) {
+                    return document.getElementById(id);
+                },
+                el: function (el) {
+                    return document.querySelector(el);
+                },
+                class: function (el) {
+                    return document.getElementsByClassName(elClass);
+                },
+                tag: function (el) {
+                    return document.getElementsByTagName(tag);
+                },
+                all: function (el) {
+                    return document.querySelectorAll(el);
+                },
+            };
+            var resu;
+
 <<<<<<< HEAD
             function prologue_yes() {
                 $.el('.prologue .hide').style.display = 'block';
@@ -234,51 +256,37 @@
                     $.el('input.' + a.value).style.display = 'block';
                 }
 >>>>>>> origin/master
-=======
-    <!--          scripts           -->
-    <script>
-        var $ = {
-            id: function (id) {
-                return document.getElementById(id);
-            },
-            el: function (el) {
-                return document.querySelector(el);
-            },
-            class: function (el) {
-                return document.getElementsByClassName(elClass);
-            },
-            tag: function (el) {
-                return document.getElementsByTagName(tag);
-            },
-            all: function (el) {
-                return document.querySelectorAll(el);
-            },
-        };
-        var resu;
->>>>>>> parent of 9e70437... Beautify story generator of PULSAR
 
-        function prologue_yes() {
-            $.el('.prologue .hide').style.display = 'block';
-            $.el('.normal').style.display = 'none';
-        }
+            function prologue_no() {
+                $.el('.prologue .hide').style.display = 'none';
+                $.el('.normal').style.display = 'block';
+            }
 
-        function prologue_no() {
-            $.el('.prologue .hide').style.display = 'none';
-            $.el('.normal').style.display = 'block';
-        }
+            function features(a) {
+                if (a.checked) {
+                    if (a.value === 'naration') {
+                        $.el('.normal table').style.display = 'none';
+                        $.el('input.naration').style.display = 'block';
+                    } else if (a.value === 'stats_change') {
+                        $.el('.stats').style.display = 'block';
+                    } else {
+                        $.el('input.' + a.value).style.display = 'block';
+                    }
 
-        function features(a) {
-            console.log($.el('input.' + a.value));
-            if (a.checked) {
-                if (a.value === 'naration') {
-                    $.el('.normal table').style.display = 'none';
-                    $.el('input.naration').style.display = 'block';
-                } else if (a.value === 'stats_change') {
-                    $.el('.stats').style.display = 'block';
                 } else {
-                    $.el('input.' + a.value).style.display = 'block';
+                    if (a.value === 'naration') {
+                        $.el('.normal table').style.display = 'block';
+                        $.el('input.naration').style.display = 'none';
+
+                        if (resu.choix) {
+                            resu.choix = [];
+                        }
+                    } else if (a.value === 'stats_change') {
+                        $.el('.stats').style.display = 'none';
+                    } else {
+                        $.el('input.' + a.value).style.display = 'none';
+                    }
                 }
-<<<<<<< HEAD
             }
 <<<<<<< HEAD
 =======
@@ -304,102 +312,82 @@
                     title: null,
                 };
 >>>>>>> origin/master
-=======
->>>>>>> parent of 9e70437... Beautify story generator of PULSAR
 
-            } else {
-                if (a.value === 'naration') {
-                    $.el('.normal table').style.display = 'block';
-                    $.el('input.naration').style.display = 'none';
-
-                    if (resu.choix) {
-                        resu.choix = [];
+            function processForm(e) {
+                resu = {};
+                if (e.preventDefault) e.preventDefault();
+                var target = '';
+                if ($.el('.prologue .hide').style.display === 'none') {
+                    target = '.normal input, .normal textarea, .options input:not(.ignore)';
+                    var index_question = 0;
+                    resu = {
+                        question: null,
+                        choix: [],
                     }
-                } else if (a.value === 'stats_change') {
-                    $.el('.stats').style.display = 'none';
                 } else {
-                    $.el('input.' + a.value).style.display = 'none';
+                    target = '.prologue .hide input,.prologue textarea';
+                    resu = {
+                        citation: null,
+                        author: null,
+                        number: null,
+                        title: null,
+                    };
+
+
                 }
-            }
-        }
 
-        function processForm(e) {
-            resu = {};
-            if (e.preventDefault) e.preventDefault();
-            console.clear();
-            console.log(e, this);
-            var target = '';
-            if ($.el('.prologue .hide').style.display === 'none') {
-                target = '.normal input, .normal textarea, .options input:not(.ignore)';
-                var index_question = 0;
-                resu = {
-                    question: null,
-                    choix: [],
-                }
-            } else {
-                target = '.prologue .hide input,.prologue textarea';
-                resu = {
-                    citation: null,
-                    author: null,
-                    number: null,
-                    title: null,
-                };
+                [].forEach.call($.all(target), function (input, index) {
+                    if (input.value.length >= 1 && input.value != 0) {
+                        console.log(input);
+                        switch (input.className) {
+                            case 'question':
+                            case 'citation':
+                            case 'author':
+                            case 'title':
+                            resu[input.className] = input.value;
 
-
-            }
-
-        [].forEach.call($.all(target), function (input, index) {
-                if (input.value.length >= 1 && input.value != 0) {
-                    console.log(input);
-                    switch (input.className) {
-                    case 'question':
-                    case 'citation':
-                    case 'author':
-                    case 'title':
-                        resu[input.className] = input.value;
-
-                        break;
-                    case 'number':
-                    case 'timer':
-                        resu[input.className] = parseInt(input.value);
-                        break;
-                    case 'text':
-                        resu.choix.push({
-                            text: input.value,
-                            data_event: null,
-                        });
-                        break;
-                    case 'data_event':
-                        resu.choix[index_question][input.className] = input.value;
-                        index_question++;
-                        break;
-                    case 'naration':
-                        resu.choix.push({
-                            text: "",
-                            data_event: input.value,
-                            naration: true,
-                        });
-                        break;
-                    case 'stats_change':
+                            break;
+                            case 'number':
+                            case 'timer':
+                            resu[input.className] = parseInt(input.value);
+                            break;
+                            case 'text':
+                            resu.choix.push({
+                                text: input.value,
+                                data_event: null,
+                            });
+                            break;
+                            case 'data_event':
+                            resu.choix[index_question][input.className] = input.value;
+                            index_question++;
+                            break;
+                            case 'naration':
+                            resu.choix.push({
+                                text: "",
+                                data_event: input.value,
+                                naration: true,
+                            });
+                            break;
+                            case 'stats_change':
                         //comming soon
                         break;
-                    default:
+                        default:
                         break;
                     };
                 }
 
             });
-            $.el('pre').innerHTML = JSON.stringify(resu, null, 4)
-            console.log(resu);
-            return false;
-        }
-        var form = $.el('form');
-        if (form.attachEvent) {
-            form.attachEvent("submit", processForm);
-        } else {
-            form.addEventListener("submit", processForm);
-        }
-    </script>
-</body>
+                $.el('pre').innerHTML = JSON.stringify(resu, null, 4)
+                console.log(resu);
+                return false;
+            }
+            var form = $.el('form');
+            if (form.attachEvent) {
+                form.attachEvent("submit", processForm);
+            } else {
+                form.addEventListener("submit", processForm);
+            }
+        </script>
+    </body>
 
-</html>
+    </html>

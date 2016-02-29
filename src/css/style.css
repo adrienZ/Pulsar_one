@@ -7,6 +7,24 @@
   }
 }
 
+@-moz-keyframes pulsar-blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@-o-keyframes pulsar-blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
 @keyframes pulsar-blink {
   0% {
     opacity: 1;
@@ -25,6 +43,24 @@
   }
 }
 
+@-moz-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -35,6 +71,28 @@
 }
 
 @-webkit-keyframes remove {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@-moz-keyframes remove {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@-o-keyframes remove {
   0% {
     opacity: 1;
   }
@@ -81,8 +139,7 @@ body {
   width: 85%;
   margin: auto;
   text-align: center;
-  -webkit-animation: remove 5s paused forwards;
-          animation: remove 5s paused forwards;
+  animation: remove 5s paused forwards;
 }
 
 .intro .container .motion-glow {
@@ -99,10 +156,8 @@ body {
 }
 
 .intro .container p {
-  -webkit-animation: remove 1s forwards;
-          animation: remove 1s forwards;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  animation: remove 1s forwards;
+  animation-play-state: paused;
   line-height: 1.25;
 }
 
@@ -120,12 +175,11 @@ body {
   font-style: inherit;
   text-align: center;
   font-family: inherit;
+  -webkit-border-radius: 0;
   border-radius: 0;
   border: 1px solid transparent;
   -webkit-padding-start: 0;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
   line-height: 1em;
   outline: none;
   -webkit-appearance: none;
@@ -148,18 +202,13 @@ body {
 }
 
 .intro .container .translate {
-  -webkit-animation: fadeIn 1s;
-          animation: fadeIn 1s;
-  -webkit-transform: translateY(-65px);
-      -ms-transform: translateY(-65px);
-          transform: translateY(-65px);
+  animation: fadeIn 1s;
+  transform: translateY(-65px);
 }
 
 .main,
 .bottom-bar {
-  transition: -webkit-transform 0.15s;
   transition: transform 0.15s;
-  transition: transform 0.15s, -webkit-transform 0.15s;
 }
 
 .main {
@@ -172,6 +221,7 @@ body {
   width: 100%;
   height: 275px;
   background: #4b6cb7;
+  background: -webkit-linear-gradient(to right, #4b6cb7, #182848);
   background: linear-gradient(to right, #4b6cb7, #182848);
 }
 
@@ -183,6 +233,7 @@ body {
   width: 75%;
   height: 275px;
   background: #4b6cb7;
+  background: -webkit-linear-gradient(to right, #4b6cb7, #182848);
   background: linear-gradient(to right, #4b6cb7, #182848);
   opacity: 1;
 }
@@ -194,8 +245,7 @@ body {
   display: block;
   margin: auto;
   opacity: 0.5;
-  -webkit-animation: pulsar-blink 1s reverse 1s forwards;
-          animation: pulsar-blink 1s reverse 1s forwards;
+  animation: pulsar-blink 1s reverse 1s forwards;
 }
 
 .main .story {
@@ -233,9 +283,7 @@ body {
   position: absolute;
   right: calc(25% + 30px);
   bottom: 100px;
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
   font-size: 30px;
 }
 
@@ -276,9 +324,7 @@ body {
   display: block;
   position: relative;
   top: 10%;
-  transition: -webkit-transform 1s linear;
   transition: transform 1s linear;
-  transition: transform 1s linear, -webkit-transform 1s linear;
 }
 
 .ui-panel {
@@ -381,8 +427,7 @@ body {
 .ui-panel .pulsars span img {
   position: relative;
   top: 7.5px;
-  -webkit-animation: pulsar-blink 2.5s infinite 10s alternate ease-in;
-          animation: pulsar-blink 2.5s infinite 10s alternate ease-in;
+  animation: pulsar-blink 2.5s infinite 10s alternate ease-in;
 }
 
 .ui-panel .pulsars .pulsar-remainging {
@@ -424,43 +469,35 @@ body {
   opacity: 0;
   font-size: 16px;
   padding: 8px 0;
-  -webkit-animation: fade-in 2s forwards;
-          animation: fade-in 2s forwards;
+  animation: fade-in 2s forwards;
 }
 
 .ui-panel .user-stats ul li:nth-child(1) {
-  -webkit-animation-delay: 0.15s;
-          animation-delay: 0.15s;
+  animation-delay: 0.15s;
 }
 
 .ui-panel .user-stats ul li:nth-child(2) {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 .ui-panel .user-stats ul li:nth-child(3) {
-  -webkit-animation-delay: 0.45s;
-          animation-delay: 0.45s;
+  animation-delay: 0.45s;
 }
 
 .ui-panel .user-stats ul li:nth-child(4) {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 
 .ui-panel .user-stats ul li:nth-child(5) {
-  -webkit-animation-delay: 0.75s;
-          animation-delay: 0.75s;
+  animation-delay: 0.75s;
 }
 
 .ui-panel .user-stats ul li:nth-child(6) {
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
+  animation-delay: 0.9s;
 }
 
 .ui-panel .user-stats ul li:nth-child(7) {
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
+  animation-delay: 0.9s;
 }
 
 .ui-panel .user-stats ul li p {
@@ -537,9 +574,7 @@ body {
 
 .bottom-bar a {
   float: left;
-  -webkit-transform: translateX(15px);
-      -ms-transform: translateX(15px);
-          transform: translateX(15px);
+  transform: translateX(15px);
 }
 
 @media only screen and (max-width: 1100px) {
