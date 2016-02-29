@@ -9,6 +9,11 @@
   opacity: 0;
 }
 
+.prologue video {
+  min-width: 100%;
+  min-height: 100%;
+}
+
 .prologue .citation {
   color: white;
   width: 70%;

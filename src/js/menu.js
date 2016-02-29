@@ -32,10 +32,7 @@ menu.link[0].addEventListener('click', function () {
 
     //redirect to game at the end of the animation
     window.setTimeout(function () {
-        var url_debug = window.location.toString().split('');
-        url_debug.pop();
-        url_debug = url_debug.join("");
-        window.location = url_debug + 'template.html'
+        window.location = '/template.html'
     }, 1500);
 
 });

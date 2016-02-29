@@ -9,6 +9,10 @@ $fade_out_citation_delay: 6s;
     top: 0;
     z-index: 1;
     opacity: 0;
+    video {
+        min-width: 100%;
+        min-height: 100%;
+    }
     .citation {
         color: white;
         width: 70%;
