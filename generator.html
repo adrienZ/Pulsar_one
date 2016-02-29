@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TEMPLATING</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="src/fonts/font_import.css">
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">           </script>
+        <![endif]-->
+</head>
+
+<body>
+
+    <style>
+        .prologue input[type="radio"] {
+            display: inline-block;
+            display: none;
+        }
+        
+        input + input {
+            display: none;
+        }
+        
+        .stats {
+            display: none;
+        }
+        
+        .hide {
+            display: none;
+        }
+        
+        table td {
+            width: 300px;
+        }
+        
+        button {
+            text-align: center;
+            padding: 30px 40px;
+            display: block;
+            margin: auto;
+        }
+        
+        textarea {
+            vertical-align: middle;
+        }
+        
+        input {
+            margin-top: 10px;
+            height: 1.25em;
+        }
+        
+        .hide label {
+            width: 150px;
+            display: inline-block;
+            text-align: right;
+        }
+    </style>
+    <pre></pre>
+
+    <form action="">
+        <div class="prologue">
+            <label for="">L'évenement est il un prologue ?</label>
+            <input type="radio" name="isPrologue" value="prologue" onclick="prologue_yes()"> oui
+            <input type="radio" name="isPrologue" value="value" onclick="prologue_no()" checked> non
+            <div class="hide" style="display:none">
+                <fieldset>
+                    <label for="citation">Citation : </label>
+                    <textarea rows="4" cols="50" id='citation' class="citation">Do or do not, there is no try.
+                    </textarea>
+                    <br>
+                    <label for="author">Auteur : </label>
+                    <input type="text" id="author" placeholder="JOHN CENAAAA !" class="author">
+                    <br>
+                    <label for="act_numbeur">Numéro de l'acte : </label>
+                    <input type="number" id="act_number" value="1" class="number">
+                    <br>
+                    <label for="act_title">Titre de l'acte : </label>
+                    <input type="text" id="act_title" placeholder="justgirlythings" class="title">
+                </fieldset>
+            </div>
+        </div>
+
+
+        <div class="normal">
+            <fieldset>
+                <label for="question">Question</label>
+                <textarea id="question" class="question"></textarea>
+                <table>
+                    <tr>
+                        <td>Infos</td>
+                        <td>Texte</td>
+                        <td>data_event</td>
+                        <td>Narration</td>
+                    </tr>
+                    <tr>
+                        <td>Choix 1</td>
+                        <td>
+                            <input type="text" class='text'>
+                        </td>
+                        <td>
+                            <input type="text" class='data_event'>
+                        </td>
+                        <td>
+                            <select name="" id="naration">
+                                <option value="false">False</option>
+
+                                <option value="true">True</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Choix 2</td>
+                        <td>
+                            <input type="text" class='text'>
+                        </td>
+                        <td>
+                            <input type="text" class='data_event'>
+                        </td>
+                        <td>
+                            <select name="" id="naration">
+                                <option value="false">False</option>
+
+                                <option value="true">True</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Choix 3</td>
+                        <td>
+                            <input type="text" class='text'>
+                        </td>
+                        <td>
+                            <input type="text" class='data_event'>
+                        </td>
+                        <td>
+                            <select name="" id="naration">
+                                <option value="false">False</option>
+
+                                <option value="true">True</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Choix 4</td>
+                        <td>
+                            <input type="text" class='text'>
+                        </td>
+                        <td>
+                            <input type="text" class='data_event'>
+                        </td>
+                        <td>
+                            <select name="" id="naration">
+                                <option value="false">False</option>
+
+                                <option value="true">True</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+        </div>
+        <div class="options">
+            <p><b><i>Options suplémentaires ? (facultatif)</i></b></p>
+            <input type='checkbox' value="timer" class="ignore" onclick="features(this)"> Timer
+            <input type="number" id="timer" class='timer' value="0">
+            <br>
+
+            <input type='checkbox' value="naration" class="ignore" onclick="features(this)"> Naration
+            <input type="text" id="naration" placeholder="insert data_event" class="naration">
+
+            <br>
+            <input type='checkbox' value="stats_change" class="ignore" onclick="features(this)"> Change stats
+            <br>
+            <div class="stats">
+
+                <label for="strenght">Force</label>
+                <input type="number" id="strenght" class="stats_change" value="0">
+                <br>
+
+                <label for="perception">Perception</label>
+                <input type="number" id="perception" class="stats_change" value="0">
+                <br>
+                <label for="stamania">Endurance</label>
+                <input type="number" id="stamania" class="stats_change" value="0">
+                <br>
+                <label for="luck">Chance</label>
+                <input type="number" id="luck" class="stats_change" value="0">
+                <br>
+                <label for="intelligence">Intelligence</label>
+                <input type="number" id="intelligence" class="stats_change" value="0">
+                <br>
+                <label for="agility">Agilité</label>
+                <input type="number" id="agility" class="stats_change" value="0">
+                <br>
+                <label for="lotalty">Loyauté</label>
+                <input type="number" id="loyalty" class="stats_change" value="0">
+
+            </div>
+
+        </div>
+
+
+        <button type="submit">Create</button>
+
+
+        <h4>NOTE --> A LIRE</h4>
+        <p> Veulliez bien pensez a vider les formulaires des choix avant de cocher <i>narration</i> et pareil si vous voulez le décocher : vider son input. Soyez vigilant et ne remplissez que ce dont vous avez besoin, les changements de stats seront bientôt dev
+        </p>
+    </form>
+
+
+
+
+
+
+    <!--          scripts           -->
+    <script>
+        var $ = {
+            id: function (id) {
+                return document.getElementById(id);
+            },
+            el: function (el) {
+                return document.querySelector(el);
+            },
+            class: function (el) {
+                return document.getElementsByClassName(elClass);
+            },
+            tag: function (el) {
+                return document.getElementsByTagName(tag);
+            },
+            all: function (el) {
+                return document.querySelectorAll(el);
+            },
+        };
+        var resu;
+
+        function prologue_yes() {
+            $.el('.prologue .hide').style.display = 'block';
+            $.el('.normal').style.display = 'none';
+        }
+
+        function prologue_no() {
+            $.el('.prologue .hide').style.display = 'none';
+            $.el('.normal').style.display = 'block';
+        }
+
+        function features(a) {
+            console.log($.el('input.' + a.value));
+            if (a.checked) {
+                if (a.value === 'naration') {
+                    $.el('.normal table').style.display = 'none';
+                    $.el('input.naration').style.display = 'block';
+                } else if (a.value === 'stats_change') {
+                    $.el('.stats').style.display = 'block';
+                } else {
+                    $.el('input.' + a.value).style.display = 'block';
+                }
+
+            } else {
+                if (a.value === 'naration') {
+                    $.el('.normal table').style.display = 'block';
+                    $.el('input.naration').style.display = 'none';
+
+                    if (resu.choix) {
+                        resu.choix = [];
+                    }
+                } else if (a.value === 'stats_change') {
+                    $.el('.stats').style.display = 'none';
+                } else {
+                    $.el('input.' + a.value).style.display = 'none';
+                }
+            }
+        }
+
+        function processForm(e) {
+            resu = {};
+            if (e.preventDefault) e.preventDefault();
+            console.clear();
+            console.log(e, this);
+            var target = '';
+            if ($.el('.prologue .hide').style.display === 'none') {
+                target = '.normal input, .normal textarea, .options input:not(.ignore)';
+                var index_question = 0;
+                resu = {
+                    question: null,
+                    choix: [],
+                }
+            } else {
+                target = '.prologue .hide input,.prologue textarea';
+                resu = {
+                    citation: null,
+                    author: null,
+                    number: null,
+                    title: null,
+                };
+
+
+            }
+
+        [].forEach.call($.all(target), function (input, index) {
+                if (input.value.length >= 1 && input.value != 0) {
+                    console.log(input);
+                    switch (input.className) {
+                    case 'question':
+                    case 'citation':
+                    case 'author':
+                    case 'title':
+                        resu[input.className] = input.value;
+
+                        break;
+                    case 'number':
+                    case 'timer':
+                        resu[input.className] = parseInt(input.value);
+                        break;
+                    case 'text':
+                        resu.choix.push({
+                            text: input.value,
+                            data_event: null,
+                        });
+                        break;
+                    case 'data_event':
+                        resu.choix[index_question][input.className] = input.value;
+                        index_question++;
+                        break;
+                    case 'naration':
+                        resu.choix.push({
+                            text: "",
+                            data_event: input.value,
+                            naration: true,
+                        });
+                        break;
+                    case 'stats_change':
+                        //comming soon
+                        break;
+                    default:
+                        break;
+                    };
+                }
+
+            });
+            $.el('pre').innerHTML = JSON.stringify(resu, null, 4)
+            console.log(resu);
+            return false;
+        }
+        var form = $.el('form');
+        if (form.attachEvent) {
+            form.attachEvent("submit", processForm);
+        } else {
+            form.addEventListener("submit", processForm);
+        }
+    </script>
+</body>
+
+</html>

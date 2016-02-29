@@ -93,6 +93,11 @@ body {
   margin: auto;
 }
 
+.intro .container .motion-glow video {
+  min-width: 100%;
+  min-height: 100%;
+}
+
 .intro .container p {
   -webkit-animation: remove 1s forwards;
           animation: remove 1s forwards;
