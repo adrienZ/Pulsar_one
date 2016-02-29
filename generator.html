@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>PULSAR - Generateur d'histoire</title>
+    <title>TEMPLATING</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="src/fonts/font_import.css">
@@ -80,7 +80,6 @@
                     <input type="text" id="act_title" placeholder="justgirlythings" class="title">
                 </fieldset>
             </div>
-<<<<<<< HEAD
         </div>
 
 
@@ -211,195 +210,11 @@
         <p> Veulliez bien pensez a vider les formulaires des choix avant de cocher <i>narration</i> et pareil si vous voulez le décocher : vider son input. Soyez vigilant et ne remplissez que ce dont vous avez besoin, les changements de stats seront bientôt dev
         </p>
     </form>
-=======
-            <div class="clear"></div>
-        </header>
 
-        <div class="container">
-            <div class="note">
-                <h4>Notification</h4>
-                <p> Pensez à vider les formulaires des choix avant de cocher <i>narration</i> et pareil si vous voulez le décocher : vider son input. <br> Soyez vigilant et ne remplissez que ce dont vous avez besoin, les changements de stats seront bientôt développés.
-                </p>
-            </div>
-            <h1 class="title_info">Définition de la nature de l'évènement</h1>
-            <form action="">
-                <div class="prologue">
-                    <div class="question_prologue">
-                        <label for="">1 ) L'évenement est-il un prologue ?</label>
-                        <div class="options">
-                            <input type="radio" name="isPrologue" value="prologue" onclick="prologue_yes()"> 
-                            <label for="prologue">oui</label>
-                            <input type="radio" name="isPrologue" value="value" onclick="prologue_no()" checked>
-                            <label for="value">non</label>
-                        </div>
-                    </div>
-                    <div class="hide" style="display:none">
-                        <fieldset>
-                            <label for="citation">Citation : </label>
-                            <textarea rows="4" cols="100" id='citation' class="citation" placeholder="Do or do not, there is no try."></textarea>
-                            <br>
-                            <label for="author">Auteur : </label>
-                            <input type="text" id="author" placeholder="John Cena" class="author">
-                            <br>
-                            <label for="act_numbeur">Numéro de l'acte : </label>
-                            <input type="number" id="act_number" value="1" class="number">
-                            <br>
-                            <label for="act_title">Titre de l'acte : </label>
-                            <input type="text" id="act_title" placeholder="Chimichangas" class="title">
-                        </fieldset>
-                    </div>
-                </div>
 
-                <h1 class="title_info">Détermination des éléments de l'événement</h1>
-                <div class="normal">
-                    <fieldset>
-                        <label for="question">Nature de la question : </label>
-                        <input id="question" type="text" class='question'>
-                        <table>
-                            <tr class="header_table">
-                                <td>Nature du choix</td>
-                                <td>Champ du texte</td>
-                                <td>Trigger next event (data_event)</td>
-                                <td>Narration (True = OUI / False = NON)</td>
-                            </tr>
-                            <tr>
-                                <td class="choice choiceA">Choix A</td>
-                                <td>
-                                    <input type="text" class='text'>
-                                </td>
-                                <td>
-                                    <input type="text" class='data_event'>
-                                </td>
-                                <td>
-                                    <select name="" id="naration">
-                                        <option value="false">False</option>
 
-                                        <option value="true">True</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="choice choiceB">Choix B</td>
-                                <td>
-                                    <input type="text" class='text'>
-                                </td>
-                                <td>
-                                    <input type="text" class='data_event'>
-                                </td>
-                                <td>
-                                    <select name="" id="naration">
-                                        <option value="false">False</option>
 
-                                        <option value="true">True</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="choice choiceC">Choix C</td>
-                                <td>
-                                    <input type="text" class='text'>
-                                </td>
-                                <td>
-                                    <input type="text" class='data_event'>
-                                </td>
-                                <td>
-                                    <select name="" id="naration">
-                                        <option value="false">False</option>
 
-                                        <option value="true">True</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="choice choiceD">Choix D</td>
-                                <td>
-                                    <input type="text" class='text'>
-                                </td>
-                                <td>
-                                    <input type="text" class='data_event'>
-                                </td>
-                                <td>
-                                    <select name="" id="naration">
-                                        <option value="false">False</option>
-
-                                        <option value="true">True</option>
-                                    </select>
-                                </td>
-                            </tr>
-                        </table>
-                    </fieldset>
-
-                </div>
-                <div class="options_dlc">
-                    <p>Options additionnelles (DLC)</p>
-                    <input type='checkbox' value="timer" class="ignore" onclick="features(this)"> Timer
-                    <input type="number" id="timer" class='timer' value="0">
-                    <br>
-
-                    <input type='checkbox' value="naration" class="ignore" onclick="features(this)"> Naration
-                    <input type="text" id="naration" placeholder="insert data_event" class="naration">
-
-                    <br>
-                    <input type='checkbox' value="stats_change" class="ignore" onclick="features(this)"> Change stats
-                    <br>
-                    <div class="stats">
-
-                        <label for="strenght">Force</label>
-                        <input type="number" id="strenght" class="stats_change" value="0">
-                        <br>
->>>>>>> origin/master
-
-                        <label for="perception">Perception</label>
-                        <input type="number" id="perception" class="stats_change" value="0">
-                        <br>
-                        <label for="stamania">Endurance</label>
-                        <input type="number" id="stamania" class="stats_change" value="0">
-                        <br>
-                        <label for="luck">Chance</label>
-                        <input type="number" id="luck" class="stats_change" value="0">
-                        <br>
-                        <label for="intelligence">Intelligence</label>
-                        <input type="number" id="intelligence" class="stats_change" value="0">
-                        <br>
-                        <label for="agility">Agilité</label>
-                        <input type="number" id="agility" class="stats_change" value="0">
-                        <br>
-                        <label for="lotalty">Loyauté</label>
-                        <input type="number" id="loyalty" class="stats_change" value="0">
-
-                    </div>
-
-                </div>
-
-                <pre>
-                </pre>
-                <button type="submit">Création de l'objet</button>
-
-<<<<<<< HEAD
-=======
-            </form>
-        </div>
-        <!--          scripts           -->
-        <script>
-            var $ = {
-                id: function (id) {
-                    return document.getElementById(id);
-                },
-                el: function (el) {
-                    return document.querySelector(el);
-                },
-                class: function (el) {
-                    return document.getElementsByClassName(elClass);
-                },
-                tag: function (el) {
-                    return document.getElementsByTagName(tag);
-                },
-                all: function (el) {
-                    return document.querySelectorAll(el);
-                },
-            };
-            var resu;
->>>>>>> origin/master
 
     <!--          scripts           -->
     <script>
