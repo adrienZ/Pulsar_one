@@ -10,9 +10,12 @@ user.set_name = function (new_name) {
 //the user is begining a new game
 if (user.game === 'intro') {
     // EXEPTION --> citatation appears first , but i cant render it so i use an extra div
-    $.el('section.new').style.display = 'block';
+    $.el('section.new').style.opacity = '1';
+    $.el('section.new').style.zIndex = '2';
     window.setTimeout(function () {
         $.el('section.new').remove();
+        $.el('section.prologue').style.zIndex = '-1';
+
     }, 4000);
     //remove the extra div lead to the input part where the player have to give his name
 
@@ -48,6 +51,8 @@ if (user.game === 'intro') {
 
                     $.el('.intro .container').style.animationPlayState = 'running';
                     window.setTimeout(function () {
+                        $.el('section.prologue').style.zIndex = '2';
+
                         render(current_act.prologue);
                     }, fade_out_delay * 1000);
                 }, 2000);

@@ -7,31 +7,12 @@ $fade_out_citation_delay: 6s;
     background: black;
     position: absolute;
     top: 0;
-    z-index: 2;
-    display: none;
-//    &.new {
-//        z-index: 2;
-//        display: none;
-//        .splash-screen {
-//            h1 {
-//                animation: slideLeft 1s ease-in-out 0s normal running 1 forwards, slideLeft 1s ease-in-out 3s reverse running 1 forwards;
-//            }
-//            .bar {
-//                animation: expandBar 1s ease-in-out 0s normal running 1 forwards, expandBar 1s ease-in-out 3s reverse running 1 forwards;
-//            }
-//            h2 {
-//                animation: slideRight 1s ease-in-out 0s normal running 1 forwards, slideRight 1s ease-in-out 3s reverse running 1 forwards;
-//            }
-//        }
-//        .pagination-acte {
-//            animation: fadeIn 1s ease-out .75s normal running 1 forwards, fadeIn 1s ease-out 3s reverse running 1 forwards;
-//            .dots {
-//                &.active {
-//                    animation: blinkDot 1.5s ease-in-out 0s normal running infinite forwards;
-//                }
-//            }
-//        }
-//    }
+    z-index: 1;
+    opacity: 0;
+    video {
+        min-width: 100%;
+        min-height: 100%;
+    }
     .citation {
         color: white;
         width: 70%;
@@ -54,22 +35,27 @@ $fade_out_citation_delay: 6s;
     }
     // Style splash-screen
     .hide {
-        display: none;
+    display: none;
     }
     .splash-screen {
+        opacity: 1;
         margin: auto;
         margin-top: 40vh;
         text-align: center;
         width: 100%;
+        visibility: visible;
         color: white;
         transform: translate3d(0px, 0, 0);
         font-family: 'Gotham', Arial, sans-serif;
         text-transform: uppercase;
         font-size: 2rem;
+        //        * {
+        //            animation-play-state: paused!important;
+        //        }
         h1 {
             transform: translate3d(0px, 0, 0);
             font-weight: bold;
-            animation: slideLeft 1s ease-in-out 0s normal running 1 forwards, slideLeft 1s ease-in-out 3s reverse running 1 forwards;
+            animation: slideLeft 1s ease-in-out 0s normal paused 1 forwards, slideLeft 1s ease-in-out 3s reverse running 1 forwards;
         }
         .bar {
             transform: translate3d(0px, 0, 0);
@@ -78,20 +64,20 @@ $fade_out_citation_delay: 6s;
             margin: 1rem auto;
             background-color: white;
             backface-visibility: hidden;
-            animation: expandBar 1s ease-in-out 0s normal running 1 forwards, expandBar 1s ease-in-out 3s reverse running 1 forwards;
+            animation: expandBar 1s ease-in-out 0s normal paused 1 forwards, expandBar 1s ease-in-out 3s reverse running 1 forwards;
         }
         h2 {
             transform: translate3d(0px, 0, 0);
             margin-top: 1.5rem;
             font-weight: 200;
-            animation: slideRight 1s ease-in-out 0s normal running 1 forwards, slideRight 1s ease-in-out 3s reverse running 1 forwards;
+            animation: slideRight 1s ease-in-out 0s normal paused 1 forwards, slideRight 1s ease-in-out 3s reverse running 1 forwards;
         }
     }
     .pagination-acte {
         transform: translate3d(0px, 0, 0);
         opacity: 0;
         width: 100%;
-        animation: fadeIn 1s ease-out .75s normal running 1 forwards, fadeIn 1s ease-out 3s reverse running 1 forwards;
+        animation: fadeIn 1s ease-out .75s normal paused 1 forwards, fadeIn 1s ease-out 3s reverse running 1 forwards;
         .dots {
             transform: translate3d(0px, 0, 0);
             display: inline-block;

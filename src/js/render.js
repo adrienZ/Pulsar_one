@@ -27,7 +27,7 @@ function render(event) {
     //this when the user begin a new act
     if (event.hasOwnProperty('citation')) {
         $.prologue = $.el('.prologue');
-        $.prologue.style.display = 'block';
+        $.prologue.style.opacity = 1;
         var citation = document.querySelector('.citation');
         var splashScreen = document.querySelector('.splash-screen');
 
@@ -52,13 +52,18 @@ function render(event) {
             prologue_texts.dots[i].classList.add('active');
         }
 
-
         //exception : the user is playing for the first time
         if (user.game == 'intro') {
             //already shown in game.js
             citation.remove();
             //but show the act title
+
             splashScreen.classList.remove('hide');
+            $.el('.prologue .splash-screen h1').style.animationPlayState = 'running';
+            $.el('.prologue .splash-screen h2').style.animationPlayState = 'running';
+            $.el('.prologue .splash-screen .bar').style.animationPlayState = 'running';
+            $.el('.prologue .splash-screen .pagination-acte').style.animationPlayState = 'running';
+
             window.setTimeout(function () {
                 splashScreen.remove();
                 //RENDER NEXT EVENT HERE
