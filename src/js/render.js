@@ -16,12 +16,14 @@ var ui = {
 
 
 
-var current_act = data.act_1;
-
-
-// all the data i need to stop the typed effect with write()
+//var current_act = data.act_1;
+var current_act = data.act_2;
 ui.skip = [];
 var skip = false;
+
+//render(current_act.a2_0);
+
+// all the data i need to stop the typed effect with write()
 //function render
 function render(event) {
     //this when the user begin a new act
@@ -40,7 +42,6 @@ function render(event) {
             act: $.prologue.querySelector('.splash-screen h1'),
             dots: $.prologue.querySelectorAll('.pagination-acte .dots'),
         }
-
 
 
         //templating with data
@@ -82,8 +83,11 @@ function render(event) {
         //avoid console errors
         return false;
 
-    }
+    } else {
+        $.el('.prologue').style.zIndex = -1;
+        $.el('.prologue:not(.new)').style.zIndex = -1;
 
+    }
     //cleaning previous answers
     $.pad.querySelector('ul').innerHTML = "";
     //pushing story's text in the div
@@ -120,6 +124,11 @@ function render(event) {
             $.pad.querySelector('ul').lastChild.querySelector('a').setAttribute('data-stats', 'true');
 
         }
+        if (choice.hasOwnProperty('pop_up')) {
+            //we may need a variable here
+            $.pad.querySelector('ul').lastChild.querySelector('a').setAttribute('data-pop-up', choice.pop_up);
+
+        }
 
         $.commands = $.pad.querySelectorAll('ul li a');
     });
@@ -133,10 +142,15 @@ function render(event) {
         [].forEach.call($.commands, function (elem, index) {
 
         elem.addEventListener('click', function () {
+            $.histoire.scrollTop = $.histoire.scrollHeight;
+
             //call the render function by getting data event attribute
             render(current_act[this.getAttribute('data-event')]);
             // SKIP HERE / be careful with this global
             skip = true;
+            if (elem.getAttribute('data-pop-up')) {
+                create_pop_up(this.getAttribute('data-pop-up'));
+            }
             if (elem.getAttribute('data-stats')) {
 
 
@@ -165,8 +179,6 @@ function render(event) {
         //if data-stats , the user's stats will be modified   
 
     });
-
-
 
 
 
@@ -223,6 +235,20 @@ function render(event) {
 
 };
 
+function create_pop_up(str) {
+
+    var pop_up_DOM = document.createElement('div');
+    pop_up_DOM.classList.add('pop_up');
+    $.el('.main').appendChild(pop_up_DOM);
+    var auto_destruction_delay = window.getComputedStyle($.el('.main').lastChild).getPropertyValue('animation-duration');
+    $.el('.pop_up').innerHTML = '<div class="icon"></div><div class="message">' + str + '</div>';
+    window.setInterval(function () {
+        $.el('.pop_up').remove();
+    }, parseInt(auto_destruction_delay) * 1000);
+}
+
+
+
 
 
 function write(txt, parent) {
@@ -251,6 +277,8 @@ function write(txt, parent) {
             }, 15);
             //audio.play(); turn down the volume xD
             if (skip == true) {
+                $.histoire.scrollTop = $.histoire.scrollHeight;
+
                 //cut typed effect on previous <p>
                 clearInterval(ui.skip[ui.skip.length - 2].interval);
                 //clear <p>
@@ -268,8 +296,9 @@ function write(txt, parent) {
 
             if (index_text === txt.length - 1) {
                 clearInterval(writing);
+                $.histoire.scrollTop = $.histoire.scrollHeight;
+
             }
-            $.histoire.scrollTop = $.histoire.scrollHeight;
         }, 15);
 
 

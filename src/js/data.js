@@ -5,6 +5,7 @@ var data = {
             author: null,
             number: 1,
             title: 'Le début de la fin',
+            change_act: 2,
         },
     },
     act_2: {
@@ -25,6 +26,7 @@ var data = {
                     text: "",
                     data_event: "a2_2",
                     naration: true,
+                    pop_up: 'Chronos s\'en souviendra',
                 },
             ],
         },
@@ -41,7 +43,7 @@ var data = {
 
         'a2_3': {
             question: 'Chronos : ' + user.name + ' ! Destinée m’a annoncée ta fin prochaine. J’ai besoin de ton aide. Je veux te laisser une seconde chance.',
-            timer: 5,
+            //timer: 5,
             choix: [
                 {
                     text: "Je suis déjà mort ?",
@@ -58,6 +60,10 @@ var data = {
 
                 },
                 {
+                    text: "Mais attendez où je suis ?",
+                    data_event: "a2_4_2",
+
+                }, {
                     text: "Mais attendez où je suis ?",
                     data_event: "a2_4_2",
 

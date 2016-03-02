@@ -9,6 +9,7 @@ $_panel_button_height: 30px;
 $_ui_stats_delay: 0.15s;
 //ui-game (main)//
 $_game_story_height: 40vh;
+$pop_up_height: 80px;
 //function to em
 $browser-context: 16;
 @function em($pixels, $context: $browser-context) {

@@ -1,13 +1,13 @@
 user.set_name = function (new_name) {
-    user.name = new_name;
-    user = JSON.stringify(user);
-    savegame.delete_save('user_save');
-    savegame.create_save('user_save', user, 7);
-    user = JSON.parse(user);
+        user.name = new_name;
+        user = JSON.stringify(user);
+        savegame.delete_save('user_save');
+        savegame.create_save('user_save', user, 7);
+        user = JSON.parse(user);
 
-}
-
-//the user is begining a new game
+    }
+    //user.game = "frbuh";
+    //the user is begining a new game
 if (user.game === 'intro') {
     // EXEPTION --> citatation appears first , but i cant render it so i use an extra div
     $.el('section.new').style.opacity = '1';

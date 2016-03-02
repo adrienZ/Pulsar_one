@@ -30,10 +30,10 @@
                 height: 40vh;
                 width: 40vh;
                 margin: auto;
-                    video {
-        min-width: 100%;
-        min-height: 100%;
-    }
+                video {
+                    min-width: 100%;
+                    min-height: 100%;
+                }
             }
             p {
                 animation: remove 1s forwards;
@@ -188,6 +188,33 @@
                     top: 10%;
                     transition: transform 1s linear;
                 }
+            }
+        }
+        .pop_up {
+            font-family: 'Gotham', 'Arial', sans-serif;
+            font-size: 0.9em;
+            position: absolute;
+            width: 300px;
+            height: $pop_up_height;
+            background: rgba(24, 40, 72, 0.95);
+            box-shadow: 0px 5px 10px #0b1322;
+            top: 50px;
+            right: calc(25vw + 20px);
+            backface-visibility: hidden;
+            animation: pop-up 5s ease-in-out forwards;
+            .icon {
+                float: left;
+                width: 25%;
+                background: url(http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons-256/3d-glossy-orange-orbs-icons-alphanumeric/104839-3d-glossy-orange-orb-icon-alphanumeric-exclamation-point1.png) no-repeat center center;
+                height: 100%;
+                background-size: cover;
+            }
+            .message {
+                float: left;
+                width: 75%;
+                height: 100%;
+                line-height: $pop_up_height;
+                text-align: center;
             }
         }
     }
@@ -362,10 +389,12 @@
                 background: #353732;
                 font-size: 12px;
                 width: 100%;
+                color: white;
                 text-align: left;
                 padding-left: 30px;
                 height: $_panel_button_height;
                 line-height: $_panel_button_height;
+                border: none;
             }
             ul {
                 li {
