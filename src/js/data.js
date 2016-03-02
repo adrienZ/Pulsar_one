@@ -7,6 +7,15 @@ var data = {
             title: 'Le début de la fin',
             change_act: 2,
         },
+        a1_0:  {
+            question: 'Vous êtes au lit les yeux fermés dans votre chambre. Au loin, on entend une télévision. Qu’entendez-vous ?',
+            choix: [{
+                text: '',
+                data_event: 'a2_0',
+                naration: true,
+                change_act: 2,
+            }],
+        }
     },
     act_2: {
         'a2_0': {
@@ -62,11 +71,6 @@ var data = {
                 {
                     text: "Mais attendez où je suis ?",
                     data_event: "a2_4_2",
-
-                }, {
-                    text: "Mais attendez où je suis ?",
-                    data_event: "a2_4_2",
-
                 },
             ],
         },
@@ -225,5 +229,9 @@ var data = {
             ],
         },
     },
+    methods: {
+        find_parent: function () {
 
+        }
+    }
 };

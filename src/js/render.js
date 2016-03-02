@@ -17,7 +17,7 @@ var ui = {
 
 
 //var current_act = data.act_1;
-var current_act = data.act_2;
+var current_act = data.act_1;
 ui.skip = [];
 var skip = false;
 
@@ -26,6 +26,7 @@ var skip = false;
 // all the data i need to stop the typed effect with write()
 //function render
 function render(event) {
+
     //this when the user begin a new act
     if (event.hasOwnProperty('citation')) {
         $.prologue = $.el('.prologue');
@@ -68,6 +69,9 @@ function render(event) {
             window.setTimeout(function () {
                 splashScreen.remove();
                 //RENDER NEXT EVENT HERE
+                $.el('.intro').remove();
+                render(current_act.a1_0);
+
             }, 5000);
         }
         //normal case , the user begin a act wich is not act 1
@@ -127,9 +131,11 @@ function render(event) {
         if (choice.hasOwnProperty('pop_up')) {
             //we may need a variable here
             $.pad.querySelector('ul').lastChild.querySelector('a').setAttribute('data-pop-up', choice.pop_up);
-
         }
 
+        if (choice.hasOwnProperty('change_act')) {
+            $.pad.querySelector('ul').lastChild.querySelector('a').setAttribute('data-act', choice.change_act);
+        }
         $.commands = $.pad.querySelectorAll('ul li a');
     });
 
@@ -143,7 +149,9 @@ function render(event) {
 
         elem.addEventListener('click', function () {
             $.histoire.scrollTop = $.histoire.scrollHeight;
-
+            if (elem.getAttribute('data-act')) {
+                current_act = data['act_' + this.getAttribute('data-act')];
+            }
             //call the render function by getting data event attribute
             render(current_act[this.getAttribute('data-event')]);
             // SKIP HERE / be careful with this global
@@ -151,6 +159,7 @@ function render(event) {
             if (elem.getAttribute('data-pop-up')) {
                 create_pop_up(this.getAttribute('data-pop-up'));
             }
+
             if (elem.getAttribute('data-stats')) {
 
 
