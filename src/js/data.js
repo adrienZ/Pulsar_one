@@ -11,13 +11,20 @@ var data = {
             question: 'Vous êtes au lit les yeux fermés dans votre chambre. Au loin, on entend une télévision. Qu’entendez-vous ?',
             choix: [{
                 text: '',
-                data_event: 'a2_0',
+                data_event: 'prologue',
                 naration: true,
                 change_act: 2,
             }],
         }
     },
     act_2: {
+        prologue: {
+            citation: 'Si vous n\'aimez pas quelque chose, changez-le. Si vous ne pouvez pas le changer, changez votre attitude.',
+            "author": "Maya Angelou",
+            "number": 2,
+            "title": "Un réveil trouble",
+            data_event: 'a2_0',
+        },
         'a2_0': {
             question: 'Vous êtes à terre, les yeux fermés avec une très grosse migraine. Tout autour de vous semble être que du vide. Vous ne pouvez que sentir un sol très lisse avec vos mains. Il est temps de se lever. Vous essayez d’ouvrir vos yeux...',
             choix: [
@@ -229,9 +236,17 @@ var data = {
             ],
         },
     },
-    methods: {
-        find_parent: function () {
+};
 
+
+function set_parents() {
+    var acts = Object.keys(data);;
+    for (var i = 0; i < acts.length; i++) {
+        for (var event in data[acts[i]]) {
+            data[acts[i]][event].parent = event;
+            data[acts[i]].index = i + 1;
         }
     }
-};
+}
+
+set_parents();

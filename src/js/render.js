@@ -6,6 +6,7 @@ $.pad = $.el('.questions');
 //icon hover helper
 var ui = {
     icon_help_text: ['sauvegardez votre partie', 'musique', 'son', 'plein écran'],
+    skip: [],
 };
         [].forEach.call($.ui.menu_icons, function (icon, index) {
     icon.addEventListener('mouseenter', function () {
@@ -13,23 +14,44 @@ var ui = {
     });
 });
 
+if (user.game !== 'intro') {
+    current_act = data['act_' + user.game.act];
+    console.log(current_act, user.game.event);
+    render(current_act[user.game.event]);
+
+}
 
 
 
 //var current_act = data.act_1;
-var current_act = data.act_1;
-ui.skip = [];
+//var current_act = data.act_1;
 var skip = false;
+
+
+
 
 //render(current_act.a2_0);
 
 // all the data i need to stop the typed effect with write()
 //function render
 function render(event) {
-
+    console.log(event);
+    if (event.parent !== 'prologue') {
+        user.game = {
+            event: event.parent,
+        }
+        user.game.act = event.parent[1];
+        savegame.erase_save('user_save', user);
+    }
     //this when the user begin a new act
     if (event.hasOwnProperty('citation')) {
-        $.prologue = $.el('.prologue');
+        if (user.game === 'info') {
+            $.prologue = $.el('.prologue');
+
+        } else {
+            $.prologue = $.el('.prologue:not(.new)');
+
+        }
         $.prologue.style.opacity = 1;
         var citation = document.querySelector('.citation');
         var splashScreen = document.querySelector('.splash-screen');
@@ -44,7 +66,6 @@ function render(event) {
             dots: $.prologue.querySelectorAll('.pagination-acte .dots'),
         }
 
-
         //templating with data
         prologue_texts.citation.innerHTML = event.citation;
         prologue_texts.author.innerHTML = event.author;
@@ -57,7 +78,7 @@ function render(event) {
         //exception : the user is playing for the first time
         if (user.game == 'intro') {
             //already shown in game.js
-            citation.remove();
+            citation.style.display = 'none';
             //but show the act title
 
             splashScreen.classList.remove('hide');
@@ -67,20 +88,31 @@ function render(event) {
             $.el('.prologue .splash-screen .pagination-acte').style.animationPlayState = 'running';
 
             window.setTimeout(function () {
-                splashScreen.remove();
                 //RENDER NEXT EVENT HERE
                 $.el('.intro').remove();
+
                 render(current_act.a1_0);
+                user.game = {
+                    act: 1,
+                    event: 'a1_0',
+                }
+                savegame.erase_save('user_save', user);
 
             }, 5000);
         }
         //normal case , the user begin a act wich is not act 1
         else {
+            citation.style.display = "block";
+
+            $.prologue.style.zIndex = 2;
             window.setTimeout(function () {
-                citation.remove();
+                citation.style.display = 'none';
+                console.log(citation);
                 splashScreen.classList.remove('hide');
                 window.setTimeout(function () {
-                    splashScreen.remove();
+                    $.prologue.style.zIndex = -1;
+                    render(current_act[event.data_event])
+                        //splashScreen.remove();
                 }, 5000);
             }, 6500);
         }
@@ -251,7 +283,7 @@ function create_pop_up(str) {
     $.el('.main').appendChild(pop_up_DOM);
     var auto_destruction_delay = window.getComputedStyle($.el('.main').lastChild).getPropertyValue('animation-duration');
     $.el('.pop_up').innerHTML = '<div class="icon"></div><div class="message">' + str + '</div>';
-    window.setInterval(function () {
+    window.setTimeout(function () {
         $.el('.pop_up').remove();
     }, parseInt(auto_destruction_delay) * 1000);
 }
@@ -265,7 +297,6 @@ function write(txt, parent) {
     else if (typeof txt === "string") {
         var content = document.createElement('p');
         parent.appendChild(content);
-
         // when previous text doesnt exist
         if (ui.skip.length === 0) {
             var first = {
@@ -289,14 +320,17 @@ function write(txt, parent) {
                 $.histoire.scrollTop = $.histoire.scrollHeight;
 
                 //cut typed effect on previous <p>
-                clearInterval(ui.skip[ui.skip.length - 2].interval);
-                //clear <p>
-                parent.childNodes[parent.childNodes.length - 2].innerHTML = "";
-                //fill the previous text on one shot <p>
-                parent.childNodes[parent.childNodes.length - 2].innerHTML = ui.skip[ui.skip.length - 2].text;
-                // reboot skip global
-                skip = false;
-                //else --> typed effect
+                if (ui.skip[ui.skip.length - 2] !== undefined) {
+                    clearInterval(ui.skip[ui.skip.length - 2].interval);
+                    //clear <p>
+                    parent.childNodes[parent.childNodes.length - 2].innerHTML = "";
+                    //fill the previous text on one shot <p>
+                    parent.childNodes[parent.childNodes.length - 2].innerHTML = ui.skip[ui.skip.length - 2].text;
+                    // reboot skip global
+                    skip = false;
+                    //else --> typed effect
+                }
+
             } else {
 
                 index_text++;

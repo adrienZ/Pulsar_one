@@ -41,6 +41,10 @@ savegame.erase_save = function (name, datas) {
     savegame.get_save(name);
 };
 
+savegame.reset_game = function () {
+    user.game = 'intro';
+    savegame.erase_save('user_save', user);
+};
 
 if (document.cookie.indexOf("user_save") >= 0) { //detect the cookie we want
     //DEFINE VARIABLE HERE
