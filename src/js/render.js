@@ -16,10 +16,14 @@ var ui = {
 
 if (user.game !== 'intro') {
     current_act = data['act_' + user.game.act];
-    console.log(current_act, user.game.event);
+    //console.log(current_act, current_act[user.game.event]);
     render(current_act[user.game.event]);
-
+    if ($.el('.prologue.new')) {
+        $.el('.prologue.new').remove();
+    }
+    $.el('.prologue').style.zIndex = -1;
 }
+
 
 
 
@@ -45,83 +49,11 @@ function render(event) {
     }
     //this when the user begin a new act
     if (event.hasOwnProperty('citation')) {
-        if (user.game === 'info') {
-            $.prologue = $.el('.prologue');
 
-        } else {
-            $.prologue = $.el('.prologue:not(.new)');
-
-        }
-        $.prologue.style.opacity = 1;
-        var citation = document.querySelector('.citation');
-        var splashScreen = document.querySelector('.splash-screen');
-
-
-        // catch all the DOM to template
-        var prologue_texts = {
-            citation: $.prologue.querySelector('.citation p'),
-            author: $.prologue.querySelector('.citation p:last-child'),
-            title: $.prologue.querySelector('.splash-screen h2'),
-            act: $.prologue.querySelector('.splash-screen h1'),
-            dots: $.prologue.querySelectorAll('.pagination-acte .dots'),
-        }
-
-        //templating with data
-        prologue_texts.citation.innerHTML = event.citation;
-        prologue_texts.author.innerHTML = event.author;
-        prologue_texts.title.innerHTML = event.title;
-        prologue_texts.act.innerHTML = 'Acte ' + event.number;
-        for (var i = 0; i < event.number; i++) {
-            prologue_texts.dots[i].classList.add('active');
-        }
-
-        //exception : the user is playing for the first time
-        if (user.game == 'intro') {
-            //already shown in game.js
-            citation.style.display = 'none';
-            //but show the act title
-
-            splashScreen.classList.remove('hide');
-            $.el('.prologue .splash-screen h1').style.animationPlayState = 'running';
-            $.el('.prologue .splash-screen h2').style.animationPlayState = 'running';
-            $.el('.prologue .splash-screen .bar').style.animationPlayState = 'running';
-            $.el('.prologue .splash-screen .pagination-acte').style.animationPlayState = 'running';
-
-            window.setTimeout(function () {
-                //RENDER NEXT EVENT HERE
-                $.el('.intro').remove();
-
-                render(current_act.a1_0);
-                user.game = {
-                    act: 1,
-                    event: 'a1_0',
-                }
-                savegame.erase_save('user_save', user);
-
-            }, 5000);
-        }
-        //normal case , the user begin a act wich is not act 1
-        else {
-            citation.style.display = "block";
-
-            $.prologue.style.zIndex = 2;
-            window.setTimeout(function () {
-                citation.style.display = 'none';
-                console.log(citation);
-                splashScreen.classList.remove('hide');
-                window.setTimeout(function () {
-                    $.prologue.style.zIndex = -1;
-                    render(current_act[event.data_event])
-                        //splashScreen.remove();
-                }, 5000);
-            }, 6500);
-        }
-        //avoid console errors
+        show_prologue(event);
         return false;
-
     } else {
-        $.el('.prologue').style.zIndex = -1;
-        $.el('.prologue:not(.new)').style.zIndex = -1;
+        $.el('.prologue').zIndex = 1 * -1;
 
     }
     //cleaning previous answers
@@ -160,6 +92,12 @@ function render(event) {
             $.pad.querySelector('ul').lastChild.querySelector('a').setAttribute('data-stats', 'true');
 
         }
+        if (choice.hasOwnProperty('get_success')) {
+            //we may need a variable here
+            console.log('obj');
+            $.pad.querySelector('ul').lastChild.querySelector('a').setAttribute('data-success', choice.get_success);
+
+        }
         if (choice.hasOwnProperty('pop_up')) {
             //we may need a variable here
             $.pad.querySelector('ul').lastChild.querySelector('a').setAttribute('data-pop-up', choice.pop_up);
@@ -190,6 +128,11 @@ function render(event) {
             skip = true;
             if (elem.getAttribute('data-pop-up')) {
                 create_pop_up(this.getAttribute('data-pop-up'));
+            }
+            if (elem.getAttribute('data-success')) {
+                user.success.push(data.backstory.success[this.getAttribute('data-success')]);
+                console.log(data.backstory.success[this.getAttribute('data-success')].img);
+                create_success(data.backstory.success[this.getAttribute('data-success')].img);
             }
 
             if (elem.getAttribute('data-stats')) {
@@ -279,12 +222,24 @@ function render(event) {
 function create_pop_up(str) {
 
     var pop_up_DOM = document.createElement('div');
-    pop_up_DOM.classList.add('pop_up');
+    pop_up_DOM.classList.add('pop_up', 'notif');
     $.el('.main').appendChild(pop_up_DOM);
     var auto_destruction_delay = window.getComputedStyle($.el('.main').lastChild).getPropertyValue('animation-duration');
-    $.el('.pop_up').innerHTML = '<div class="icon"></div><div class="message">' + str + '</div>';
+    $.el('.notif').innerHTML = '<img src="src/img/notif/' + str + '" width="400">';
     window.setTimeout(function () {
-        $.el('.pop_up').remove();
+        $.el('.notif').remove();
+    }, parseInt(auto_destruction_delay) * 1000);
+}
+
+function create_success(str) {
+
+    var success_DOM = document.createElement('div');
+    success_DOM.classList.add('pop_up', 'success');
+    $.el('.main').appendChild(success_DOM);
+    var auto_destruction_delay = window.getComputedStyle($.el('.main').lastChild).getPropertyValue('animation-duration');
+    $.el('.success').innerHTML = '<img src="' + str + '" width="400">';
+    window.setTimeout(function () {
+        $.el('.success').remove();
     }, parseInt(auto_destruction_delay) * 1000);
 }
 
@@ -359,4 +314,80 @@ function write(txt, parent) {
         ui.skip.push(previous);
 
     }
+}
+
+
+
+function show_prologue(infos) {
+    if (user.game === 'intro') {
+        $.prologue = $.el('.prologue');
+
+    } else {
+        $.prologue = $.el('.prologue:not(.new)');
+
+    }
+    $.prologue.style.opacity = 1;
+    var citation = document.querySelector('.citation');
+    var splashScreen = document.querySelector('.splash-screen');
+
+
+    // catch all the DOM to template
+    var prologue_texts = {
+        citation: $.prologue.querySelector('.citation p'),
+        author: $.prologue.querySelector('.citation p:last-child'),
+        title: $.prologue.querySelector('.splash-screen h2'),
+        act: $.prologue.querySelector('.splash-screen h1'),
+        dots: $.prologue.querySelectorAll('.pagination-acte .dots'),
+    }
+
+    //templating with data
+    prologue_texts.citation.innerHTML = infos.citation;
+    prologue_texts.author.innerHTML = infos.author;
+    prologue_texts.title.innerHTML = infos.title;
+    prologue_texts.act.innerHTML = 'Acte ' + infos.number;
+    for (var i = 0; i < infos.number; i++) {
+        prologue_texts.dots[i].classList.add('active');
+    }
+
+    //exception : the user is playing for the first time
+    if (user.game == 'intro') {
+        //already shown in game.js
+        citation.style.display = 'none';
+        //but show the act title
+
+        splashScreen.classList.remove('hide');
+        $.el('.prologue .splash-screen h1').style.animationPlayState = 'running';
+        $.el('.prologue .splash-screen h2').style.animationPlayState = 'running';
+        $.el('.prologue .splash-screen .bar').style.animationPlayState = 'running';
+        $.el('.prologue .splash-screen .pagination-acte').style.animationPlayState = 'running';
+
+        window.setTimeout(function () {
+            //RENDER NEXT infos HERE
+            $.el('.intro').remove();
+            render(current_act.a1_0);
+            user.game = {
+                act: 1,
+                event: 'a1_0',
+            }
+            savegame.erase_save('user_save', user);
+
+        }, 5000);
+    }
+    //normal case , the user begin a act wich is not act 1
+    else {
+        citation.style.display = "block";
+
+        $.prologue.style.zIndex = 2;
+        window.setTimeout(function () {
+            citation.style.display = 'none';
+            splashScreen.classList.remove('hide');
+            window.setTimeout(function () {
+                $.prologue.style.zIndex = -1;
+                render(current_act[infos.data_event])
+                    //splashScreen.remove();
+            }, 5000);
+        }, 6500);
+    }
+    //avoid console errors
+    return false;
 }

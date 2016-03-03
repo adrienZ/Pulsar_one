@@ -75,6 +75,7 @@ if (document.cookie.indexOf("user_save") >= 0) { //detect the cookie we want
         agility: 0,
         loyalty: 0,
     };
+    user.success = [];
     user.game = null;
     user.pulsars = 5;
     //to sting, imperative to get save in cookies, they only read strings

@@ -42,7 +42,7 @@ var data = {
                     text: "",
                     data_event: "a2_2",
                     naration: true,
-                    pop_up: 'Chronos s\'en souviendra',
+                    pop_up: 'destiny_will_remember.svg',
                 },
             ],
         },
@@ -53,6 +53,7 @@ var data = {
                     text: "",
                     data_event: "a2_3",
                     naration: true,
+                    get_success: 1,
                 },
             ],
         },
@@ -236,105 +237,107 @@ var data = {
             ],
         },
     },
+
     backstory: {
         success: [{
             name: "Une fraternité au grand coeur",
             id: 1,
             rewards_pulsar: 1,
-            img: '/src/img/success_badge_1.svg';
+            img: '/src/img/success/success_badge_1.svg',
         }, {
             name: "La combinaison parfaite",
             id: 2,
             rewards_pulsar: 3,
-            img: '/src/img/success_badge_2.svg';
+            img: '/src/img/success/success_badge_2.svg',
         }, {
             name: "Gros G33k",
             id: 3,
             rewards_pulsar: 1,
-            img: '/src/img/success_badge_3.svg';
+            img: '/src/img/success/success_badge_3.svg',
         }, {
             name: "Une journée si calme",
             id: 4,
             rewards_pulsar: 1,
-            img: '/src/img/success_badge_4.svg';
+            img: '/src/img/success/success_badge_4.svg',
         }, {
             name: "Chronos a une dents contre vous",
             id: 5,
             rewards_pulsar: 1,
-            img: '/src/img/success_badge_5.svg';
+            img: '/src/img/success/success_badge_5.svg',
         }, {
             name: "Pseudo Héros",
             id: 6,
             rewards_pulsar: 1,
-            img: '/src/img/success_badge_6.svg';
+            img: '/src/img/success/success_badge_6.svg',
         }, {
             name: "Tenace",
             id: 7,
             rewards_pulsar: 1,
-            img: '/src/img/success_badge_7.svg';
+            img: '/src/img/success/success_badge_7.svg',
         }, {
             name: "Les dieux grecs vous protegeront",
             id: 8,
             rewards_pulsar: 1,
-            img: '/src/img/success_badge_8.svg';
+            img: '/src/img/success/success_badge_8.svg',
         }, {
             name: "Les pyramides vous remercient",
             id: 9,
             rewards_pulsar: 1,
-            img: '/src/img/success_badge_9.svg';
+            img: '/src/img/success/success_badge_9.svg',
         }, {
             name: 'L\'espionage n\'a plus de secrets pour vous',
             id: 10,
             rewards_pulsar: 1,
-            img: '/src/img/success_badge_10.svg';
+            img: '/src/img/success/success_badge_10.svg',
         }, {
             name: "Vous prenez soins de votre soeur",
             id: 11,
             rewards_pulsar: 1,
-            img: '/src/img/success_badge_11.svg';
+            img: '/src/img/success/success_badge_11.svg',
         }, {
             name: "Petit cerveau de poisson rouge",
             id: 12,
             rewards_pulsar: 1,
-            img: '/src/img/success_badge_12.svg';
+            img: '/src/img/success/success_badge_12.svg',
         }, {
             name: "Agir et réfléchir après",
             id: 13,
             rewards_pulsar: 1,
-            img: '/src/img/success_badge_13.svg';
+            img: '/src/img/success/success_badge_13.svg',
         }, {
             name: "On vous appelle aussi Enigma",
             id: 14,
             rewards_pulsar: 1,
-            img: '/src/img/success_badge_14.svg';
+            img: '/src/img/success/success_badge_14.svg',
         }, {
             name: "Dans le mille",
             id: 15,
             rewards_pulsar: 1,
-            img: '/src/img/success_badge_15.svg';
+            img: '/src/img/success/success_badge_15.svg',
         }, {
             name: "La famille avant tout",
             id: 16,
             rewards_pulsar: 1,
-            img: '/src/img/success_badge_16.svg';
+            img: '/src/img/success/success_badge_16.svg',
         }, {
             name: "Une fraternité au grand coeur",
             id: 1,
             rewards_pulsar: 1,
-            img: '/src/img/success_badge_1.svg';
+            img: '/src/img/success/success_badge_1.svg',
         }, ],
     }
 };
 
 
 function set_parents() {
-    var acts = Object.keys(data);;
+    var acts = Object.keys(data);
     for (var i = 0; i < acts.length; i++) {
         for (var event in data[acts[i]]) {
             data[acts[i]][event].parent = event;
             data[acts[i]].index = i + 1;
         }
     }
+    console.log(data);
 }
 
 set_parents();

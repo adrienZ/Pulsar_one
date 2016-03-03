@@ -59,6 +59,52 @@
 @-webkit-keyframes pop-up {
   0% {
     opacity: 0;
+    -webkit-transform: translate3d(-100px, 0, 0);
+            transform: translate3d(-100px, 0, 0);
+  }
+  15% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -200px, 0);
+            transform: translate3d(0, -200px, 0);
+  }
+}
+
+@keyframes pop-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100px, 0, 0);
+            transform: translate3d(-100px, 0, 0);
+  }
+  15% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -200px, 0);
+            transform: translate3d(0, -200px, 0);
+  }
+}
+
+@-webkit-keyframes pop-up-success {
+  0% {
+    opacity: 0;
     -webkit-transform: translate3d(100px, 0, 0);
             transform: translate3d(100px, 0, 0);
   }
@@ -79,7 +125,7 @@
   }
 }
 
-@keyframes pop-up {
+@keyframes pop-up-success {
   0% {
     opacity: 0;
     -webkit-transform: translate3d(100px, 0, 0);
@@ -332,15 +378,21 @@ body {
   font-size: 0.9em;
   position: absolute;
   width: 300px;
-  height: 80px;
+  height: 50px;
   background: rgba(24, 40, 72, 0.95);
   box-shadow: 0px 5px 10px #0b1322;
   top: 50px;
-  right: calc(25vw + 20px);
+  left: 20px;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  -webkit-animation: pop-up 5s ease-in-out forwards;
-          animation: pop-up 5s ease-in-out forwards;
+  -webkit-animation: pop-up 5s ease-in-out infinite;
+          animation: pop-up 5s ease-in-out infinite;
+}
+
+.main .pop_up.success {
+  right: calc(25vh + 20px) !important;
+  -webkit-animation: pop-up-success 5s ease-in-out infinite;
+          animation: pop-up-success 5s ease-in-out infinite;
 }
 
 .main .pop_up .icon {
@@ -355,7 +407,7 @@ body {
   float: left;
   width: 75%;
   height: 100%;
-  line-height: 80px;
+  line-height: 50px;
   text-align: center;
 }
 

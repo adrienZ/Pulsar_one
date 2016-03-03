@@ -52,9 +52,8 @@ if (user.game === 'intro') {
 
                     $.el('.intro .container').style.animationPlayState = 'running';
                     window.setTimeout(function () {
-                        $.el('section.prologue').style.zIndex = '2';
-
-                        render(current_act.prologue);
+                        $.el('section.prologue').style.zIndex = '-1';
+                        show_prologue(current_act.prologue);
                     }, fade_out_delay * 1000);
                 }, 2000);
             }
@@ -74,16 +73,6 @@ else {
     };
     //display user pulsars
     $.el('.ui-panel .pulsars span').innerHTML = '[' + user.pulsars + ']';
-
-
-    //static bullshit interaction
-    $.el('.bottom-bar a').addEventListener('click', function () {
-        console.log(document.body.children);
-        document.body.children[0].style.transform = "translate3D(0,-100px,0)";
-        document.body.children[0].querySelector('.bottom-bar').style.transform = "translate3D(0,-240px,0)";
-        document.body.children[0].querySelector('.bottom-bar').style.width = "100%";
-
-    });
 
     //Full screen mode
     $.el('.ui-panel #fullscreen').addEventListener('click', function () {
