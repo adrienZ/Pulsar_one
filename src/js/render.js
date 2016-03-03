@@ -131,8 +131,9 @@ function render(event) {
             }
             if (elem.getAttribute('data-success')) {
                 user.success.push(data.backstory.success[this.getAttribute('data-success')]);
-                console.log(data.backstory.success[this.getAttribute('data-success')].img);
                 create_success(data.backstory.success[this.getAttribute('data-success')].img);
+                var trophy_sound = new Audio('src/medias/success-sound.mp3');
+                trophy_sound.play();
             }
 
             if (elem.getAttribute('data-stats')) {
