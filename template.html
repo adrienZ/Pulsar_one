@@ -15,122 +15,136 @@
     <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">           </script>
         <![endif]-->
-</head>
+    </head>
 
-<body>
-    <section class="prologue">
-        <div class="citation hide">
-            <p></p>
-            <p></p>
-        </div>
-        <div class="splash-screen hide">
-            <h1>Prologue</h1>
-            <div class="bar"></div>
-            <h2></h2>
-            <div class="pagination-acte">
-                <div class="dots"></div>
-                <div class="dots"></div>
-                <div class="dots"></div>
-                <div class="dots"></div>
-                <div class="dots"></div>
+    <body>
+        <section class="prologue">
+            <div class="citation hide">
+                <p></p>
+                <p></p>
             </div>
-        </div>
-    </section>
-
-
-    <!--   containers-->
-
-    <section class="main">
-        <div class="illustration">
-            <img src="https://unsplash.it/2000/275/?random" alt="">
-        </div>
-        <div class="story"></div>
-
-        <div class="questions">
-            <ul></ul>
-        </div>
-        <!--        this is part is not yet coded , static ui only-->
-        <section class="bottom-bar">
-            <span></span>
-            <a href="#"><img src="src/img/icons/tree_button.png" height="20" width="20" alt=""></a>
-            <span></span>
+            <div class="splash-screen hide">
+                <h1>Prologue</h1>
+                <div class="bar"></div>
+                <h2></h2>
+                <div class="pagination-acte">
+                    <div class="dots"></div>
+                    <div class="dots"></div>
+                    <div class="dots"></div>
+                    <div class="dots"></div>
+                    <div class="dots"></div>
+                </div>
+            </div>
         </section>
-    </section>
 
-    <aside class="ui-panel">
-        <section class="act">
-            <p>Interface ETA 1.23 // AZ2S4KT61JM6A5CA51F10</p>
-            <p>Acte I - <span>Le début de la fin</span></p>
-        </section>
-        <section class="date">
-            <section class="day">
-                <p>Jour 1, année 2016</p>
-            </section>
-            <section class="hour">
-                <p id="clock_write">09:15:01</p>
+
+        <!--   containers-->
+
+        <section class="main">
+            <div class="illustration">
+                <img src="https://unsplash.it/2000/275/?random" alt="">
+            </div>
+            <div class="story"></div>
+
+            <div class="questions">
+                <ul></ul>
+            </div>
+            <!--        this is part is not yet coded , static ui only-->
+            <section class="bottom-bar">
+                <span></span>
+                <a href="#"><img src="src/img/icons/tree_button.png" height="20" width="20" alt=""></a>
+                <span></span>
             </section>
         </section>
-        <section class="remappage">
-            <img src="src/img/icons/clock_remap.svg" height="40" width="40" alt="">
-            <p class="state">Accès remappage temporel</p>
-            <p><span>indisponible</span> (-2 pulsars)</p>
-        </section>
-        <section class="pulsars">
-            <p>Vous avez
-                <span class="pulsar-remainging">[07]</span>
-                <span>
+
+        <aside class="ui-panel">
+            <section class="act">
+                <p>Interface ETA 1.23 // AZ2S4KT61JM6A5CA51F10</p>
+                <p>Acte I - <span>Le début de la fin</span></p>
+            </section>
+            <section class="date">
+                <section class="day">
+                    <p>Jour 1, année 2016</p>
+                </section>
+                <section class="hour">
+                    <p id="clock_write">09:15:01</p>
+                </section>
+            </section>
+            <section class="remappage">
+                <img src="src/img/icons/clock_remap.svg" height="40" width="40" alt="">
+                <p class="state">Accès remappage temporel</p>
+                <p><span>indisponible</span> (-2 pulsars)</p>
+            </section>
+            <section class="pulsars">
+                <p>Vous possèdez
+                    <span class="pulsar-remainging">[07]</span>
+                    <span>
                      <img src="src/img/icons/particule_pulsar.svg" height="30" alt="">
-                </span>pulsars</p>
-        </section>
-        <section class="user-stats">
-            <span class="icon"></span>
-            <p>vos <span>statistiques</span></p>
+                 </span>pulsars</p>
+             </section>
+             <section class="user-stats">
+                <span class="icon"></span>
+                <p>vos <span>statistiques</span></p>
 
-            <ul></ul>
-        </section>
-
-
-        <section class="menu">
-            <button>sauvegardez votre partie</button>
-            <ul>
-                <li>
-                    <a href="#" id="save"><img src="src/img/icons/save.png" height="20" alt=""></a>
-                </li>
-                <li>
-                    <a href="#" id="sound"><img src="src/img/icons/sound.png" height="20" alt=""></a>
-                </li>
-                <li>
-                    <a href="#" id="music"><img src="src/img/icons/music.png" height="20" alt=""></a>
-                </li>
-                <li>
-                    <a href="#" id="fullscreen"><img src="src/img/icons/full_screen.png" height="20" alt=""></a>
-                </li>
-            </ul>
-        </section>
-    </aside>
+                <ul></ul>
+            </section>
 
 
+            <section class="menu">
+                <button class="hide">sauvegardez votre partie</button>
+                <ul>
+                    <li>
+                        <a href="#" id="save"><img src="src/img/icons/save.png" height="20" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#" id="sound"><img src="src/img/icons/sound.png" height="20" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#" id="music"><img src="src/img/icons/music.png" height="20" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="#" id="fullscreen"><img src="src/img/icons/full_screen.png" height="20" alt=""></a>
+                    </li>
+                </ul>
+            </section>
+        </aside>
 
 
 
 
-    <!--          scripts           -->
-    <!--    for dom manipulations-->
-    <script src='src/js/selector.js'></script>
-    <!--    for save manipulations-->
-    <script src="src/js/cookie.js"></script>
-    <!--    assests of the game-->
-    <script src="src/js/data.js"></script>
-    <!--    render engine for chapters intro-->
-    <script src="src/js/prologue.js"></script>
-    <!--    game engine-->
-    <script src="src/js/render.js"></script>
-    <!--    Clock-->
-    <script src="src/js/clock.js"></script>
-    <!--    filter, analysing the datas to prevent bugs -->
-    <script src="src/js/game.js"></script>
 
 
-</body>
+        <!--          scripts           -->
+        <!--          scripts for hiding and showing indications in menu bar           -->
+        <script>
+            var menu = document.querySelector('.menu');
+            var bar = menu.querySelector('button');
+            var options = menu.querySelectorAll('ul li');
+            for(var i = 0 ; i <= 3 ; i++){
+                options[i].addEventListener('mouseenter', function(){
+                    bar.classList.remove('hide');
+                });
+                options[i].addEventListener('mouseleave', function(){
+                    bar.classList.add('hide');
+                });
+            }
+        </script>
+        <!--    for dom manipulations-->
+        <script src='src/js/selector.js'></script>
+        <!--    for save manipulations-->
+        <script src="src/js/cookie.js"></script>
+        <!--    assests of the game-->
+        <script src="src/js/data.js"></script>
+        <!--    render engine for chapters intro-->
+        <script src="src/js/prologue.js"></script>
+        <!--    game engine-->
+        <script src="src/js/render.js"></script>
+        <!--    Clock-->
+        <script src="src/js/clock.js"></script>
+        <!--    filter, analysing the datas to prevent bugs -->
+        <script src="src/js/game.js"></script>
 
-</html>
+
+    </body>
+
+    </html>

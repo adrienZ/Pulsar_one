@@ -463,10 +463,26 @@ body {
 }
 
 .ui-panel .remappage {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
   font-size: 12px;
   height: 60px;
-  background: #1a3b5c;
+  background: rgba(26, 59, 92, 0.4);
+  transition: all 0.4s;
+  color: rgba(225, 223, 225, 0.4);
   overflow: hidden;
+}
+
+.ui-panel .remappage:hover {
+  background: #1a3b5c;
+  color: #e1dfe1;
+}
+
+.ui-panel .remappage:hover img {
+  opacity: 0.7;
 }
 
 .ui-panel .remappage img {
@@ -477,7 +493,8 @@ body {
   margin: 5px 0;
   width: 4rem;
   height: 4rem;
-  opacity: 0.5;
+  opacity: 0.2;
+  transition: all 0.3s;
 }
 
 .ui-panel .remappage .state {
@@ -506,6 +523,7 @@ body {
 .ui-panel .pulsars p {
   line-height: 60px;
   padding-left: 20px;
+  font-weight: 400;
 }
 
 .ui-panel .pulsars span img {
@@ -621,12 +639,25 @@ body {
   height: 30px;
   line-height: 30px;
   border: none;
+  transition: all 0.3s;
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+}
+
+.ui-panel .menu button.hide {
+  -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+          transform: translateY(-10px);
+  opacity: 0;
 }
 
 .ui-panel .menu ul li {
+  cursor: pointer;
   display: inline-block;
   height: 30px;
-  background: #252a2d;
+  background: rgba(255, 255, 255, 0.04);
   width: calc(100% / 4);
   float: left;
   border-right: 1px solid white;
@@ -634,11 +665,19 @@ body {
 }
 
 .ui-panel .menu ul li:hover {
-  background: #263238;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .ui-panel .menu ul li:hover img {
   opacity: 0.5;
+}
+
+.ui-panel .menu ul li:active {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.ui-panel .menu ul li:active img {
+  opacity: 0.8;
 }
 
 .ui-panel .menu ul li img {

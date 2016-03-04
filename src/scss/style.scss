@@ -272,10 +272,21 @@
             }
         }
         .remappage {
+            user-select: none;
+            cursor: pointer;
             font-size: 12px;
             height: $_panel_remappage_height;
             //line-height: $_panel_remappage_height;
-            background: #1a3b5c;
+            background: rgba(26, 59, 92, 0.4);
+            transition:all 0.4s;
+            color: rgba(225, 223, 225, 0.4);
+            &:hover{
+                background: rgba(26, 59, 92, 1);
+                color: rgba(225, 223, 225, 1);
+                & img{
+                    opacity: 0.7;
+                }
+            }
             overflow: hidden;
             img {
                 float: left;
@@ -285,7 +296,8 @@
                 margin: 5px 0;
                 width: 4rem;
                 height: 4rem;
-                opacity: 0.5;
+                opacity: 0.2;
+                transition: all 0.3s;
             }
             .state {
                 font-size: 15px;
@@ -309,6 +321,7 @@
             p {
                 line-height: $_panel_pulsars_height;
                 padding-left: 20px;
+                font-weight: 400;
             }
             span img {
                 position: relative;
@@ -399,20 +412,36 @@
                 height: $_panel_button_height;
                 line-height: $_panel_button_height;
                 border: none;
+                transition:all 0.3s;
+                transform:translateY(0px);
+                opacity: 1;
+                &.hide{
+                    transform: translateY(-10px);
+                    opacity: 0;
+                }
             }
             ul {
                 li {
+                    cursor: pointer;
                     display: inline-block;
                     height: $_panel_button_height;
-                    background: #252a2d;
+                    background: rgba(255,255,255,0.04);
                     width: calc(100% / 4);
                     float: left;
                     border-right: 1px solid white;
                     transition: 0.15s;
                     &:hover {
-                        background: #263238;
+                        background: rgba(255,255,255,0.1);
+
                         img {
                             opacity: 0.5;
+                        }
+                    }
+                    &:active {
+                        background: rgba(255,255,255,0.5);
+
+                        img {
+                            opacity: 0.8;
                         }
                     }
                     img {
