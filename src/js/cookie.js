@@ -82,4 +82,5 @@ if (document.cookie.indexOf("user_save") >= 0) { //detect the cookie we want
     user = JSON.stringify(user);
     user = savegame.create_save('user_save', user, 7);
     console.log('new cookie : ' + document.cookie);
+    user = JSON.parse(savegame.get_save('user_save'));
 }

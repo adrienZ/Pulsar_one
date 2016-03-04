@@ -11,11 +11,14 @@ var data = {
             question: 'Vous êtes au lit les yeux fermés dans votre chambre. Au loin, on entend une télévision. Qu’entendez-vous ?',
             choix: [{
                 text: '',
-                data_event: 'prologue',
+                data_event: 'end',
                 naration: true,
-                change_act: 2,
+
             }],
-        }
+        },
+        end: {
+            stop_act: true,
+        },
     },
     act_2: {
         prologue: {
@@ -337,7 +340,6 @@ function set_parents() {
             data[acts[i]].index = i + 1;
         }
     }
-    console.log(data);
 }
 
 set_parents();

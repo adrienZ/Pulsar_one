@@ -18,31 +18,8 @@
 </head>
 
 <body>
-    <!-- EXEPTION the user is playing new game   -->
-    <section class="prologue new">
-        <div class="citation">
-            <p>« J’aime la science-fiction, j’aime la fantaisie, j’aime le voyage dans le temps, c’est pourquoi j’ai eu cette idée : et si vous aviez la possibilité de retourner dans votre passé par un simple coup de fil.
-                <br>Que changerez-vous ? »</p>
-            <p>- Rainbow Rowell</p>
-        </div>
-    </section>
-
-    <!--    input part where the user set his name-->
-    <section class="intro">
-        <div class="container">
-            <div class="motion-glow">
-                <video src="/src/medias/glow-intro.webm" autoplay loop></video>
-            </div>
-            <p>Réveillez-vous.
-                <br> Je suis Chronos, le dieu du temps. Votre histoire n’est pas terminée.
-            </p>
-            <input type="text" id="user-name" onfocus="this.placeholder = ''" placeholder="Quel est votre nom ?" onblur="this.placeholder = 'Quel est votre nom ?'" required>
-        </div>
-    </section>
-
-
     <section class="prologue">
-        <div class="citation">
+        <div class="citation hide">
             <p></p>
             <p></p>
         </div>
@@ -138,11 +115,19 @@
 
 
     <!--          scripts           -->
+    <!--    for dom manipulations-->
     <script src='src/js/selector.js'></script>
+    <!--    for save manipulations-->
     <script src="src/js/cookie.js"></script>
+    <!--    assests of the game-->
     <script src="src/js/data.js"></script>
-    <script src="src/js/game.js"></script>
+    <!--    render engine for chapters intro-->
+    <script src="src/js/prologue.js"></script>
+    <!--    game engine-->
     <script src="src/js/render.js"></script>
+    <!--    filter, analysing the datas to prevent bugs -->
+    <script src="src/js/game.js"></script>
+
 
 </body>
 

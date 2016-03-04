@@ -1,23 +1,31 @@
 $fade_out_citation_delay: 6s;
 .prologue {
     // Style citation
-    backface-visibility: hidden;
     height: 100vh;
     width: 100vw;
     float: left;
     background: black;
     position: absolute;
     top: 0;
-    z-index: 1;
+    z-index: -1;
+    transform: translate3d(0, 0, 0);
     opacity: 0;
+    &.showtime {
+        z-index: 2;
+        opacity: 1;
+    }
     video {
         min-width: 100%;
         min-height: 100%;
     }
+    .citation,
+    .splash-screen {
+        position: absolute;
+    }
     .citation {
         color: white;
         width: 70%;
-        margin: auto;
+        left: 15%;
         margin-top: 35vh;
         p {
             font-family: 'Baskerville', Times, serif;
@@ -36,7 +44,10 @@ $fade_out_citation_delay: 6s;
     }
     // Style splash-screen
     .hide {
-        display: none;
+        transform: translate3d(0, -100%, 0);
+        * {
+            animation-play-state: paused!important;
+        }
     }
     .splash-screen {
         opacity: 1;
@@ -54,21 +65,17 @@ $fade_out_citation_delay: 6s;
         //            animation-play-state: paused!important;
         //        }
         h1 {
-            transform: translate3d(0px, 0, 0);
             font-weight: bold;
             animation: slideLeft 1s ease-in-out 0s normal paused 1 forwards, slideLeft 1s ease-in-out 3s reverse running 1 forwards;
         }
         .bar {
-            transform: translate3d(0px, 0, 0);
             width: 500px;
             height: 3px;
             margin: 1rem auto;
             background-color: white;
-            backface-visibility: hidden;
             animation: expandBar 1s ease-in-out 0s normal paused 1 forwards, expandBar 1s ease-in-out 3s reverse running 1 forwards;
         }
         h2 {
-            transform: translate3d(0px, 0, 0);
             margin-top: 1.5rem;
             font-weight: 200;
             animation: slideRight 1s ease-in-out 0s normal paused 1 forwards, slideRight 1s ease-in-out 3s reverse running 1 forwards;
@@ -80,14 +87,12 @@ $fade_out_citation_delay: 6s;
         width: 100%;
         animation: fadeIn 1s ease-out .75s normal paused 1 forwards, fadeIn 1s ease-out 3s reverse running 1 forwards;
         .dots {
-            transform: translate3d(0px, 0, 0);
             display: inline-block;
             height: .75rem;
             width: .75rem;
             border: 1px solid white;
             border-radius: 20px;
             &.active {
-                transform: translate3d(0px, 0, 0);
                 animation: blinkDot 1.5s ease-in-out 0s normal running infinite forwards;
             }
         }
@@ -130,12 +135,10 @@ $fade_out_citation_delay: 6s;
     0% {
         opacity: 0;
         transform: translate3d(50px, 0, 0);
-        backface-visibility: hidden;
     }
     100% {
         opacity: 1;
         transform: translate3d(0px, 0, 0);
-        backface-visibility: hidden;
     }
 }
 
@@ -143,12 +146,10 @@ $fade_out_citation_delay: 6s;
     0% {
         opacity: 0;
         transform: scaleX(0) translate3d(-50px, 0, 0);
-        backface-visibility: hidden;
     }
     100% {
         opacity: 1;
         transform: scaleX(1) translate3d(-50px, 0, 0);
-        backface-visibility: hidden;
     }
 }
 
@@ -156,16 +157,13 @@ $fade_out_citation_delay: 6s;
     0% {
         transform: translate3d(0px, 0, 0);
         background-color: rgba(255, 255, 255, 1);
-        backface-visibility: hidden;
     }
     50% {
         transform: translate3d(0px, 0, 0);
         background-color: rgba(255, 255, 255, 0);
-        backface-visibility: hidden;
     }
     100% {
         transform: translate3d(0px, 0, 0);
         background-color: rgba(255, 255, 255, 1);
-        backface-visibility: hidden;
     }
 }

@@ -102,7 +102,24 @@
         </div>
         <div class="icon"><img src="src/img/arrow.svg" alt=""></div>
     </div>
-    <script src="src/scripts/app/main.js"></script>
+    <script>
+        var compteur = $.el('#compteur');
+        var number = 0;
+
+
+        function clampFunction(number, limit, nameInterval) {
+            if (number == limit + 1) {
+                clearInterval(nameInterval);
+            }
+        }
+
+        var numberIncrementation = window.setInterval(function () {
+            compteur.innerText = number;
+            console.log(number);
+            number++;
+            clampFunction(number, 76, numberIncrementation);
+        }, 30);
+    </script>
 </body>
 
 </html>

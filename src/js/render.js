@@ -14,16 +14,6 @@ var ui = {
     });
 });
 
-if (user.game !== 'intro') {
-    current_act = data['act_' + user.game.act];
-    //console.log(current_act, current_act[user.game.event]);
-    render(current_act[user.game.event]);
-    if ($.el('.prologue.new')) {
-        $.el('.prologue.new').remove();
-    }
-    $.el('.prologue').style.zIndex = -1;
-}
-
 
 
 
@@ -39,28 +29,20 @@ var skip = false;
 // all the data i need to stop the typed effect with write()
 //function render
 function render(event) {
-    console.log(event);
-    if (event.parent !== 'prologue') {
-        user.game = {
-            event: event.parent,
-        }
-        user.game.act = event.parent[1];
-        savegame.erase_save('user_save', user);
-    }
-    //this when the user begin a new act
-    if (event.hasOwnProperty('citation')) {
 
-        show_prologue(event);
-        return false;
-    } else {
-        $.el('.prologue').zIndex = 1 * -1;
+    if (event.hasOwnProperty('stop_act')) {
+        window.location = '/recap.html';
+    };
+    user.game = event.parent;
+    savegame.erase_save('user_save', user);
 
-    }
+
+
+
     //cleaning previous answers
     $.pad.querySelector('ul').innerHTML = "";
     //pushing story's text in the div
     write(event.question, $.histoire);
-
 
 
 
@@ -249,6 +231,7 @@ function create_success(str) {
 
 
 function write(txt, parent) {
+    console.log(txt);
     if (txt.length === 0) return false;
     else if (typeof txt === "string") {
         var content = document.createElement('p');
@@ -315,80 +298,4 @@ function write(txt, parent) {
         ui.skip.push(previous);
 
     }
-}
-
-
-
-function show_prologue(infos) {
-    if (user.game === 'intro') {
-        $.prologue = $.el('.prologue');
-
-    } else {
-        $.prologue = $.el('.prologue:not(.new)');
-
-    }
-    $.prologue.style.opacity = 1;
-    var citation = document.querySelector('.citation');
-    var splashScreen = document.querySelector('.splash-screen');
-
-
-    // catch all the DOM to template
-    var prologue_texts = {
-        citation: $.prologue.querySelector('.citation p'),
-        author: $.prologue.querySelector('.citation p:last-child'),
-        title: $.prologue.querySelector('.splash-screen h2'),
-        act: $.prologue.querySelector('.splash-screen h1'),
-        dots: $.prologue.querySelectorAll('.pagination-acte .dots'),
-    }
-
-    //templating with data
-    prologue_texts.citation.innerHTML = infos.citation;
-    prologue_texts.author.innerHTML = infos.author;
-    prologue_texts.title.innerHTML = infos.title;
-    prologue_texts.act.innerHTML = 'Acte ' + infos.number;
-    for (var i = 0; i < infos.number; i++) {
-        prologue_texts.dots[i].classList.add('active');
-    }
-
-    //exception : the user is playing for the first time
-    if (user.game == 'intro') {
-        //already shown in game.js
-        citation.style.display = 'none';
-        //but show the act title
-
-        splashScreen.classList.remove('hide');
-        $.el('.prologue .splash-screen h1').style.animationPlayState = 'running';
-        $.el('.prologue .splash-screen h2').style.animationPlayState = 'running';
-        $.el('.prologue .splash-screen .bar').style.animationPlayState = 'running';
-        $.el('.prologue .splash-screen .pagination-acte').style.animationPlayState = 'running';
-
-        window.setTimeout(function () {
-            //RENDER NEXT infos HERE
-            $.el('.intro').remove();
-            render(current_act.a1_0);
-            user.game = {
-                act: 1,
-                event: 'a1_0',
-            }
-            savegame.erase_save('user_save', user);
-
-        }, 5000);
-    }
-    //normal case , the user begin a act wich is not act 1
-    else {
-        citation.style.display = "block";
-
-        $.prologue.style.zIndex = 2;
-        window.setTimeout(function () {
-            citation.style.display = 'none';
-            splashScreen.classList.remove('hide');
-            window.setTimeout(function () {
-                $.prologue.style.zIndex = -1;
-                render(current_act[infos.data_event])
-                    //splashScreen.remove();
-            }, 5000);
-        }, 6500);
-    }
-    //avoid console errors
-    return false;
 }
