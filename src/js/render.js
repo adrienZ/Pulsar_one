@@ -29,9 +29,13 @@ var skip = false;
 // all the data i need to stop the typed effect with write()
 //function render
 function render(event) {
-
+    console.log(event);
     if (event.hasOwnProperty('stop_act')) {
+        console.log('hahoy');
+
+        //current_act = data['act_' + user.game[1]];
         window.location = '/recap.html';
+        return false;
     };
     user.game = event.parent;
     savegame.erase_save('user_save', user);
@@ -102,12 +106,10 @@ function render(event) {
         elem.addEventListener('click', function () {
             $.histoire.scrollTop = $.histoire.scrollHeight;
             if (elem.getAttribute('data-act')) {
-                current_act = data['act_' + this.getAttribute('data-act')];
+                //current_act = data['act_' + this.getAttribute('data-act')];
             }
             //call the render function by getting data event attribute
-            render(current_act[this.getAttribute('data-event')]);
-            // SKIP HERE / be careful with this global
-            skip = true;
+
             if (elem.getAttribute('data-pop-up')) {
                 create_pop_up(this.getAttribute('data-pop-up'));
             }
@@ -141,6 +143,9 @@ function render(event) {
                 });
 
             }
+            render(current_act[this.getAttribute('data-event')]);
+            // SKIP HERE / be careful with this global
+            skip = true;
         });
 
         //if data-stats , the user's stats will be modified   

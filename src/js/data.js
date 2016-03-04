@@ -5,18 +5,16 @@ var data = {
             author: null,
             number: 1,
             title: 'Le début de la fin',
-            change_act: 2,
         },
         a1_0:  {
             question: 'Vous êtes au lit les yeux fermés dans votre chambre. Au loin, on entend une télévision. Qu’entendez-vous ?',
             choix: [{
                 text: '',
-                data_event: 'end',
+                data_event: 'end1',
                 naration: true,
-
             }],
         },
-        end: {
+        end1: {
             stop_act: true,
         },
     },

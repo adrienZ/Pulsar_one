@@ -1,11 +1,13 @@
-current_act = data.act_2;
-
 //user.game = 'intro';
 
 if (user.game === "prologue") {
     render_prologue(current_act.prologue);
 } else if (user.game === 'intro') {
+    current_act = data.act_1;
     render_intro();
+} else if (user.game === 'end') {
+    current_act = data['act_' + user.game[user.game.length - 1]]
+
 } else if (user.game[0] === 'a') {
     console.log('hey a frendly non-buggy event !');
     current_act = data['act_' + user.game[1]];
