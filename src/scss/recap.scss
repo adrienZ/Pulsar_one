@@ -1,6 +1,8 @@
 // GENERALS
 body {
     background-color: black;
+    overflow: hidden;
+    user-select: none;
 }
 
 .clear {
@@ -185,6 +187,33 @@ header {
 }
 
 // NEXT ACT BUTTON
+.return_menu{
+    position: fixed;
+    color: white;
+    width: 25vw;
+    padding: .50rem;
+    background-color: rgba(219, 217, 219, 0.3);
+    text-align: center;
+    font-family: 'Gotham', Arial, sans-serif;
+    color: rgba(255,255,255, 0.5);
+    text-transform: uppercase;
+    font-size: .75rem;
+    right: 0px;
+    bottom: 80px;
+    opacity: 0;
+    animation: apparitionButton 1s ease-in-out 1.5s normal running 1 forwards;
+    transition:all 0.3s;
+    &:hover{
+        cursor: pointer;
+        background-color: rgba(219, 217, 219, 0.5);
+        color: rgba(255,255,255, 0.7);
+    }
+    &:active{
+        cursor: pointer;
+        background-color: rgba(219, 217, 219, 1);
+        color: rgba(255,255,255, 1);
+    }
+}
 .nextAct {
     display: inline-block;
     position: fixed;
