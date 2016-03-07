@@ -1,7 +1,11 @@
 //user.game = 'intro';
-
 if (user.game === "prologue") {
+    if (typeof current_act === 'undefined') {
+        console.log('on vient dun prologue');
+        var current_act = data['act_' + user.new];
+    }
     render_prologue(current_act.prologue);
+
 } else if (user.game === 'intro') {
     current_act = data.act_1;
     render_intro();
@@ -13,7 +17,7 @@ if (user.game === "prologue") {
     current_act = data['act_' + user.game[1]];
     render(current_act[user.game]);
 } else {
-    alert('RED CODE : UNDEFINED');
+    alert(' UNDEFINED');
     document.location = '/';
 }
 

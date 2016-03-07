@@ -5,8 +5,6 @@ var dtExpire = new Date();
 dtExpire.setTime(dtExpire.getTime() + 3600 * 1000);
 
 
-
-
 savegame.create_save = function (name, value, days) {
     if (days) {
         var date = new Date();

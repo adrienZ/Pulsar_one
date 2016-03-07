@@ -329,7 +329,6 @@ var data = {
     }
 };
 
-
 function set_parents() {
     var acts = Object.keys(data);
     for (var i = 0; i < acts.length; i++) {
