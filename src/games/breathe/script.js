@@ -31,9 +31,11 @@ document.addEventListener("keydown", function(touche) {
     	switch(speed) {
     		case 0 :
     			warnings_stats.innerHTML = "";
+                circle.style.border = "3px solid green";
     			break;
     		case 3 :
     			warnings_stats.innerHTML = "Vous n'êtes pas réguliés";
+                circle.style.border = "3px solid red";
     			break;
     		case 6 :
     			warnings_stats.innerHTML = "Attention à Rainmaker";
