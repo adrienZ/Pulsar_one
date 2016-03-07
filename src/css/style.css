@@ -773,3 +773,21 @@ body {
 ::-webkit-scrollbar-corner {
   background: transparent;
 }
+
+@media only screen and (max-width: 1400px) {
+  .ui-panel .pulsars p {
+    line-height: 60px;
+    padding-left: 20px;
+    font-weight: 400;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .ui-panel .pulsars p {
+    line-height: 60px;
+    padding-left: 20px;
+    font-weight: 400;
+    font-size: 10px;
+  }
+}
