@@ -64,3 +64,20 @@
             transform: translate3d(0, -200px, 0);
         }
     }
+    
+    @include keyframes(mask-playzero-1) {
+        from {
+            -webkit-mask-position: 0 0;
+            -ms-mask-position: 0 0;
+            -moz-mask-position: 0 0;
+            -o-mask-position: 0 0;
+            mask-position: 0 0;
+        }
+        to {
+            -webkit-mask-position: 100% 0;
+            -ms-mask-position: 100% 0;
+            -moz-mask-position: 100% 0;
+            -o-mask-position: 100% 0;
+            mask-position: 100% 0;
+        }
+    }

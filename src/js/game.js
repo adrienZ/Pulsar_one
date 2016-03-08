@@ -13,9 +13,12 @@ if (user.game === "prologue") {
     current_act = data['act_' + user.game[user.game.length - 1]]
 
 } else if (user.game[0] === 'a') {
-    console.log('hey a frendly non-buggy event !');
-    current_act = data['act_' + user.game[1]];
-    render(current_act[user.game]);
+    window.addEventListener('load', function () {
+
+        console.log('hey a frendly non-buggy event !');
+        current_act = data['act_' + user.game[1]];
+        render(current_act[user.game]);
+    });
 } else {
     alert(' UNDEFINED');
     document.location = '/';

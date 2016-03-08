@@ -1,3 +1,12 @@
+// TO DO 
+//debug animation changement
+//debug animation slapsh screen 
+//debug intro form + fade in in p
+
+
+
+
+
 //catch useful DOM
 $.ui = $.el('.ui-panel');
 $.ui.menu_icons = $.ui.querySelectorAll('.menu li');
@@ -14,7 +23,25 @@ var ui = {
     });
 });
 
+var browsers = {};
+browsers.isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+// Firefox 1.0+
+browsers.isFirefox = typeof InstallTrigger !== 'undefined';
+// At least Safari 3+= "[object HTMLElementConstructor]"
+browsers.isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+// Internet Explorer 6-11
+browsers.isIE = /*@cc_on!@*/ false || !!document.documentMode;
+// Edge 20+
+browsers.isEdge = !browsers.isIE && !!window.StyleMedia;
+// Chrome 1+
+browsers.isChrome = !!window.chrome && !!window.chrome.webstore;
+// Blink engine detection
+browsers.isBlink = (browsers.isChrome || browsers.isOpera) && !!window.CSS;
 
+for (var browser in browsers) {
+    if (browsers[browser])
+        console.log(browser);
+}
 
 
 //var current_act = data.act_1;
@@ -76,7 +103,6 @@ function render(event) {
         if (choice.hasOwnProperty('stats_change')) {
             //we may need a variable here
             $.pad.querySelector('ul').lastChild.querySelector('a').setAttribute('data-stats', 'true');
-
         }
         if (choice.hasOwnProperty('get_success')) {
             //we may need a variable here
@@ -136,7 +162,7 @@ function render(event) {
                             setTimeout(function () {
                                 element.querySelector('p:last-child').innerHTML = abilities_targeted[capacity];
                                 element.querySelector('p:last-child').style.opacity = '';
-                            }, 300)
+                            }, 300);
 
                         }
                     });
@@ -153,7 +179,21 @@ function render(event) {
     });
 
 
+    if (event.hasOwnProperty('change_img')) {
 
+        $.el('#encima').className = event.change_img;
+
+        $.el('#encima').style.animationPlayState = 'running';
+        var delay = window.getComputedStyle($.el('#encima')).getPropertyValue('animation-duration');
+        var new_img = window.getComputedStyle($.el('#encima.' + event.change_img), ':before').getPropertyValue('background-image');
+
+        window.setTimeout(function () {
+            $.el('#fondo').style.background = new_img + ' no-repeat center center';
+            $.el('#encima').style.animationPlayState = 'paused';
+
+        }, parseInt(delay[0]) * 1000);
+
+    }
 
 
 

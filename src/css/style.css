@@ -148,6 +148,40 @@
   }
 }
 
+@-webkit-keyframes mask-playzero-1 {
+  from {
+    -webkit-mask-position: 0 0;
+    -ms-mask-position: 0 0;
+    -moz-mask-position: 0 0;
+    -o-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    -ms-mask-position: 100% 0;
+    -moz-mask-position: 100% 0;
+    -o-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+
+@keyframes mask-playzero-1 {
+  from {
+    -webkit-mask-position: 0 0;
+    -ms-mask-position: 0 0;
+    -moz-mask-position: 0 0;
+    -o-mask-position: 0 0;
+    mask-position: 0 0;
+  }
+  to {
+    -webkit-mask-position: 100% 0;
+    -ms-mask-position: 100% 0;
+    -moz-mask-position: 100% 0;
+    -o-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+}
+
 body {
   font-size: 18px;
   font-family: "Arial";
@@ -175,14 +209,16 @@ body {
   text-align: center;
   -webkit-animation: remove 5s paused forwards;
           animation: remove 5s paused forwards;
+  transition: opacity 2s;
 }
 
 .intro .container .motion-glow {
   margin: 15vh auto !important;
-  background: #4a4abc;
   height: 40vh;
   width: 40vh;
   margin: auto;
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
 }
 
 .intro .container .motion-glow video {
@@ -191,11 +227,10 @@ body {
 }
 
 .intro .container p {
-  -webkit-animation: remove 1s forwards;
-          animation: remove 1s forwards;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
+  -webkit-animation: remove 1s forwards paused;
+          animation: remove 1s forwards paused;
   line-height: 1.25;
+  transition: 2s;
 }
 
 .intro .container p:last-of-type {
@@ -277,6 +312,49 @@ body {
   background: #4b6cb7;
   background: linear-gradient(to right, #4b6cb7, #182848);
   opacity: 1;
+}
+
+.main .illustration #fondo {
+  /*background: url(http://i.imgur.com/ygVpJMP.jpg) no-repeat left top;*/
+  background: url(http://s28.postimg.org/3z90275y5/yg_Vp_JMP.jpg) no-repeat left top;
+  background-size: cover;
+  height: 275px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 75%;
+}
+
+.main .illustration #encima {
+  position: absolute;
+  height: 275px;
+  width: 75%;
+  left: 0;
+  top: 0;
+  /*-webkit-mask: url(http://i.imgur.com/AYJuRke.png);*/
+  -webkit-mask: url(../img/brush.png);
+  -webkit-mask-size: 3000% 100%;
+  -webkit-animation: mask-playzero-1 2s steps(29) paused infinite;
+}
+
+.main .illustration #encima.chan:before {
+  background: url(http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2016/03/maxresdefault.jpg) no-repeat center center;
+}
+
+.main .illustration #encima.illu:before {
+  background: url(https://cdn-images-1.medium.com/max/2000/1*1RteQIQxKKt0SVnZ8bh0pg.jpeg) no-repeat center center;
+}
+
+.main .illustration #encima:before {
+  content: '';
+  /*background: url(http://i.imgur.com/dJLNhFN.jpg) no-repeat left top;*/
+  background: url(http://s22.postimg.org/urrt8jfq9/d_JLNh_FN.jpg) no-repeat left top;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .main .illustration img {

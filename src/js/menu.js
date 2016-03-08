@@ -13,8 +13,11 @@ var menu = {
 
 //loader disapear when page is loaded
 window.addEventListener('load', function () {
-    menu.loader_screen.classList.toggle('hide');
-    menu.welcome_screen.classList.toggle('hide');
+    window.setTimeout(function () {
+        menu.loader_screen.classList.toggle('hide');
+        menu.welcome_screen.classList.toggle('hide');
+    }, 500);
+
 });
 
 

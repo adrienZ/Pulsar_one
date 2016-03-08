@@ -29,7 +29,7 @@ function render_prologue(event) {
             render(current_act[event.data_event]);
         }, 4000);
 
-    }, 8000);
+    }, 6000);
 };
 
 function render_intro() {
@@ -37,6 +37,7 @@ function render_intro() {
     new_prologue.className = 'new_game prologue showtime';
     new_prologue.innerHTML = '<div class="citation hide"> <p>« J’aime la science-fiction, j’aime la fantaisie, j’aime le voyage dans le temps, c’est pourquoi j’ai eu cette idée : et si vous aviez la possibilité de retourner dans votre passé par un simple coup de fil. <br>Que changerez-vous ? »</p> <p>- Rainbow Rowell</p> </div>';
     document.body.appendChild(new_prologue);
+
 
 
     var form_name = document.createElement('section');
@@ -91,9 +92,15 @@ function render_intro() {
         new_prologue.querySelector('.citation').classList.remove('hide');
         window.setTimeout(function () {
             document.body.appendChild(form_name);
+            form_name.querySelector('p').style.opacity = 0;
+            form_name.querySelector('input').style.opacity = 0;
+            setTimeout(function () {
+                form_name.querySelector('p').style.opacity = '';
+                form_name.querySelector('input').style.opacity = '';
+            }, 500);
             new_prologue.classList.remove('showtime');
             new_prologue.innerHTML = '<div class="splash-screen hide"> <h1>Acte 1</h1> <div class="bar"></div> <h2>La réminiscence du destin</h2> <div class="pagination-acte"> <div class="dots active"></div> <div class="dots"></div> <div class="dots"></div> <div class="dots"></div> <div class="dots"></div> </div> </div>';
-        }, 8000);
+        }, 6000);
     }, 1000);
 };
 
@@ -105,6 +112,14 @@ function render_intro() {
 
 user.set_name = function (new_name) {
     user.name = new_name;
+    user = JSON.stringify(user);
+    savegame.delete_save('user_save');
+    savegame.create_save('user_save', user, 7);
+    user = JSON.parse(user);
+};
+
+user.set_progress = function (new_event) {
+    user.game = new_event;
     user = JSON.stringify(user);
     savegame.delete_save('user_save');
     savegame.create_save('user_save', user, 7);
