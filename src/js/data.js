@@ -132,7 +132,7 @@ var data = {
             ]
         },
         'a1_5': {
-            "question": "Jour 01, 09h45, année 2016.Vous prenez place dans votre salle et aujourd’hui, c’est cours d’espagnol. Parallèlement à la situation, vous êtes sur votre PC. Qu’ il y a - t - il sur votre écran ?",
+            "question": "Jour 01, 09h45, année 2016.Vous prenez place dans votre salle et aujourd’hui, c’est cours d’espagnol. Parallèlement à la situation, vous êtes sur votre PC. Qu’il y a - t - il sur votre écran ?",
             "choix": [
                 {
                     "text": "Vos prises de notes",
@@ -565,20 +565,210 @@ var data = {
     ]
         },
         'a2_17': {
-            "question": "Rose : Tu as ce qu’on appelle la manipulation de l’entropie temporelle. Tu es capable de contrôler ton énergie afin de tordre instantanément l’espace-temps. Tu crées une bulle autour de toi et pouf ! Tu transportes ta matière dans une autre dimension ! J’imaginais que ça pouvait exister. Ce type de pouvoir est unique en son genre.",
+            "question": "Rose : Que je t’explique un peu. Tu vas pas le croire mais tu as une capacité spéciale qui s’appelle “Le Saut d’Inter-Réalité”. C’est un pouvoir extrêmement rare du fait de sa dangerosité. Plus tu crées des saut et plus ton destin est alterné. Tu écrases en gros le travail que Destinée fait en bref. Chose qu’elle n’aime pas trop.\n",
+            "choix": [
+                {
+                    "text": "Du coup je peux voyager dans le temps c’est ça ?",
+                    "data_event": "a2_18"
+        }
+    ]
+        },
+        'a2_18': {
+            "question": "Rose : Ouais à peu près. Comme ton pouvoir n’est pas assez développé, tu ne peux pas voyager en toute liberté. Chronos a du créer des barrières trans-dimensionnel pour éviter que tu fasses des bêtises.",
+            "choix": [
+                {
+                    "text": "Whoa, on est capable de faire ça ?",
+                    "data_event": "a2_19"
+        },
+                {
+                    "text": "Du coup je peux voyager dans le temps c’est ça ?",
+                    "data_event": "a2_20"
+        }
+    ]
+        },
+
+        'a2_19': {
+            "question": "Rose : A priori ouais. Moi je n’ai pas ce don haha. Je suis douée sur tout ce qui touche la connaissance et la mécanique.",
             "choix": [
                 {
                     "text": "",
-                    "data_event": "end2",
+                    "data_event": "a2_21",
                     "naration": true
         }
     ]
         },
-        end2: {
-            stop_act: true,
+
+        'a2_20': {
+            "question": "Rose : Ouais à peu près. Comme ton pouvoir n’est pas assez développé, tu ne peux pas voyager en toute liberté. Chronos a du créer des barrières trans-dimensionnel pour éviter que tu fasses des bêtises.",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a2_21",
+                    "naration": true
+        }
+    ]
         },
 
+        'a2_21': {
+            "question": "Rose : Bon maintenant, il faut que je t’explique comment tu peux traverser les dimensions. Ce que tu crées ce sont des réalités alternatives qui ont pour but d’organiser tout le chaos du temps. Dès lors où tu initialiseras un saut, tu dois utiliser des pulsars, ce sont des particules d’énergies qui synchronise tes sauts et garde tes propriétés métaphysiques. La règle de Chronos est : 3 pulsars pour ne pas rester dans le blizzard. C’est 1 pulsar d’entrée, 1 pulsar de parcours et 1 pulsar de sortie. Et attention ! Ce ne sont pas des jouets ! Tu dois jamais les laisser tomber, ce sont des éléments très toxique. Donc ne mange pas les pulsars. Je ne l’ai jamais fait, mais on m’a dit que ça ferait un effet plutôt sympathique.\n(3 pulsars = 1 retour temporel conscient. 1 pulsar pour initialiser, 1 pulsar pour modifier les événements et garder son esprit, 1 pulsar pour retourner dans notre lignée temporelle)\n\nTu dois à tout prix sortir de tes bulles temporelles ou sinon tu devras rester dans ce temps où tu n’existerais même pas. Comme un fantôme. Mais ça je t’expliquerai plus tard. Garde l’Appareil d'Eclaircissement Biologique, ce sera ton appareil pour faire les sauts temporels. Je l’ai modifié pour toi. Souviens-toi, tu fais des sauts temporels, aux yeux de Destinée tu remappes le temps. Est-ce que tu as tout compris ?\n",
+            "choix": [
+                {
+                    "text": "Ouais ! Allons sauver le monde ! ",
+                    "data_event": "a2_22"
+        },
+                {
+                    "text": "Euh, j’ai pas très bien compris..",
+                    "data_event": "a2_23"
+        }
+    ]
+        },
+
+        'a2_22': {
+            "question": "Rose : Haha j’aime cette détermination. Ne bouge pas, je vais appeler Chronos.\n",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a2_26",
+                    "naration": true
+        }
+    ]
+        },
+
+        'a2_23': {
+            "question": "Rose : Pour te faire court, tu as le pouvoir de voyager dans le temps. C’est 3 pulsars sont pour le voyage. Tâche de sortir du temps que tu as modifié au risque de te faire effacer. Compris ?\n",
+            "choix": [
+                {
+                    "text": "Ouais, maintenant c’est plus clair !",
+                    "data_event": "a2_24"
+        },
+                {
+                    "text": "Euh attends, tu peux recommencer ?",
+                    "data_event": "a2_25"
+        }
+    ]
+        },
+
+        'a2_24': {
+            "question": "Rose : Ok. Ne bouge pas, je vais appeler Chronos.",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a2_26",
+                    "naration": true
+        }
+    ]
+        },
+        'a2_25': {
+            "question": "Rose : Pour te faire court, tu as le pouvoir de voyager dans le temps. C’est 3 pulsars sont pour le voyage. Tâche de sortir du temps que tu as modifié au risque de te faire effacer. Compris ?",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a2_26",
+                    "naration": true
+        }
+    ]
+        },
+
+        'a2_26': {
+            "question": "Chronos arrive d’un coup. Une onde de choc d’air vous blaste avec Rose aussi.\nChronos : … *cough* Bon alors tu as découvert ton pouvoir ?\n",
+            "choix": [
+                {
+                    "text": "Ouais, je suis capable de manipuler le temps, c’est bien ça ?",
+                    "data_event": "a2_27"
+        },
+                {
+                    "text": "Ouais, je suis capable de voir le temps, c’est bien ça ?",
+                    "data_event": "a2_28"
+        },
+                {
+                    "text": "Ouais, je suis capable d’écrire le temps, c’est bien ça ?",
+                    "data_event": "a2_28"
+        }
+    ]
+        },
+
+        'a2_27': {
+            "question": "Chronos : Oui à peu près. Tu as la possibilité de faire des sauts temporels. Manipuler le temps c’est moi ça.",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a2_29",
+                    "naration": true
+        }
+    ]
+        },
+        'a2_28': {
+            "question": "Chronos : Euh non. Tu possèdes la possibilité de faire des sauts temporels et d’influer ses les événements.",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a2_29",
+                    "naration": true
+        }
+    ]
+        },
+
+        'a2_29': {
+            "question": "Chronos : Maintenant je dois t’expliquer la partie la plus importante du topo. Il y a cinq siècles, après la création de la régence des disciples, j’ai accueilli un disciple au potentiel similaire au tien, il s'appelait Rainmaker. Il était très doué et pouvait assimiler tout en un rien de temps. C’était un vrai prodige. Mais petit à petit, sa soif de pouvoir a pris le dessus et voilà maintenant qu’il veut siéger sur le trône des Limbes. Je ne peux pas tolérer ça. Il est en train de tout faire pour me détruire, quitte à sacrifier des personnes innocentes.\nTu es mon seul espoir, tu possèdes le même potentiel que Rainmaker et tu est le seul à posséder un pouvoir capable de détruire Rainmaker. Il faut que tu m’aides. En échange, je modifierai ton destin tragique.\n",
+            "choix": [
+                {
+                    "text": "D’accord, je vous aiderai.",
+                    "data_event": "a2_30"
+        }
+    ]
+        },
+
+        'a2_30': {
+            "question": "Chronos : Merci. Maintenant, je dois te laisser. Ah oui dernière chose, tu dois sortir par toi-même des Limbes. Ce sera ton épreuve finale. Sers toi de ton instinct pour trouver ton chemin. On se retrouve à la sortie.",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a2_31",
+                    "naration": true
+        }
+    ]
+        },
+
+        'a2_31': {
+            "question": "Jeu S'échapper des Limbes",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a2_32",
+                    "naration": true
+        }
+    ]
+        },
+
+        'a2_32': {
+            "question": "Chronos : Tu as réussi l’épreuve finale. L’initiation est dorénavant terminé. Fais attention, tout de même. Dans cette aventure chaque choix que tu prendras aura des conséquences sur ton avenir. Utilise ce pulsar quantum pour réaliser ton premier remappage temporel.\nRose : Hey *player* profite ! On dit toujours que le premier voyage temporel est celui que l’on se souvient le plus !\nChronos :  Remappage temporel Rose. Utilise les bons termes.\nRose : Roh si tu veux.\n",
+            "choix": [
+                {
+                    "text": "Remappage temporel vers La Grèce Antique ",
+                    "data_event": "a3_1",
+                    stop_act: true,
+        },
+                {
+                    "text": "Remappage temporel vers L’Egypte Ancienne",
+                    "data_event": "a3_2",
+                    stop_act: true,
+        },
+                {
+                    "text": "Remappage temporel vers La France Révolutionnaire",
+                    "data_event": "a3_3",
+                    stop_act: true,
+        }
+    ]
+        },
+
+
     },
+
+    act_3: {
+
+    },
+
+
 
     backstory: {
         success: [{
