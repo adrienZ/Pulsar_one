@@ -330,7 +330,6 @@ var data = {
                     text: "",
                     data_event: "a2_3",
                     naration: true,
-                    get_success: 1,
                 },
             ],
         },
@@ -460,7 +459,7 @@ var data = {
             ],
         },
         'a2_9': {
-            question: 'Rose : ... alors c’est toi le nouveau « disciple » ?',
+            question: 'Rose : Alors c’est toi le nouveau « disciple » ?',
             choix: [
                 {
                     text: "Euh ouais à priori.",
@@ -496,7 +495,7 @@ var data = {
             ],
         },
         'a2_11': {
-            question: 'C\'est une jeune femme blonde aux cheveux courts avec des pansements sur le visage. Elle a une tenue venant d\'un monde perdu. Tout est en lanières de cuir. Elle possède un casque d\'avion sur sa tête avec une vitre cassée. Elle semble avoir 20 ans.',
+            question: 'C\'est une jeune femme brune aux cheveux long avec des pansements sur le visage. Elle a une tenue venant d\'un monde perdu. Tout est en lanières de cuir. Elle semble avoir 20 ans.',
             choix: [
                 {
                     text: "",
