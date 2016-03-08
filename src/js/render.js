@@ -180,21 +180,30 @@ function render(event) {
 
 
     if (event.hasOwnProperty('change_img')) {
+        if (browsers.isChrome || browsers.isOpera || browsers.isBlink || browsers.isOpera) {
+            $.el('#encima').className = event.change_img;
+            $.el('#encima').style.animationPlayState = 'running';
+            var delay = window.getComputedStyle($.el('#encima')).getPropertyValue('animation-duration');
+            var new_img = window.getComputedStyle($.el('#encima.' + event.change_img), ':before').getPropertyValue('background-image');
 
-        $.el('#encima').className = event.change_img;
+            window.setTimeout(function () {
+                $.el('#fondo').style.background = new_img + ' no-repeat center center';
+                $.el('#encima').style.animationPlayState = 'paused';
 
-        $.el('#encima').style.animationPlayState = 'running';
-        var delay = window.getComputedStyle($.el('#encima')).getPropertyValue('animation-duration');
-        var new_img = window.getComputedStyle($.el('#encima.' + event.change_img), ':before').getPropertyValue('background-image');
+            }, parseInt(delay[0]) * 1000);
 
-        window.setTimeout(function () {
-            $.el('#fondo').style.background = new_img + ' no-repeat center center';
-            $.el('#encima').style.animationPlayState = 'paused';
+        } else {
+            console.log('cant do the reebook effect');
+            $.el('#encima').className = event.change_img;
+            $.el('#encima').style.animationPlayState = 'running';
+            window.setTimeout(function () {
+                $.el('#fondo').style.background = new_img + ' no-repeat center center';
+                $.el('#encima').style.animationPlayState = 'paused';
 
-        }, parseInt(delay[0]) * 1000);
+            }, 1000);
 
+        }
     }
-
 
 
 

@@ -111,6 +111,8 @@
                         background: -webkit-linear-gradient(to right, #4b6cb7, #182848);
                         background: linear-gradient(to right, #4b6cb7, #182848);
                         opacity: 1;
+                                                -moz-animation: fadeIn 1s infinite;
+
                     }
                     #fondo {
                         /*background: url(http://i.imgur.com/ygVpJMP.jpg) no-repeat left top;*/

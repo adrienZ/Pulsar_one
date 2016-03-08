@@ -152,7 +152,7 @@ var data = {
                     "data_event": "a1_6",
                     get_success: 3,
                     stats_change: {
-                        -user.stats.intelligence,
+                        intelligence: -user.stats.intelligence,
                     },
 
                 }
