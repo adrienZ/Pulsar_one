@@ -5,6 +5,26 @@ body{
 	background-image: url('../img/background_menu.jpg');
 	font-family: 'Gotham',Arial,sans-serif;
 }
+<<<<<<< HEAD
+=======
+.alpha{
+	font-size: 1rem;
+	color: rgba(150, 7, 38, 1);
+}
+.beta{
+	font-size: 1rem;
+	color: rgba(235, 166, 67, 1);
+}
+.gamma{
+	font-size: 1rem;
+	color: rgba(133, 166, 105, 1);
+}
+.gamma-II{
+	font-size: 1rem;
+	color: rgba(142, 195, 124, 1);
+}
+
+>>>>>>> origin/master
 .clear{
 	clear: both;
 }
@@ -16,6 +36,38 @@ body{
 	opacity: 0.4;
 	z-index: -1;
 }
+<<<<<<< HEAD
+=======
+a{
+	text-decoration: none;
+}
+.return_menu{
+	color: white;
+	z-index: 99;
+	display: block;
+	cursor: pointer;
+	text-decoration: none;
+	border: 2px solid white;
+	padding: .7rem 0rem;
+	text-align: center;
+	text-transform: uppercase;
+	width: 200px;
+	font-size: .8rem;
+	position: fixed;
+	bottom: 10px;
+	left: 0;
+	transform-origin: 50% 50%;
+	background-color: rgba(0,0,0,1);
+	transition: all 0.4s;
+	animation: fadeIn 1s ease-in-out 0s normal running 1 forwards;
+	&:hover{
+		cursor: pointer;
+		background-color: rgba(255,255,255,0.2);
+	}
+}
+
+
+>>>>>>> origin/master
 
 header{
 	color: white;
