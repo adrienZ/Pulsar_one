@@ -104,17 +104,18 @@ function render(event) {
             //we may need a variable here
             $.pad.querySelector('ul').lastChild.querySelector('a').setAttribute('data-stats', 'true');
         }
+        if (choice.hasOwnProperty('game_over')) {
+            //we may need a variable here
+            $.pad.querySelector('ul').lastChild.querySelector('a').setAttribute('data-game-over', 'true');
+        }
         if (choice.hasOwnProperty('get_success')) {
             //we may need a variable here
-            console.log('obj');
             $.pad.querySelector('ul').lastChild.querySelector('a').setAttribute('data-success', choice.get_success);
-
         }
         if (choice.hasOwnProperty('pop_up')) {
             //we may need a variable here
             $.pad.querySelector('ul').lastChild.querySelector('a').setAttribute('data-pop-up', choice.pop_up);
         }
-
         if (choice.hasOwnProperty('change_act')) {
             $.pad.querySelector('ul').lastChild.querySelector('a').setAttribute('data-act', choice.change_act);
         }
@@ -138,6 +139,9 @@ function render(event) {
 
             if (elem.getAttribute('data-pop-up')) {
                 create_pop_up(this.getAttribute('data-pop-up'));
+            }
+            if (elem.getAttribute('data-game-over')) {
+                pulsar_game_over();
             }
             if (elem.getAttribute('data-success')) {
                 user.success.push(data.backstory.success[this.getAttribute('data-success') - 1]);
@@ -205,8 +209,6 @@ function render(event) {
         }
     }
 
-
-
     // remove unused timers
     if ($.pad.querySelector('.timer')) {
         $.pad.querySelector('.timer').remove();
@@ -221,7 +223,6 @@ function render(event) {
         var time_left = event.timer;
         var random = parseInt(Math.random() * $.pad.querySelectorAll('li a').length);
 
-
         $.pad.appendChild(timer_DOM);
 
         var tic_toc = setInterval(function (e) {
@@ -232,7 +233,6 @@ function render(event) {
             $.pad.querySelector('.timer span').style.msTransform = ' scale(' + (time_left / event.timer) + ',1) translate3D(0,0,0)';
             $.pad.querySelector('.timer span').style.transform = ' scale(' + (time_left / event.timer) + ',1) translate3D(0,0,0)';
 
-
             if (time_left === -1) {
                 //if time is up, we simulate a click on a random answer
                 //simulating click like that // code can be improved
@@ -242,8 +242,6 @@ function render(event) {
                 clearInterval(tic_toc);
             }
         }, 1000);
-
-
 
         // interupt timer onclick
         [].forEach.call($.commands, function (elem) {
@@ -352,4 +350,12 @@ function write(txt, parent) {
         ui.skip.push(previous);
 
     }
+}
+
+
+function pulsar_game_over() {
+    var game_over_dom = document.createElement('section');
+    game_over_dom.className = "game-over";
+    game_over_dom.innerHTML = '<article><h2>Fin de <span>partie<span></h2><p>Le destin a eu raison de vous.</p><a href="#">Recommencer (-2 pulsars)</a><a href="index.html">Quitter la partie</a><p class="pulars-left">Il vous reste ' + user.pulsars + 'pulsars</p></article>';
+    document.body.appendChild(game_over_dom);
 }

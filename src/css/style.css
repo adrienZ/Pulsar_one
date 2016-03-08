@@ -870,3 +870,72 @@ body {
     font-size: 10px;
   }
 }
+
+.game-over {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Gotham Book', 'Arial', sans-serif;
+  position: relative;
+  background: #060607;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #060607, #1b1d1f);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+  text-align: center;
+}
+
+.game-over article {
+  text-transform: uppercase;
+  position: absolute;
+  width: 80%;
+  height: 50vh;
+  left: 10%;
+  top: 20%;
+}
+
+.game-over article h2 {
+  font-family: 'Gotham-light', 'Arial', sans-serif;
+  font-size: 2.875em;
+  line-height: 2.375em;
+}
+
+.game-over article h2 span {
+  font-family: 'Gotham bold', 'Arial', sans-serif;
+}
+
+.game-over article h2:before {
+  content: '';
+  position: absolute;
+  width: 17.5%;
+  left: 41.25%;
+  height: 3px;
+  background: white;
+  top: 100px;
+}
+
+.game-over article p {
+  text-transform: none;
+  line-height: 4.5em;
+  font-size: 1.25em;
+}
+
+.game-over article p:first-of-type {
+  margin-bottom: 50px;
+}
+
+.game-over article p:last-of-type {
+  text-transform: uppercase;
+  position: fixed;
+  right: 80px;
+  bottom: 20px;
+  font-size: 0.75em;
+  font-weight: 900;
+}
+
+.game-over article a {
+  text-decoration: none;
+  font-size: 0.875em;
+  margin: 0.9375em;
+  display: block;
+}

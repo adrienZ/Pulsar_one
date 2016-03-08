@@ -188,6 +188,7 @@ var data = {
                 {
                     "text": "Vous protestez et vous êtes envoyé chez le directeur.",
                     "data_event": "a1_9",
+                    game_over: true,
                     stats_change: {
                         luck: -5,
                     },

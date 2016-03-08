@@ -111,8 +111,7 @@
                         background: -webkit-linear-gradient(to right, #4b6cb7, #182848);
                         background: linear-gradient(to right, #4b6cb7, #182848);
                         opacity: 1;
-                                                -moz-animation: fadeIn 1s infinite;
-
+                        -moz-animation: fadeIn 1s infinite;
                     }
                     #fondo {
                         /*background: url(http://i.imgur.com/ygVpJMP.jpg) no-repeat left top;*/
@@ -594,5 +593,67 @@
                     padding-left: 20px;
                     font-weight: 400;
                     font-size: 10px;
+                }
+            }
+            
+            .game-over {
+                width: 100vw;
+                height: 100vh;
+                font-family: 'Gotham Book', 'Arial', sans-serif;
+                position: relative;
+                background: #060607;
+                /* fallback for old browsers */
+                background: -webkit-linear-gradient(to bottom, #060607, #1b1d1f);
+                /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to bottom, #060607, #1b1d1f);
+                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                color: white;
+                text-align: center;
+                article {
+                    text-transform: uppercase;
+                    position: absolute;
+                    width: 80%;
+                    height: 50vh;
+                    left: 10%;
+                    top: 20%;
+                    h2 {
+                        font-family: 'Gotham-light', 'Arial', sans-serif;
+                        font-size: em(46px);
+                        line-height: em(38px);
+                        span {
+                            font-family: 'Gotham bold', 'Arial', sans-serif;
+                        }
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            width: 17.5%;
+                            left: 41.25%;
+                            height: 3px;
+                            background: white;
+                            top: 100px;
+                        }
+                    }
+                    p {
+                        text-transform: none;
+                        line-height: em(72px);
+                        font-size: em(20px);
+                        &:first-of-type {
+                            margin-bottom: 50px;
+                        }
+                        &:last-of-type {
+                            text-transform: uppercase;
+                            position: fixed;
+                            right: 80px;
+                            bottom: 20px;
+                            font-size: em(12px);
+                            font-weight: 900;
+                        }
+                    }
+                    a {
+                        text-decoration: none;
+                        font-size: em(14px);
+                        margin: em(15px);
+                        display: block;
+                    }
                 }
             }
