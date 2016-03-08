@@ -68,36 +68,36 @@ if (order < limit_characters.length) {
 
 
 // arrow_prev.addEventListener('click', function(e){
-// 	if (order < limit_characters.length && order <= 0){
-// 		order = 0;
-// 		character_base.style.transform = 'translateX('+evolution_position*order+'vw)';
-// 	} else {
-// 		order--;
-// 		character_base.style.transform = 'translateX('+evolution_position*order+'vw)';
-// 		window.setTimeout(function(){
-// 			window.setTimeout(function(){
-// 				description_char[order].style.transform = 'translateX('+1.5+'vw)';
-// 			}, 100)
-// 			image_char[order].style.transform = 'translateX('+-1+'vw)';
-// 		}, 300);
-// 	}
-// 	console.log(evolution_position);
-// 	console.log(order);
+//  if (order < limit_characters.length && order <= 0){
+//      order = 0;
+//      character_base.style.transform = 'translateX('+evolution_position*order+'vw)';
+//  } else {
+//      order--;
+//      character_base.style.transform = 'translateX('+evolution_position*order+'vw)';
+//      window.setTimeout(function(){
+//          window.setTimeout(function(){
+//              description_char[order].style.transform = 'translateX('+1.5+'vw)';
+//          }, 100)
+//          image_char[order].style.transform = 'translateX('+-1+'vw)';
+//      }, 300);
+//  }
+//  console.log(evolution_position);
+//  console.log(order);
 // });
 // arrow_next.addEventListener('click', function(e){
-// 	if (order < limit_characters.length){
-// 		order++;
-// 		character_base.style.transform = 'translateX('+evolution_position*order+'vw)';
+//  if (order < limit_characters.length){
+//      order++;
+//      character_base.style.transform = 'translateX('+evolution_position*order+'vw)';
 
-// 		window.setTimeout(function(){
-// 			window.setTimeout(function(){
-// 				description_char[order].style.transform = 'translateX('+-1.5+'vw)';
-// 			}, 100)
-// 			image_char[order].style.transform = 'translateX('+1+'vw)';
-// 		}, 300);
-// 	} else {
-// 		order = limit_characters.length;
-// 		character_base.style.transform = 'translateX('+evolution_position*order+'vw)';
-// 	}
-// 	console.log(order);
+//      window.setTimeout(function(){
+//          window.setTimeout(function(){
+//              description_char[order].style.transform = 'translateX('+-1.5+'vw)';
+//          }, 100)
+//          image_char[order].style.transform = 'translateX('+1+'vw)';
+//      }, 300);
+//  } else {
+//      order = limit_characters.length;
+//      character_base.style.transform = 'translateX('+evolution_position*order+'vw)';
+//  }
+//  console.log(order);
 // });
