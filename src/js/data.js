@@ -26,7 +26,7 @@ var data = {
     ]
         },
         'a1_1': {
-            "question": "Cette nuisance sonore vous a réveillé un peu. On dirait qu’il est temps de se lever. Vous vous levez avec une affreuse migraine.Vous vous souvenez de tout et de rien.C’est le néant. Les seuls mots qui se répètent dans votre tête sont: ‘histoire’, ‘sacrifice’, ‘destin’. Vous êtes en pyjama.Vous vous habillez, prenez votre sac de cours et décidez de descendre. Vous apercevez votre sœur Luna mangeant un bol de céréales dans la cuisine. LUNA: Salut ! Tu as vu ?",
+            "question": "Cette nuisance sonore vous a réveillé un peu. On dirait qu’il est temps de se lever. Vous vous levez avec une affreuse migraine.Vous vous souvenez de tout et de rien. C’est le néant. Les seuls mots qui se répètent dans votre tête sont: ‘histoire’, ‘sacrifice’, ‘destin’. Vous êtes en pyjama.Vous vous habillez, prenez votre sac de cours et décidez de descendre. Vous apercevez votre sœur Luna mangeant un bol de céréales dans la cuisine. LUNA : Salut ! Tu as vu l'épisode de Sense : the prequel ?",
             "choix": [
                 {
                     "text": "Euh ouais, c'est ouf !",
@@ -55,7 +55,7 @@ var data = {
     ]
         },
         'a1_1_1': {
-            "question": "LUNA : Oh, dommage ! À la fin de l’épisode, tu aurais dû voir ! Cette bataille de malade ! // Oh ce n’est pas grave, tu n’as rien raté.",
+            "question": "LUNA : Oh, dommage ! À la fin de l’épisode, tu aurais dû voir ! Cette bataille de malade !",
             "choix": [
                 {
                     "text": "",
@@ -82,10 +82,11 @@ var data = {
                 {
                     "text": "Luna ? Tu veux qu’on aille en cours ensemble ?",
                     "data_event": "a1_3_0 ",
+                    "get_success": 1,
                     stats_change: {
                         loyalty: 3,
                     },
-                    "get_success": 1,
+
         },
                 {
                     "text": "Bon Luna, je m’en vais. On se voit au dîner.",
@@ -131,7 +132,7 @@ var data = {
             ]
         },
         'a1_5': {
-            "question": "Jour 01, 09h45, année 2016.Vous prenez place dans votre salle et aujourd’hui, c’est cours d’espagnol. Parallèlement à la situation, vous êtes sur votre PC.Qu’ il y a - t - il sur votre écran ?",
+            "question": "Jour 01, 09h45, année 2016.Vous prenez place dans votre salle et aujourd’hui, c’est cours d’espagnol. Parallèlement à la situation, vous êtes sur votre PC. Qu’ il y a - t - il sur votre écran ?",
             "choix": [
                 {
                     "text": "Vos prises de notes",
@@ -182,10 +183,10 @@ var data = {
         },
 
         'a1_8': {
-            "question": "Votre PC se met à émettre du bruit de manière pestilentielle, vous vous faites remarquer et le professeur se tourne vers vous…\n Hey" + user.name + ", on ne vous dérange pas ? Sortez du cours maintenant s’il vous plaît.\n",
+            "question": "Votre PC se met à émettre du bruit de manière pestilentielle, vous vous faites remarquer et le professeur se tourne vers vous…\n Hey " + user.name + ", on ne vous dérange pas ? Sortez du cours maintenant s’il vous plaît.\n",
             "choix": [
                 {
-                    "text": "Vous proteste et vous êtes envoyé chez le directeur.",
+                    "text": "Vous protestez et vous êtes envoyé chez le directeur.",
                     "data_event": "a1_9",
                     stats_change: {
                         luck: -5,

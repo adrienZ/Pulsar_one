@@ -140,8 +140,8 @@ function render(event) {
                 create_pop_up(this.getAttribute('data-pop-up'));
             }
             if (elem.getAttribute('data-success')) {
-                user.success.push(data.backstory.success[this.getAttribute('data-success')]);
-                create_success(data.backstory.success[this.getAttribute('data-success')].img);
+                user.success.push(data.backstory.success[this.getAttribute('data-success') - 1]);
+                create_success(data.backstory.success[this.getAttribute('data-success') - 1].img);
                 var trophy_sound = new Audio('src/medias/success-sound.mp3');
                 trophy_sound.play();
             }
