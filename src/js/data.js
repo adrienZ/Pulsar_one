@@ -495,7 +495,7 @@ var data = {
             ],
         },
         'a2_11': {
-            question: 'C\'est une jeune femme brune aux cheveux long avec des pansements sur le visage. Elle a une tenue venant d\'un monde perdu. Tout est en lanières de cuir. Elle semble avoir 20 ans.',
+            question: 'C\'est une jeune femme blonde aux cheveux long avec des pansements sur le visage. Elle a une tenue venant d\'un monde perdu. Tout est en lanières de cuir. Elle semble avoir 20 ans.',
             choix: [
                 {
                     text: "",
