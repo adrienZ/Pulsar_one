@@ -173,6 +173,7 @@ function render(event) {
                 });
 
             }
+            console.log(current_act[this.getAttribute('data-event')], this.getAttribute('data-event'));
             render(current_act[this.getAttribute('data-event')]);
             // SKIP HERE / be careful with this global
             skip = true;
@@ -356,6 +357,6 @@ function write(txt, parent) {
 function pulsar_game_over() {
     var game_over_dom = document.createElement('section');
     game_over_dom.className = "game-over";
-    game_over_dom.innerHTML = '<article><h2>Fin de <span>partie<span></h2><p>Le destin a eu raison de vous.</p><a href="#">Recommencer (-2 pulsars)</a><a href="index.html">Quitter la partie</a><p class="pulars-left">Il vous reste ' + user.pulsars + 'pulsars</p></article>';
+    game_over_dom.innerHTML = '<article><h2>Fin de <span>partie<span></h2><p>Le destin a eu raison de vous.</p><a href="#">Recommencer (-2 pulsars)</a><a href="index.html">Quitter la partie</a><p class="pulars-left">Il vous reste ' + user.pulsars + ' pulsars</p></article>';
     document.body.appendChild(game_over_dom);
 }
