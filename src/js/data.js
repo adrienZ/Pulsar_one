@@ -746,48 +746,56 @@ var data = {
             "choix": [
                 {
                     "text": "Remappage temporel vers La Grèce Antique ",
-                    "data_event": "a2_33",
+                    "data_event": "a2_33_0",
+                    time_travel: 'greece',
+
         },
                 {
                     "text": "Remappage temporel vers L’Egypte Ancienne",
-                    "data_event": "a2_34",
+                    "data_event": "a2_33_1",
+                    time_travel: 'egypt',
+
         },
                 {
                     "text": "Remappage temporel vers La France Révolutionnaire",
-                    "data_event": "a2_35",
+                    "data_event": "a2_33_2",
+                    time_travel: 'france',
+
         }
     ]
         },
 
-        'a2_33': {
+        'a2_33_0': {
             "question": "Vous avez choisi de partir en Grèce Antique. ",
             "choix": [
                 {
                     "text": "",
                     "data_event": "a2_36",
-                    "naration": true
+                    "naration": true,
         }
     ]
         },
 
-        'a2_34': {
+        'a2_33_1': {
             "question": "Vous avez choisi de partir en Egypte Ancienne. ",
             "choix": [
                 {
                     "text": "",
                     "data_event": "a2_36",
-                    "naration": true
+                    "naration": true,
+
         }
     ]
         },
 
-        'a2_35': {
+        'a2_33_2': {
             "question": "Vous avez choisi de partir en France Révolutionnaire.",
             "choix": [
                 {
                     "text": "",
                     "data_event": "a2_36",
-                    "naration": true
+                    "naration": true,
+
         }
     ]
         },
@@ -810,7 +818,80 @@ var data = {
     },
 
     act_3: {
-
+        prologue: {
+            citation: '"Lorsque vous faites un choix dans votre vie, cela affecte votre vie dans toutes les manières, que ça soit dans le bon ou dans le mauvais sens."',
+            "author": "John Mayer",
+            "number": 3,
+            "title": "Un passé incertain",
+            data_event: 'a3_0',
+        },
+        'a3_0': {
+            "question": "Souviens-toi, tu dois retourner affronter Rainmaker dans le passé et le détruire tant qu’il est encore jeune et faible.Utilise le flux quantique pour remonter dans le temps, à quelle époque veux tu remonter ?",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "end3",
+                    "naration": true
+        }
+    ]
+        },
+        'a3_1_0': {
+            "question": "Souviens-toi, tu dois retourner affronter Rainmaker dans le passé et le détruire tant qu’il est encore jeune et faible.Utilise le flux quantique pour remonter dans le temps, à quelle époque veux tu remonter ?",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "travel",
+                    "naration": true
+        }
+    ]
+        },
+        'a3_1_1': {
+            "question": "Souviens-toi, tu dois retourner affronter Rainmaker dans le passé et le détruire tant qu’il est encore jeune et faible.Utilise le flux quantique pour remonter dans le temps, à quelle époque veux tu remonter ?",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "end3",
+                    "naration": true
+        }
+    ]
+        },
+        'a3_1_2': {
+            "question": "Souviens-toi, tu dois retourner affronter Rainmaker dans le passé et le détruire tant qu’il est encore jeune et faible.Utilise le flux quantique pour remonter dans le temps, à quelle époque veux tu remonter ?",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "end3",
+                    "naration": true
+        }
+    ]
+        },
+        end3: {
+            stop_act: true,
+        },
+    },
+    act_4: {
+        prologue: {
+            citation: '"Le meilleur succès est souvent né avec un grand sacrifice, et n\'est jamais le résultat d\'un égoïste."',
+            "author": "John Mayer",
+            "number": 4,
+            "title": "Une rengaine fatale",
+            data_event: 'a4_0',
+        },
+        end4: {
+            stop_act: true,
+        },
+    },
+    act_5: {
+        prologue: {
+            citation: '"Un héro est une persone qui a donné toute sa vie pour faire naître quelque chose de plus grand que sa propre vie."',
+            "author": "Joseph Campbell",
+            "number": 5,
+            "title": "La fin justifie les moyens",
+            data_event: 'a5_0',
+        },
+        end5: {
+            stop_game: true,
+        },
     },
 
 

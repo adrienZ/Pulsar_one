@@ -58,17 +58,11 @@ var skip = false;
 function render(event) {
     console.log(event);
     if (event.hasOwnProperty('stop_act')) {
-        console.log('hahoy');
-
         //current_act = data['act_' + user.game[1]];
         window.location = '/recap.html';
         return false;
     };
-    user.game = event.parent;
-    savegame.erase_save('user_save', user);
-
-
-
+    user.set_progress = event.parent;
 
     //cleaning previous answers
     $.pad.querySelector('ul').innerHTML = "";
@@ -77,16 +71,33 @@ function render(event) {
 
 
 
-
-
     //iterate trought players
     event.choix.forEach(function (choice) {
+        //EXCEPTIONS for time travel in act_3
+        if (user.game === 'a3_0') {
+            switch (user.travel) {
+            case 'greece':
+                console.log('Selected area : ' + user.travel);;
+
+                choice.data_event = 'a3_0';
+                break;
+            case 'egypt':
+                choice.data_event = 'a3_1';
+                break;
+            case 'france':
+                choice.data_event = 'a3_2';
+                break;
+
+            }
+        }
+
+
+
 
         //link function generator
         var text = function (content) {
             return $.pad.querySelector('ul').innerHTML += '<li><a href="#" data-event="' + choice.data_event + '">' + content + '</a></li>';
         }; // if this is narration , there could be only one choice for the player --> skip the dialogue
-
 
 
         if (choice.naration) {
@@ -98,16 +109,16 @@ function render(event) {
             text(choice.text);
         }
 
-
+        if (choice.hasOwnProperty('game_over')) {
+            //we may need a variable here
+            $.pad.querySelector('ul').lastChild.querySelector('a').setAttribute('data-game-over', 'true');
+        }
         // detect if user stats will change
         if (choice.hasOwnProperty('stats_change')) {
             //we may need a variable here
             $.pad.querySelector('ul').lastChild.querySelector('a').setAttribute('data-stats', 'true');
         }
-        if (choice.hasOwnProperty('game_over')) {
-            //we may need a variable here
-            $.pad.querySelector('ul').lastChild.querySelector('a').setAttribute('data-game-over', 'true');
-        }
+
         if (choice.hasOwnProperty('get_success')) {
             //we may need a variable here
             $.pad.querySelector('ul').lastChild.querySelector('a').setAttribute('data-success', choice.get_success);
@@ -118,6 +129,9 @@ function render(event) {
         }
         if (choice.hasOwnProperty('change_act')) {
             $.pad.querySelector('ul').lastChild.querySelector('a').setAttribute('data-act', choice.change_act);
+        }
+        if (choice.hasOwnProperty('time_travel')) {
+            $.pad.querySelector('ul').lastChild.querySelector('a').setAttribute('data-travel', choice.time_travel);
         }
         $.commands = $.pad.querySelectorAll('ul li a');
     });
@@ -142,6 +156,9 @@ function render(event) {
             }
             if (elem.getAttribute('data-game-over')) {
                 pulsar_game_over();
+            }
+            if (elem.getAttribute('data-travel')) {
+                user.travel = elem.getAttribute('data-travel');
             }
             if (elem.getAttribute('data-success')) {
                 user.success.push(data.backstory.success[this.getAttribute('data-success') - 1]);
