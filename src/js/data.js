@@ -81,7 +81,7 @@ var data = {
             "choix": [
                 {
                     "text": "Luna ? Tu veux qu’on aille en cours ensemble ?",
-                    "data_event": "a1_3_0 ",
+                    "data_event": "a1_3_0",
                     "get_success": 1,
                     stats_change: {
                         loyalty: 3,
@@ -100,7 +100,7 @@ var data = {
         },
 
         'a1_3_0': {
-            "question": "LUNA : Oh ne t’inquiète pas. J’attends Rosaline. On a cours à 09h45. Par contre, je dois te passer mon nouveau numéro de téléphone, j’ai perdu l’ancien. Papa m’en a acheté un nouveau : 06-72-91-04-93.\nElle termine son bol de céréales et se dirige vers vous pour vous donner un petit câlin.\nLUNA : À ce soir ! \n",
+            "question": "LUNA : Oh ne t’inquiète pas. J’attend Rosaline. On a cours à 09h45. Par contre, je dois te passer mon nouveau numéro de téléphone, j’ai perdu l’ancien. Papa m’en a acheté un nouveau : 06-72-91-04-93.\nElle termine son bol de céréales et se dirige vers vous pour vous donner un petit câlin.\nLUNA : À ce soir ! \n",
             "choix": [
                 {
                     "text": "",
@@ -132,7 +132,7 @@ var data = {
             ]
         },
         'a1_5': {
-            "question": "Jour 01, 09h45, année 2016.Vous prenez place dans votre salle et aujourd’hui, c’est cours d’espagnol. Parallèlement à la situation, vous êtes sur votre PC. Qu’il y a - t - il sur votre écran ?",
+            "question": "Jour 01, 09h45, année 2016.Vous prenez place dans votre salle et aujourd’hui, c’est cours d’espagnol. Parallèlement à la situation, vous êtes sur votre PC. Qu’il y a-t-il sur votre écran ?",
             "choix": [
                 {
                     "text": "Vos prises de notes",
@@ -296,7 +296,7 @@ var data = {
 
     act_2: {
         prologue: {
-            citation: 'Si vous n\'aimez pas quelque chose, changez-le. Si vous ne pouvez pas le changer, changez votre attitude.',
+            citation: '"Si vous n\'aimez pas quelque chose, changez-le. Si vous ne pouvez pas le changer, changez votre attitude."',
             "author": "Maya Angelou",
             "number": 2,
             "title": "Un réveil trouble",
@@ -388,7 +388,7 @@ var data = {
             ],
         },
         'a2_4_2': {
-            question: 'Chronos : Tu es dans les limbes. Un lieu où le temps et l’espace ne sont plus.',
+            question: 'Chronos : Tu es dans les Limbes. Un lieu où le temps et l’espace ne sont plus.',
             choix: [
                 {
                     text: "",
@@ -408,7 +408,7 @@ var data = {
             ],
         },
         'a2_6': {
-            question: 'Chronos : Toi, tu es particulier. J’ai vu ton potentiel au-delà. J’ai vu ta puissance. J’aurai besoin de ton aide pour l’abattre. Il est imprévisible et je ne peux pas le battre toutseul.Dans les limbes, je t’enseignerai le pouvoir que tu possèdes au sein de ton esprit. Aide-moi, ton destin est en jeu.',
+            question: 'Chronos : Toi, tu es particulier. J’ai vu ton potentiel au-delà. J’ai vu ta puissance. J’aurai besoin de ton aide pour l’abattre. Il est imprévisible et je ne peux pas le battre tout seul. Dans les Limbes, je t’enseignerai le pouvoir que tu possèdes au sein de ton esprit. Aide-moi, ton destin est en jeu.',
             choix: [
                 {
                     text: "Bah le problème c’est que je n’ai pas que ça à faire et vous savez...",
@@ -449,7 +449,7 @@ var data = {
             ],
         },
         'a2_8': {
-            question: 'Chronos disparaît devant vous. Vous êtes devant un paysage très blanc, très lumineux. Il n\'y a a pas de murs, que de la vapeur blanche au fond. Le sens de l\'orientation est perdu dans les limbes.Vous sentez une présence derrière vous, on dirait que quelqu\'un vous attend.',
+            question: 'Chronos disparaît devant vous. Vous êtes devant un paysage très blanc, très lumineux. Il n\'y a a pas de murs, que de la vapeur blanche au fond. Le sens de l\'orientation est inexistant dans les Limbes. Vous sentez une présence derrière vous, on dirait que quelqu\'un vous attend.',
             choix: [
                 {
                     text: "",
@@ -520,7 +520,7 @@ var data = {
             "question": "Le joueur doit connecter les points vitaux en appuyant au bon moment sur les touches.",
             "choix": [
                 {
-                    "text": "D'un coup les limbes se transforment. Rose et le Player se font téléporter dans le cosmos. L'interface utilisateur passe du blanc au noir.",
+                    "text": "D'un coup les Limbes se transforment. Rose et le Player se font téléporter dans le cosmos. L'interface utilisateur passe du blanc au noir.",
                     "data_event": "a2_14"
         },
                 {
@@ -742,27 +742,71 @@ var data = {
         },
 
         'a2_32': {
-            "question": "Chronos : Tu as réussi l’épreuve finale. L’initiation est dorénavant terminé. Fais attention, tout de même. Dans cette aventure chaque choix que tu prendras aura des conséquences sur ton avenir. Utilise ce pulsar quantum pour réaliser ton premier remappage temporel.\nRose : Hey *player* profite ! On dit toujours que le premier voyage temporel est celui que l’on se souvient le plus !\nChronos :  Remappage temporel Rose. Utilise les bons termes.\nRose : Roh si tu veux.\n",
+            "question": "Chronos : Tu as réussi l’épreuve finale. L’initiation est dorénavant terminé. Fais attention, tout de même. Dans cette aventure chaque choix que tu prendras aura des conséquences sur ton avenir. Utilise ce pulsar quantum pour réaliser ton premier remappage temporel.\nRose : Hey" + user.name + "profite ! On dit toujours que le premier voyage temporel est celui que l’on se souvient le plus !\nChronos :  Remappage temporel Rose. Utilise les bons termes.\nRose : Roh si tu veux.\n",
             "choix": [
                 {
                     "text": "Remappage temporel vers La Grèce Antique ",
-                    "data_event": "a3_1",
-                    stop_act: true,
+                    "data_event": "a2_33",
         },
                 {
                     "text": "Remappage temporel vers L’Egypte Ancienne",
-                    "data_event": "a3_2",
-                    stop_act: true,
+                    "data_event": "a2_34",
         },
                 {
                     "text": "Remappage temporel vers La France Révolutionnaire",
-                    "data_event": "a3_3",
-                    stop_act: true,
+                    "data_event": "a2_35",
+        }
+    ]
+        },
+
+        'a2_33': {
+            "question": "Vous avez choisi de partir en Grèce Antique. ",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a2_36",
+                    "naration": true
+        }
+    ]
+        },
+
+        'a2_34': {
+            "question": "Vous avez choisi de partir en Egypte Ancienne. ",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a2_36",
+                    "naration": true
+        }
+    ]
+        },
+
+        'a2_35': {
+            "question": "Vous avez choisi de partir en France Révolutionnaire.",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a2_36",
+                    "naration": true
         }
     ]
         },
 
 
+        'a2_36': {
+            "question": "Bon courage pour ce premier voyage, accroche toi bien !",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "end2",
+                    "naration": true
+        }
+    ]
+        },
+
+        end2: {
+            stop_act: true,
+        },
     },
 
     act_3: {
