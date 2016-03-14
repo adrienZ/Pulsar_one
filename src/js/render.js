@@ -57,12 +57,17 @@ var skip = false;
 //function render
 function render(event) {
     console.log(event);
+
+
     if (event.hasOwnProperty('stop_act')) {
-        //current_act = data['act_' + user.game[1]];
+        current_act = data['act_' + user.game[1]];
         window.location = '/recap.html';
         return false;
     };
-    user.set_progress = event.parent;
+
+    user.game = event.parent;
+    savegame.erase_save('user_save', user);
+    console.log(event.parent, user.game);
 
     //cleaning previous answers
     $.pad.querySelector('ul').innerHTML = "";

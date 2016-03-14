@@ -112,10 +112,11 @@
     <script>
         var compteur = $.el('#compteur');
         var number = 0;
-        var current_act = (user.game[1]);
+        var current_act = parseInt(user.game[1]);
 
         console.log(current_act);
         $.el('.nextAct').addEventListener('click', function () {
+            console.log(current_act);
             user.new = parseInt(current_act) + 1;
             user.game = 'prologue';
             savegame.erase_save('user_save', user);
