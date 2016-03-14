@@ -84,13 +84,13 @@ function render(event) {
             case 'greece':
                 console.log('Selected area : ' + user.travel);;
 
-                choice.data_event = 'a3_0';
-                break;
-            case 'egypt':
                 choice.data_event = 'a3_1';
                 break;
-            case 'france':
+            case 'egypt':
                 choice.data_event = 'a3_2';
+                break;
+            case 'france':
+                choice.data_event = 'a3_3';
                 break;
 
             }

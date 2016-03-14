@@ -826,7 +826,7 @@ var data = {
             data_event: 'a3_0',
         },
         'a3_0': {
-            "question": "Souviens-toi, tu dois retourner affronter Rainmaker dans le passé et le détruire tant qu’il est encore jeune et faible.Utilise le flux quantique pour remonter dans le temps, à quelle époque veux tu remonter ?",
+            "question": "Ton voyage commence maintenant !",
             "choix": [
                 {
                     "text": "",
@@ -835,37 +835,355 @@ var data = {
         }
     ]
         },
-        'a3_1_0': {
-            "question": "Souviens-toi, tu dois retourner affronter Rainmaker dans le passé et le détruire tant qu’il est encore jeune et faible.Utilise le flux quantique pour remonter dans le temps, à quelle époque veux tu remonter ?",
+        'a3_1': {
+            "question": "Grèce",
             "choix": [
                 {
                     "text": "",
-                    "data_event": "travel",
+                    "data_event": "a3_1_1",
                     "naration": true
         }
     ]
         },
+
         'a3_1_1': {
-            "question": "Souviens-toi, tu dois retourner affronter Rainmaker dans le passé et le détruire tant qu’il est encore jeune et faible.Utilise le flux quantique pour remonter dans le temps, à quelle époque veux tu remonter ?",
+            "question": "Dans le passé Rainmaker tue Pythonisse pour être le seul à pouvoir connaître le futur et affaiblir les hommes, c’est à ce moment la qu’il prit le pouvoir, tu dois l’empêcher de réaliser son funeste dessein et sauver Pythonisse. Sois vigilant durant ton voyage, le moindre changement que tu feras dans le passé aura une conséquence sur le présent à ton retour, ne l'oubli pas !",
             "choix": [
                 {
-                    "text": "",
-                    "data_event": "end3",
-                    "naration": true
+                    "text": "Je me fiche de cette Pythonisse, je veux juste battre Rainmaker !",
+                    "data_event": "a3_1_5"
+        },
+                {
+                    "text": "Je suis prêt maintenant.",
+                    "data_event": "a3_1_5"
+        },
+                {
+                    "text": "Très bien y a-t-il autre chose que je dois savoir ? ",
+                    "data_event": "a3_1_2"
         }
     ]
         },
+
         'a3_1_2': {
-            "question": "Souviens-toi, tu dois retourner affronter Rainmaker dans le passé et le détruire tant qu’il est encore jeune et faible.Utilise le flux quantique pour remonter dans le temps, à quelle époque veux tu remonter ?",
+            "question": "Tu devras peut être affronter Rainmaker alors sois prudent. Il est encore jeune, mais il est déjà démoniaque, il a toujours été un disciple doué tu as peu de chance de le vaincre… Ce qui risque de le retenir indéfiniment dans les Limbes.\n",
+            "choix": [
+                {
+                    "text": "Wooooow ! C’est bien beau tout ça, mais comment je reviens dans le présent ? ",
+                    "data_event": "a3_1_3"
+        }
+    ]
+        },
+
+        'a3_1_3': {
+            "question": "Ne t’en fais pas, tu reviendras de la même manière que tu y arriveras : grâce a ton flux quantique, veille à économiser tes pulsars ! Et à ne pas rester coincer dans les Limbes…\n",
+            "choix": [
+                {
+                    "text": "Rester dans les Limbes ? C’est une blague ?",
+                    "data_event": "a3_1_4"
+        }
+    ]
+        },
+
+        'a3_1_4': {
+            "question": "Eh bien… Si par malheur tu es vaincu pendant le voyage temporel, tu perdra tes pulsars et tu resteras coincé dans l’époque à laquelle tu as été vaincu, fait donc attention.\n",
             "choix": [
                 {
                     "text": "",
-                    "data_event": "end3",
+                    "data_event": "a3_1_5",
                     "naration": true
         }
     ]
         },
-        end3: {
+
+        'a3_1_5': {
+            "question": "Le joueur arrive à Delphes, la cité est en effervescence. Les passants ne parlent que de l’évènement qui va avoir lieu aujourd’hui (nous sommes le 7 du mois de Bysios, jour de l’anniversaire de la naissance d'Apollon.) : la Pytie va consulter l’oracle et prédire le dénouement de la bataille de Salamine contre les Perses, d’autres crient à l’arnaque et les esprits s’échauffent. Certains citoyens décident de monter au temple s’expliquer avec la protégée d’Apollon.\nLe joueur se rend alors compte qu’il est un esclave car un homme en toge tire sur son collier...\n",
+            "choix": [
+                {
+                    "text": "Citoyen : Dépêche toi Menesthes ! Allons régler son compte à cette vierge ! ",
+                    "data_event": "a3_1_6"
+        }
+    ]
+        },
+        'a3_1_6': {
+            "question": "Nom d’un pégase je suis un esclave !",
+            "choix": [
+                {
+                    "text": "Évidemment idiot ! Allez, ne traîne pas.",
+                    "data_event": "a3_1_7"
+        }
+    ]
+        },
+
+        'a3_1_7': {
+            "question": "Peu de temps après, vous vous retrouvez dans une petite ruelle seul avec votre maître, il doit reprendre son souffle, que faites vous ? \n",
+            "choix": [
+                {
+                    "text": "Vous le tuez avec la chaîne à laquelle vous êtes attaché.",
+                    "data_event": "a3_1_8"
+        },
+                {
+                    "text": "Hé citoyen  ! Tu dois m’aider à battre Rainmaker !",
+                    "data_event": "a3_1_9"
+        },
+                {
+                    "text": "Je dois le vaincre, laissez moi partir !",
+                    "data_event": "a3_1_10"
+        }
+    ]
+        },
+
+        'a3_1_8': {
+            "question": "C’est ici que tu meurs Citoyen. (Vos chaînes se brisent durant l'affrontement). Oh mon dieu qu’ai-je fais… Bon pas le temps de réfléchir, je dois retrouver la Pytie avant Rainmaker. (Vous suivez la foule en colère).",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a3_1_12",
+                    "naration": true
+        }
+    ]
+        },
+
+        'a3_1_9': {
+            "question": "Citoyen : Qu’est ce que tu me chantes esclave ? ",
+            "choix": [
+                {
+                    "text": "Je viens du futur, il ne faut pas que la Pytie meurt !",
+                    "data_event": "a3_1_11"
+        }
+    ]
+        },
+
+        'a3_1_11': {
+            "question": "Citoyen : Du futur ? Par Zeus, cet esclave est devenu fou, tu vas rester ici je n’ai plus besoin de toi.",
+            "choix": [
+                {
+                    "text": "Non attendez !",
+                    "data_event": "a3_1_13"
+        },
+                {
+                    "text": "Tuer le citoyen.",
+                    "data_event": "a3_1_12"
+        }
+    ]
+        },
+
+        'a3_1_13': {
+            "question": "Vous avez sans doute fait un mauvais choix.",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a3_1_12",
+                    game_over: true,
+                    "naration": true
+        }
+    ]
+        },
+
+        'a3_1_10': {
+            "question": "Citoyen : Voyons Menesthes, ton seul droit est de me suivre… Hahaha ! Allons dépêchons !\n",
+            "choix": [
+                {
+                    "text": "Tuer le citoyen.",
+                    "data_event": "a3_1_12"
+        },
+                {
+                    "text": "Le suivre.",
+                    game_over: true,
+                    "data_event": "a3_1_12"
+        }
+    ]
+        },
+
+        'a3_1_12': {
+            "question": "Vous arrivez finalement au temple de Delphes, le temple est déjà pris d’assaut par la foule. Vous tentez de la traverser. \n Vous arrivez enfin dans le temple, au centre se trouve Pytie, des vapeurs s'échappent d'une faille qui s'ouvrait dans le sol, elle trône assise sur un haut trépied placé au-dessus de la fissure, elle respire les vapeurs et prophétise.\n\nUn homme armé sort de la foule, il se présente sous le nom de Rainmaker et annonce vouloir tuer la Pythie et cesser cette duperie.\n",
+            "choix": [
+                {
+                    "text": "Laissez faire…",
+                    "data_event": "a3_1_12_1"
+        },
+                {
+                    "text": "Hey Rainmaker, viens te battre !",
+                    "data_event": "a3_1_12_2"
+        }
+    ]
+        },
+
+        'a3_1_12_1': {
+            "question": "Rainmaker sort une arme et se dirige vers la Pythie pour l'attaquer. ",
+            "choix": [
+                {
+                    "text": "Ne rien faire... ",
+                    "data_event": "a3_1_12_1_0"
+        },
+                {
+                    "text": "Aller attaquer Rainmaker !",
+                    "data_event": "a3_1_12_1_1"
+        },
+                {
+                    "text": "Il faut couvrir la Pythie !",
+                    "data_event": "a3_1_12_1_2"
+        }
+    ]
+        },
+
+        'a3_1_12_1_0': {
+            "question": "Vous ne faites rien, la Pythie meurt... Vous avez échouez à votre mission. ",
+            "choix": [
+                {
+                    "text": "",
+                    game_over: true,
+                    "data_event": "a3_1_12_1_1",
+                    "naration": true
+        }
+    ]
+        },
+
+        'a3_1_12_1_1': {
+            "question": "JEUX FORCE RAINMAKER ",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a3_1_12_1_1_0",
+                    "naration": true
+        }
+    ]
+        },
+
+        'a3_1_12_1_1_0': {
+            "question": "Rainmaker est blessé, la Pythie s'enfuit. Vous avez réalisé votre objectif dans ce monde. ",
+            "choix": [
+                {
+                    "text": "",
+                    get_success: 8,
+                    "data_event": "a3_4",
+                    "naration": true
+        }
+    ]
+        },
+
+
+        'a3_1_12_1_2': {
+            "question": "JEUX AGILITÉ CONTRE RAINMAKER ",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a3_1_12_1_2_0",
+                    "naration": true
+        }
+    ]
+        },
+
+        'a3_1_12_1_2_0': {
+            "question": "Pythie s'enfuit, si vous avez assez de force vous contrez Rainmaker. ",
+            "choix": [
+                {
+                    "text": "",
+                    get_success: 8,
+                    "data_event": "a3_4",
+                    "naration": true
+        }
+    ]
+        },
+
+        'a3_1_12_2': {
+            "question": "Qui es-tu étranger ? ",
+            "choix": [
+                {
+                    "text": "Je suis" + user.name + " et je viens du futur pour te détruire. ",
+                    "data_event": "a3_1_12_2_0"
+        },
+                {
+                    "text": "Laisse la Pythie tranquille. ",
+                    "data_event": "a3_1_12_2_1"
+        }
+    ]
+        },
+
+        'a3_1_12_2_0': {
+            "question": "Vous attaquez Rainmaker. ",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a3_1_12_1_1",
+                    "naration": true
+        }
+    ]
+        },
+
+        'a3_1_12_2_1': {
+            "question": "Rainmaker : Haha c'est ce qu'on va voir. Tu veux vraiment te battre contre un dieu ? ",
+            "choix": [
+                {
+                    "text": "Euh... Après mûre réflexion. ",
+                    "data_event": "a3_1_12_2_2"
+        },
+                {
+                    "text": "En garde !",
+                    "data_event": "a3_1_12_2_3"
+        }
+    ]
+        },
+
+        'a3_1_12_2_2': {
+            "question": "Je me disais bien. Dans ce cas reste à l'écart",
+            "choix": [
+                {
+                    "text": "Ne rien faire... ",
+                    "data_event": "a3_1_12_1_0"
+        },
+                {
+                    "text": "Attaquer Rainmaker ! ",
+                    "data_event": "a3_1_12_1_1"
+        },
+                {
+                    "text": "Couvrir la Pythie ! ",
+                    "data_event": "a3_1_12_1_2"
+        }
+    ]
+        },
+
+        'a3_1_12_2_3': {
+            "question": "Tu as l'air de quelqu'un qui à déjà voyagé dans les Limbes dis donc, je vais prendre du plaisir à mettre fin à ta petite vie ! ",
+            "choix": [
+                {
+                    "text": "Attaquez Rainmaker !",
+                    "data_event": "a3_1_12_1_1"
+        }
+    ]
+        },
+
+
+
+
+
+
+        'a3_2': {
+            "question": "Egypte",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a3_2_1",
+                    "naration": true
+        }
+    ]
+        },
+
+
+        'a3_3': {
+            "question": "France",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a3_3_1",
+                    "naration": true
+        }
+    ]
+        },
+
+        'a3_4':
+
+
+            end3: {
             stop_act: true,
         },
     },
