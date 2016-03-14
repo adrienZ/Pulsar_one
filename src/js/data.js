@@ -1169,6 +1169,258 @@ var data = {
     ]
         },
 
+        'a3_2_1': {
+            "question": "PARAGYNOM : Hey petit, ça va aller ? C'est dangereux de dormir ici, tu vas vite cramer pour sûr.",
+            "choix": [
+                {
+                    "text": "Mais, je suis où la ?",
+                    "data_event": "a3_2_1_1"
+        },
+                {
+                    "text": "Oui, oui. Bien sur désolé. ",
+                    "data_event": "a3_2_1_2"
+        }
+    ]
+        },
+
+        'a3_2_1_1': {
+            "question": "Nous sommes en Égypte, le lieu absolu du dieu Hélios. ",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a3_2_3",
+                    "naration": true
+        }
+    ]
+        },
+
+        'a3_2_1_2': {
+            "question": "PARAGYNOM : Vous êtes d'ici ? Je n'ai jamais vu des vêtements comme les vôtres ici... ",
+            "choix": [
+                {
+                    "text": "Hum... Oui je viens d'une contrée lointaine, j'ai fais un long voyage pour venir ici. ",
+                    "data_event": "a3_2_1_3"
+        },
+                {
+                    "text": "Oui ! Vous connaissez Partoutatix ? Je suis son cousin et je suis venu chercher de l'eau. ",
+                    "data_event": "a3_2_1_4"
+        }
+    ]
+        },
+        'a3_2_1_3': {
+            "question": "Ah d'accord.",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a3_2_3",
+                    "naration": true
+        }
+    ]
+        },
+
+        'a3_2_1_4': {
+            "question": "PARAGYNOM :  Mais oui ! D'ailleurs, il me doit 4 cuivres ce sot. ",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a3_2_3",
+                    "naration": true
+        }
+    ]
+        },
+        'a3_2_3': {
+            "question": "PARAGYNOM : Bon venez dans ma tanière, ce n'est pas très bon d'errer seul en ce moment.",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a3_2_4",
+                    "naration": true
+        }
+    ]
+        },
+
+        'a3_2_4': {
+            "question": "Vous marchez avec lui dans une ville assez chaotique. Vous entendez des bruits qui parlent de révolution, de massacre. Rien ne vous dit que tout va aller bien. PARAGYNOM vous amène chez lui. C'est une tanière relativement modeste. Vous prenez un petit tabouret et vous vous asseyez. Il fait très très chaud. Vous suez à grosses gouttes.",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a3_2_5",
+                    "naration": true
+        }
+    ]
+        },
+
+        'a3_2_5': {
+            "question": "PARAGYNOM : Bon ce n'est pas du luxe, mais c'est tout ce que j'ai. Je vous sers de l'eau ?",
+            "choix": [
+                {
+                    "text": "Oui, je veux bien. ",
+                    "data_event": "a3_2_6"
+        },
+                {
+                    "text": "Non ça ira, merci. ",
+                    "data_event": "a3_2_7"
+        }
+    ]
+        },
+
+        'a3_2_6': {
+            "question": "PARAGYNOM : Tenez. Ce vieil homme vous sert un verre avec une eau très trouble, elle est jaunâtre. Vous ne pouvez pas refuser ce geste. Vous buvez l'eau dégueulasse. Elle a un goût sableuse. Vous avalez en même temps du sable et une possibilité de maladie par la même occasion.",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a3_2_8",
+                    "naration": true
+        }
+    ]
+        },
+        'a3_2_7': {
+            "question": "PARAGYNOM : Bon d'accord.",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a3_2_8",
+                    "naration": true
+        }
+    ]
+        },
+
+        'a3_2_8': {
+            "question": "PARAGYNOM s'assoit à côté du joueur.",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a3_2_9",
+                    "naration": true
+        }
+    ]
+        },
+
+        'a3_2_9': {
+            "question": "PARAGYNOM : Ah le temps est catastrophique. Notre monde s'effondre. Tout ça à cause de Rhea Magnus. Cette personne est venue d’on ne sait où et là il est à l'origine de cette catastrophe.",
+            "choix": [
+                {
+                    "text": "Rhea Magnus ? C'est qui lui ? ",
+                    "data_event": "a3_2_9_1"
+        },
+                {
+                    "text": "Pourquoi ? Qu'est-ce qu'il a fait ?",
+                    "data_event": "a3_2_9_2"
+        }
+    ]
+        },
+
+        'a3_2_9_1': {
+            "question": "On ne le connaît pas tellement. Mais il a les pouvoirs d'un dieu. On ne sait pas comment il fait, mais il est invincible. C'est une personne très puissante, certains l'appellent le destructeur de royaume.",
+            "choix": [
+                {
+                    "text": "Peut-on se battre contre lui ?",
+                    "data_event": "a3_9_3"
+        },
+                {
+                    "text": "À quoi il ressemble ?",
+                    "data_event": "a3_9_4"
+        },
+                {
+                    "text": "Ce n'est pas possible, on doit réagir. Votre peuple ne doit pas se soumettre.",
+                    "data_event": "a3_9_5"
+        }
+    ]
+        },
+
+        'a3_2_9_2': {
+            "question": "Des échos me disent que Rhea Magnus veut régner sur notre royaume et contrôler l'Egypte. Il est prêt à sacrifier beaucoup de monde pour parvenir à ses fins. On dit qu'il est en train de créer une armée très très volumineuse : l'armée divine.",
+            "choix": [
+                {
+                    "text": "Peut-on se battre contre lui ?",
+                    "data_event": "a2_9_3"
+        },
+                {
+                    "text": "À quoi il ressemble ?",
+                    "data_event": "a2_9_4"
+        },
+                {
+                    "text": "Ce n'est pas possible, on doit réagir. Votre peuple ne doit pas se soumettre.",
+                    "data_event": "a2_9_5"
+        }
+    ]
+        },
+
+        'a2_9_3': {
+            "question": " Malheureusement seul les plus forts mentalement et physiquement peuvent défier Rhea Magnus. Et encore, si tu perds contre lui il prend le contrôle de ton esprit et tu rejoins directement l'armée divine... Donc tout le monde doit se soumettre",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a2_9_6",
+                    "naration": true
+        }
+    ]
+        },
+        'a2_9_4': {
+            "question": "Je ne l'ai jamais rencontré. Mais il est très imposant. On dit qu'il a les yeux bruns, les cheveux courts et possède une cicatrice au niveau de la paupière gauche.",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a2_9_6",
+                    "naration": true
+        }
+    ]
+        },
+        'a2_9_5': {
+            "question": "PARAGYNOM : Je veux bien, mais le problème c'est que c'est un dieu. Personne ne peut le vaincre.",
+            "choix": [
+                {
+                    "text": "Laissez-moi vous aider. Je suis capable de le vaincre, amenez- moi vers lui. Je serai en mesure de le détruire",
+                    "data_event": "a2_9_7",
+                    "naration": true
+        }
+    ]
+        },
+
+        'a2_9_7': {
+            "question": "PARAGYNOM : Pour sûr. Je ne vous connais pas vraiment, mais je vous aime déjà. Dès demain, nous irons sur la place où Rhea Magnus fera son speech.",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a2_9_8",
+                    "naration": true
+        }
+    ]
+        },
+        'a2_9_9': {
+            "question": "PARAGYNOM : C'est ici qu'il va lancer son armée divine et tuer les infidèles. Tenez, prenez cette tenue, elle sera moins flashy que vos vêtements venant d'un autre monde.",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a2_9_10",
+                    "naration": true
+        }
+    ]
+        },
+
+        'a2_9_10': {
+            "question": "\nJour 04, année -3000 avant J-C, Egypte ancienne.\nIl est 07h00, ou presque. Le discours de Rhea Magnus est tenu dans une heure. Vous vous habillez comme un citoyen égyptien et partez avec PARAGYNOM à la place de la ville.\nTout le monde est là, il y a une foule incroyable. Devant se trouve une place plus haute, ce sera là que Rhea Magnus va donner son discours. Tout le monde chahute sur ce qui va se passer. Quand tout à coup.",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a2_9_11",
+                    "naration": true
+        }
+    ]
+        },
+
+        'a2_9_11': {
+            "question": "RHEA MAGNUS : Bonjour tout le monde",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a2_9_12",
+                    "naration": true
+        }
+    ]
+        },
+
+
 
         'a3_3': {
             "question": "France",
@@ -1306,19 +1558,15 @@ var data = {
 };
 
 
-
-
-
-function update_data(username){
+function update_data(username) {
     var new_data = JSON.stringify(data);
     var regex = new RegExp(user.name, "gi");
     //console.log('CURRENT NAME -> '+ user.name +' // NEW NAME ->'+ username);
-    new_data= new_data.replace(regex, username);
+    new_data = new_data.replace(regex, username);
     new_data = JSON.parse(new_data);
     return new_data;
-    
-}
 
+}
 
 function set_parents() {
     var acts = Object.keys(data);
