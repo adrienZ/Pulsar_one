@@ -545,7 +545,6 @@ body {
   height: 500px;
   cursor: default;
   border-top: 1px solid rgba(255, 255, 255, 0);
-  transform: translateZ(0) translateY(70px);
 }
 
 .main .questions .arrows_choice {
