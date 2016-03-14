@@ -569,6 +569,7 @@ body {
 }
 
 .main .questions .arrows_choice .middleRow {
+  position: relative;
   width: 100%;
   display: inline-block;
 }
@@ -584,6 +585,34 @@ body {
 
 .main .questions .arrows_choice .middleRow .arrow-left img {
   width: 20px;
+}
+
+.main .questions .arrows_choice .middleRow .circle_pulsar {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  top: 5px;
+  left: 31px;
+  border-radius: 20px;
+  border: 3px solid white;
+  transform: translateZ(0px) translateX(0px) translateY(0px);
+}
+
+.main .questions .arrows_choice .middleRow .circle_pulsar.animation_right {
+  animation: circleRight 1s ease-in-out .2s alternate running 1 forwards;
+}
+
+.main .questions .arrows_choice .middleRow .circle_pulsar.animation_left {
+  animation: circleLeft 1s ease-in-out .2s alternate running 1 forwards;
+}
+
+.main .questions .arrows_choice .middleRow .circle_pulsar.animation_top {
+  animation: circleTop 1s ease-in-out .2s alternate running 1 forwards;
+}
+
+.main .questions .arrows_choice .middleRow .circle_pulsar.animation_bottom {
+  animation: circleBottom 1s ease-in-out .2s alternate running 1 forwards;
 }
 
 .main .questions .arrows_choice .middleRow .arrow-right {
@@ -1313,5 +1342,41 @@ body {
     img {
       fill: green;
     }
+  }
+}
+
+@keyframes circleRight {
+  0% {
+    transform: translateZ(0) translateX(0px);
+  }
+  100% {
+    transform: translateZ(0) translateX(10px);
+  }
+}
+
+@keyframes circleLeft {
+  0% {
+    transform: translateZ(0) translateX(0px);
+  }
+  100% {
+    transform: translateZ(0) translateX(-10px);
+  }
+}
+
+@keyframes circleTop {
+  0% {
+    transform: translateZ(0) translateY(0px);
+  }
+  100% {
+    transform: translateZ(0) translateY(-10px);
+  }
+}
+
+@keyframes circleBottom {
+  0% {
+    transform: translateZ(0) translateY(0px);
+  }
+  100% {
+    transform: translateZ(0) translateY(10px);
   }
 }
