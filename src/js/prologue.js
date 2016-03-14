@@ -61,6 +61,7 @@ function render_intro() {
                 // #badCode
                 //intro text , without the render function
                 data = update_data($.el('input').value);
+                current_act = data.act_1;
                 user.set_name($.el('input').value);
                 form_name.querySelector('p:first-of-type').style.animationPlayState = 'running';
                 form_name.querySelector(' p:last-of-type').style.animationPlayState = 'running';
