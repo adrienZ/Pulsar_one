@@ -1305,6 +1305,21 @@ var data = {
     }
 };
 
+
+
+
+
+function update_data(username){
+    var new_data = JSON.stringify(data);
+    var regex = new RegExp(user.name, "gi");
+    //console.log('CURRENT NAME -> '+ user.name +' // NEW NAME ->'+ username);
+    new_data= new_data.replace(regex, username);
+    new_data = JSON.parse(new_data);
+    return new_data;
+    
+}
+
+
 function set_parents() {
     var acts = Object.keys(data);
     for (var i = 0; i < acts.length; i++) {

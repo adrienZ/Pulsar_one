@@ -60,13 +60,15 @@ function render_intro() {
                 console.log(new_prologue);
                 // #badCode
                 //intro text , without the render function
+                data = update_data($.el('input').value);
                 user.set_name($.el('input').value);
-                data = data;
                 form_name.querySelector('p:first-of-type').style.animationPlayState = 'running';
                 form_name.querySelector(' p:last-of-type').style.animationPlayState = 'running';
                 form_name.querySelector('input').classList.add('confirmed', 'translate');
                 form_name.querySelector('input').setAttribute('disabled', '');
                 form_name.querySelector('input').setAttribute('value', user.name);
+ 
+
                 form_name.querySelector('.container').innerHTML += '<p class="translate"> Votre histoire est sur le point de trouver un nouveau tournant. Ce n’est pas terminé. <br> Réveillez-vous.</p>';
                 //now that the name is set , we remove the input part and render the first event
                 window.setTimeout(function () {
