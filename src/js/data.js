@@ -256,7 +256,7 @@ var data = {
         },
 
         'a1_11_0': {
-            "question": "C’est à moi que tu parles comme ça ? Haha, voilà quelqu’un qui essaye d’être un héros et qui veut se la jouer. Eh bien, héros, montre moi de quoi tu es capable.\n",
+            "question": "HOMME : C’est à moi que tu parles comme ça ? Haha, voilà quelqu’un qui essaye d’être un héros et qui veut se la jouer. Eh bien, héros, montre moi de quoi tu es capable.\n",
             "choix": [
                 {
                     "text": "",
@@ -336,7 +336,7 @@ var data = {
         },
 
         'a2_3': {
-            question: 'Chronos : ' + user.name + ' ! Destinée m’a annoncée ta fin prochaine. J’ai besoin de ton aide. Je veux te laisser une seconde chance.',
+            question: 'CHRONOS : ' + user.name + ' ! Destinée m’a annoncée ta fin prochaine. J’ai besoin de ton aide. Je veux te laisser une seconde chance.',
             change_img: 'illu',
 
             //timer: 5,
@@ -363,7 +363,7 @@ var data = {
         },
 
         'a2_4_0': {
-            question: 'Chronos : Non. Mais bientôt.',
+            question: 'CHRONOS : Non. Mais bientôt.',
             choix: [
                 {
                     text: "",
@@ -373,7 +373,7 @@ var data = {
             ],
         },
         'a2_4_1': {
-            question: 'Chronos : Je suis Chronos, le dieu du temps. Je règne dans un monde où le temps et l’espace sont réunis dans des milliers de mondes parallèles. Ce que tu vois en ce moment est mon royaume : les Limbes. Un espace blanc, vide de sens et de physique. C’est l’origine du cosmos, la signification de toutes les vies.',
+            question: 'CHRONOS : Je suis Chronos, le dieu du temps. Je règne dans un monde où le temps et l’espace sont réunis dans des milliers de mondes parallèles. Ce que tu vois en ce moment est mon royaume : les Limbes. Un espace blanc, vide de sens et de physique. C’est l’origine du cosmos, la signification de toutes les vies.',
             choix: [
                 {
                     text: "Quel est le problème alors ?",
@@ -388,7 +388,7 @@ var data = {
             ],
         },
         'a2_4_2': {
-            question: 'Chronos : Tu es dans les Limbes. Un lieu où le temps et l’espace ne sont plus.',
+            question: 'CHRONOS : Tu es dans les Limbes. Un lieu où le temps et l’espace ne sont plus.',
             choix: [
                 {
                     text: "",
@@ -398,7 +398,7 @@ var data = {
             ],
         },
         'a2_5_0': {
-            question: 'Chronos : Bonne question. Depuis la régence des disciples, un de mes disciples a volontairement disparu des Limbes pour disparaître sur Terre, menaçant ma place à la direction des Limbes. Le problème est qu’il maîtrise le pouvoir que mes soeurs Ethée et Asenys qui ont crée en cas de ma démence au pouvoir.',
+            question: 'CHRONOS : Bonne question. Depuis la régence des disciples, un de mes disciples a volontairement disparu des Limbes pour disparaître sur Terre, menaçant ma place à la direction des Limbes. Le problème est qu’il maîtrise le pouvoir que mes soeurs Ethée et Asenys qui ont crée en cas de ma démence au pouvoir.',
             choix: [
                 {
                     text: "Et pourquoi moi ?",
@@ -408,7 +408,7 @@ var data = {
             ],
         },
         'a2_6': {
-            question: 'Chronos : Toi, tu es particulier. J’ai vu ton potentiel au-delà. J’ai vu ta puissance. J’aurai besoin de ton aide pour l’abattre. Il est imprévisible et je ne peux pas le battre tout seul. Dans les Limbes, je t’enseignerai le pouvoir que tu possèdes au sein de ton esprit. Aide-moi, ton destin est en jeu.',
+            question: 'CHRONOS : Toi, tu es particulier. J’ai vu ton potentiel au-delà. J’ai vu ta puissance. J’aurai besoin de ton aide pour l’abattre. Il est imprévisible et je ne peux pas le battre tout seul. Dans les Limbes, je t’enseignerai le pouvoir que tu possèdes au sein de ton esprit. Aide-moi, ton destin est en jeu.',
             choix: [
                 {
                     text: "Bah le problème c’est que je n’ai pas que ça à faire et vous savez...",
@@ -416,14 +416,14 @@ var data = {
 
                 },
                 {
-                    text: "Et pourquoi D’accord. Je vous aiderai. J’essayerai.",
+                    text: "D’accord, je vous aiderai. Enfin j’essayerai.",
                     data_event: "a2_7_1",
 
                 },
             ],
         },
         'a2_7_0': {
-            question: 'Chronos : Ah, donc tu ne veux pas m’aider ? Tu est sûr ?',
+            question: 'CHRONOS : Ah, donc tu ne veux pas m’aider ? Tu es sûr ?',
             choix: [
                 {
                     text: "Oui",
@@ -438,7 +438,7 @@ var data = {
             ],
         },
         'a2_7_1': {
-            question: 'Chronos : Haha. J’invoque Rose ma disciple. Elle va t’enseigner toutes les bases de ton pouvoir.',
+            question: 'CHRONOS : Haha. J’invoque Rose ma disciple. Elle va t’enseigner toutes les bases de ton pouvoir.',
             choix: [
                 {
                     text: "",
@@ -460,7 +460,7 @@ var data = {
             ],
         },
         'a2_9': {
-            question: 'Rose : Alors c’est toi le nouveau « disciple » ?',
+            question: 'ROSE : Alors c’est toi le nouveau « disciple » ?',
             choix: [
                 {
                     text: "Euh ouais à priori.",
@@ -475,7 +475,7 @@ var data = {
             ],
         },
         'a2_10_0': {
-            question: 'Rose : Haha, t’es encore dans les vapes ? C’est normal.',
+            question: 'ROSE : Haha, t’es encore dans les vapes ? C’est normal.',
             choix: [
                 {
                     text: "",
@@ -486,7 +486,7 @@ var data = {
         },
 
         'a2_10_1': {
-            question: 'Rose : Ouais, l’unique, la vraie. Rose.',
+            question: 'ROSE : Eh ouais, l’unique, la vraie. Rose.',
             choix: [
                 {
                     text: "",
@@ -506,7 +506,7 @@ var data = {
             ],
         },
         'a2_12': {
-            question: 'Rose : Je t\'aurais vu plus vieux.. et plus grand. Bon enfin c\'est pas grave ! Chronos a dû sûrement te parler du pourquoi tu es là. Je sais que c\'est encore flou et que tu as plein de questions, mais on a pas vraiment le "temps". Le comble.Tiens je vais te donner quelque chose qui s\'appelle "Appareil d\'Eclaircissement Biologique". C\'est un petit cube auquel tu dois te concentrer dessus pour libérer ton potentiel.Attention le choc est fatal, il connecte tous tes points vitaux pour libérer ce qu\'on appelle la "deuxième forme". Tu es prêt ?',
+            question: 'ROSE : Je t\'aurais vu plus vieux... Et plus grand. Bon enfin c\'est pas grave ! Chronos a dû sûrement te parler du pourquoi tu es là. Je sais que c\'est encore flou et que tu as plein de questions, mais on a pas vraiment le "temps". Le comble. Tiens je vais te donner quelque chose qui s\'appelle "Appareil d\'Eclaircissement Biologique". C\'est un petit cube auquel tu dois te concentrer dessus pour libérer ton potentiel. Attention le choc est fatal, il connecte tous tes points vitaux pour libérer ce qu\'on appelle la "deuxième forme". Tu es prêt ?',
             choix: [
                 {
                     text: "",
@@ -540,7 +540,7 @@ var data = {
     ]
         },
         'a2_15': {
-            "question": "Rose : Ça se voit que tu es quelqu'un de spécial, époustouflé par la situation. Ton pouvoir est incroyable, et crois-moi je suis très difficile à être époustouflée comme ça.",
+            "question": "ROSE : Ça se voit que tu es quelqu'un de spécial, époustouflé par la situation. Ton pouvoir est incroyable, et crois-moi je suis très difficile à être époustouflée comme ça.",
             "choix": [
                 {
                     "text": "Quoi c'est mon pouvoir ?!",
@@ -556,7 +556,7 @@ var data = {
     ]
         },
         'a2_16': {
-            "question": "Rose : Ne prends pas trop le gros melon cabrón.",
+            "question": "ROSE : Ne prends pas trop le gros melon cabrón.",
             "choix": [
                 {
                     "text": "",
@@ -566,7 +566,7 @@ var data = {
     ]
         },
         'a2_17': {
-            "question": "Rose : Que je t’explique un peu. Tu vas pas le croire mais tu as une capacité spéciale qui s’appelle “Le Saut d’Inter-Réalité”. C’est un pouvoir extrêmement rare du fait de sa dangerosité. Plus tu crées des saut et plus ton destin est alterné. Tu écrases en gros le travail que Destinée fait en bref. Chose qu’elle n’aime pas trop.\n",
+            "question": "ROSE : Que je t’explique un peu. Tu vas pas le croire mais tu as une capacité spéciale qui s’appelle “Le Saut d’Inter-Réalité”. C’est un pouvoir extrêmement rare du fait de sa dangerosité. Plus tu crées des sauts et plus ton destin est alterné. Tu écrases en gros le travail que Destinée fait en bref.\n",
             "choix": [
                 {
                     "text": "Du coup je peux voyager dans le temps c’est ça ?",
@@ -575,7 +575,7 @@ var data = {
     ]
         },
         'a2_18': {
-            "question": "Rose : Ouais à peu près. Comme ton pouvoir n’est pas assez développé, tu ne peux pas voyager en toute liberté. Chronos a du créer des barrières trans-dimensionnel pour éviter que tu fasses des bêtises.",
+            "question": "ROSE : Ouais à peu près. Comme ton pouvoir n’est pas assez développé, tu ne peux pas voyager en toute liberté. Chronos a du créer des barrières trans-dimensionnel pour éviter que tu fasses des bêtises.",
             "choix": [
                 {
                     "text": "Whoa, on est capable de faire ça ?",
@@ -589,7 +589,7 @@ var data = {
         },
 
         'a2_19': {
-            "question": "Rose : A priori ouais. Moi je n’ai pas ce don haha. Je suis douée sur tout ce qui touche la connaissance et la mécanique.",
+            "question": "ROSE : A priori ouais. Moi je n’ai pas ce don haha. Je suis douée sur tout ce qui touche la connaissance et la mécanique.",
             "choix": [
                 {
                     "text": "",
@@ -600,7 +600,7 @@ var data = {
         },
 
         'a2_20': {
-            "question": "Rose : Ouais à peu près. Comme ton pouvoir n’est pas assez développé, tu ne peux pas voyager en toute liberté. Chronos a du créer des barrières trans-dimensionnel pour éviter que tu fasses des bêtises.",
+            "question": "ROSE : Ouais à peu près. Comme ton pouvoir n’est pas assez développé, tu ne peux pas voyager en toute liberté. Chronos a du créer des barrières trans-dimensionnel pour éviter que tu fasses des bêtises.",
             "choix": [
                 {
                     "text": "",
@@ -611,7 +611,7 @@ var data = {
         },
 
         'a2_21': {
-            "question": "Rose : Bon maintenant, il faut que je t’explique comment tu peux traverser les dimensions. Ce que tu crées ce sont des réalités alternatives qui ont pour but d’organiser tout le chaos du temps. Dès lors où tu initialiseras un saut, tu dois utiliser des pulsars, ce sont des particules d’énergies qui synchronise tes sauts et garde tes propriétés métaphysiques. La règle de Chronos est : 3 pulsars pour ne pas rester dans le blizzard. C’est 1 pulsar d’entrée, 1 pulsar de parcours et 1 pulsar de sortie. Et attention ! Ce ne sont pas des jouets ! Tu dois jamais les laisser tomber, ce sont des éléments très toxique. Donc ne mange pas les pulsars. Je ne l’ai jamais fait, mais on m’a dit que ça ferait un effet plutôt sympathique.\n(3 pulsars = 1 retour temporel conscient. 1 pulsar pour initialiser, 1 pulsar pour modifier les événements et garder son esprit, 1 pulsar pour retourner dans notre lignée temporelle)\n\nTu dois à tout prix sortir de tes bulles temporelles ou sinon tu devras rester dans ce temps où tu n’existerais même pas. Comme un fantôme. Mais ça je t’expliquerai plus tard. Garde l’Appareil d'Eclaircissement Biologique, ce sera ton appareil pour faire les sauts temporels. Je l’ai modifié pour toi. Souviens-toi, tu fais des sauts temporels, aux yeux de Destinée tu remappes le temps. Est-ce que tu as tout compris ?\n",
+            "question": "ROSE : Bon maintenant, il faut que je t’explique comment tu peux traverser les dimensions. Ce que tu crées ce sont des réalités alternatives qui ont pour but d’organiser tout le chaos du temps. Dès lors où tu initialiseras un saut, tu dois utiliser des pulsars, ce sont des particules d’énergies qui synchronise tes sauts et garde tes propriétés métaphysiques. La règle de Chronos est : 3 pulsars pour ne pas rester dans le blizzard. C’est 1 pulsar d’entrée, 1 pulsar de parcours et 1 pulsar de sortie. Et attention ! Ce ne sont pas des jouets ! Tu dois jamais les laisser tomber, ce sont des éléments très toxique. Donc ne mange pas les pulsars. Je ne l’ai jamais fait, mais on m’a dit que ça ferait un effet plutôt sympathique.\n(3 pulsars = 1 retour temporel conscient. 1 pulsar pour initialiser, 1 pulsar pour modifier les événements et garder son esprit, 1 pulsar pour retourner dans notre lignée temporelle)\n\nTu dois à tout prix sortir de tes bulles temporelles ou sinon tu devras rester dans ce temps où tu n’existerais même pas. Comme un fantôme. Mais ça je t’expliquerai plus tard. Garde l’Appareil d'Eclaircissement Biologique, ce sera ton appareil pour faire les sauts temporels. Je l’ai modifié pour toi. Souviens-toi, tu fais des sauts temporels, aux yeux de Destinée tu remappes le temps. Est-ce que tu as tout compris ?\n",
             "choix": [
                 {
                     "text": "Ouais ! Allons sauver le monde ! ",
@@ -625,7 +625,7 @@ var data = {
         },
 
         'a2_22': {
-            "question": "Rose : Haha j’aime cette détermination. Ne bouge pas, je vais appeler Chronos.\n",
+            "question": "ROSE : Haha j’aime cette détermination. Ne bouge pas, je vais appeler Chronos.\n",
             "choix": [
                 {
                     "text": "",
@@ -636,7 +636,7 @@ var data = {
         },
 
         'a2_23': {
-            "question": "Rose : Pour te faire court, tu as le pouvoir de voyager dans le temps. C’est 3 pulsars sont pour le voyage. Tâche de sortir du temps que tu as modifié au risque de te faire effacer. Compris ?\n",
+            "question": "ROSE : Pour te faire court, tu as le pouvoir de voyager dans le temps. C’est 3 pulsars sont pour le voyage. Tâche de sortir du temps que tu as modifié au risque de te faire effacer. Compris ?\n",
             "choix": [
                 {
                     "text": "Ouais, maintenant c’est plus clair !",
@@ -650,7 +650,7 @@ var data = {
         },
 
         'a2_24': {
-            "question": "Rose : Ok. Ne bouge pas, je vais appeler Chronos.",
+            "question": "ROSE : Ok. Ne bouge pas, je vais appeler Chronos.",
             "choix": [
                 {
                     "text": "",
@@ -660,7 +660,7 @@ var data = {
     ]
         },
         'a2_25': {
-            "question": "Rose : Pour te faire court, tu as le pouvoir de voyager dans le temps. C’est 3 pulsars sont pour le voyage. Tâche de sortir du temps que tu as modifié au risque de te faire effacer. Compris ?",
+            "question": "ROSE : Pour te faire court, tu as le pouvoir de voyager dans le temps. C’est 3 pulsars sont pour le voyage. Tâche de sortir du temps que tu as modifié au risque de te faire effacer. Compris ?",
             "choix": [
                 {
                     "text": "",
@@ -671,7 +671,7 @@ var data = {
         },
 
         'a2_26': {
-            "question": "Chronos arrive d’un coup. Une onde de choc d’air vous blaste avec Rose aussi.\nChronos : … *cough* Bon alors tu as découvert ton pouvoir ?\n",
+            "question": "Chronos arrive d’un coup. Une onde de choc d’air vous blaste avec Rose aussi.\nCHRONOS : … *cough* Bon alors tu as découvert ton pouvoir ?\n",
             "choix": [
                 {
                     "text": "Ouais, je suis capable de manipuler le temps, c’est bien ça ?",
@@ -689,7 +689,7 @@ var data = {
         },
 
         'a2_27': {
-            "question": "Chronos : Oui à peu près. Tu as la possibilité de faire des sauts temporels. Manipuler le temps c’est moi ça.",
+            "question": "CHRONOS : Oui à peu près. Tu as la possibilité de faire des sauts temporels. Manipuler le temps c’est moi ça.",
             "choix": [
                 {
                     "text": "",
@@ -699,7 +699,7 @@ var data = {
     ]
         },
         'a2_28': {
-            "question": "Chronos : Euh non. Tu possèdes la possibilité de faire des sauts temporels et d’influer ses les événements.",
+            "question": "CHRONOS : Euh non. Tu possèdes la possibilité de faire des sauts temporels et d’influer ses les événements.",
             "choix": [
                 {
                     "text": "",
@@ -710,7 +710,7 @@ var data = {
         },
 
         'a2_29': {
-            "question": "Chronos : Maintenant je dois t’expliquer la partie la plus importante du topo. Il y a cinq siècles, après la création de la régence des disciples, j’ai accueilli un disciple au potentiel similaire au tien, il s'appelait Rainmaker. Il était très doué et pouvait assimiler tout en un rien de temps. C’était un vrai prodige. Mais petit à petit, sa soif de pouvoir a pris le dessus et voilà maintenant qu’il veut siéger sur le trône des Limbes. Je ne peux pas tolérer ça. Il est en train de tout faire pour me détruire, quitte à sacrifier des personnes innocentes.\nTu es mon seul espoir, tu possèdes le même potentiel que Rainmaker et tu est le seul à posséder un pouvoir capable de détruire Rainmaker. Il faut que tu m’aides. En échange, je modifierai ton destin tragique.\n",
+            "question": "CHRONOS : Maintenant je dois t’expliquer la partie la plus importante du topo. Il y a cinq siècles, après la création de la régence des disciples, j’ai accueilli un disciple au potentiel similaire au tien, il s'appelait Rainmaker. Il était très doué et pouvait assimiler tout en un rien de temps. C’était un vrai prodige. Mais petit à petit, sa soif de pouvoir a pris le dessus et voilà maintenant qu’il veut siéger sur le trône des Limbes. Je ne peux pas tolérer ça. Il est en train de tout faire pour me détruire, quitte à sacrifier des personnes innocentes.\nTu es mon seul espoir, tu possèdes le même potentiel que Rainmaker et tu est le seul à posséder un pouvoir capable de détruire Rainmaker. Il faut que tu m’aides. En échange, je modifierai ton destin tragique.\n",
             "choix": [
                 {
                     "text": "D’accord, je vous aiderai.",
@@ -720,7 +720,7 @@ var data = {
         },
 
         'a2_30': {
-            "question": "Chronos : Merci. Maintenant, je dois te laisser. Ah oui dernière chose, tu dois sortir par toi-même des Limbes. Ce sera ton épreuve finale. Sers toi de ton instinct pour trouver ton chemin. On se retrouve à la sortie.",
+            "question": "CHRONOS : Merci. Maintenant, je dois te laisser. Ah oui dernière chose, tu dois sortir par toi-même des Limbes. Ce sera ton épreuve finale. Sers toi de ton instinct pour trouver ton chemin. On se retrouve à la sortie.",
             "choix": [
                 {
                     "text": "",
@@ -742,7 +742,7 @@ var data = {
         },
 
         'a2_32': {
-            "question": "Chronos : Tu as réussi l’épreuve finale. L’initiation est dorénavant terminé. Fais attention, tout de même. Dans cette aventure chaque choix que tu prendras aura des conséquences sur ton avenir. Utilise ce pulsar quantum pour réaliser ton premier remappage temporel.\nRose : Hey" + user.name + "profite ! On dit toujours que le premier voyage temporel est celui que l’on se souvient le plus !\nChronos :  Remappage temporel Rose. Utilise les bons termes.\nRose : Roh si tu veux.\n",
+            "question": "CHRONOS : Tu as réussi l’épreuve finale. L’initiation est dorénavant terminé. Fais attention, tout de même. Dans cette aventure chaque choix que tu prendras aura des conséquences sur ton avenir. Utilise ce pulsar quantum pour réaliser ton premier remappage temporel.\nROSE : Hey" + user.name + "profite ! On dit toujours que le premier voyage temporel est celui que l’on se souvient le plus !\nCHONOS :  Remappage temporel Rose. Utilise les bons termes.\nROSE : Roh si tu veux.\n",
             "choix": [
                 {
                     "text": "Remappage temporel vers La Grèce Antique ",
@@ -847,7 +847,7 @@ var data = {
         },
 
         'a3_1_1': {
-            "question": "Dans le passé Rainmaker tue Pythonisse pour être le seul à pouvoir connaître le futur et affaiblir les hommes, c’est à ce moment la qu’il prit le pouvoir, tu dois l’empêcher de réaliser son funeste dessein et sauver Pythonisse. Sois vigilant durant ton voyage, le moindre changement que tu feras dans le passé aura une conséquence sur le présent à ton retour, ne l'oubli pas !",
+            "question": "CHRONOS : Dans le passé Rainmaker tue Pythonisse pour être le seul à pouvoir connaître le futur et affaiblir les hommes, c’est à ce moment la qu’il prit le pouvoir, tu dois l’empêcher de réaliser son funeste dessein et sauver Pythonisse. Sois vigilant durant ton voyage, le moindre changement que tu feras dans le passé aura une conséquence sur le présent à ton retour, ne l'oubli pas !",
             "choix": [
                 {
                     "text": "Je me fiche de cette Pythonisse, je veux juste battre Rainmaker !",
@@ -865,7 +865,7 @@ var data = {
         },
 
         'a3_1_2': {
-            "question": "Tu devras peut être affronter Rainmaker alors sois prudent. Il est encore jeune, mais il est déjà démoniaque, il a toujours été un disciple doué tu as peu de chance de le vaincre… Ce qui risque de le retenir indéfiniment dans les Limbes.\n",
+            "question": "CHRONOS : Tu devras peut être affronter Rainmaker alors sois prudent. Il est encore jeune, mais il est déjà démoniaque, il a toujours été un disciple doué tu as peu de chance de le vaincre… Ce qui risque de le retenir indéfiniment dans les Limbes.\n",
             "choix": [
                 {
                     "text": "Wooooow ! C’est bien beau tout ça, mais comment je reviens dans le présent ? ",
@@ -875,7 +875,7 @@ var data = {
         },
 
         'a3_1_3': {
-            "question": "Ne t’en fais pas, tu reviendras de la même manière que tu y arriveras : grâce a ton flux quantique, veille à économiser tes pulsars ! Et à ne pas rester coincer dans les Limbes…\n",
+            "question": "CHRONOS : Ne t’en fais pas, tu reviendras de la même manière que tu y arriveras : grâce a ton flux quantique, veille à économiser tes pulsars ! Et à ne pas rester coincer dans les Limbes…\n",
             "choix": [
                 {
                     "text": "Rester dans les Limbes ? C’est une blague ?",
@@ -885,7 +885,7 @@ var data = {
         },
 
         'a3_1_4': {
-            "question": "Eh bien… Si par malheur tu es vaincu pendant le voyage temporel, tu perdra tes pulsars et tu resteras coincé dans l’époque à laquelle tu as été vaincu, fait donc attention.\n",
+            "question": "CHRONOS : Eh bien… Si par malheur tu es vaincu pendant le voyage temporel, tu perdras tes pulsars et tu resteras coincé dans l’époque à laquelle tu as été vaincu, fais donc attention.\n",
             "choix": [
                 {
                     "text": "",
@@ -896,20 +896,21 @@ var data = {
         },
 
         'a3_1_5': {
-            "question": "Le joueur arrive à Delphes, la cité est en effervescence. Les passants ne parlent que de l’évènement qui va avoir lieu aujourd’hui (nous sommes le 7 du mois de Bysios, jour de l’anniversaire de la naissance d'Apollon.) : la Pytie va consulter l’oracle et prédire le dénouement de la bataille de Salamine contre les Perses, d’autres crient à l’arnaque et les esprits s’échauffent. Certains citoyens décident de monter au temple s’expliquer avec la protégée d’Apollon.\nLe joueur se rend alors compte qu’il est un esclave car un homme en toge tire sur son collier...\n",
+            "question": "Le joueur arrive à Delphes, la cité est en effervescence. Les passants ne parlent que de l’évènement qui va avoir lieu aujourd’hui (nous sommes le 7 du mois de Bysios, jour de l’anniversaire de la naissance d'Apollon) : la Pytie va consulter l’oracle et prédire le dénouement de la bataille de Salamine contre les Perses, d’autres crient à l’arnaque et les esprits s’échauffent. Certains citoyens décident de monter au temple s’expliquer avec la protégée d’Apollon.\nLe joueur se rend alors compte qu’il est un esclave car un homme en toge tire sur son collier...\n CITOYEN : Dépêche toi Menesthes ! Allons régler son compte à cette vierge !",
             "choix": [
                 {
-                    "text": "Citoyen : Dépêche toi Menesthes ! Allons régler son compte à cette vierge ! ",
+                    "text": "Nom d’un pégase je suis un esclave !",
                     "data_event": "a3_1_6"
         }
     ]
         },
         'a3_1_6': {
-            "question": "Nom d’un pégase je suis un esclave !",
+            "question": "CITOYEN : Évidemment idiot ! Allez, ne traîne pas.",
             "choix": [
                 {
-                    "text": "Évidemment idiot ! Allez, ne traîne pas.",
-                    "data_event": "a3_1_7"
+                    "text": "",
+                    "data_event": "a3_1_7",
+                    "naration": true,
         }
     ]
         },
@@ -944,7 +945,7 @@ var data = {
         },
 
         'a3_1_9': {
-            "question": "Citoyen : Qu’est ce que tu me chantes esclave ? ",
+            "question": "CITOYEN : Qu’est ce que tu me chantes esclave ? ",
             "choix": [
                 {
                     "text": "Je viens du futur, il ne faut pas que la Pytie meurt !",
@@ -954,7 +955,7 @@ var data = {
         },
 
         'a3_1_11': {
-            "question": "Citoyen : Du futur ? Par Zeus, cet esclave est devenu fou, tu vas rester ici je n’ai plus besoin de toi.",
+            "question": "CITOYEN : Du futur ? Par Zeus, cet esclave est devenu fou, tu vas rester ici je n’ai plus besoin de toi.",
             "choix": [
                 {
                     "text": "Non attendez !",
@@ -980,7 +981,7 @@ var data = {
         },
 
         'a3_1_10': {
-            "question": "Citoyen : Voyons Menesthes, ton seul droit est de me suivre… Hahaha ! Allons dépêchons !\n",
+            "question": "CITOYEn : Voyons Menesthes, ton seul droit est de me suivre… Hahaha ! Allons dépêchons !\n",
             "choix": [
                 {
                     "text": "Tuer le citoyen.",
@@ -1086,10 +1087,10 @@ var data = {
         },
 
         'a3_1_12_2': {
-            "question": "Qui es-tu étranger ? ",
+            "question": "RAINMAKER : Qui es-tu étranger ? ",
             "choix": [
                 {
-                    "text": "Je suis" + user.name + " et je viens du futur pour te détruire. ",
+                    "text": "Je suis " + user.name + " et je viens du futur pour te détruire. ",
                     "data_event": "a3_1_12_2_0"
         },
                 {
@@ -1111,7 +1112,7 @@ var data = {
         },
 
         'a3_1_12_2_1': {
-            "question": "Rainmaker : Haha c'est ce qu'on va voir. Tu veux vraiment te battre contre un dieu ? ",
+            "question": "RAINMAKER : Haha c'est ce qu'on va voir. Tu veux vraiment te battre contre un dieu ? ",
             "choix": [
                 {
                     "text": "Euh... Après mûre réflexion. ",
@@ -1125,7 +1126,7 @@ var data = {
         },
 
         'a3_1_12_2_2': {
-            "question": "Je me disais bien. Dans ce cas reste à l'écart",
+            "question": "RAINMAKER : Je me disais bien. Dans ce cas reste à l'écart",
             "choix": [
                 {
                     "text": "Ne rien faire... ",
@@ -1143,7 +1144,7 @@ var data = {
         },
 
         'a3_1_12_2_3': {
-            "question": "Tu as l'air de quelqu'un qui à déjà voyagé dans les Limbes dis donc, je vais prendre du plaisir à mettre fin à ta petite vie ! ",
+            "question": "RAINMAKER : Tu as l'air de quelqu'un qui à déjà voyagé dans les Limbes dis donc, je vais prendre du plaisir à mettre fin à ta petite vie ! ",
             "choix": [
                 {
                     "text": "Attaquez Rainmaker !",
@@ -1180,10 +1181,10 @@ var data = {
     ]
         },
 
-//        'a3_4':
+        //        'a3_4':
 
 
-            end3: {
+        end3: {
             stop_act: true,
         },
     },
