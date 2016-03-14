@@ -22,7 +22,7 @@ function render_prologue(event) {
     $.prologue.querySelector('.citation').classList.remove('hide');
 
     window.setTimeout(function () {
-        $.prologue.querySelector('.citation').classList.add('hide');
+        //$.prologue.querySelector('.citation').classList.add('hide');
         $.prologue.querySelector('.splash-screen').classList.remove('hide');
         window.setTimeout(function () {
             $.prologue.classList.remove('showtime');
