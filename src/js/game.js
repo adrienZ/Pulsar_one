@@ -59,9 +59,12 @@ $.el('.ui-panel #fullscreen').addEventListener('click', function () {
 });
 
 $.el('.ui-panel #fonts_change').addEventListener('click', function () {
-            +
-            if ($.el('.story').classList.contains('serif')) {
-                +$.el('.story').classList.remove('serif'); + $.el('.story').classList.add('sans-serif'); +
-            } else if ($.el('.story).classList.contains(' + sans - serif ')) { + $.el('.story').classList.remove('sans-serif'); $.el('.story').classList.add('serif'); +
-                } +
-            });
+
+    if ($.histoire.classList.contains('serif')) {
+        $.histoire.classList.remove('serif');
+        $.histoire.classList.add('sans-serif');
+    } else if ($.el('.story').classList.contains('sans-serif')) {
+        $.histoire.classList.remove('sans-serif');
+        $.histoire.classList.add('serif');
+    }
+});

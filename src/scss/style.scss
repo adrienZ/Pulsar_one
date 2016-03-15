@@ -175,12 +175,12 @@
                     p {
                         padding: 7.5px 30px;
                     }
-                     &.sans-serif {
- +                        font-family: 'Gotham', Arial, sans-serif;
- +                    }
- +                    &.serif {
- +                        font-family: 'Libre Baskerville', serif;
- +                    }
+                    &.sans-serif {
+                        font-family: 'Gotham Book', Arial, sans-serif;
+                    }
+                    &.serif {
+                        font-family: 'Libre Baskerville', serif;
+                    }
                     &:before {
                         content: '';
                         position: absolute;

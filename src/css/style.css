@@ -384,6 +384,14 @@ body {
   padding: 7.5px 30px;
 }
 
+.main .story.sans-serif {
+  font-family: 'Gotham Book', Arial, sans-serif;
+}
+
+.main .story.serif {
+  font-family: 'Libre Baskerville', serif;
+}
+
 .main .story:before {
   content: '';
   position: absolute;
