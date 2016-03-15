@@ -1918,15 +1918,146 @@ var data = {
     ]
         },
 
-
-
-        //        'a3_4':
-
+        'a3_4': {
+            "question": "Vous décidez de voyagez dans le temps après ce long voyage. Quelle date choisissez vous ?",
+            "choix": [
+                {
+                    "text": "2012",
+                    "data_event": "a3_4_1"
+        },
+                {
+                    "text": "3123",
+                    "data_event": "a3_4_2"
+        },
+                {
+                    "text": "9999",
+                    "data_event": "a3_4_3"
+        },
+                {
+                    "text": "2000 ",
+                    "data_event": "a3_4_4"
+        }
+    ]
+        },
+        'a3_4_1': {
+            "question": "Cette année est une année qui changera totalement le visage de l'histoire. Je suis à New-York, il me semble. Devant moi, il y a cette belle tour avec des tonnes de publicités. Je regarde ma montre, il est 9h51. J'ai des frissons, je sais ce qui va se passer. Je ne peux pas dire aux gens, ils me prendront pour un(e) fou/folle. Je sirote mon café au lait de chez Starbucks Coffee et je m'en vais de suite pour tenir ma promesse à Chronos. Allons trouver ce fichu Rainmaker.",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a3_4",
+                    "naration": true
+        }
+    ]
+        },
+        'a3_4_2': {
+            "question": "Mais qu'est-ce que cette ville ? On dirait un Time Square en mode science-fiction ! Tout est sur-connecté ! J'aperçois à côté de moi un petit teckel qui se fait balader par... Un drone ?! Ce petit chien me sourit avec sa langue qui lèche l'air chaud de New-York. Incroyable. Finis les bêtises, j'ai fais une promesse à Chronos... ",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a3_4",
+                    "naration": true
+        }
+    ]
+        },
+        'a3_4_3': {
+            "question": "Oh bordel, mais qu'est-ce qu'il fait froid ! Je n'ai jamais rien ressenti de tel. Où je suis ? On dirait un désert de neige. Je vois une civilisation au loin, je ne sais pas si je peux les approcher. Le soleil est couvert par un voile de nuage. L'air que je respire est étrange, elle est trop froide pour moi. Mes mouvements sont plus lourds qu'auparavant. Pourtant, je n'ai qu'un manteau sur moi. Je dois m'enfuir à tout prix de là !",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a3_4",
+                    "naration": true
+        }
+    ]
+        },
+        'a3_4_4': {
+            "question": "Vous êtes à Time Square, vous rencontrez un prophète qui vous raconte une histoire... Il l'a vu de nombreuses fois dans ses visions. \nPROPHÈTE : La personne que vous voulez se trouve ici, c'est une personne hors du temps. Vous avez obtenu des indices lors de vos voyages, vous devez vous en souvenir pour retrouver celui que vous cherchez.",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a3_4_5",
+                    "naration": true
+        }
+    ]
+        },
+        'a3_4_5': {
+            "question": "JEUX QUI EST CE ! ",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a3_4_6",
+                    "naration": true
+        }
+    ]
+        },
+        'a3_4_6': {
+            "question": "Vous avez trouvé Rainmaker ! Vite il s'enfuit ! ",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a3_4_7",
+                    "naration": true
+        }
+    ]
+        },
+        'a3_4_7': {
+            "question": "JEUX QTE RAPIDITÉ",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a3_4_8",
+                    "naration": true
+        }
+    ]
+        },
+        'a3_4_8': {
+            "question": "Vous avez réussi à rattraper Rainmaker ! Que voulez-vous faire maintenant ?",
+            "choix": [
+                {
+                    "text": "Tuer Rainmaker ! ",
+                    "data_event": "a3_4_8_1"
+        },
+                {
+                    "text": "L'attraper pour le livrer à Chronos.",
+                    "data_event": "a3_4_8_2"
+        }
+    ]
+        },
+        'a3_4_8_1': {
+            "question": "Vous tentez de le tuez. Mais vous êtes encore trop faible. Il vous contre.\nRAINMAKER : Tu ne connais pas mes pouvoirs, espère de sot. ",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a3_4_8_1_1",
+                    "naration": true
+        }
+    ]
+        },
+        'a3_4_8_1_1': {
+            "question": "Rainmaker a shapeshifté sur une autre personne qui regarde la scène. Vous venez de vous rendre compte qu'il allait tuer une jeune femme apeurée par la situation et qu'elle n'avait rien demandé.\nRAINMAKER : Tu n'as pas vraiment de coeur toi. Tu as voulu mettre fin à ma vie. Tu ne connais pas le prix d'une vie. On va voir ce qui se passe quand on s'attaque aux gens qui te sont chères.",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "end3",
+                    "naration": true
+        }
+    ]
+        },
+        'a3_4_1_2': {
+            "question": "Vous l'attrapez. Mais il se débarrasse de vous en un claquement de doigt. Vous êtes encore trop faible pour pouvoir le défier... Il utilise ses pouvoirs. Rainmaker a shapeshifté sur une autre personne qui regarde la scène. Vous venez de vous rendre compte qu'il allait capturer une jeune femme apeurée par la situation et qui n'avait rien demandé. Il disparaît.",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "end3",
+                    "naration": true
+        }
+    ]
+        },
 
         end3: {
             stop_act: true,
         },
     },
+
     act_4: {
         prologue: {
             citation: '"Le meilleur succès est souvent né avec un grand sacrifice, et n\'est jamais le résultat d\'un égoïste."',
