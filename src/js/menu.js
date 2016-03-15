@@ -24,6 +24,7 @@ window.addEventListener('load', function () {
 //new game
 menu.link[0].addEventListener('click', function () {
     //create new savegame
+    user.name = null;
     user.game = 'intro';
     savegame.erase_save('user_save', user);
     //intro animation

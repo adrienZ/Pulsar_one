@@ -1,3 +1,6 @@
+var token = "SDFGHJKLKJHGFGHJKDKJSGJKQFJGNFJSKGHGNKGHFGNSKFBNVJKJKGHSVJKBHLJBLSH";
+
+
 var data = {
     act_1: {
         prologue: {
@@ -183,7 +186,7 @@ var data = {
         },
 
         'a1_8': {
-            "question": "Votre PC se met à émettre du bruit de manière pestilentielle, vous vous faites remarquer et le professeur se tourne vers vous…\n Hey " + user.name + ", on ne vous dérange pas ? Sortez du cours maintenant s’il vous plaît.\n",
+            "question": "Votre PC se met à émettre du bruit de manière pestilentielle, vous vous faites remarquer et le professeur se tourne vers vous…\n Hey " + user.name + token + ", on ne vous dérange pas ? Sortez du cours maintenant s’il vous plaît.\n",
             "choix": [
                 {
                     "text": "Vous protestez et vous êtes envoyé chez le directeur.",
@@ -313,7 +316,7 @@ var data = {
     ]
         },
         'a2_1': {
-            question: user.name + ' est à terre, le joueur doit appuyer sur espace au bon moment pour se réveiller.',
+            question: user.name + token + ' est à terre, le joueur doit appuyer sur espace au bon moment pour se réveiller.',
             choix: [
                 {
                     text: "",
@@ -336,7 +339,7 @@ var data = {
         },
 
         'a2_3': {
-            question: 'CHRONOS : ' + user.name + ' ! Destinée m’a annoncée ta fin prochaine. J’ai besoin de ton aide. Je veux te laisser une seconde chance.',
+            question: 'CHRONOS : ' + user.name + token + ' ! Destinée m’a annoncée ta fin prochaine. J’ai besoin de ton aide. Je veux te laisser une seconde chance.',
             change_img: 'illu',
 
             //timer: 5,
@@ -742,7 +745,7 @@ var data = {
         },
 
         'a2_32': {
-            "question": "CHRONOS : Tu as réussi l’épreuve finale. L’initiation est dorénavant terminé. Fais attention, tout de même. Dans cette aventure chaque choix que tu prendras aura des conséquences sur ton avenir. Utilise ce pulsar quantum pour réaliser ton premier remappage temporel.\nROSE : Hey" + user.name + "profite ! On dit toujours que le premier voyage temporel est celui que l’on se souvient le plus !\nCHONOS :  Remappage temporel Rose. Utilise les bons termes.\nROSE : Roh si tu veux.\n",
+            "question": "CHRONOS : Tu as réussi l’épreuve finale. L’initiation est dorénavant terminé. Fais attention, tout de même. Dans cette aventure chaque choix que tu prendras aura des conséquences sur ton avenir. Utilise ce pulsar quantum pour réaliser ton premier remappage temporel.\nROSE : Hey" + user.name + token + "profite ! On dit toujours que le premier voyage temporel est celui que l’on se souvient le plus !\nCHONOS :  Remappage temporel Rose. Utilise les bons termes.\nROSE : Roh si tu veux.\n",
             "choix": [
                 {
                     "text": "Remappage temporel vers La Grèce Antique ",
@@ -1090,7 +1093,7 @@ var data = {
             "question": "RAINMAKER : Qui es-tu étranger ? ",
             "choix": [
                 {
-                    "text": "Je suis " + user.name + " et je viens du futur pour te détruire. ",
+                    "text": "Je suis " + user.name + token + " et je viens du futur pour te détruire. ",
                     "data_event": "a3_1_12_2_0"
         },
                 {
@@ -1560,11 +1563,27 @@ var data = {
 
 function update_data(username) {
     var new_data = JSON.stringify(data);
-    var regex = new RegExp(user.name, "gi");
-    //console.log('CURRENT NAME -> '+ user.name +' // NEW NAME ->'+ username);
-    new_data = new_data.replace(regex, username);
-    new_data = JSON.parse(new_data);
-    return new_data;
+    var target = user.name + token;
+    var regex = new RegExp(target, "g");
+    if (new_data.match(regex) !== null) {
+        console.log('LETS GO : ' + new_data.match(regex).length + ' LEFT');
+        console.log('CURRENT NAME -> ' + target + ' // NEW NAME ->' + username);
+        new_data = new_data.replace(target, username);
+        while (regex.exec(new_data) !== null) {
+
+            new_data = new_data.replace(target, username);
+        }
+
+
+        new_data = JSON.parse(new_data);
+        console.log(new_data);
+
+        user.name = username;
+        savegame.erase_save('user_save', user);
+        return new_data;
+    } else {
+        console.error('TOKEN ALREADY USED');
+    }
 
 }
 

@@ -202,16 +202,30 @@ function render(event) {
         });
 
         //if data-stats , the user's stats will be modified  
-        console.log(Object.keys(event.choix).length);
-        if (Object.keys(event.choix).length <= 2) {
-            if (!$.el('.main .questions .arrows').classList.contains('hide')) {
-                console.log('hide arrows');
-            }
-        }
-
 
 
     });
+
+    console.log(Object.keys(event.choix).length);
+    var answer_realign = $.el('.main .questions ul li:not(.arrow_naration):nth-child(2)');
+
+    if (Object.keys(event.choix).length <= 2) {
+        console.log('hide arrows');
+        if (!$.el('.main .questions .arrows').classList.contains('hide')) {
+            $.el('.main .questions .arrows').classList.add('hide');
+            if (answer_realign && !answer_realign.classList.contains('realign')) {
+                answer_realign.classList.add('realign');
+            }
+        }
+    } else {
+        console.log('show arrows');
+        if ($.el('.main .questions .arrows').classList.contains('hide')) {
+            $.el('.main .questions .arrows').classList.remove('hide');
+            if (answer_realign && answer_realign.classList.contains('realign')) {
+                // answer_realign.classList.remove('realign');
+            }
+        }
+    }
 
 
     if (event.hasOwnProperty('change_img')) {

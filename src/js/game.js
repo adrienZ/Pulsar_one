@@ -1,4 +1,13 @@
 //user.game = 'intro';
+
+if (user.game !== 'intro') {
+    console.log('ENLEVE LE TOKEN');
+    data = update_data(user.name);
+}
+
+
+
+
 if (user.game === "prologue") {
     if (typeof current_act === 'undefined') {
         console.log('on vient dun prologue');
