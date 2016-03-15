@@ -395,15 +395,72 @@ body {
 }
 
 .main .questions {
+<<<<<<< HEAD
+=======
+  font-size: 1rem;
+  font-weight: 300;
+>>>>>>> origin/master
   width: 100%;
   height: 500px;
   padding: 15px;
   font-family: 'Gotham Book', 'Arial', sans-serif;
   border-top: 1px solid rgba(255, 255, 255, 0);
+<<<<<<< HEAD
+=======
+}
+
+.main .questions.sans-serif {
+  font-family: 'Gotham', Arial, sans-serif;
+}
+
+.main .questions.serif {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.main .questions .arrows_choice {
+  display: inline-block;
+  width: 75px;
+  margin: auto;
+}
+
+.main .questions .arrows_choice .firstRow img {
+  width: 20px;
+  -webkit-transform: translateZ(0) rotate(90deg);
+          transform: translateZ(0) rotate(90deg);
+}
+
+.main .questions .arrows_choice .firstRow .arrow-up {
+  -webkit-transform: translateZ(0) translateY(0px);
+          transform: translateZ(0) translateY(0px);
+  translate: all 0.3s;
+}
+
+.main .questions .arrows_choice .firstRow .arrow-up.onpress {
+  -webkit-animation: moveArrowChoiceUp 0.3s ease-in-out 0s alternate running 3 forwards;
+          animation: moveArrowChoiceUp 0.3s ease-in-out 0s alternate running 3 forwards;
+}
+
+.main .questions .arrows_choice .middleRow {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+
+.main .questions .arrows_choice .middleRow .arrow-left {
+  -webkit-transform: translateZ(0) translateY(1px) translateX(-10px);
+          transform: translateZ(0) translateY(1px) translateX(-10px);
+  display: inline-block;
+}
+
+.main .questions .arrows_choice .middleRow .arrow-left.onpress {
+  -webkit-animation: moveArrowChoiceLeft 0.3s ease-in-out 0s alternate running 3 forwards;
+          animation: moveArrowChoiceLeft 0.3s ease-in-out 0s alternate running 3 forwards;
+>>>>>>> origin/master
 }
 
 .main .questions .arrows {
   position: absolute;
+<<<<<<< HEAD
   left: calc( 37.5% - 10px);
   top: calc(275px + 40vh + 20px * 2);
 }
@@ -445,6 +502,59 @@ body {
   -webkit-transform: rotate(0.5turn) translateX(-10px);
       -ms-transform: rotate(0.5turn) translateX(-10px);
           transform: rotate(0.5turn) translateX(-10px);
+=======
+  top: 5px;
+  left: 31px;
+  border-radius: 20px;
+  border: 3px solid white;
+  -webkit-transform: translateZ(0px) translateX(0px) translateY(0px);
+          transform: translateZ(0px) translateX(0px) translateY(0px);
+}
+
+.main .questions .arrows_choice .middleRow .circle_pulsar.animation_right {
+  -webkit-animation: circleRight 1s ease-in-out .2s alternate running 1 forwards;
+          animation: circleRight 1s ease-in-out .2s alternate running 1 forwards;
+}
+
+.main .questions .arrows_choice .middleRow .circle_pulsar.animation_left {
+  -webkit-animation: circleLeft 1s ease-in-out .2s alternate running 1 forwards;
+          animation: circleLeft 1s ease-in-out .2s alternate running 1 forwards;
+}
+
+.main .questions .arrows_choice .middleRow .circle_pulsar.animation_top {
+  -webkit-animation: circleTop 1s ease-in-out .2s alternate running 1 forwards;
+          animation: circleTop 1s ease-in-out .2s alternate running 1 forwards;
+}
+
+.main .questions .arrows_choice .middleRow .circle_pulsar.animation_bottom {
+  -webkit-animation: circleBottom 1s ease-in-out .2s alternate running 1 forwards;
+          animation: circleBottom 1s ease-in-out .2s alternate running 1 forwards;
+}
+
+.main .questions .arrows_choice .middleRow .arrow-right {
+  -webkit-transform: translateZ(0) translateY(-1px) translateX(10px) rotate(180deg);
+          transform: translateZ(0) translateY(-1px) translateX(10px) rotate(180deg);
+  display: inline-block;
+}
+
+.main .questions .arrows_choice .middleRow .arrow-right.onpress {
+  -webkit-animation: moveArrowChoiceRight 0.3s ease-in-out 0s alternate running 3 forwards;
+          animation: moveArrowChoiceRight 0.3s ease-in-out 0s alternate running 3 forwards;
+}
+
+.main .questions .arrows_choice .middleRow .arrow-right img {
+  width: 20px;
+}
+
+.main .questions .arrows_choice .bottomRow .arrow-bottom {
+  -webkit-transform: translateZ(0) rotate(-90deg);
+          transform: translateZ(0) rotate(-90deg);
+}
+
+.main .questions .arrows_choice .bottomRow .arrow-bottom.onpress {
+  -webkit-animation: moveArrowChoiceBottom 0.3s ease-in-out 0s alternate running 3 forwards;
+          animation: moveArrowChoiceBottom 0.3s ease-in-out 0s alternate running 3 forwards;
+>>>>>>> origin/master
 }
 
 .main .questions .arrows .arrow.bottom {
@@ -459,10 +569,29 @@ body {
   position: absolute;
   right: calc(25% + 30px);
   bottom: 100px;
+<<<<<<< HEAD
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
           transform: rotate(90deg);
   font-size: 30px;
+=======
+  background-image: url("../img/arrow_next.svg");
+  background-repeat: no-repeat;
+  opacity: 0.6;
+  transition: all 0.3s;
+  -webkit-animation: moveArrowNext 1s ease-in-out 0s alternate running infinite forwards;
+          animation: moveArrowNext 1s ease-in-out 0s alternate running infinite forwards;
+  font-size: 40px;
+}
+
+.main .questions .arrow_naration:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.main .questions .arrow_naration:active {
+  opacity: 0.7;
+>>>>>>> origin/master
 }
 
 .main .questions .arrow_naration a {
@@ -490,14 +619,88 @@ body {
   vertical-align: baseline;
 }
 
+<<<<<<< HEAD
 .main .questions ul li:not(.arrow_naration) a {
   text-decoration: none;
+=======
+.main .questions .timer {
+  width: 200px;
+  height: 8px;
+  background: #373637;
+  margin: auto;
+}
+
+.main .questions .timer span {
+  width: 100%;
+  height: 80%;
+  background: #edb424;
+  display: block;
+  position: relative;
+  top: 10%;
+  transition: -webkit-transform 1s linear;
+  transition: transform 1s linear;
+  transition: transform 1s linear, -webkit-transform 1s linear;
+}
+
+.main .questions .firstRow {
+  text-align: center;
+>>>>>>> origin/master
 }
 
 .main .questions ul li:not(.arrow_naration):first-child {
   width: 70%;
   margin: auto;
+<<<<<<< HEAD
   text-align: center;
+=======
+  -webkit-transform: translateZ(0) translateY(-10px);
+          transform: translateZ(0) translateY(-10px);
+  transition: all .3s ease-in-out;
+  opacity: 0.5;
+}
+
+.main .questions .firstRow .choiceA:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.main .questions .firstRow .choiceA:active {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.main .questions .firstRow .choiceA.selected {
+  opacity: 1;
+  background-color: rgba(21, 48, 89, 0.6);
+  border: 1px solid white;
+}
+
+.main .questions .secondRow {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+.main .questions .secondRow .choiceD {
+  display: inline-block;
+  -webkit-transform: translateZ(0) translateY(-25px);
+          transform: translateZ(0) translateY(-25px);
+  padding: .75rem;
+  text-align: right;
+  width: 40%;
+  transition: all .3s ease-in-out;
+  opacity: 0.5;
+}
+
+.main .questions .secondRow .choiceD:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.main .questions .secondRow .choiceD:active {
+  cursor: pointer;
+  opacity: 1;
+>>>>>>> origin/master
 }
 
 .main .questions ul li:not(.arrow_naration):last-child {
@@ -508,7 +711,17 @@ body {
 .main .questions ul li:not(.arrow_naration):nth-child(2), .main .questions ul li:not(.arrow_naration):nth-child(3) {
   width: 50%;
   display: inline-block;
+<<<<<<< HEAD
   margin: 25px 0px;
+=======
+  -webkit-transform: translateZ(0) translateY(-25px);
+          transform: translateZ(0) translateY(-25px);
+  padding: .75rem;
+  text-align: left;
+  width: 40%;
+  transition: all .3s ease-in-out;
+  opacity: 0.5;
+>>>>>>> origin/master
 }
 
 .main .questions .timer {
@@ -1017,3 +1230,216 @@ body {
   margin: 0.9375em;
   display: block;
 }
+<<<<<<< HEAD
+=======
+
+@-webkit-keyframes moveArrowNext {
+  0% {
+    -webkit-transform: translateZ(0) translateY(-10px);
+            transform: translateZ(0) translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0px);
+            transform: translateZ(0) translateY(0px);
+  }
+}
+
+@keyframes moveArrowNext {
+  0% {
+    -webkit-transform: translateZ(0) translateY(-10px);
+            transform: translateZ(0) translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0px);
+            transform: translateZ(0) translateY(0px);
+  }
+}
+
+@-webkit-keyframes moveArrowChoiceRight {
+  0% {
+    -webkit-transform: translateZ(0) translateY(-1px) translateX(10px) rotate(180deg);
+            transform: translateZ(0) translateY(-1px) translateX(10px) rotate(180deg);
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(-1px) translateX(15px) rotate(180deg);
+            transform: translateZ(0) translateY(-1px) translateX(15px) rotate(180deg);
+  }
+}
+
+@keyframes moveArrowChoiceRight {
+  0% {
+    -webkit-transform: translateZ(0) translateY(-1px) translateX(10px) rotate(180deg);
+            transform: translateZ(0) translateY(-1px) translateX(10px) rotate(180deg);
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(-1px) translateX(15px) rotate(180deg);
+            transform: translateZ(0) translateY(-1px) translateX(15px) rotate(180deg);
+  }
+}
+
+@-webkit-keyframes moveArrowChoiceLeft {
+  0% {
+    -webkit-transform: translateZ(0) translateY(1px) translateX(-10px);
+            transform: translateZ(0) translateY(1px) translateX(-10px);
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(1px) translateX(-15px);
+            transform: translateZ(0) translateY(1px) translateX(-15px);
+  }
+}
+
+@keyframes moveArrowChoiceLeft {
+  0% {
+    -webkit-transform: translateZ(0) translateY(1px) translateX(-10px);
+            transform: translateZ(0) translateY(1px) translateX(-10px);
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(1px) translateX(-15px);
+            transform: translateZ(0) translateY(1px) translateX(-15px);
+  }
+}
+
+@-webkit-keyframes moveArrowChoiceBottom {
+  0% {
+    -webkit-transform: translateZ(0) rotate(-90deg) translateX(0px);
+            transform: translateZ(0) rotate(-90deg) translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateZ(0) rotate(-90deg) translateX(-5px);
+            transform: translateZ(0) rotate(-90deg) translateX(-5px);
+  }
+}
+
+@keyframes moveArrowChoiceBottom {
+  0% {
+    -webkit-transform: translateZ(0) rotate(-90deg) translateX(0px);
+            transform: translateZ(0) rotate(-90deg) translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateZ(0) rotate(-90deg) translateX(-5px);
+            transform: translateZ(0) rotate(-90deg) translateX(-5px);
+  }
+}
+
+@-webkit-keyframes moveArrowChoiceUp {
+  0% {
+    -webkit-transform: translateZ(0) translateY(0px);
+            transform: translateZ(0) translateY(0px);
+    img {
+      fill: white;
+    }
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(-5px);
+            transform: translateZ(0) translateY(-5px);
+    img {
+      fill: green;
+    }
+  }
+}
+
+@keyframes moveArrowChoiceUp {
+  0% {
+    -webkit-transform: translateZ(0) translateY(0px);
+            transform: translateZ(0) translateY(0px);
+    img {
+      fill: white;
+    }
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(-5px);
+            transform: translateZ(0) translateY(-5px);
+    img {
+      fill: green;
+    }
+  }
+}
+
+@-webkit-keyframes circleRight {
+  0% {
+    -webkit-transform: translateZ(0) translateX(0px);
+            transform: translateZ(0) translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateX(10px);
+            transform: translateZ(0) translateX(10px);
+  }
+}
+
+@keyframes circleRight {
+  0% {
+    -webkit-transform: translateZ(0) translateX(0px);
+            transform: translateZ(0) translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateX(10px);
+            transform: translateZ(0) translateX(10px);
+  }
+}
+
+@-webkit-keyframes circleLeft {
+  0% {
+    -webkit-transform: translateZ(0) translateX(0px);
+            transform: translateZ(0) translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateX(-10px);
+            transform: translateZ(0) translateX(-10px);
+  }
+}
+
+@keyframes circleLeft {
+  0% {
+    -webkit-transform: translateZ(0) translateX(0px);
+            transform: translateZ(0) translateX(0px);
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateX(-10px);
+            transform: translateZ(0) translateX(-10px);
+  }
+}
+
+@-webkit-keyframes circleTop {
+  0% {
+    -webkit-transform: translateZ(0) translateY(0px);
+            transform: translateZ(0) translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(-10px);
+            transform: translateZ(0) translateY(-10px);
+  }
+}
+
+@keyframes circleTop {
+  0% {
+    -webkit-transform: translateZ(0) translateY(0px);
+            transform: translateZ(0) translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(-10px);
+            transform: translateZ(0) translateY(-10px);
+  }
+}
+
+@-webkit-keyframes circleBottom {
+  0% {
+    -webkit-transform: translateZ(0) translateY(0px);
+            transform: translateZ(0) translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(10px);
+            transform: translateZ(0) translateY(10px);
+  }
+}
+
+@keyframes circleBottom {
+  0% {
+    -webkit-transform: translateZ(0) translateY(0px);
+            transform: translateZ(0) translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(10px);
+            transform: translateZ(0) translateY(10px);
+  }
+}
+>>>>>>> origin/master

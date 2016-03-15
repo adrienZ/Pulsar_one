@@ -186,6 +186,7 @@
                     }
                 }
                 .questions {
+<<<<<<< HEAD
                     .arrows {
                         position: absolute;
                         left: calc( 37.5% - 10px);
@@ -225,6 +226,94 @@
                                 // background: yellow;
                                 display: block;
                                 margin-top: -4px;
+=======
+                    font-size: 1rem;
+                    font-weight: 300;
+                    width: 100%;
+                    height: 500px;
+                    cursor: default;
+                    border-top: 1px solid rgba(255, 255, 255, 0.0);
+                    &.sans-serif {
+                        font-family: 'Gotham', Arial, sans-serif;
+                    }
+                    &.serif {
+                        font-family: 'Libre Baskerville', serif;
+                    }
+                    .arrows_choice {
+                        display: inline-block;
+                        width: 75px;
+                        margin: auto;
+                        .firstRow {
+                            img {
+                                width: 20px;
+                                transform: translateZ(0) rotate(90deg);
+                            }
+                            .arrow-up {
+                                transform: translateZ(0) translateY(0px);
+                                translate: all 0.3s;
+                                &.onpress {
+                                    animation: moveArrowChoiceUp 0.3s ease-in-out 0s alternate running 3 forwards;
+                                }
+                            }
+                        }
+                        .middleRow {
+                            position: relative;
+                            width: 100%;
+                            display: inline-block;
+                            .arrow-left {
+                                transform: translateZ(0) translateY(1px) translateX(-10px);
+                                display: inline-block;
+                                &.onpress {
+                                    animation: moveArrowChoiceLeft 0.3s ease-in-out 0s alternate running 3 forwards;
+                                }
+                                img {
+                                    width: 20px;
+                                }
+                            }
+                            .circle_pulsar {
+                                display: inline-block;
+                                width: 13px;
+                                height: 13px;
+                                position: absolute;
+                                top: 5px;
+                                left: 31px;
+                                border-radius: 20px;
+                                border: 3px solid white;
+                                transform: translateZ(0px) translateX(0px) translateY(0px);
+                                &.animation_right {
+                                    animation: circleRight 1s ease-in-out .2s alternate running 1 forwards;
+                                }
+                                &.animation_left {
+                                    animation: circleLeft 1s ease-in-out .2s alternate running 1 forwards;
+                                }
+                                &.animation_top {
+                                    animation: circleTop 1s ease-in-out .2s alternate running 1 forwards;
+                                }
+                                &.animation_bottom {
+                                    animation: circleBottom 1s ease-in-out .2s alternate running 1 forwards;
+                                }
+                            }
+                            .arrow-right {
+                                transform: translateZ(0) translateY(-1px) translateX(10px) rotate(180deg);
+                                display: inline-block;
+                                &.onpress {
+                                    animation: moveArrowChoiceRight 0.3s ease-in-out 0s alternate running 3 forwards;
+                                }
+                                img {
+                                    width: 20px;
+                                }
+                            }
+                        }
+                        .bottomRow {
+                            .arrow-bottom {
+                                transform: translateZ(0) rotate(-90deg);
+                                &.onpress {
+                                    animation: moveArrowChoiceBottom 0.3s ease-in-out 0s alternate running 3 forwards;
+                                }
+                                img {
+                                    width: 20px;
+                                }
+>>>>>>> origin/master
                             }
                         }
                     }
@@ -303,6 +392,114 @@
                             transition: transform 1s linear;
                         }
                     }
+<<<<<<< HEAD
+=======
+                    .firstRow {
+                        text-align: center;
+                        .choiceA {
+                            text-align: center;
+                            padding: .75rem;
+                            width: 70%;
+                            margin: auto;
+                            transform: translateZ(0) translateY(-10px);
+                            transition: all .3s ease-in-out;
+                            opacity: 0.5;
+                            &:hover {
+                                cursor: pointer;
+                                opacity: 0.7;
+                            }
+                            &:active {
+                                cursor: pointer;
+                                opacity: 1;
+                            }
+                            &.selected {
+                                opacity: 1;
+                                background-color: rgba(21, 48, 89, .6);
+                                border: 1px solid white;
+                            }
+                        }
+                    }
+                    .secondRow {
+                        display: inline-block;
+                        text-align: center;
+                        width: 100%;
+                        .choiceD {
+                            display: inline-block;
+                            transform: translateZ(0) translateY(-25px);
+                            padding: .75rem;
+                            text-align: right;
+                            width: 40%;
+                            transition: all .3s ease-in-out;
+                            opacity: 0.5;
+                            &:hover {
+                                cursor: pointer;
+                                opacity: 0.7;
+                            }
+                            &:active {
+                                cursor: pointer;
+                                opacity: 1;
+                            }
+                            &.selected {
+                                opacity: 1;
+                                background-color: rgba(21, 48, 89, .6);
+                                border: 1px solid white;
+                            }
+                        }
+                        .arrows {
+                            display: inline-block;
+                            width: 3rem;
+                            height: 3rem;
+                        }
+                        .choiceB {
+                            display: inline-block;
+                            transform: translateZ(0) translateY(-25px);
+                            padding: .75rem;
+                            text-align: left;
+                            width: 40%;
+                            transition: all .3s ease-in-out;
+                            opacity: 0.5;
+                            &:hover {
+                                cursor: pointer;
+                                opacity: 0.7;
+                            }
+                            &:active {
+                                cursor: pointer;
+                                opacity: 1;
+                            }
+                            &.selected {
+                                opacity: 1;
+                                background-color: rgba(21, 48, 89, .6);
+                                border: 1px solid white;
+                            }
+                        }
+                    }
+                    .thirdRow {
+                        padding-top: 1rem;
+                        text-align: center;
+                        .choiceC {
+                            text-align: center;
+                            padding: .75rem;
+                            width: 70%;
+                            margin: auto;
+                            margin-top: -1rem;
+                            transition: all .3s ease-in-out;
+                            opacity: 0.5;
+                            &:hover {
+                                cursor: pointer;
+                                opacity: 0.7;
+                            }
+                            &:active {
+                                cursor: pointer;
+                                opacity: 1;
+                            }
+                            &.selected {
+                                opacity: 1;
+                                background-color: rgba(21, 48, 89, .6);
+                                border: 1px solid white;
+                            }
+                        }
+                    }
+>>>>>>> origin/master
                 }
                 .pop_up {
                     font-family: 'Gotham', 'Arial', sans-serif;
@@ -729,4 +926,94 @@
                         display: block;
                     }
                 }
+<<<<<<< HEAD
+=======
+            }
+            
+            @keyframes moveArrowNext {
+                0% {
+                    transform: translateZ(0) translateY(-10px);
+                }
+                100% {
+                    transform: translateZ(0) translateY(0px);
+                }
+            }
+            
+            @keyframes moveArrowChoiceRight {
+                0% {
+                    transform: translateZ(0) translateY(-1px) translateX(10px) rotate(180deg);
+                }
+                100% {
+                    transform: translateZ(0) translateY(-1px) translateX(15px) rotate(180deg);
+                }
+            }
+            
+            @keyframes moveArrowChoiceLeft {
+                0% {
+                    transform: translateZ(0) translateY(1px) translateX(-10px);
+                }
+                100% {
+                    transform: translateZ(0) translateY(1px) translateX(-15px);
+                }
+            }
+            
+            @keyframes moveArrowChoiceBottom {
+                0% {
+                    transform: translateZ(0) rotate(-90deg) translateX(0px);
+                }
+                100% {
+                    transform: translateZ(0) rotate(-90deg) translateX(-5px);
+                }
+            }
+            
+            @keyframes moveArrowChoiceUp {
+                0% {
+                    transform: translateZ(0) translateY(0px);
+                    img {
+                        fill: white;
+                    }
+                }
+                100% {
+                    transform: translateZ(0) translateY(-5px);
+                    img {
+                        fill: green;
+                    }
+                }
+            }
+            
+            @keyframes circleRight {
+                0% {
+                    transform: translateZ(0) translateX(0px);
+                }
+                100% {
+                    transform: translateZ(0) translateX(10px);
+                }
+            }
+            
+            @keyframes circleLeft {
+                0% {
+                    transform: translateZ(0) translateX(0px);
+                }
+                100% {
+                    transform: translateZ(0) translateX(-10px);
+                }
+            }
+            
+            @keyframes circleTop {
+                0% {
+                    transform: translateZ(0) translateY(0px);
+                }
+                100% {
+                    transform: translateZ(0) translateY(-10px);
+                }
+            }
+            
+            @keyframes circleBottom {
+                0% {
+                    transform: translateZ(0) translateY(0px);
+                }
+                100% {
+                    transform: translateZ(0) translateY(10px);
+                }
+>>>>>>> origin/master
             }

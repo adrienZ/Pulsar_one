@@ -57,3 +57,14 @@ $.el('.ui-panel #fullscreen').addEventListener('click', function () {
         }
     }
 });
+
+// Fonts_change
+$.el('.ui-panel #fonts_change').addEventListener('click', function () {
+            if ($.el('.story').classList.contains('serif')) {
+                $.el('.story').classList.remove('serif');
+                $.el('.story').classList.add('sans-serif');
+            } else if ($.el('.story).classList.contains('
+                    sans - serif ')) {
+                    $.el('.story').classList.remove('sans-serif'); $.el('.story').classList.add('serif');
+                }
+            });
