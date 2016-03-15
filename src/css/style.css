@@ -395,12 +395,19 @@ body {
 
 .main .questions {
   font-size: 1rem;
-  font-family: 'Gotham',Arial,sans-serif;
   font-weight: 300;
   width: 100%;
   height: 500px;
   cursor: default;
   border-top: 1px solid rgba(255, 255, 255, 0);
+}
+
+.main .questions.sans-serif {
+  font-family: 'Gotham', Arial, sans-serif;
+}
+
+.main .questions.serif {
+  font-family: 'Libre Baskerville', serif;
 }
 
 .main .questions .arrows_choice {
