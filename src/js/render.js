@@ -14,7 +14,7 @@ $.histoire = $.el('.story');
 $.pad = $.el('.questions');
 //icon hover helper
 var ui = {
-    icon_help_text: ['changer la police', 'musique', 'son', 'plein écran'],
+    icon_help_text: ['sauvegardez votre partie', 'musique', 'son', 'plein écran'],
     skip: [],
 };
         [].forEach.call($.ui.menu_icons, function (icon, index) {

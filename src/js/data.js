@@ -836,7 +836,7 @@ var data = {
     ]
         },
         'a3_1': {
-            "question": "Bienvenue en Grèce",
+            "question": "Grèce",
             "choix": [
                 {
                     "text": "",
@@ -1148,17 +1148,7 @@ var data = {
             "choix": [
                 {
                     "text": "Attaquez Rainmaker !",
-                    "data_event": "a3_1_12_2_4"
-        }
-    ]
-        },
-        'a3_1_12_2_4': {
-            "question": "Il est temps de partir... Destination. (Choisissez une date)",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_4",
-                    "naration": true
+                    "data_event": "a3_1_12_1_1"
         }
     ]
         },
@@ -1169,7 +1159,7 @@ var data = {
 
 
         'a3_2': {
-            "question": "Bienvenue en Egypte",
+            "question": "Egypte",
             "choix": [
                 {
                     "text": "",
@@ -1343,268 +1333,88 @@ var data = {
             "choix": [
                 {
                     "text": "Peut-on se battre contre lui ?",
-                    "data_event": "a3_2_9_3"
+                    "data_event": "a2_9_3"
         },
                 {
                     "text": "À quoi il ressemble ?",
-                    "data_event": "a3_2_9_4"
+                    "data_event": "a2_9_4"
         },
                 {
                     "text": "Ce n'est pas possible, on doit réagir. Votre peuple ne doit pas se soumettre.",
-                    "data_event": "a3_2_9_5"
+                    "data_event": "a2_9_5"
         }
     ]
         },
 
-        'a3_2_9_3': {
+        'a2_9_3': {
             "question": " Malheureusement seul les plus forts mentalement et physiquement peuvent défier Rhea Magnus. Et encore, si tu perds contre lui il prend le contrôle de ton esprit et tu rejoins directement l'armée divine... Donc tout le monde doit se soumettre",
             "choix": [
                 {
                     "text": "",
-                    "data_event": "a3_2_9_6",
+                    "data_event": "a2_9_6",
                     "naration": true
         }
     ]
         },
-        'a3_2_9_4': {
+        'a2_9_4': {
             "question": "Je ne l'ai jamais rencontré. Mais il est très imposant. On dit qu'il a les yeux bruns, les cheveux courts et possède une cicatrice au niveau de la paupière gauche.",
             "choix": [
                 {
                     "text": "",
-                    "data_event": "a3_2_9_6",
+                    "data_event": "a2_9_6",
                     "naration": true
         }
     ]
         },
-        'a3_2_9_5': {
+        'a2_9_5': {
             "question": "PARAGYNOM : Je veux bien, mais le problème c'est que c'est un dieu. Personne ne peut le vaincre.",
             "choix": [
                 {
                     "text": "Laissez-moi vous aider. Je suis capable de le vaincre, amenez- moi vers lui. Je serai en mesure de le détruire",
-                    "data_event": "a3_2_9_7",
+                    "data_event": "a2_9_7",
                     "naration": true
         }
     ]
         },
 
-        'a3_2_9_7': {
+        'a2_9_7': {
             "question": "PARAGYNOM : Pour sûr. Je ne vous connais pas vraiment, mais je vous aime déjà. Dès demain, nous irons sur la place où Rhea Magnus fera son speech.",
             "choix": [
                 {
                     "text": "",
-                    "data_event": "a3_2_9_8",
+                    "data_event": "a2_9_8",
                     "naration": true
         }
     ]
         },
-        'a3_2_9_9': {
+        'a2_9_9': {
             "question": "PARAGYNOM : C'est ici qu'il va lancer son armée divine et tuer les infidèles. Tenez, prenez cette tenue, elle sera moins flashy que vos vêtements venant d'un autre monde.",
             "choix": [
                 {
                     "text": "",
-                    "data_event": "a3_2_9_10",
+                    "data_event": "a2_9_10",
                     "naration": true
         }
     ]
         },
 
-        'a3_2_9_10': {
+        'a2_9_10': {
             "question": "\nJour 04, année -3000 avant J-C, Egypte ancienne.\nIl est 07h00, ou presque. Le discours de Rhea Magnus est tenu dans une heure. Vous vous habillez comme un citoyen égyptien et partez avec PARAGYNOM à la place de la ville.\nTout le monde est là, il y a une foule incroyable. Devant se trouve une place plus haute, ce sera là que Rhea Magnus va donner son discours. Tout le monde chahute sur ce qui va se passer. Quand tout à coup.",
             "choix": [
                 {
                     "text": "",
-                    "data_event": "a3_2_9_11",
+                    "data_event": "a2_9_11",
                     "naration": true
         }
     ]
         },
 
-        'a3_2_9_11': {
+        'a2_9_11': {
             "question": "RHEA MAGNUS : Bonjour tout le monde",
             "choix": [
                 {
                     "text": "",
-                    "data_event": "a3_2_9_12",
-                    "naration": true
-        }
-    ]
-        },
-
-        'a3_2_9_12': {
-            "question": "Tout le monde continue de parler, n'entendant pas Rhea Magnus.",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_2_9_13",
-                    "naration": true
-        }
-    ]
-        },
-
-        'a3_2_9_13': {
-            "question": "RHEA MAGNUS : J'ai dis BONJOUR TOUT LE MONDE.",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_2_9_14",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_2_9_14': {
-            "question": "La voix de Rhea Magnus est tellement perçante que tout le monde s'est tu directement. C'est une voix très très imposante. Vous sentez que Rhea Magnus est en effet, très fort. Vous avez le pressentiment que c'est lui Rainmaker.",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_2_9_15",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_2_9_15': {
-            "question": "RHEA MAGNUS : Je vous ai donné un sursis d'une semaine sur ce que j'ai proposé. Mais on dirait que la majorité d'entre vous ne veulent pas se soumettre à moi. C'est dommage. Comme vous savez, je dois maintenant passer à la manière forte. J'ai crée une armée à moi qui s'appelle l'armée divine. Elle réunit les meilleurs d'entre vous et ceux qui ont décidé de... Me vaincre.",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_2_9_16",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_2_9_16': {
-            "question": "Le monde craint de ce moment. Un chuchotement se fait entendre.\nRHEA MAGNUS : SILENCE.\nTout le monde se tait. Toujours à cause de cette voix extrêmement puissante.\nRHEA MAGNUS : Bon comme vous êtes assez dissipé, il est temps de vous montrer un peu mes soldats. Rhea Magnus se retire et laisse son armée divine rentrer dans la scène.\nRHEA MAGNUS : Comme vous pouvez le voir, voilà mon armée. Pas mal non ? Il est temps de vous montrer de quel bois je me CHAUFFE. Si quelqu'un s'oppose à cette action qu'il vienne ou se sacrifie à jamais.",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_2_9_17",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_2_9_17': {
-            "question": "QTE",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_2_10",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_2_10': {
-            "question": "RHEA MAGNUS : Oh ! Mais qu'est ce que nous avons la ?",
-            "choix": [
-                {
-                    "text": "Je suis... Ghost ! Je viens t'arrêter pour éviter une grande catastrophe ! ",
-                    "data_event": "a3_2_11"
-        },
-                {
-                    "text": "Je vais te buter la gueule ! Tu vas casser la ligne temporel abruti !",
-                    "data_event": "a3_2_12"
-        }
-    ]
-        },
-        'a3_2_11': {
-            "question": "RHEA MAGNUS : Eh bien vas-y jeune citoyen, je vous attend. Mais avant, venez défier mon armée !",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_2_13",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_2_12': {
-            "question": "RHEA MAGNUS : Oh. Mais quel grossier personnage. Armée divine, donnez moi son corps. Je le veux mort. ",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_2_13",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_2_13': {
-            "question": "Vous devez vous battre, QTE de rythme, une musique sera joué en background, le but du joueur est de taper au bon moment les touches du clavier au rythme de la musique. Plus il réussi à taper au bon moment les touches, il affaiblira l'armée.",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_2_14",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_2_14': {
-            "question": "Incroyable ! Vous venez de casser la mâchoire d'un sbire ! (Restant : 65%)",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_2_15",
-                    "naration": true
-        }
-    ]
-        },
-
-        'a3_2_15': {
-            "question": "Wow ! Vous évitez deux sbires, vous continuez votre chemin ! (Restant : 35%)",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_2_16",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_2_16': {
-            "question": "Quel talent ! Vous donnez un uppercut au capitaine de l'armée ! (Restant : 10%)",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_2_17",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_2_17': {
-            "question": "Vous êtes devant Rhea Magnus, un peu choqué par la situation. Vous êtes essoufflé par la bataille. Vous regardez Rhea Magnus d'un regard rempli de haine. ",
-            "choix": [
-                {
-                    "text": "C'est toi... Rainmaker... ",
-                    "data_event": "a3_2_17_1"
-        },
-                {
-                    "text": "C'est fini pour toi Rhea Magnus. ",
-                    "data_event": "a3_2_17_2"
-        }
-    ]
-        },
-        'a3_2_17_1': {
-            "question": "RHEA MAGNUS : Hahaha, c'est la première fois que j'entends ça. Bon fini de jouer, on dirait. Tu m'as suffisamment diverti. Allez salut. ",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_2_18",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_2_17_2': {
-            "question": "Hahaha. C'est la première fois que je vois ça. Mais tu ne me connais pas. Tu m'as suffisamment diverti. Allez salut. ",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_2_18",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_2_18': {
-            "question": "Choqué et déçu par la situation vous restez bouche bée. Comme si la fin de la bataille vous avez frustré. Un gros silence religieux se fait dans la cour. Quand tout à coup.\nVENTURANA : ...Il nous a sauvé.\nC'est une jeune femme blonde qui a percé le silence. VENTURANA : ...Ce héros...Merci... Pharaon...Pharaon...\nTout le monde commence à chuchoter \"Pharaon\" de plus en plus fort comme un chant du peuple. Vous sentez une énergie très forte qui vous est destiné. Vous tiltez maintenant que le premier pharaon qui a percé dans l'Histoire c’est... vous.\nVous avez rectifié l'histoire, mais il est temps de retrouver ce Rainmaker. Vous sortez de la scène et consommez le restant des pulsars que vous avez pour continuer à sauver le temps.\n        Incroyable, vous cassez la mâchoire d'un sbire ! (Restant : 65%)\n  Wow, vous évitez deux sbires, vous continuez le chemin ! (Restant : 35%)\nQuel talent ! Vous donnez un uppercut au plus fort de l'armée ! (Restant : 10%)\nC'est toi Rain..Maker.\n  Vous êtes devant Rhea Magnus, un peu choqué par la situation. Vous êtes essouflé par la bataille. Vous regarder Rhea Magnus d'un regard très haineux.\nHahaha, c'est la première fois que je vois ça. Mais tu ne me connais pas. Tu m'as suffisamment diverti. Allez salut.\n   C'est fini pour toi Rhea Magnus.\n  Rhea Magnus sort de la scène et d'un coup... Disparaît.\nIl est temps de partir. Destination.... (Choisissez une date)",
-            "choix": [
-                {
-                    "text": "",
-                    success: 9,
-                    "data_event": "a3_4",
+                    "data_event": "a2_9_12",
                     "naration": true
         }
     ]
@@ -1613,7 +1423,7 @@ var data = {
 
 
         'a3_3': {
-            "question": "Bienvenue en France",
+            "question": "France",
             "choix": [
                 {
                     "text": "",
@@ -1622,442 +1432,14 @@ var data = {
         }
     ]
         },
-        'a3_3_1': {
-            "question": "Vous vous retrouvez abasourdi. Selon la couleur du ciel, le soleil vient seulement de se lever. D’après l’architecture des bâtiments et l’odeur nauséabonde qui règne, vous êtes à coup sûr arrivé à votre destination. Vous avancez dans l'impasse en direction d’une rue. La rue n’est pas très peuplée, mais déjà à cette heure matinale.",
-            "choix": [
-                {
-                    "text": "Vous apercevez un groupe de courtisanes.",
-                    "data_event": "a3_3_1_1"
-        },
-                {
-                    "text": "Vous entendez un crieur au loin. ",
-                    "data_event": "a_3_3_1_2"
-        }
-    ]
-        },
-        'a3_3_1_1': {
-            "question": "Vous vous dirigez vers elles et vous les entendez parler :\n COURTISANE 1 : “Vous avez entendu parler de ce qu’il risque de se passer aujourd’hui ?\nCOURTISANES : “Non, raconte.”\nCOURTISANE 1 : “Eh bien à en croire les rumeurs qui circule. Il parait que des dignitaires vont se réunir sans l’accord du Roi pour décider de le renverser et signer je ne sais quoi. Mais le pire dans tout ça, c’est qu’un dignitaire serait en danger de mort.”\nCOURTISANE 2 : “Comment as-tu eu vent de ces rumeurs ?”\nCOURTISANE 1 : “C’est ce qu’on entend à la maison des plaisirs.”",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_3_2",
-                    "naration": true
-        }
-    ]
-        },
-        'a_3_3_1_2': {
-            "question": "Vous vous dirigez vers le crieur\n CRIEUR : “Oyez, oyez ! Les dernières nouvelles ne sont pas bonnes ! Des rumeurs circulent sur un supposé complot pour renverser notre Roi. Il est donc recommandé de ne pas s’aventurer trop loin de vos chaumières.”",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_3_2",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_3_2': {
-            "question": "Vous en profitez pour vous renseigner ! ",
-            "choix": [
-                {
-                    "text": "Excusez-moi ! Savez-vous où est signé le serment ?",
-                    "data_event": "a3_3_2_1"
-        },
-                {
-                    "text": "Quand aura lieu la signature ?",
-                    "data_event": "a_3_3_2_2"
-        }
-    ]
-        },
-        'a3_3_2_1': {
-            "question": "- Il parait que les dignitaires se rendront à Versailles. Je ne peux en dire plus sans risque de me faire tuer.",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_3_3",
-                    "naration": true
-        }
-    ]
-        },
 
-        'a_3_3_2_2': {
-            "question": "- Je ne sais pas exactement. Mais ils sont censés le signer aujourd'hui. Ils sont certainement déjà en train de se réunir.",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_3_3",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_3_3': {
-            "question": "Vous ne savez pas comment parvenir au château. À vrai dire, vous ne savez même pas où vous avez atterri.",
-            "choix": [
-                {
-                    "text": "Vous demandez au premier passant que vous croisez où vous êtes.",
-                    "data_event": "a3_3_3_1"
-        },
-                {
-                    "text": "Vous n’avez pas de temps à perdre. Vous commencez à marcher.",
-                    "data_event": "a3_3_3_2"
-        }
-    ]
-        },
-        'a3_3_3_1': {
-            "question": "- Vous : “Excusez-moi, pouvez-vous m’indiquer où sommes-nous ?”\n- Passant : “Eh bien, mon brave vous êtes à Vincennes. Auriez-vous bu quelques sortes de boissons alcoolisées ? C’est écrit devant vous.”",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_3_4",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_3_3_2': {
-            "question": "Vous continuez à avancer jusqu'à ce que vous tombiez sur un panneau qui vous indique que vous êtes à Vincennes. ",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_3_4",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_3_4': {
-            "question": "Vous n’êtes pas vraiment tombé au meilleur des endroits, mais cela aurait pu être pire.\nLe lieu de signature est à l'opposé de votre position. Pour vous y rendre, vous avez deux solutions :",
-            "choix": [
-                {
-                    "text": "Vous demandez aux calèches que vous croisez si elles peuvent vous amenez à Versailles.",
-                    "data_event": "a3_3_4_1"
-        },
-                {
-                    "text": "Vous commencez à marchez vers Versailles à vos risques et périls...",
-                    "data_event": "a3_3_4_2"
-        }
-    ]
-        },
-        'a3_3_4_1': {
-            "question": "CALÈCHE 1 : - “Je n’ai pas de temps à perdre avec vous pleutre...”\nCALÈCHE 2 : - “Vous avez des Louis d’or ?”\nOui : - “Oui. Je vous donne X Louis d’or une fois à destination. (vous menez)",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_3_4_1_0",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_3_4_1_0': {
-            "question": "> Choix du nombre (plus le nombre est grand plus il à de chance d’être accepté.)",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_3_4_1_1",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_3_4_1_1': {
-            "question": "Non : (CALÈCHE 3)\n> CALÈCHE 3 : - “On dirait que c’est votre jour de chance, c’est justement ma destination. Montez ! Je vous y amène.”\n- “Merveilleux !”",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_3_5",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_3_4_2': {
-            "question": "Pendant votre trajet, vous tombez sur des malfrats qui vous volent.",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_3_5",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_3_5': {
-            "question": "Le château de Versailles est devant vous. Le soleil commence à décliner sur l’horizon. Vous êtes dans le château, vous apercevez de nombreuses personnes qui convergent en un lieu commun. Vous décidez de les suivre.\nVous entrez dans la salle où le jeu de paume est joué. De nombreuses personnes sont présentes bien plus que vous ne l’avez imaginé.\nC’est une belle cour que vous voyez. Tout est en or comme vous avez vu dans les livres d’Histoire ou dans les documentaires. Au loin, vous apercevez un petit groupe d’une dizaine de personnes qui se distingue des autres. On dirait des nobles. Ils ne se mélangent pas et ne participent pas au débat houleux qui a lieu. Mais vous remarquez que le groupe se sépare. Quelques personnes se dirigent vers la sortie.",
-            "choix": [
-                {
-                    "text": "Vous décidez de rester dans la salle. Si le meurtre aura lieu alors il sera ici.",
-                    game_over: true,
-                    "data_event": "a_3_3_6"
-        },
-                {
-                    "text": "Cela vous semble beaucoup trop suspect. Vous suivez le groupe qui est sorti.",
-                    "data_event": "a3_3_6"
-        }
-    ]
-        },
-        'a3_3_6': {
-            "question": "Vous suivez le groupe. Ils montent les escaliers rapidement et cela vous semble vraiment suspect. Ils longent un grand couloir et rentrent dans une pièce. Vous courez rapidement et discrètement vers la salle. Vous ne pouvez pas entrer et si vous écoutez à travers la porte vous pouvez être découvert.",
-            "choix": [
-                {
-                    "text": "Vous allez dans une des pièces adjacentes.",
-                    "data_event": "a3_3_6_1"
-        },
-                {
-                    "text": "  Vous restez derrière la porte de la pièce à vos risques et ",
-                    "data_event": "a3_3_6_2"
-        }
-    ]
-        },
-        'a3_3_6_1': {
-            "question": "Vous devez choisir entre deux pièces : ",
-            "choix": [
-                {
-                    "text": "Celle de gauche : vous arrivez dans une pièce où par chance une porte donnant sur la pièce à côté vous permet d'écouter la conversation sans être découvert.",
-                    "data_event": "a3_3_6_2"
-        },
-                {
-                    "text": "Celle de droite : vous entrez dans la pièce où vous apercevez un balcon mitoyen avec la pièce où sont présent les comploteurs. Ce balcon vous permet d’entendre distinctement et discrètement la discussion. De plus il vous donne une vue partielle de la pièce. C’est alors que vous apercevez les comploteurs ainsi qu’une personne assise dans un fauteuil. Les mains croisées, proche de son visage, parlant d’une voix forte et distincte. Immédiatement, une sensation bizarre vous envahie. Et une sensation de déjà vu. C’est comme si vous le connaissiez sans le connaître.",
-                    "data_event": "a3_3_6_2"
-        }
-    ]
-        },
-        'a3_3_6_2': {
-            "question": "- Homme au fauteuil (Rainmaker) : “La personne que vous devrez tuer est le marquis de Brézé. Sans lui la signature du serment du Jeu de Paume ne se fera pas. Et ainsi nous pourrons prendre le pouvoir au Roi Louis XVI.”\n- Comploteur 1 : “Vous nous assurez de notre place dans votre futur règne ?”\n- Homme au fauteuil (Rainmaker) : “Bien sûr mes chers amis ! Bien sûr ! Tout travail mérite salaire. Vous serez en plus généreusement récompensé. Argents, courtisanes et alcools couleront à flots pour vous. Puis sans vous je n’en serai jamais arrivé là. Vous avez ma parole.”\n- Comploteur 2 : “Très bien alors, nous allons tuer ce Marquis.”\n- Homme au fauteuil (Rainmaker) : “Assurez-vous qu’il soit bel et bien mort ! C’est important. Sans cela vous pouvez dire adieu à vos futurs privilèges”\n- Comploteur 3 : “Nous avons engagé un des meilleurs assassins d’Europe pour cette occasion. Nous allons ordonner à l’assassin de tuer le marquis d’un des balcons vide de la salle comme vous l’avez demandé.”\n- Homme au fauteuil (Rainmaker) : “Très bien. Me voilà un peu plus réconforté. Vous pouvez partir, votre absence ne doit pas être remarquée plus longtemps.”\nLes comploteurs quittent la pièce.",
-            "choix": [
-                {
-                    "text": "Vous quitter aussi les lieux.",
-                    "data_event": "a3_3_6_2_1"
-        },
-                {
-                    "text": "Vous décidez de rester un peu.",
-                    "data_event": "a3_3_6_2_2"
-        }
-    ]
-        },
-        'a3_3_6_2_1': {
-            "question": "Vous parcourez alors le couloir d'où vous êtes venu. Vous vous arrêtez devant les escaliers où vous remarquez cette fois deux couloirs à votre gauche et un à votre droite, c’est alors qu’il vous semble avoir aperçu le temps d’un instant une ombre tournée à l’angle du prochain couloir.",
-            "choix": [
-                {
-                    "text": " Vous prenez le couloir de gauche. (10s)",
-                    "data_event": "a3_3_6_2_1_1"
-        },
-                {
-                    "text": "Vous prenez le couloir de droite. (10s)",
-                    "data_event": "a3_3_6_2_1_2"
-        }
-    ]
-        },
-        'a3_3_6_2_1_1': {
-            "question": "Vous longez ce couloir jusqu’à l’angle où vous jetez un regard discret sur le prochain couloir. Rien, ni personne.",
-            "choix": [
-                {
-                    "text": "Vous faites demi-tour.",
-                    "data_event": "a3_3_6_2_1"
-        },
-                {
-                    "text": "Vous continuez. Dans un renforcement, à votre droite se trouve une porte. Vous l’ouvrez et vous vous trouvez face au balcon où se tient l’assassin qui se tient prêt à tirer avec un mousquet. Vous regardez autour de vous et apercevez que votre balcon possède aussi un mousquet.",
-                    "data_event": "a3_3_6_2_1_1_1"
-        }
-    ]
-        },
-        'a3_3_6_2_1_1_1': {
-            "question": "Que décidez-vous ? ",
-            "choix": [
-                {
-                    "text": "Vous ne faites rien. Le coup de feu retentit. L’assassin se retourne et s’enfuit à travers le couloir d'où il est venu. Vous vous approchez de la balustrade. Vous voyez le marquis étendu sur le sol, sans vie. Tout le monde regarde dans la direction du coup de feu.",
-                    game_over: true,
-                    "data_event": "a3_3_6_3"
-        },
-                {
-                    "text": " Vous prenez le mousquet déjà armé et tirez sur l’assassin. Vous le touchez il tombe raide mort. Les gens sont affolés par le coup de feu. Vous leur criez : “Soyez tranquille ! Cet homme a tenté de porter atteinte à la vie du marquis.",
-                    game_over: true,
-                    "data_event": "a3_3_6_3"
-        }
-    ]
-        },
-        'a3_3_6_2_1_2': {
-            "question": "Vous longez ce couloir jusqu’à l’angle où vous jetez un regard discret sur le prochain couloir. Rien, ni personne.",
-            "choix": [
-                {
-                    "text": "Vous faites demi-tour ",
-                    "data_event": "a3_3_6_2_1"
-        },
-                {
-                    "text": "Vous continuez. Dans un renforcement, à votre droite se trouve une porte. Vous l’ouvrez et vous vous retrouvez face à l'assassin se tenant prêt à tirer avec un mousquet. [Timer très rapide 3/5 seconde ? Si pas de choix alors choix par défaut : impassible]",
-                    "data_event": "a3_3_6_3"
-        }
-    ]
-        },
-        'a3_3_6_3': {
-            "question": "Que faites-vous ? ",
-            "choix": [
-                {
-                    "text": "Vous sautez sur l’assassin pour lui faire manquer son tir. Le coup de feu retentit, mais par chance sa cible n’est que légèrement blessée. L’assassin vous repousse et s’enfuit.",
-                    "data_event": "a3_3_7"
-        },
-                {
-                    "text": "Vous restez impassible. Le coup de feu retentit. L’assassin ayant terminé son travail se retourne et vous aperçoit. Il vous bouscule et s’enfuit à travers le couloir. Vous vous approchez de la balustrade. Vous voyez un homme étendu sur le sol, sans vie. Tout le monde regarde dans votre direction. - “Il a tué le marquis ! Attrapez-le !” Vous ne vous faites pas attendre pour emboîter le pas de l’assassin. Pour vous cacher dans les pièces dont vous avez écouté la conversation.",
-                    "data_event": "a3_3_8"
-        }
-    ]
-        },
-        'a3_3_7': {
-            "question": "Vous avez quand même sauvez le marquis d’une mort certaine.\nVous avez participer un événement majeur de la France.\nIl est temps de partir pour vous. Destination... (Le joueur choisit son temps)",
-            "choix": [
-                {
-                    "text": "",
-                    get_success: 10,
-                    "data_event": "a3_4",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_3_8': {
-            "question": "Par l’aide des médecins présent dans la pièce. Le marquis s’en est sorti vivant. Et le serment à pu être finalement",
-            "choix": [
-                {
-                    "text": "",
-                    get_success: 10,
-                    "data_event": "a3_4",
-                    "naration": true
-        }
-    ]
-        },
+        //        'a3_4':
 
-        'a3_4': {
-            "question": "Vous décidez de voyagez dans le temps après ce long voyage. Quelle date choisissez vous ?",
-            "choix": [
-                {
-                    "text": "2012",
-                    "data_event": "a3_4_1"
-        },
-                {
-                    "text": "3123",
-                    "data_event": "a3_4_2"
-        },
-                {
-                    "text": "9999",
-                    "data_event": "a3_4_3"
-        },
-                {
-                    "text": "2000 ",
-                    "data_event": "a3_4_4"
-        }
-    ]
-        },
-        'a3_4_1': {
-            "question": "Cette année est une année qui changera totalement le visage de l'histoire. Je suis à New-York, il me semble. Devant moi, il y a cette belle tour avec des tonnes de publicités. Je regarde ma montre, il est 9h51. J'ai des frissons, je sais ce qui va se passer. Je ne peux pas dire aux gens, ils me prendront pour un(e) fou/folle. Je sirote mon café au lait de chez Starbucks Coffee et je m'en vais de suite pour tenir ma promesse à Chronos. Allons trouver ce fichu Rainmaker.",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_4",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_4_2': {
-            "question": "Mais qu'est-ce que cette ville ? On dirait un Time Square en mode science-fiction ! Tout est sur-connecté ! J'aperçois à côté de moi un petit teckel qui se fait balader par... Un drone ?! Ce petit chien me sourit avec sa langue qui lèche l'air chaud de New-York. Incroyable. Finis les bêtises, j'ai fais une promesse à Chronos... ",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_4",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_4_3': {
-            "question": "Oh bordel, mais qu'est-ce qu'il fait froid ! Je n'ai jamais rien ressenti de tel. Où je suis ? On dirait un désert de neige. Je vois une civilisation au loin, je ne sais pas si je peux les approcher. Le soleil est couvert par un voile de nuage. L'air que je respire est étrange, elle est trop froide pour moi. Mes mouvements sont plus lourds qu'auparavant. Pourtant, je n'ai qu'un manteau sur moi. Je dois m'enfuir à tout prix de là !",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_4",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_4_4': {
-            "question": "Vous êtes à Time Square, vous rencontrez un prophète qui vous raconte une histoire... Il l'a vu de nombreuses fois dans ses visions. \nPROPHÈTE : La personne que vous voulez se trouve ici, c'est une personne hors du temps. Vous avez obtenu des indices lors de vos voyages, vous devez vous en souvenir pour retrouver celui que vous cherchez.",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_4_5",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_4_5': {
-            "question": "JEUX QUI EST CE ! ",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_4_6",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_4_6': {
-            "question": "Vous avez trouvé Rainmaker ! Vite il s'enfuit ! ",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_4_7",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_4_7': {
-            "question": "JEUX QTE RAPIDITÉ",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_4_8",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_4_8': {
-            "question": "Vous avez réussi à rattraper Rainmaker ! Que voulez-vous faire maintenant ?",
-            "choix": [
-                {
-                    "text": "Tuer Rainmaker ! ",
-                    "data_event": "a3_4_8_1"
-        },
-                {
-                    "text": "L'attraper pour le livrer à Chronos.",
-                    "data_event": "a3_4_8_2"
-        }
-    ]
-        },
-        'a3_4_8_1': {
-            "question": "Vous tentez de le tuez. Mais vous êtes encore trop faible. Il vous contre.\nRAINMAKER : Tu ne connais pas mes pouvoirs, espère de sot. ",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "a3_4_8_1_1",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_4_8_1_1': {
-            "question": "Rainmaker a shapeshifté sur une autre personne qui regarde la scène. Vous venez de vous rendre compte qu'il allait tuer une jeune femme apeurée par la situation et qu'elle n'avait rien demandé.\nRAINMAKER : Tu n'as pas vraiment de coeur toi. Tu as voulu mettre fin à ma vie. Tu ne connais pas le prix d'une vie. On va voir ce qui se passe quand on s'attaque aux gens qui te sont chères.",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "end3",
-                    "naration": true
-        }
-    ]
-        },
-        'a3_4_8_2': {
-            "question": "Vous l'attrapez. Mais il se débarrasse de vous en un claquement de doigt. Vous êtes encore trop faible pour pouvoir le défier... Il utilise ses pouvoirs. Rainmaker a shapeshifté sur une autre personne qui regarde la scène. Vous venez de vous rendre compte qu'il allait capturer une jeune femme apeurée par la situation et qui n'avait rien demandé. Il disparaît.",
-            "choix": [
-                {
-                    "text": "",
-                    "data_event": "end3",
-                    "naration": true
-        }
-    ]
-        },
 
         end3: {
             stop_act: true,
         },
     },
-
     act_4: {
         prologue: {
             citation: '"Le meilleur succès est souvent né avec un grand sacrifice, et n\'est jamais le résultat d\'un égoïste."',
