@@ -201,7 +201,15 @@ function render(event) {
             skip = true;
         });
 
-        //if data-stats , the user's stats will be modified   
+        //if data-stats , the user's stats will be modified  
+        console.log(Object.keys(event.choix).length);
+        if (Object.keys(event.choix).length <= 2){
+            if(!$.el('.main .questions .arrows').classList.contains('hide')){
+                console.log('hide arrows');
+            }
+        }
+        }
+
 
     });
 

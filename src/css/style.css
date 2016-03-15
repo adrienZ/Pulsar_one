@@ -404,8 +404,8 @@ body {
 
 .main .questions .arrows {
   position: absolute;
-  left: calc( 37.5% - 10px);
-  top: calc(275px + 40vh + 20px * 2);
+  left: calc(75% / 2 - 10px - 5px);
+  top: calc(275px + 40vh + 15px + 20px);
 }
 
 .main .questions .arrows .circle {
@@ -415,7 +415,7 @@ body {
   background: white;
   position: absolute;
   top: calc( 50% - 5px);
-  left: calc( 50% - 10px);
+  left: calc(50% - 10px);
 }
 
 .main .questions .arrows .arrow {
@@ -506,9 +506,16 @@ body {
 }
 
 .main .questions ul li:not(.arrow_naration):nth-child(2), .main .questions ul li:not(.arrow_naration):nth-child(3) {
+  padding: 0 20px;
   width: 50%;
+  margin: 0px 5px;
   display: inline-block;
   margin: 25px 0px;
+}
+
+.main .questions ul li:not(.arrow_naration):nth-child(3) {
+  text-align: left;
+  padding-left: 2rem;
 }
 
 .main .questions .timer {
