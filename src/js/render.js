@@ -382,11 +382,13 @@ function write(txt, parent) {
 
                 index_text++;
                 content.innerHTML += txt[index_text];
+                $.histoire.scrollTop = $.histoire.scrollHeight;
+
             }
 
             if (index_text === txt.length - 1) {
                 clearInterval(writing);
-                $.histoire.scrollTop = $.histoire.scrollHeight;
+                // $.histoire.scrollTop = $.histoire.scrollHeight;
 
             }
         }, 15);
