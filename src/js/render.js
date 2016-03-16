@@ -215,6 +215,8 @@ function render(event) {
             $.el('.main .questions .arrows').classList.add('hide');
             if (answer_realign && !answer_realign.classList.contains('realign')) {
                 answer_realign.classList.add('realign');
+                console.log('realign');
+
             }
         }
     } else {
@@ -222,7 +224,8 @@ function render(event) {
         if ($.el('.main .questions .arrows').classList.contains('hide')) {
             $.el('.main .questions .arrows').classList.remove('hide');
             if (answer_realign && answer_realign.classList.contains('realign')) {
-                // answer_realign.classList.remove('realign');
+                //answer_realign.classList.remove('realign');
+                console.log('no realign');
             }
         }
     }
