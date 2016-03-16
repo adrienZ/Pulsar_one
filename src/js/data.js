@@ -126,6 +126,7 @@ var data = {
 
         'a1_4': {
             "question": "JEU CHOIX DU CHIFFRE",
+            mini_game: 'personality_test',
             "choix": [
                 {
                     "text": "",

@@ -36,7 +36,7 @@ if (user.game === "prologue") {
 
 
 for (var key in user.stats) {
-    $.el('.ui-panel .user-stats ul').innerHTML += '<li><p>' + key + '</p><p>' + user.stats[key] + '</p></li>'
+    $.el('.ui-panel .user-stats ul').innerHTML += '<li class=' + key + '><p>' + key + '</p><p>' + user.stats[key] + '</p></li>'
 };
 //display user pulsars
 $.el('.ui-panel .pulsars span').innerHTML = '[' + user.pulsars + ']';

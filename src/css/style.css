@@ -316,7 +316,6 @@ body {
 }
 
 .main .illustration #fondo {
-  /*background: url(http://i.imgur.com/ygVpJMP.jpg) no-repeat left top;*/
   background: url(http://s28.postimg.org/3z90275y5/yg_Vp_JMP.jpg) no-repeat left top;
   background-size: cover;
   height: 275px;
@@ -332,7 +331,6 @@ body {
   width: 75%;
   left: 0;
   top: 0;
-  /*-webkit-mask: url(http://i.imgur.com/AYJuRke.png);*/
   -webkit-mask: url(../img/brush.png);
   -webkit-mask-size: 3000% 100%;
   -webkit-animation: mask-playzero-1 2s steps(29) paused infinite;
@@ -348,7 +346,6 @@ body {
 
 .main .illustration #encima:before {
   content: '';
-  /*background: url(http://i.imgur.com/dJLNhFN.jpg) no-repeat left top;*/
   background: url(http://s22.postimg.org/urrt8jfq9/d_JLNh_FN.jpg) no-repeat left top;
   background-size: cover;
   height: 100%;
@@ -981,11 +978,26 @@ body {
   }
 }
 
-.game-over {
+section.mini-game {
   width: 100vw;
   height: 100vh;
+  opacity: 1;
+  -webkit-animation: fadeOut 1s ease-in-out;
+          animation: fadeOut 1s ease-in-out;
+}
+
+section.mini-game.active {
+  position: absolute;
+  -webkit-animation: fadeIn 1s ease-in-out;
+          animation: fadeIn 1s ease-in-out;
+}
+
+.game-over {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  height: 100vh;
   font-family: 'Gotham Book', 'Arial', sans-serif;
-  position: relative;
   background: #060607;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */

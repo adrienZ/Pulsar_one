@@ -63,7 +63,6 @@ if (document.cookie.indexOf("user_save") >= 0) { //detect the cookie we want
     if ($.el('.welcome-screen')) {
         $.el('.welcome-screen .menu a:nth-child(2)').classList.add('unavailable');
     }
-    user.name = "JOOOOOOOOHN Cena !";
     user.stats = {
         strenght: 0,
         perception: 0,
@@ -75,7 +74,7 @@ if (document.cookie.indexOf("user_save") >= 0) { //detect the cookie we want
     };
     user.game = 'intro';
     user.success = [];
-    //user.game = null;
+    user.name = null;
     user.pulsars = 5;
     //to sting, imperative to get save in cookies, they only read strings
     user = JSON.stringify(user);
