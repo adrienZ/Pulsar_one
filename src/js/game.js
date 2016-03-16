@@ -77,13 +77,5 @@ $.el('.ui-panel #fonts_change').addEventListener('click', function () {
         $.histoire.classList.remove('sans-serif');
         $.histoire.classList.add('serif');
 
-        if ($.el('.story').classList.contains('serif')) {
-            $.el('.story').classList.remove('serif');
-            $.el('.story').classList.add('sans-serif');
-        } else if ($.el('.story').classList.contains('sans-serif')) {
-            $.el('.story ').classList.remove('sans-serif ');
-            $.el('.story ').classList.add('serif');
-
-        }
     }
 });
