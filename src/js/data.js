@@ -839,7 +839,7 @@ var data = {
     ]
         },
         'a3_1': {
-            "question": "Grèce",
+            "question": "Vous êtes arrivé en Grèce ! ",
             "choix": [
                 {
                     "text": "",
@@ -984,7 +984,7 @@ var data = {
         },
 
         'a3_1_10': {
-            "question": "CITOYEn : Voyons Menesthes, ton seul droit est de me suivre… Hahaha ! Allons dépêchons !\n",
+            "question": "CITOYEN : Voyons Menesthes, ton seul droit est de me suivre… Hahaha ! Allons dépêchons !\n",
             "choix": [
                 {
                     "text": "Tuer le citoyen.",
