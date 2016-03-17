@@ -582,9 +582,8 @@ mini_games.wake_up = function () {
             console.log(win_windows.classList.contains('fade'));
             window.setTimeout(function () {
                 $.mini_game.className = 'mini-game';
-                //render(current_act[ui.finish_mini_game_redirect]);
-                //ui.finish_mini_game_redirect = undefined;
-            }, 3000);
+                render(current_act[ui.finish_mini_game_redirect]);
+                ui.finish_mini_game_redirect = undefined;            }, 3000);
         } else {
             //   square_move.style.border = '4px solid red';
         }
