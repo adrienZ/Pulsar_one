@@ -2381,15 +2381,10 @@ var data = {
                 rewards_pulsar: 1,
                 img: '/src/img/success/success_badge_16.svg',
         }, {
-                name: "Une fraternité au grand coeur",
-                id: 1,
-                rewards_pulsar: 1,
-                img: '/src/img/success/success_badge_1.svg',
-        }, {
                 name: "Voyageur temporel",
                 id: 17,
                 rewards_pulsar: 1,
-                img: '/src/img/success/Voyageur.svg',
+                img: '/src/img/success/success_badge_17.svg',
         },
 
                  ],
