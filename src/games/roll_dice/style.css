@@ -1,0 +1,251 @@
+
+.roll_dice {
+  position: relative;
+  overflow: hidden;
+}
+
+.roll_dice .container {
+  position: relative;
+  padding: 0rem 0rem;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  transition: all 1s;
+}
+
+.roll_dice .container h1 {
+  position: absolute;
+  color: black;
+  font-family: 'Gotham',Arial,sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  width: 100%;
+  top: 20vh;
+}
+
+.roll_dice .blur {
+  transform: translateY(-50px);
+  -webkit-filter: blur(5px);
+}
+
+.roll_dice .windows-panel {
+  font-family: 'Gotham',Arial,sans-serif;
+  z-index: 99;
+  opacity: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  padding-top: 45vh;
+  text-align: center;
+}
+
+.roll_dice .windows-panel.animation {
+  animation: slideUp 1s ease 0s normal running 1 forwards;
+}
+
+.roll_dice .windows-panel h1 {
+  opacity: 0;
+  color: white;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+}
+
+.roll_dice .windows-panel h1.animation {
+  animation: firstTitle 0.5s ease 1s normal running 1 forwards, slideUpTitle 1s ease 2s normal running 1 forwards;
+}
+
+.roll_dice .windows-panel h2 {
+  opacity: 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  width: 60%;
+  margin: auto;
+}
+
+.roll_dice .windows-panel h2.animation {
+  animation: firstTitle 0.5s ease 1.5s normal running 1 forwards, slideUpTitle 1s ease 2s normal running 1 forwards;
+}
+
+/* ---------------------------- */
+/* QUESTIONS */
+
+
+/*Question 1 : Car délai avant lancement */
+/* .windows-panel .question1 {
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  display: none;
+}
+
+.windows-panel .question1.animation {
+  display: initial;
+  animation: fade 0.8s ease 3s normal running 1 forwards;
+}
+
+.windows-panel .question1.animation.gone {
+  animation: fadeGone 0.4s ease 0s normal running 1 forwards;
+} */
+
+/* Questions en général */ 
+/* .windows-panel .questions {
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(100px);
+  display: none;
+}
+
+.windows-panel .questions.animation {
+  display: initial;
+  opacity: 0;
+  animation: fade 0.8s ease 0.5s normal running 1 forwards;
+}
+
+.windows-panel .questions.animation.gone {
+  animation: fadeGone 0.4s ease 0s normal running 1 forwards;
+} */
+
+
+/* Div qui contient toutes les questions */ 
+.roll_dice .windows-panel .div-dice {
+  margin: auto;
+  position: relative;
+  text-align: center;
+  width: 500px;
+  height: 280px;
+  color: white;
+  margin-top: -5rem;
+  transform: translateY(400px);
+}
+
+.roll_dice .windows-panel .div-dice.animation {
+  animation: fade 0.8s ease 3s normal running 1 forwards;
+}
+
+
+.roll_dice .windows-panel .div-dice .player {
+  display: inline-block;
+  width: 240px;
+  height: 130px;
+  text-align: center;
+  font-size: 30px;
+}
+
+
+.roll_dice .windows-panel .div-dice .player .name{
+  display: block;
+  width: 100%;
+  line-height: 30px;
+  height: 30px;
+  margin-bottom: 30px;
+}
+
+.roll_dice .windows-panel .div-dice .player1 {
+  margin-right: 10px;
+}
+
+.roll_dice .windows-panel .div-dice .player .rounds{
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  border: 1px solid white;
+  line-height: 45px;
+  margin-right: 8px;
+}
+
+.roll_dice .windows-panel .div-dice .button-play {
+  width: 100px;
+  height: 25px;
+  background-color: #2c3e50;
+  cursor: pointer;
+  line-height: 25px;
+  vertical-align: middle;
+  margin: 20px auto;
+  transition: all 0.3s ease;
+}
+
+.roll_dice .windows-panel .div-dice .button-play.unusable {
+  background-color: rgba(0,0,0,0.3);
+  cursor: none;
+}
+
+.roll_dice .windows-panel .div-dice .results.invisible {
+  display: none;
+}
+
+.roll_dice .windows-panel .div-dice .results.visible {
+  display: initial;
+  margin-top: 30px;
+  font-size: 40px;
+  animation: fade 0.4s ease 0s normal running 1 forwards;
+}
+
+
+
+
+@keyframes slideUp {
+  0% {
+    opacity: 1;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slideUpTitle {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-30vh);
+  }
+}
+
+@keyframes firstTitle {
+  0% {
+    opacity: 0;
+    transform: scale(1.25) translateZ(0px) translateY(70px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateZ(0px) translateY(0px);
+  }
+}
+
+/* Questions qui arrivent */
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: translateY(400px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+
+/* Questions qui partent */
+@keyframes fadeGone {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px);
+    visibility: hidden;
+  }
+}

@@ -155,7 +155,7 @@ var data = {
 
         'a1_4': {
             "question": "",
-            mini_game: 'roll_dice',
+            //    mini_game: 'roll_dice',
             "choix": [
                 {
                     "text": "",
@@ -304,10 +304,11 @@ var data = {
 
         'a1_12': {
             "question": "MINI JEU LANCÉ DE DÉS",
+            mini_game: 'roll_dice',
+
             "choix": [
                 {
                     "text": "",
-
                     "data_event": "a1_13",
                     "naration": true
         }
