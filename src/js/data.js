@@ -16,6 +16,7 @@ var data = {
                 {
                     "text": "Les nouvelles du jour : le président Wilson est sur le point de déclencher une guerre mondiale.",
                     "data_event": "a1_1",
+                    timer: 5,
 
                     stats_change: {
                         intelligence: 1,
@@ -24,6 +25,7 @@ var data = {
                 {
                     "text": "Une série TV : c’est l’épisode 03 de Sense : the prequel.",
                     "data_event": "a1_1",
+                    timer: 5,
                     stats_change: {
                         perception: 2,
                     },
@@ -219,6 +221,7 @@ var data = {
             "choix": [
                 {
                     "text": "Vous protestez et vous êtes envoyé chez le directeur.",
+                    get_success: 6,
                     "data_event": "a1_9",
                     game_over: true,
                     stats_change: {
@@ -313,6 +316,7 @@ var data = {
 
         'a1_13': {
             "question": "En rentrant chez vous, vous êtes toujours choqué(e) par cette journée. Tant d’émotions en si peu de temps. Mais attention, ce n’est pas encore terminé. \nEn voulant déverrouiller la porte de votre maison, une étrange sensation se ressent à l’intérieur de votre corps. Comme si votre esprit divaguait et essayait de sortir de votre corps. Vous tremblez. Vous entendez des voix à l’intérieur de votre tête d’une langue étrange. Vous ne pouvez plus tenir sur vos jambes. \nEt d’un coup, une force mystérieuse stoppe le temps. Les feuilles des arbres soufflées par un vent violent se retrouvent figées. Les oiseaux en vol sont immobiles dans les airs. \nVous regardez à côté de vous, pétrifié(e) par la situation et D’UN COUP UNE SORTE DE BALLE INVISIBLE TRAVERSE VOTRE CORPS COMME UNE GROSSE ONDE DE CHOC D’UNE TELLE ENVERGURE QUE VOUS VOUS ÉVANOUISSEZ. BLACKOUT. KO.\n",
+            get_success: 1,
             change_img: 'bus',
             "choix": [
                 {
@@ -850,6 +854,7 @@ var data = {
 
         'a2_36': {
             "question": "Bon courage pour ce premier voyage, accroche toi bien !",
+            get_success: 17,
             "choix": [
                 {
                     "text": "",
@@ -1031,6 +1036,8 @@ var data = {
 
         'a3_1_13': {
             "question": "Vous avez sans doute fait un mauvais choix.",
+            get_success: 6,
+
             "choix": [
                 {
                     "text": "",
@@ -1058,6 +1065,7 @@ var data = {
                         strenght: -1,
                         loyalty: 2,
                     },
+                    get_success: 6,
                     game_over: true,
                     "data_event": "a3_1_12"
         }
@@ -1124,6 +1132,7 @@ var data = {
                 agility: -1,
                 luck: -1,
             },
+            get_success: 6,
             "choix": [
                 {
                     "text": "",
@@ -1937,6 +1946,7 @@ var data = {
             "choix": [
                 {
                     "text": "Vous décidez de rester dans la salle. Si le meurtre aura lieu alors il sera ici.",
+                    get_success: 6,
                     game_over: true,
                     "data_event": "a_3_3_6"
         },
@@ -2026,11 +2036,13 @@ var data = {
             "choix": [
                 {
                     "text": "Vous ne faites rien. Le coup de feu retentit. L’assassin se retourne et s’enfuit à travers le couloir d'où il est venu. Vous vous approchez de la balustrade. Vous voyez le marquis étendu sur le sol, sans vie. Tout le monde regarde dans la direction du coup de feu.",
+                    get_success: 6,
                     game_over: true,
                     "data_event": "a3_3_6_3"
         },
                 {
                     "text": " Vous prenez le mousquet déjà armé et tirez sur l’assassin. Vous le touchez il tombe raide mort. Les gens sont affolés par le coup de feu. Vous leur criez : “Soyez tranquille ! Cet homme a tenté de porter atteinte à la vie du marquis.",
+                    get_success: 6,
                     game_over: true,
                     "data_event": "a3_3_6_3"
         }
@@ -2265,94 +2277,100 @@ var data = {
 
     backstory: {
         success: [{
-            name: "Une fraternité au grand coeur",
-            id: 1,
-            rewards_pulsar: 1,
-            img: '/src/img/success/success_badge_1.svg',
+                name: "Une fraternité au grand coeur",
+                id: 1,
+                rewards_pulsar: 1,
+                img: '/src/img/success/success_badge_1.svg',
         }, {
-            name: "La combinaison parfaite",
-            id: 2,
-            rewards_pulsar: 3,
-            img: '/src/img/success/success_badge_2.svg',
+                name: "La combinaison parfaite",
+                id: 2,
+                rewards_pulsar: 3,
+                img: '/src/img/success/success_badge_2.svg',
         }, {
-            name: "Gros G33k",
-            id: 3,
-            rewards_pulsar: 1,
-            img: '/src/img/success/success_badge_3.svg',
+                name: "Gros G33k",
+                id: 3,
+                rewards_pulsar: 1,
+                img: '/src/img/success/success_badge_3.svg',
         }, {
-            name: "Une journée si calme",
-            id: 4,
-            rewards_pulsar: 1,
-            img: '/src/img/success/success_badge_4.svg',
+                name: "Une journée si calme",
+                id: 4,
+                rewards_pulsar: 1,
+                img: '/src/img/success/success_badge_4.svg',
         }, {
-            name: "Chronos a une dents contre vous",
-            id: 5,
-            rewards_pulsar: 1,
-            img: '/src/img/success/success_badge_5.svg',
+                name: "Chronos a une dents contre vous",
+                id: 5,
+                rewards_pulsar: 1,
+                img: '/src/img/success/success_badge_5.svg',
         }, {
-            name: "Pseudo Héros",
-            id: 6,
-            rewards_pulsar: 1,
-            img: '/src/img/success/success_badge_6.svg',
+                name: "Pseudo Héros",
+                id: 6,
+                rewards_pulsar: 1,
+                img: '/src/img/success/success_badge_6.svg',
         }, {
-            name: "Tenace",
-            id: 7,
-            rewards_pulsar: 1,
-            img: '/src/img/success/success_badge_7.svg',
+                name: "Tenace",
+                id: 7,
+                rewards_pulsar: 1,
+                img: '/src/img/success/success_badge_7.svg',
         }, {
-            name: "Les dieux grecs vous protegeront",
-            id: 8,
-            rewards_pulsar: 1,
-            img: '/src/img/success/success_badge_8.svg',
+                name: "Les dieux grecs vous protegeront",
+                id: 8,
+                rewards_pulsar: 1,
+                img: '/src/img/success/success_badge_8.svg',
         }, {
-            name: "Les pyramides vous remercient",
-            id: 9,
-            rewards_pulsar: 1,
-            img: '/src/img/success/success_badge_9.svg',
+                name: "Les pyramides vous remercient",
+                id: 9,
+                rewards_pulsar: 1,
+                img: '/src/img/success/success_badge_9.svg',
         }, {
-            name: 'L\'espionage n\'a plus de secrets pour vous',
-            id: 10,
-            rewards_pulsar: 1,
-            img: '/src/img/success/success_badge_10.svg',
+                name: 'L\'espionage n\'a plus de secrets pour vous',
+                id: 10,
+                rewards_pulsar: 1,
+                img: '/src/img/success/success_badge_10.svg',
         }, {
-            name: "Vous prenez soins de votre soeur",
-            id: 11,
-            rewards_pulsar: 1,
-            img: '/src/img/success/success_badge_11.svg',
+                name: "Vous prenez soins de votre soeur",
+                id: 11,
+                rewards_pulsar: 1,
+                img: '/src/img/success/success_badge_11.svg',
         }, {
-            name: "Petit cerveau de poisson rouge",
-            id: 12,
-            rewards_pulsar: 1,
-            img: '/src/img/success/success_badge_12.svg',
+                name: "Petit cerveau de poisson rouge",
+                id: 12,
+                rewards_pulsar: 1,
+                img: '/src/img/success/success_badge_12.svg',
         }, {
-            name: "Agir et réfléchir après",
-            id: 13,
-            rewards_pulsar: 1,
-            img: '/src/img/success/success_badge_13.svg',
+                name: "Agir et réfléchir après",
+                id: 13,
+                rewards_pulsar: 1,
+                img: '/src/img/success/success_badge_13.svg',
         }, {
-            name: "On vous appelle aussi Enigma",
-            id: 14,
-            rewards_pulsar: 1,
-            img: '/src/img/success/success_badge_14.svg',
+                name: "On vous appelle aussi Enigma",
+                id: 14,
+                rewards_pulsar: 1,
+                img: '/src/img/success/success_badge_14.svg',
         }, {
-            name: "Dans le mille",
-            id: 15,
-            rewards_pulsar: 1,
-            img: '/src/img/success/success_badge_15.svg',
+                name: "Dans le mille",
+                id: 15,
+                rewards_pulsar: 1,
+                img: '/src/img/success/success_badge_15.svg',
         }, {
-            name: "La famille avant tout",
-            id: 16,
-            rewards_pulsar: 1,
-            img: '/src/img/success/success_badge_16.svg',
+                name: "La famille avant tout",
+                id: 16,
+                rewards_pulsar: 1,
+                img: '/src/img/success/success_badge_16.svg',
         }, {
-            name: "Une fraternité au grand coeur",
-            id: 1,
-            rewards_pulsar: 1,
-            img: '/src/img/success/success_badge_1.svg',
-        }, ],
-    }
-};
+                name: "Une fraternité au grand coeur",
+                id: 1,
+                rewards_pulsar: 1,
+                img: '/src/img/success/success_badge_1.svg',
+        }, {
+                name: "Voyageur temporel",
+                id: 17,
+                rewards_pulsar: 1,
+                img: '/src/img/success/Voyageur.svg',
+        },
 
+                 ],
+    },
+};
 
 function update_data(username) {
     var new_data = JSON.stringify(data);
