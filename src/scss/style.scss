@@ -154,8 +154,18 @@ body {
             background: url('../img/acte/acte2/limbes.jpg') no-repeat center center;
         }
         #encima.nuage:before {
-            background: url('../img/acte/acte2/tumblr_noqydabxdn1tayn6co1_1280.jpg');
+            background: url('../img/acte/acte2/tumblr_noqydabxdn1tayn6co1_1280.jpg') no-repeat center center;
         }
+        #encima.cosmos:before {
+            background: url('../img/acte/acte2/cosmos_xvii_by_redxen-d46a6m6.jpg') no-repeat center center;
+        }
+        #encima.labyrinthe:before {
+            background: url('../img/acte/acte2/labyrinth_by_tsonline-d7xya6d.jpg') no-repeat center center;
+        }
+        #encima.galaxy:before{
+            background: url('../img/acte/acte2/sapphire_by_o0tim0o-d4jlfvg.png') no-repeat center center;
+        }
+        
         #encima:before {
             content: '';
             background-repeat: no-repeat;

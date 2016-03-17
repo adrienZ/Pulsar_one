@@ -245,7 +245,7 @@ function render(event) {
             $.el('#encima').style.animationPlayState = 'running';
             var delay = window.getComputedStyle($.el('#encima')).getPropertyValue('animation-duration');
             var new_img = window.getComputedStyle($.el('#encima.' + event.change_img), ':before').getPropertyValue('background-image');
-
+            console.log(window.getComputedStyle($.el('#encima.' + event.change_img), ':before'));
             window.setTimeout(function () {
                 $.el('#fondo').style.background = new_img + ' no-repeat center center';
                 $.el('#encima').style.animationPlayState = 'paused';

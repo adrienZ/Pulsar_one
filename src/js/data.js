@@ -95,6 +95,7 @@ var data = {
 
         'a1_3': {
             "question": "Jour 01, 09h02, année 2016. Il est temps d’aller en cours. Vous mettez vos chaussures, votre manteau et vous prenez vos clés dans le bol de clés sur la table basse à côté de la porte de sortie.",
+            change_img: 'mag',
             "choix": [
                 {
                     "text": "Luna ? Tu veux qu’on aille en cours ensemble ?",
@@ -151,8 +152,8 @@ var data = {
         },
 
         'a1_4': {
-            "question": "JEU CHOIX DU CHIFFRE POUR AVOIR LE BUS",
-            mini_game: 'personality_test',
+            "question": "",
+            mini_game: 'roll_dice',
             "choix": [
                 {
                     "text": "",
@@ -550,6 +551,7 @@ var data = {
 
         'a2_13': {
             "question": "Le joueur doit connecter les points vitaux en appuyant au bon moment sur les touches.",
+            change_img: 'cosmos',
             "choix": [
                 {
                     "text": "D'un coup les Limbes se transforment. Rose et le Player se font téléporter dans le cosmos. L'interface utilisateur passe du blanc au noir.",
@@ -668,7 +670,7 @@ var data = {
         },
 
         'a2_23': {
-            "question": "ROSE : Pour te faire court, tu as le pouvoir de voyager dans le temps. C’est 3 pulsars sont pour le voyage. Tâche de sortir du temps que tu as modifié au risque de te faire effacer. Compris ?\n",
+            "question": "ROSE : Pour te faire court, tu as le pouvoir de voyager dans le temps. Ces 3 pulsars sont pour le voyage. Tâche de sortir du temps que tu as modifié au risque de te faire effacer. Compris ?\n",
             "choix": [
                 {
                     "text": "Ouais, maintenant c’est plus clair !",
@@ -692,7 +694,7 @@ var data = {
     ]
         },
         'a2_25': {
-            "question": "ROSE : Pour te faire court, tu as le pouvoir de voyager dans le temps. C’est 3 pulsars sont pour le voyage. Tâche de sortir du temps que tu as modifié au risque de te faire effacer. Compris ?",
+            "question": "ROSE : Pour te faire court, tu as le pouvoir de voyager dans le temps. Ces 3 pulsars sont pour le voyage. Tâche de sortir du temps que tu as modifié au risque de te faire effacer. Compris ?",
             "choix": [
                 {
                     "text": "",
@@ -764,6 +766,7 @@ var data = {
 
         'a2_31': {
             "question": "Jeu S'échapper des Limbes",
+            change_img: 'labyrinthe',
             "choix": [
                 {
                     "text": "",
@@ -775,6 +778,7 @@ var data = {
 
         'a2_32': {
             "question": "CHRONOS : Tu as réussi l’épreuve finale. L’initiation est dorénavant terminé. Fais attention, tout de même. Dans cette aventure chaque choix que tu prendras aura des conséquences sur ton avenir. Utilise ce pulsar quantum pour réaliser ton premier remappage temporel.\nROSE : Hey" + user.name + token + "profite ! On dit toujours que le premier voyage temporel est celui que l’on se souvient le plus !\nCHONOS :  Remappage temporel Rose. Utilise les bons termes.\nROSE : Roh si tu veux.\n",
+            change_img: 'galaxy',
             "choix": [
                 {
                     "text": "Remappage temporel vers La Grèce Antique ",
