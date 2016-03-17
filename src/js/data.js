@@ -316,17 +316,30 @@ var data = {
 
         'a1_13': {
             "question": "En rentrant chez vous, vous êtes toujours choqué(e) par cette journée. Tant d’émotions en si peu de temps. Mais attention, ce n’est pas encore terminé. \nEn voulant déverrouiller la porte de votre maison, une étrange sensation se ressent à l’intérieur de votre corps. Comme si votre esprit divaguait et essayait de sortir de votre corps. Vous tremblez. Vous entendez des voix à l’intérieur de votre tête d’une langue étrange. Vous ne pouvez plus tenir sur vos jambes. \nEt d’un coup, une force mystérieuse stoppe le temps. Les feuilles des arbres soufflées par un vent violent se retrouvent figées. Les oiseaux en vol sont immobiles dans les airs. \nVous regardez à côté de vous, pétrifié(e) par la situation et D’UN COUP UNE SORTE DE BALLE INVISIBLE TRAVERSE VOTRE CORPS COMME UNE GROSSE ONDE DE CHOC D’UNE TELLE ENVERGURE QUE VOUS VOUS ÉVANOUISSEZ. BLACKOUT. KO.\n",
-            get_success: 1,
+
             change_img: 'bus',
             "choix": [
                 {
+
                     "text": "",
-                    "data_event": "end1",
+                    get_success: 4,
+                    "data_event": "a1_14",
                     "naration": true
         }
     ]
         },
 
+        'a1_14': {
+            "question": "",
+            "choix": [
+                {
+                    "text": "",
+
+                    "data_event": "end1",
+                    "naration": true
+        }
+    ]
+        },
         end1: {
             stop_act: true,
         },
@@ -854,7 +867,18 @@ var data = {
 
         'a2_36': {
             "question": "Bon courage pour ce premier voyage, accroche toi bien !",
-            get_success: 17,
+
+            "choix": [
+                {
+                    "text": "",
+                    get_success: 17,
+                    "data_event": "a2_37",
+                    "naration": true
+        }
+    ]
+        },
+        'a2_37': {
+            "question": "",
             "choix": [
                 {
                     "text": "",
