@@ -207,6 +207,7 @@ var data = {
 
         'a1_7': {
             "question": "JEU ",
+            mini_game: 'hacking',
             "choix": [
                 {
                     "text": "",

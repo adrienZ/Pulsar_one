@@ -51,7 +51,7 @@ menu.link[0].addEventListener('click', function () {
         console.log(menu.background_music.currentTime);
         user.continue_intro_music = menu.background_music.currentTime;
         savegame.erase_save('user_save', user);
-        window.location = '/template.html';
+        window.location = 'template.html';
     }, 1500);
 
 });

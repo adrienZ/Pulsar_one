@@ -1,0 +1,58 @@
+/* Container */
+.hacking #hackingZone{
+	background: black;
+	height: 100vh;
+	width:100vw;
+	color: #14ff16;
+	display: block;
+	position: absolute;
+	font-family: consolas;
+}
+/* Texte in shell */
+.hacking #hackingZone p{
+	letter-spacing: 2px;
+	padding:2px 0;
+}
+/* Cliquable words */
+.hacking #hackingZone p a{
+	cursor: pointer;
+}
+.hacking #hackingZone p a:hover{
+	background-color : #14ff16;
+	color:black;
+}
+
+/* ALERT BOXE*/
+.hacking #hackingZone .alert{
+	background-color:black;
+	border : 3px solid #14ff16;
+	color : #14ff16;
+	text-align: center;
+	padding:18px;
+	position: absolute;
+	z-index: 2;
+	margin: 0 40%;
+	top:80px;
+	font-family: consolas;
+}
+.hacking #hackingZone .alert h1{
+	font-size: 18px;
+	text-transform: uppercase;
+	font-family: consolas;
+}
+.hacking #hackingZone .alert p{
+	font-family: consolas;
+	
+}
+.hacking #hackingZone .alert a.button{
+	font-family: consolas;
+	color:black;
+	text-decoration: none;
+	padding : 6px 18px;
+	display: block;
+	margin:20px auto 0;
+	background-color : #14ff16;
+	width:25px;
+	text-align: center;
+	cursor : pointer;
+}
