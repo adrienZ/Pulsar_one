@@ -1889,7 +1889,7 @@ var data = {
     ]
         },
         'a3_3_4_1': {
-            "question": "CALÈCHE 1 : - “Je n’ai pas de temps à perdre avec vous pleutre...”\nCALÈCHE 2 : - “Vous avez des Louis d’or ?”\nOui : - “Oui. Je vous donne X Louis d’or une fois à destination. (vous menez)",
+            "question": "CALÈCHE 1 : - “Je n’ai pas de temps à perdre avec vous pleutre...”\nCALÈCHE 2 : - “Vous avez des Louis d’or ?”\nOui : - “Oui. Je vous donne X Louis d’or une fois à destination. (vous mentez)",
             "choix": [
                 {
                     "text": "",
@@ -1909,7 +1909,7 @@ var data = {
     ]
         },
         'a3_3_4_1_1': {
-            "question": "Non : (CALÈCHE 3)\n> CALÈCHE 3 : - “On dirait que c’est votre jour de chance, c’est justement ma destination. Montez ! Je vous y amène.”\n- “Merveilleux !”",
+            "question": "\n> CALÈCHE 3 : - “On dirait que c’est votre jour de chance, c’est justement ma destination. Montez ! Je vous y amène.”\n- “Merveilleux !”",
             "choix": [
                 {
                     "text": "",
