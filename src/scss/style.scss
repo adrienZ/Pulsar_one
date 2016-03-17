@@ -264,25 +264,26 @@ body {
         'Arial',
         sans-serif;
         border-top: 1px solid rgba(255,
-        255,
-        255,
-        0.0);
+            255,
+            255,
+            0.0);
         .arrow_naration {
             position: absolute;
             right: calc(25% + 30px);
             bottom: 100px;
-            transform: rotate(90deg);
-            font-size: 30px;
+            font-size: 35px;
+            animation: animationArrow 1s ease-in-out 0s alternate running infinite forwards;
             a {
-                background-color: #FF4B39;
-                border-radius: 50px;
+                background-image: url('../img/arrow_next.svg');
                 color: transparent;
+                background-repeat: no-repeat;
                 text-decoration: none;
+                opacity: 0.6;
                 &:hover {
-                    background-color: #fefefe;
+                    opacity: 0.8;
                 }
                 &:active {
-                    background-color: #0099DE;
+                    opacity: 1;
                 }
             }
         }

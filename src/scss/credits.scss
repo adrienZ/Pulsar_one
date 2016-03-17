@@ -130,6 +130,7 @@ body{
 			position: absolute;
 			z-index: 1;
 			width: 100%;
+			margin-top: -1rem;
 			opacity: 0;
 			animation: appearIn 1s ease-in-out 1s normal running 1 forwards;
 		}
@@ -137,6 +138,7 @@ body{
 			position: absolute;
 			z-index: -1;
 			width: 100%;
+			margin-top: -1rem;
 		}
 	}
 }
