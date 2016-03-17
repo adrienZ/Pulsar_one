@@ -378,8 +378,7 @@ var data = {
                     data_event: "a2_4_0",
 
                     stats_change: {
-                        strenght: 1,
-                        luck: -2,
+                        perception: -2,
                     },
                 },
                 {
@@ -552,9 +551,12 @@ var data = {
         'a2_13': {
             "question": "Le joueur doit connecter les points vitaux en appuyant au bon moment sur les touches.",
             change_img: 'cosmos',
+            stats_change: {
+                strenght: 3,
+            },
             "choix": [
                 {
-                    "text": "D'un coup les Limbes se transforment. Rose et le Player se font téléporter dans le cosmos. L'interface utilisateur passe du blanc au noir.",
+                    "text": "D'un coup les Limbes se transforment. Vous vous faites téléporter dans le cosmos. L'interface utilisateur passe du blanc au noir.",
                     "data_event": "a2_14"
         },
                 {
@@ -653,6 +655,9 @@ var data = {
         },
                 {
                     "text": "Euh, j’ai pas très bien compris..",
+                    stats_change: {
+                        intelligence: -3,
+                    },
                     "data_event": "a2_23"
         }
     ]
@@ -727,6 +732,9 @@ var data = {
             "choix": [
                 {
                     "text": "",
+                    stats_change: {
+                        intelligence: 2,
+                    },
                     "data_event": "a2_29",
                     "naration": true
         }
@@ -737,6 +745,9 @@ var data = {
             "choix": [
                 {
                     "text": "",
+                    stats_change: {
+                        intelligence: -1,
+                    },
                     "data_event": "a2_29",
                     "naration": true
         }
@@ -888,14 +899,23 @@ var data = {
             "choix": [
                 {
                     "text": "Je me fiche de cette Pythonisse, je veux juste battre Rainmaker !",
+                    stats_change: {
+                        intelligence: -1,
+                    },
                     "data_event": "a3_1_5"
         },
                 {
                     "text": "Je suis prêt maintenant.",
+                    stats_change: {
+                        strenght: 1,
+                    },
                     "data_event": "a3_1_5"
         },
                 {
                     "text": "Très bien y a-t-il autre chose que je dois savoir ? ",
+                    stats_change: {
+                        perception: 1,
+                    },
                     "data_event": "a3_1_2"
         }
     ]
@@ -957,6 +977,10 @@ var data = {
             "choix": [
                 {
                     "text": "Vous le tuez avec la chaîne à laquelle vous êtes attaché.",
+                    stats_change: {
+                        strenght: 1,
+                        intelligence: -1,
+                    },
                     "data_event": "a3_1_8"
         },
                 {
@@ -1022,10 +1046,18 @@ var data = {
             "choix": [
                 {
                     "text": "Tuer le citoyen.",
+                    stats_change: {
+                        loyalty: -1,
+                        strenght: 1,
+                    },
                     "data_event": "a3_1_12"
         },
                 {
                     "text": "Le suivre.",
+                    stats_change: {
+                        strenght: -1,
+                        loyalty: 2,
+                    },
                     game_over: true,
                     "data_event": "a3_1_12"
         }
@@ -1038,10 +1070,18 @@ var data = {
             "choix": [
                 {
                     "text": "Laissez faire…",
+                    stats_change: {
+                        strenght: -1,
+                    },
                     "data_event": "a3_1_12_1"
         },
                 {
                     "text": "Hey Rainmaker, viens te battre !",
+                    stats_change: {
+                        luck: 1,
+                        strenght: 1,
+                        agility: 1,
+                    },
                     "data_event": "a3_1_12_2"
         }
     ]
@@ -1052,14 +1092,26 @@ var data = {
             "choix": [
                 {
                     "text": "Ne rien faire... ",
+                    stats_change: {
+                        strenght: -1,
+                        luck: -1,
+                    },
                     "data_event": "a3_1_12_1_0"
         },
                 {
                     "text": "Aller attaquer Rainmaker !",
+                    stats_change: {
+                        strenght: 1,
+                        agility: 1,
+                    },
                     "data_event": "a3_1_12_1_1"
         },
                 {
                     "text": "Il faut couvrir la Pythie !",
+                    stats_change: {
+                        loyalty: 1,
+                        intelligence: 1,
+                    },
                     "data_event": "a3_1_12_1_2"
         }
     ]
@@ -1067,6 +1119,11 @@ var data = {
 
         'a3_1_12_1_0': {
             "question": "Vous ne faites rien, la Pythie meurt... Vous avez échouez à votre mission. ",
+            stats_change: {
+                strenght: -1,
+                agility: -1,
+                luck: -1,
+            },
             "choix": [
                 {
                     "text": "",
@@ -1154,6 +1211,12 @@ var data = {
             "choix": [
                 {
                     "text": "Euh... Après mûre réflexion. ",
+                    stats_change: {
+                        loyalty: -1,
+                        strenght: -1,
+                        intelligence: -1,
+                        luck: -1,
+                    },
                     "data_event": "a3_1_12_2_2"
         },
                 {
@@ -1168,14 +1231,27 @@ var data = {
             "choix": [
                 {
                     "text": "Ne rien faire... ",
+                    stats_change: {
+                        agility: -1,
+                        strenght: -1,
+                        loyalty: -1,
+                    },
                     "data_event": "a3_1_12_1_0"
         },
                 {
                     "text": "Attaquer Rainmaker ! ",
+                    stats_change: {
+                        strenght: 1,
+                        agility: 1,
+                    },
                     "data_event": "a3_1_12_1_1"
         },
                 {
                     "text": "Couvrir la Pythie ! ",
+                    stats_change: {
+                        intelligence: 1,
+                        loyalty: 1,
+                    },
                     "data_event": "a3_1_12_1_2"
         }
     ]
@@ -1304,6 +1380,9 @@ var data = {
             "choix": [
                 {
                     "text": "Oui, je veux bien. ",
+                    stats_change: {
+                        loyalty: 1;
+                    },
                     "data_event": "a3_2_6"
         },
                 {
@@ -1350,10 +1429,16 @@ var data = {
             "choix": [
                 {
                     "text": "Rhea Magnus ? C'est qui lui ? ",
+                    stats_change: {
+                        intelligence: -1,
+                    },
                     "data_event": "a3_2_9_1"
         },
                 {
                     "text": "Pourquoi ? Qu'est-ce qu'il a fait ?",
+                    stats_change: {
+                        perception: -1,
+                    },
                     "data_event": "a3_2_9_2"
         }
     ]
@@ -1364,14 +1449,24 @@ var data = {
             "choix": [
                 {
                     "text": "Peut-on se battre contre lui ?",
+                    stats_change: {
+                        strenght: 1,
+                    },
                     "data_event": "a3_9_3"
         },
                 {
                     "text": "À quoi il ressemble ?",
+                    stats_change: {
+                        perception: 1,
+                    },
                     "data_event": "a3_9_4"
         },
                 {
                     "text": "Ce n'est pas possible, on doit réagir. Votre peuple ne doit pas se soumettre.",
+                    stats_change: {
+                        loyalty: 1,
+                        intelligence: 1,
+                    },
                     "data_event": "a3_9_5"
         }
     ]
@@ -1539,6 +1634,11 @@ var data = {
         },
                 {
                     "text": "Je vais te buter la gueule ! Tu vas casser la ligne temporel abruti !",
+                    stats_change: {
+                        strenght: 1,
+                        agility: 1,
+                        intelligence: -1,
+                    },
                     "data_event": "a3_2_12"
         }
     ]
@@ -1609,6 +1709,9 @@ var data = {
             "choix": [
                 {
                     "text": "C'est toi... Rainmaker... ",
+                    stats_change: {
+                        intelligence: 1,
+                    },
                     "data_event": "a3_2_17_1"
         },
                 {
@@ -1638,7 +1741,7 @@ var data = {
     ]
         },
         'a3_2_18': {
-            "question": "Choqué et déçu par la situation vous restez bouche bée. Comme si la fin de la bataille vous avez frustré. Un gros silence religieux se fait dans la cour. Quand tout à coup.\nVENTURANA : ...Il nous a sauvé.\nC'est une jeune femme blonde qui a percé le silence. VENTURANA : ...Ce héros...Merci... Pharaon...Pharaon...\nTout le monde commence à chuchoter \"Pharaon\" de plus en plus fort comme un chant du peuple. Vous sentez une énergie très forte qui vous est destiné. Vous tiltez maintenant que le premier pharaon qui a percé dans l'Histoire c’est... vous.\nVous avez rectifié l'histoire, mais il est temps de retrouver ce Rainmaker. Vous sortez de la scène et consommez le restant des pulsars que vous avez pour continuer à sauver le temps.\n        Incroyable, vous cassez la mâchoire d'un sbire ! (Restant : 65%)\n  Wow, vous évitez deux sbires, vous continuez le chemin ! (Restant : 35%)\nQuel talent ! Vous donnez un uppercut au plus fort de l'armée ! (Restant : 10%)\nC'est toi Rain..Maker.\n  Vous êtes devant Rhea Magnus, un peu choqué par la situation. Vous êtes essouflé par la bataille. Vous regarder Rhea Magnus d'un regard très haineux.\nHahaha, c'est la première fois que je vois ça. Mais tu ne me connais pas. Tu m'as suffisamment diverti. Allez salut.\n   C'est fini pour toi Rhea Magnus.\n  Rhea Magnus sort de la scène et d'un coup... Disparaît.\nIl est temps de partir. Destination.... (Choisissez une date)",
+            "question": "Choqué et déçu par la situation vous restez bouche bée. Comme si la fin de la bataille vous avez frustré. Un gros silence religieux se fait dans la cour. Quand tout à coup.\nVENTURANA : ...Il nous a sauvé.\nC'est une jeune femme blonde qui a percé le silence. VENTURANA : ...Ce héros...Merci... Pharaon...Pharaon...\nTout le monde commence à chuchoter \"Pharaon\" de plus en plus fort comme un chant du peuple. Vous sentez une énergie très forte qui vous est destiné. Vous tiltez maintenant que le premier pharaon qui a percé dans l'Histoire c’est... vous.\nVous avez rectifié l'histoire, mais il est temps de retrouver ce Rainmaker. Vous sortez de la scène et consommez le restant des pulsars que vous avez pour continuer à sauver le temps.\n        Incroyable, vous cassez la mâchoire d'un sbire ! (Restant : 65%)\n  Wow, vous évitez deux sbires, vous continuez le chemin ! (Restant : 35%)\nQuel talent ! Vous donnez un uppercut au plus fort de l'armée ! (Restant : 10%)\nC'est toi Rain..Maker.\n  Vous êtes devant Rhea Magnus, un peu choqué par la situation. Vous êtes essouflé par la bataille. Vous regarder Rhea Magnus d'un regard très haineux.\nHahaha, c'est la première fois que je vois ça. Mais tu ne me connais pas. Tu m'as suffisamment diverti. Allez salut.\n   C'est fini pour toi Rhea Magnus.\n  Rhea Magnus sort de la scène et d'un coup... Disparaît.\nIl est temps de partir.",
             "choix": [
                 {
                     "text": "",
@@ -1734,10 +1837,17 @@ var data = {
             "choix": [
                 {
                     "text": "Vous demandez au premier passant que vous croisez où vous êtes.",
+                    stats_change: {
+                        intelligence: 1,
+                        luck: 1,
+                    },
                     "data_event": "a3_3_3_1"
         },
                 {
                     "text": "Vous n’avez pas de temps à perdre. Vous commencez à marcher.",
+                    stats_change: {
+                        intelligence: -1,
+                    },
                     "data_event": "a3_3_3_2"
         }
     ]
@@ -1771,6 +1881,9 @@ var data = {
         },
                 {
                     "text": "Vous commencez à marchez vers Versailles à vos risques et périls...",
+                    stats_change: {
+                        luck: 1,
+                    },
                     "data_event": "a3_3_4_2"
         }
     ]
@@ -1807,6 +1920,9 @@ var data = {
         },
         'a3_3_4_2': {
             "question": "Pendant votre trajet, vous tombez sur des malfrats qui vous volent.",
+            stats_change: {
+                luck: -2,
+            },
             "choix": [
                 {
                     "text": "",
@@ -1817,6 +1933,7 @@ var data = {
         },
         'a3_3_5': {
             "question": "Le château de Versailles est devant vous. Le soleil commence à décliner sur l’horizon. Vous êtes dans le château, vous apercevez de nombreuses personnes qui convergent en un lieu commun. Vous décidez de les suivre.\nVous entrez dans la salle où le jeu de paume est joué. De nombreuses personnes sont présentes bien plus que vous ne l’avez imaginé.\nC’est une belle cour que vous voyez. Tout est en or comme vous avez vu dans les livres d’Histoire ou dans les documentaires. Au loin, vous apercevez un petit groupe d’une dizaine de personnes qui se distingue des autres. On dirait des nobles. Ils ne se mélangent pas et ne participent pas au débat houleux qui a lieu. Mais vous remarquez que le groupe se sépare. Quelques personnes se dirigent vers la sortie.",
+            change_img: 'versailles',
             "choix": [
                 {
                     "text": "Vous décidez de rester dans la salle. Si le meurtre aura lieu alors il sera ici.",
@@ -1831,6 +1948,7 @@ var data = {
         },
         'a3_3_6': {
             "question": "Vous suivez le groupe. Ils montent les escaliers rapidement et cela vous semble vraiment suspect. Ils longent un grand couloir et rentrent dans une pièce. Vous courez rapidement et discrètement vers la salle. Vous ne pouvez pas entrer et si vous écoutez à travers la porte vous pouvez être découvert.",
+            change_img: 'salle',
             "choix": [
                 {
                     "text": "Vous allez dans une des pièces adjacentes.",
@@ -1847,6 +1965,9 @@ var data = {
             "choix": [
                 {
                     "text": "Celle de gauche : vous arrivez dans une pièce où par chance une porte donnant sur la pièce à côté vous permet d'écouter la conversation sans être découvert.",
+                    stats_change: {
+                        luck: 2,
+                    },
                     "data_event": "a3_3_6_2"
         },
                 {
@@ -1857,6 +1978,7 @@ var data = {
         },
         'a3_3_6_2': {
             "question": "- Homme au fauteuil (Rainmaker) : “La personne que vous devrez tuer est le marquis de Brézé. Sans lui la signature du serment du Jeu de Paume ne se fera pas. Et ainsi nous pourrons prendre le pouvoir au Roi Louis XVI.”\n- Comploteur 1 : “Vous nous assurez de notre place dans votre futur règne ?”\n- Homme au fauteuil (Rainmaker) : “Bien sûr mes chers amis ! Bien sûr ! Tout travail mérite salaire. Vous serez en plus généreusement récompensé. Argents, courtisanes et alcools couleront à flots pour vous. Puis sans vous je n’en serai jamais arrivé là. Vous avez ma parole.”\n- Comploteur 2 : “Très bien alors, nous allons tuer ce Marquis.”\n- Homme au fauteuil (Rainmaker) : “Assurez-vous qu’il soit bel et bien mort ! C’est important. Sans cela vous pouvez dire adieu à vos futurs privilèges”\n- Comploteur 3 : “Nous avons engagé un des meilleurs assassins d’Europe pour cette occasion. Nous allons ordonner à l’assassin de tuer le marquis d’un des balcons vide de la salle comme vous l’avez demandé.”\n- Homme au fauteuil (Rainmaker) : “Très bien. Me voilà un peu plus réconforté. Vous pouvez partir, votre absence ne doit pas être remarquée plus longtemps.”\nLes comploteurs quittent la pièce.",
+            change_img: 'réunion',
             "choix": [
                 {
                     "text": "Vous quitter aussi les lieux.",
@@ -1870,13 +1992,15 @@ var data = {
         },
         'a3_3_6_2_1': {
             "question": "Vous parcourez alors le couloir d'où vous êtes venu. Vous vous arrêtez devant les escaliers où vous remarquez cette fois deux couloirs à votre gauche et un à votre droite, c’est alors qu’il vous semble avoir aperçu le temps d’un instant une ombre tournée à l’angle du prochain couloir.",
+            change_img: 'salle',
+            timer: 10,
             "choix": [
                 {
-                    "text": " Vous prenez le couloir de gauche. (10s)",
+                    "text": " Vous prenez le couloir de gauche.",
                     "data_event": "a3_3_6_2_1_1"
         },
                 {
-                    "text": "Vous prenez le couloir de droite. (10s)",
+                    "text": "Vous prenez le couloir de droite.",
                     "data_event": "a3_3_6_2_1_2"
         }
     ]
@@ -1886,6 +2010,9 @@ var data = {
             "choix": [
                 {
                     "text": "Vous faites demi-tour.",
+                    stats_change: {
+                        luck: -1,
+                    },
                     "data_event": "a3_3_6_2_1"
         },
                 {
@@ -1927,16 +2054,26 @@ var data = {
             "choix": [
                 {
                     "text": "Vous sautez sur l’assassin pour lui faire manquer son tir. Le coup de feu retentit, mais par chance sa cible n’est que légèrement blessée. L’assassin vous repousse et s’enfuit.",
+                    stats_change: {
+                        luck: 2,
+                        strenght: 1,
+                        agility: 2,
+                    },
                     "data_event": "a3_3_7"
         },
                 {
                     "text": "Vous restez impassible. Le coup de feu retentit. L’assassin ayant terminé son travail se retourne et vous aperçoit. Il vous bouscule et s’enfuit à travers le couloir. Vous vous approchez de la balustrade. Vous voyez un homme étendu sur le sol, sans vie. Tout le monde regarde dans votre direction. - “Il a tué le marquis ! Attrapez-le !” Vous ne vous faites pas attendre pour emboîter le pas de l’assassin. Pour vous cacher dans les pièces dont vous avez écouté la conversation.",
+                    stats_change: {
+                        luck: -2,
+                        strenght: -1,
+                        agility: -2,
+                    },
                     "data_event": "a3_3_8"
         }
     ]
         },
         'a3_3_7': {
-            "question": "Vous avez quand même sauvez le marquis d’une mort certaine.\nVous avez participer un événement majeur de la France.\nIl est temps de partir pour vous. Destination... (Le joueur choisit son temps)",
+            "question": "Vous avez quand même sauvez le marquis d’une mort certaine.\nVous avez participer un événement majeur de la France.\nIl est temps de partir pour vous.",
             "choix": [
                 {
                     "text": "",
@@ -1960,6 +2097,7 @@ var data = {
 
         'a3_4': {
             "question": "Vous décidez de voyagez dans le temps après ce long voyage. Quelle date choisissez vous ?",
+            change_img: 'cosmos',
             "choix": [
                 {
                     "text": "2012",

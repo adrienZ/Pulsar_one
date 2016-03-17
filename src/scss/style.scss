@@ -136,46 +136,55 @@ body {
             background: url(../img/acte/acte1/bedroom.jpg) no-repeat center center;
         }
         #encima.kitchen:before {
-            background: url(../img/acte/acte1/Kitchen.jpg) no-repeat center center;
+            background: url(../img/acte/acte1/1_Kitchen-compressor.jpg) no-repeat center center;
         }
         #encima.mag:before {
             background: url(../img/acte/acte1/Magazine2.jpg) no-repeat center center;
         }
         #encima.bus:before {
-            background: url(../img/acte/acte1/outside.jpg) no-repeat center center;
+            background: url(../img/acte/acte1/3_Outside-compressor.jpg) no-repeat center center;
         }
         #encima.class:before {
-            background: url('../img/acte/acte1/Classroom.jpg') no-repeat center center;
+            background: url('../img/acte/acte1/2_Classroom-compressor.png') no-repeat center center;
         }
         #encima.chemin:before {
-            background: url('../img/acte/acte1/Sunset.jpg') no-repeat center center;
+            background: url('../img/acte/acte1/4_Sunset-compressor.jpg') no-repeat center center;
         }
         #encima.limbes:before {
-            background: url('../img/acte/acte2/limbes.jpg') no-repeat center center;
+            background: url('../img/acte/acte2/1_Limbes-compressor.jpg') no-repeat center center;
         }
         #encima.nuage:before {
-            background: url('../img/acte/acte2/tumblr_noqydabxdn1tayn6co1_1280.jpg') no-repeat center center;
+            background: url('../img/acte/acte2/2_Cloud-compressor.jpg') no-repeat center center;
         }
         #encima.cosmos:before {
-            background: url('../img/acte/acte2/cosmos_xvii_by_redxen-d46a6m6.jpg') no-repeat center center;
+            background: url('../img/acte/acte2/3_Cosmos-compressor.jpg') no-repeat center center;
         }
         #encima.labyrinthe:before {
-            background: url('../img/acte/acte2/labyrinth_by_tsonline-d7xya6d.jpg') no-repeat center center;
+            background: url('../img/acte/acte2/4_Labyrinth-compressor.jpg') no-repeat center center;
         }
         #encima.galaxy:before {
             background: url('../img/acte/acte2/sapphire_by_o0tim0o-d4jlfvg.png') no-repeat center center;
         }
         #encima.grece:before {
-            background: url('../img/acte/acte3/1_Greece.jpg') no-repeat center center;
+            background: url('../img/acte/acte3/1_Greece-compressor.jpg') no-repeat center center;
         }
         #encima.temple:before {
-            background: url('../img/acte/acte3/2_GreeceTemple.jpg') no-repeat center center;
+            background: url('../img/acte/acte3/2_GreeceTemple-compressor.jpg') no-repeat center center;
         }
         #encima.egypt:before {
-            background: url('../img/acte/acte3/cairo__the_old_city__by_x_works-d7u2mpz.jpg') no-repeat center center;
+            background: url('../img/acte/acte3/1_Egypt-compressor.jpg') no-repeat center center;
         }
-        #encima.france:before{
-            background: url('../img/acte/acte3/1_Paris.jpg');
+        #encima.france:before {
+            background: url('../img/acte/acte3/1_Paris-compressor.jpg') no-repeat center center;
+        }
+        #encima.versailles:before {
+            background: url('../img/acte/acte3/2_Paris-compressor.jpg') no-repeat center center;
+        }
+        #encima.salle:before {
+            background: url('../img/acte/acte3/3_Paris-compressor.jpg') no-repeat center center;
+        }
+        #encima.reunion:before {
+            background: url('../img/acte/acte3/4_Paris-compressor.jpg') no-repeat center center;
         }
         #encima:before {
             content: '';
@@ -275,9 +284,9 @@ body {
         'Arial',
         sans-serif;
         border-top: 1px solid rgba(255,
-            255,
-            255,
-            0.0);
+        255,
+        255,
+        0.0);
         .arrow_naration {
             position: absolute;
             right: calc(25% + 30px);
