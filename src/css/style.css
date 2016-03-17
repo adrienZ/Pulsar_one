@@ -403,6 +403,22 @@ body {
   background: url("../img/acte/acte2/sapphire_by_o0tim0o-d4jlfvg.png") no-repeat center center;
 }
 
+.main .illustration #encima.grece:before {
+  background: url("../img/acte/acte3/1_Greece.jpg") no-repeat center center;
+}
+
+.main .illustration #encima.temple:before {
+  background: url("../img/acte/acte3/2_GreeceTemple.jpg") no-repeat center center;
+}
+
+.main .illustration #encima.egypt:before {
+  background: url("../img/acte/acte3/cairo__the_old_city__by_x_works-d7u2mpz.jpg") no-repeat center center;
+}
+
+.main .illustration #encima.france:before {
+  background: url("../img/acte/acte3/1_Paris.jpg");
+}
+
 .main .illustration #encima:before {
   content: '';
   background-repeat: no-repeat;

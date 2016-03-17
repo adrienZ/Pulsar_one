@@ -873,6 +873,7 @@ var data = {
         },
         'a3_1': {
             "question": "Bienvenue en Grèce",
+            change_img: 'grece',
             "choix": [
                 {
                     "text": "",
@@ -1033,6 +1034,7 @@ var data = {
 
         'a3_1_12': {
             "question": "Vous arrivez finalement au temple de Delphes, le temple est déjà pris d’assaut par la foule. Vous tentez de la traverser. \n Vous arrivez enfin dans le temple, au centre se trouve Pytie, des vapeurs s'échappent d'une faille qui s'ouvrait dans le sol, elle trône assise sur un haut trépied placé au-dessus de la fissure, elle respire les vapeurs et prophétise.\n\nUn homme armé sort de la foule, il se présente sous le nom de Rainmaker et annonce vouloir tuer la Pythie et cesser cette duperie.\n",
+            change_img: 'temple',
             "choix": [
                 {
                     "text": "Laissez faire…",
@@ -1189,7 +1191,7 @@ var data = {
     ]
         },
         'a3_1_12_2_4': {
-            "question": "Il est temps de partir... Destination. (Choisissez une date)",
+            "question": "Il est temps de partir...",
             "choix": [
                 {
                     "text": "",
@@ -1206,6 +1208,7 @@ var data = {
 
         'a3_2': {
             "question": "Bienvenue en Egypte",
+            change_img: 'egypt',
             "choix": [
                 {
                     "text": "",
@@ -1650,6 +1653,7 @@ var data = {
 
         'a3_3': {
             "question": "Bienvenue en France",
+            change_img: 'france',
             "choix": [
                 {
                     "text": "",

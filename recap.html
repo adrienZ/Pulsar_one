@@ -115,7 +115,7 @@
         var current_act = parseInt(user.game[1]);
 
         console.log(current_act, user.new);
-        if (current_act === user.new - 1) {
+//        if (current_act === user.new - 1) {
             console.log('check ok');
             $.el('.nextAct').addEventListener('click', function () {
                 console.log(current_act);
@@ -137,10 +137,7 @@
                 number++;
                 clampFunction(number, 76, numberIncrementation);
             }, 30);
-        } else {
-            console.log('check NOT OK');
-            window.location = '/template.html'
-        }
+//        } else { // console.log('check NOT OK'); // window.location = '/template.html' // }
     </script>
 </body>
 
