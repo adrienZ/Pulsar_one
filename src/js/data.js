@@ -1381,7 +1381,7 @@ var data = {
                 {
                     "text": "Oui, je veux bien. ",
                     stats_change: {
-                        loyalty: 1;
+                        loyalty: 1,
                     },
                     "data_event": "a3_2_6"
         },
