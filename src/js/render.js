@@ -65,7 +65,12 @@ function render(event) {
         current_act = data['act_' + user.game[1]];
         window.location = '/recap.html';
         return false;
-    };
+    } else if (event.hasOwnProperty('mini_game')) {
+        ui.finish_mini_game_redirect = event.choix[0].data_event;
+        console.log('here we go bibibibibibbitch!');
+        render_mini_game(event.mini_game);
+    }
+
 
     user.game = event.parent;
     savegame.erase_save('user_save', user);
@@ -258,12 +263,6 @@ function render(event) {
         }
     }
 
-    if (event.hasOwnProperty('mini_game')) {
-        ui.finish_mini_game_redirect = event.choix[0].data_event;
-        console.log('here we go bibibibibibbitch!');
-        render_mini_game(event.mini_game);
-
-    }
 
     // remove unused timers
     if ($.pad.querySelector('.timer')) {

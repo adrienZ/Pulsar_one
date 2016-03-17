@@ -11,10 +11,12 @@ var data = {
         },
         'a1_0': {
             "question": "Vous êtes au lit les yeux fermés dans votre chambre. Au loin, on entend une télévision. Qu’entendez-vous ?",
+            change_img: 'bedroom',
             "choix": [
                 {
                     "text": "Les nouvelles du jour : le président Wilson est sur le point de déclencher une guerre mondiale.",
                     "data_event": "a1_1",
+
                     stats_change: {
                         intelligence: 1,
                     },
@@ -30,6 +32,7 @@ var data = {
         },
         'a1_1': {
             "question": "Cette nuisance sonore vous a réveillé un peu. On dirait qu’il est temps de se lever. Vous vous levez avec une affreuse migraine.Vous vous souvenez de tout et de rien. C’est le néant. Les seuls mots qui se répètent dans votre tête sont: ‘histoire’, ‘sacrifice’, ‘destin’. Vous êtes en pyjama.Vous vous habillez, prenez votre sac de cours et décidez de descendre. Vous apercevez votre sœur Luna mangeant un bol de céréales dans la cuisine. LUNA : Salut ! Tu as vu l'épisode de Sense : the prequel ?",
+            change_img: 'kitchen',
             "choix": [
                 {
                     "text": "Euh ouais, c'est ouf !",
@@ -70,6 +73,17 @@ var data = {
 
         'a1_2': {
             "question": "Vous vous asseyez à côté de Luna et vous lisez le journal “35 minutes” (on voit la page 35 minutes en image). À la fin du journal, vous tombez sur un questionnaire amusant : “Timide ? Susceptible ? Dynamique ? Enthousiaste ? Nos tests vous aident à mettre en valeur tous les aspects de votre personnalité ! Complétez ce test immédiatement et vous saurez qui vous êtes réellement.",
+            change_img: 'mag',
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a1_2_1",
+                    "naration": true
+        }
+    ]
+        },
+        'a1_2_1': {
+            mini_game: 'personality_test',
             "choix": [
                 {
                     "text": "",
@@ -80,7 +94,7 @@ var data = {
         },
 
         'a1_3': {
-            "question": "Jour 01, 09h02, année 2016.09h02, il est temps d’aller en cours. Vous mettez vos chaussures, votre manteau et vous prenez vos clés dans le bol de clés sur la table basse à côté de la porte de sortie.",
+            "question": "Jour 01, 09h02, année 2016. Il est temps d’aller en cours. Vous mettez vos chaussures, votre manteau et vous prenez vos clés dans le bol de clés sur la table basse à côté de la porte de sortie.",
             "choix": [
                 {
                     "text": "Luna ? Tu veux qu’on aille en cours ensemble ?",
@@ -107,7 +121,7 @@ var data = {
             "choix": [
                 {
                     "text": "",
-                    "data_event": "a1_4",
+                    "data_event": "a1_3_2",
                     "naration": true
         }
     ]
@@ -118,6 +132,18 @@ var data = {
             "choix": [
                 {
                     "text": "",
+                    "data_event": "a1_3_2",
+                    "naration": true
+        }
+    ]
+        },
+
+        'a1_3_2': {
+            "question": "Vous sortez de chez vous, et vous voyez le bus passer !",
+            change_img: 'bus',
+            "choix": [
+                {
+                    "text": "",
                     "data_event": "a1_4",
                     "naration": true
         }
@@ -125,7 +151,7 @@ var data = {
         },
 
         'a1_4': {
-            "question": "JEU CHOIX DU CHIFFRE",
+            "question": "JEU CHOIX DU CHIFFRE POUR AVOIR LE BUS",
             mini_game: 'personality_test',
             "choix": [
                 {
@@ -137,6 +163,7 @@ var data = {
         },
         'a1_5': {
             "question": "Jour 01, 09h45, année 2016.Vous prenez place dans votre salle et aujourd’hui, c’est cours d’espagnol. Parallèlement à la situation, vous êtes sur votre PC. Qu’il y a-t-il sur votre écran ?",
+            change_img: 'class',
             "choix": [
                 {
                     "text": "Vos prises de notes",
@@ -216,6 +243,7 @@ var data = {
 
         'a1_9': {
             "question": "Jour 01, 17h15, année 2016.\nVous êtes sur le chemin de retour. Vous décidez de marcher tout seul avec vos écouteurs devant ce beau coucher de soleil. Vous avez lancé votre playlist préférée et une petite musique chill se lance dans vos écouteurs.\nVous êtes à une intersection, quel chemin prenez-vous ?\n",
+            change_img: 'chemin',
             "choix": [
                 {
                     "text": "Celui de droite, votre chemin habituel.",
@@ -275,6 +303,7 @@ var data = {
             "choix": [
                 {
                     "text": "",
+
                     "data_event": "a1_13",
                     "naration": true
         }
@@ -283,6 +312,7 @@ var data = {
 
         'a1_13': {
             "question": "En rentrant chez vous, vous êtes toujours choqué(e) par cette journée. Tant d’émotions en si peu de temps. Mais attention, ce n’est pas encore terminé. \nEn voulant déverrouiller la porte de votre maison, une étrange sensation se ressent à l’intérieur de votre corps. Comme si votre esprit divaguait et essayait de sortir de votre corps. Vous tremblez. Vous entendez des voix à l’intérieur de votre tête d’une langue étrange. Vous ne pouvez plus tenir sur vos jambes. \nEt d’un coup, une force mystérieuse stoppe le temps. Les feuilles des arbres soufflées par un vent violent se retrouvent figées. Les oiseaux en vol sont immobiles dans les airs. \nVous regardez à côté de vous, pétrifié(e) par la situation et D’UN COUP UNE SORTE DE BALLE INVISIBLE TRAVERSE VOTRE CORPS COMME UNE GROSSE ONDE DE CHOC D’UNE TELLE ENVERGURE QUE VOUS VOUS ÉVANOUISSEZ. BLACKOUT. KO.\n",
+            change_img: 'bus',
             "choix": [
                 {
                     "text": "",
@@ -308,6 +338,7 @@ var data = {
         },
         'a2_0': {
             "question": "Vous êtes à terre, les yeux fermés avec une très grosse migraine. Tout autour de vous semble être que du vide. Vous ne pouvez que sentir un sol très lisse avec vos mains. Il est temps de se lever. Vous essayez d’ouvrir vos yeux...",
+            change_img: 'limbes',
             "choix": [
                 {
                     "text": "",
@@ -323,13 +354,11 @@ var data = {
                     text: "",
                     data_event: "a2_2",
                     naration: true,
-                    pop_up: 'destiny_will_remember.svg',
                 },
             ],
         },
         'a2_2': {
             question: 'Vous ouvrez le yeux. Au dessus de vous, une entité divine vous guette. C’est Chronos.',
-            change_img: 'chan',
             choix: [
                 {
                     text: "",
@@ -341,9 +370,7 @@ var data = {
 
         'a2_3': {
             question: 'CHRONOS : ' + user.name + token + ' ! Destinée m’a annoncée ta fin prochaine. J’ai besoin de ton aide. Je veux te laisser une seconde chance.',
-            change_img: 'illu',
 
-            //timer: 5,
             choix: [
                 {
                     text: "Je suis déjà mort ?",
@@ -454,6 +481,7 @@ var data = {
         },
         'a2_8': {
             question: 'Chronos disparaît devant vous. Vous êtes devant un paysage très blanc, très lumineux. Il n\'y a a pas de murs, que de la vapeur blanche au fond. Le sens de l\'orientation est inexistant dans les Limbes. Vous sentez une présence derrière vous, on dirait que quelqu\'un vous attend.',
+            change_img: 'nuage',
             choix: [
                 {
                     text: "",
