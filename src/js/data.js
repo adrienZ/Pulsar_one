@@ -151,7 +151,12 @@ var data = {
         },
 
         'a1_4': {
+<<<<<<< HEAD
             "question": "JEU CHOIX DU CHIFFRE POUR AVOIR LE BUS",
+=======
+            "question": "JEU CHOIX DU CHIFFRE",
+            mini_game: 'personality_test',
+>>>>>>> origin/master
             "choix": [
                 {
                     "text": "",

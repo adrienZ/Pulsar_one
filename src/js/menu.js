@@ -24,8 +24,19 @@ window.addEventListener('load', function () {
 //new game
 menu.link[0].addEventListener('click', function () {
     //create new savegame
-    user.name = null;
+    user.stats = {
+        strenght: 0,
+        perception: 0,
+        stamania: 0,
+        luck: 0,
+        intelligence: 0,
+        agility: 0,
+        loyalty: 0,
+    };
     user.game = 'intro';
+    user.success = [];
+    user.name = null;
+    user.pulsars = 5;
     savegame.erase_save('user_save', user);
     //intro animation
     menu.menu_home.classList.add('finished_down');

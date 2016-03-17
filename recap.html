@@ -114,27 +114,33 @@
         var number = 0;
         var current_act = parseInt(user.game[1]);
 
-        console.log(current_act);
-        $.el('.nextAct').addEventListener('click', function () {
-            console.log(current_act);
-            user.new = parseInt(current_act) + 1;
-            user.game = 'prologue';
-            savegame.erase_save('user_save', user);
-            window.location = '/template.html';
+        console.log(current_act, user.new);
+        if (current_act === user.new - 1) {
+            console.log('check ok');
+            $.el('.nextAct').addEventListener('click', function () {
+                console.log(current_act);
+                user.new = parseInt(current_act) + 1;
+                user.game = 'prologue';
+                savegame.erase_save('user_save', user);
+                window.location = '/template.html';
 
-        });
+            });
 
-        function clampFunction(number, limit, nameInterval) {
-            if (number == limit + 1) {
-                clearInterval(nameInterval);
+            function clampFunction(number, limit, nameInterval) {
+                if (number == limit + 1) {
+                    clearInterval(nameInterval);
+                }
             }
-        }
 
-        var numberIncrementation = window.setInterval(function () {
-            compteur.innerText = number;
-            number++;
-            clampFunction(number, 76, numberIncrementation);
-        }, 30);
+            var numberIncrementation = window.setInterval(function () {
+                compteur.innerText = number;
+                number++;
+                clampFunction(number, 76, numberIncrementation);
+            }, 30);
+        } else {
+            console.log('check NOT OK');
+            window.location = '/template.html'
+        }
     </script>
 </body>
 
