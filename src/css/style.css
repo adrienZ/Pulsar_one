@@ -316,11 +316,12 @@ body {
 }
 
 .main .illustration #fondo {
-  background: url(http://s28.postimg.org/3z90275y5/yg_Vp_JMP.jpg) no-repeat left top;
+  background-position: left top;
   background-size: cover;
   height: 275px;
+  background-image: url(../img/placeholder.jpg);
   position: absolute;
-  left: 0;
+  left: -0px;
   top: 0;
   width: 75%;
 }
@@ -370,7 +371,8 @@ body {
 
 .main .illustration #encima:before {
   content: '';
-  background: url(http://s22.postimg.org/urrt8jfq9/d_JLNh_FN.jpg) no-repeat left top;
+  background-repeat: no-repeat;
+  background-position: left top;
   background-size: cover;
   height: 100%;
   width: 100%;

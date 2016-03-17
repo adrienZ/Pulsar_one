@@ -69,6 +69,9 @@ function render(event) {
         ui.finish_mini_game_redirect = event.choix[0].data_event;
         console.log('here we go bibibibibibbitch!');
         render_mini_game(event.mini_game);
+    } else {
+        //pushing story's text in the div
+        write(event.question, $.histoire);
     }
 
 
@@ -78,8 +81,7 @@ function render(event) {
 
     //cleaning previous answers
     $.pad.querySelector('ul').innerHTML = "";
-    //pushing story's text in the div
-    write(event.question, $.histoire);
+
 
 
 

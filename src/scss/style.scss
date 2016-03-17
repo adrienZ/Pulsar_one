@@ -112,11 +112,13 @@ body {
             -moz-animation: fadeIn 1s infinite;
         }
         #fondo {
-            background: url(http://s28.postimg.org/3z90275y5/yg_Vp_JMP.jpg) no-repeat left top;
+            // background-repeat: no-repeat;
+            background-position: left top;
             background-size: cover;
             height: 275px;
+            background-image: url(../img/placeholder.jpg);
             position: absolute;
-            left: 0;
+            left: -0px;
             top: 0;
             width: 75%;
         }
@@ -130,33 +132,34 @@ body {
             -webkit-mask-size: 3000% 100%;
             -webkit-animation: mask-playzero-1 2s steps(29) paused infinite;
         }
-      #encima.bedroom:before {
-                        background: url(../img/acte/acte1/bedroom.jpg) no-repeat center center;
-                    }
-                    #encima.kitchen:before {
-                        background: url(../img/acte/acte1/Kitchen.jpg) no-repeat center center;
-                    }
-                    #encima.mag:before {
-                        background: url(../img/acte/acte1/Magazine2.jpg) no-repeat center center;
-                    }
-                    #encima.bus:before {
-                        background: url(../img/acte/acte1/outside.jpg) no-repeat center center;
-                    }
-                    #encima.class:before {
-                        background: url('../img/acte/acte1/Classroom.jpg') no-repeat center center;
-                    }
-                    #encima.chemin:before {
-                        background: url('../img/acte/acte1/Sunset.jpg') no-repeat center center;
-                    }
-                    #encima.limbes:before {
-                        background: url('../img/acte/acte2/limbes.jpg') no-repeat center center;
-                    }
-                    #encima.nuage:before{
-                        background: url('../img/acte/acte2/tumblr_noqydabxdn1tayn6co1_1280.jpg');
-                    }
+        #encima.bedroom:before {
+            background: url(../img/acte/acte1/bedroom.jpg) no-repeat center center;
+        }
+        #encima.kitchen:before {
+            background: url(../img/acte/acte1/Kitchen.jpg) no-repeat center center;
+        }
+        #encima.mag:before {
+            background: url(../img/acte/acte1/Magazine2.jpg) no-repeat center center;
+        }
+        #encima.bus:before {
+            background: url(../img/acte/acte1/outside.jpg) no-repeat center center;
+        }
+        #encima.class:before {
+            background: url('../img/acte/acte1/Classroom.jpg') no-repeat center center;
+        }
+        #encima.chemin:before {
+            background: url('../img/acte/acte1/Sunset.jpg') no-repeat center center;
+        }
+        #encima.limbes:before {
+            background: url('../img/acte/acte2/limbes.jpg') no-repeat center center;
+        }
+        #encima.nuage:before {
+            background: url('../img/acte/acte2/tumblr_noqydabxdn1tayn6co1_1280.jpg');
+        }
         #encima:before {
             content: '';
-            background: url(http://s22.postimg.org/urrt8jfq9/d_JLNh_FN.jpg) no-repeat left top;
+            background-repeat: no-repeat;
+            background-position: left top;
             background-size: cover;
             height: 100%;
             width: 100%;
@@ -710,7 +713,7 @@ section.mini-game {
     top: 0;
     height: 100vh;
     font-family: 'Gotham Book', 'Arial', sans-serif;
-  //  position: relative;
+    //  position: relative;
     background: #060607;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #060607, #1b1d1f);
