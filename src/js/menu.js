@@ -7,13 +7,14 @@ var menu = {
     logo_pulsar: $.el('.logo_pulsar'),
     menu_home: $.el('.menu'),
     credits: $.el('.credits'),
-    background_music: $.el('.background-music'),
+    background_music: $.el('.background-music audio'),
     audio: 'src/medias/sfx_click.wav',
 }
 
 //loader disapear when page is loaded
 window.addEventListener('load', function () {
     window.setTimeout(function () {
+        menu.background_music.play();
         menu.loader_screen.classList.toggle('hide');
         menu.welcome_screen.classList.toggle('hide');
     }, 500);
@@ -47,6 +48,9 @@ menu.link[0].addEventListener('click', function () {
 
     //redirect to game at the end of the animation
     window.setTimeout(function () {
+        console.log(menu.background_music.currentTime);
+        user.continue_intro_music = menu.background_music.currentTime;
+        savegame.erase_save('user_save', user);
         window.location = '/template.html';
     }, 1500);
 

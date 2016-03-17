@@ -78,8 +78,8 @@
 
 .prologue .splash-screen h1 {
   font-weight: bold;
-  -webkit-animation: slideLeft 1s ease-in-out 0s normal paused 1 forwards, slideLeft 1s ease-in-out 3s reverse running 1 forwards;
-          animation: slideLeft 1s ease-in-out 0s normal paused 1 forwards, slideLeft 1s ease-in-out 3s reverse running 1 forwards;
+  -webkit-animation: slideLeft 1s ease-in-out 0s normal running 1 forwards, slideLeft 1s ease-in-out 3s reverse running 1 forwards;
+          animation: slideLeft 1s ease-in-out 0s normal running 1 forwards, slideLeft 1s ease-in-out 3s reverse running 1 forwards;
 }
 
 .prologue .splash-screen .bar {
@@ -87,15 +87,15 @@
   height: 3px;
   margin: 1rem auto;
   background-color: white;
-  -webkit-animation: expandBar 1s ease-in-out 0s normal paused 1 forwards, expandBar 1s ease-in-out 3s reverse running 1 forwards;
-          animation: expandBar 1s ease-in-out 0s normal paused 1 forwards, expandBar 1s ease-in-out 3s reverse running 1 forwards;
+  -webkit-animation: expandBar 1s ease-in-out 0s normal running, expandBar 1s ease-in-out 3s reverse running 1;
+          animation: expandBar 1s ease-in-out 0s normal running, expandBar 1s ease-in-out 3s reverse running 1;
 }
 
 .prologue .splash-screen h2 {
   margin-top: 1.5rem;
   font-weight: 200;
-  -webkit-animation: slideRight 1s ease-in-out 0s normal paused 1 forwards, slideRight 1s ease-in-out 3s reverse running 1 forwards;
-          animation: slideRight 1s ease-in-out 0s normal paused 1 forwards, slideRight 1s ease-in-out 3s reverse running 1 forwards;
+  -webkit-animation: slideRight 1s ease-in-out 0s normal running 1 forwards, slideRight 1s ease-in-out 3s reverse running 1 forwards;
+          animation: slideRight 1s ease-in-out 0s normal running 1 forwards, slideRight 1s ease-in-out 3s reverse running 1 forwards;
 }
 
 .prologue .pagination-acte {
@@ -103,8 +103,8 @@
           transform: translate3d(0px, 0, 0);
   opacity: 0;
   width: 100%;
-  -webkit-animation: fadeIn 1s ease-out .75s normal paused 1 forwards, fadeIn 1s ease-out 3s reverse running 1 forwards;
-          animation: fadeIn 1s ease-out .75s normal paused 1 forwards, fadeIn 1s ease-out 3s reverse running 1 forwards;
+  -webkit-animation: fadeIn 1s ease-out .75s normal running 1 forwards, fadeIn 1s ease-out 3s reverse running 1 forwards;
+          animation: fadeIn 1s ease-out .75s normal running 1 forwards, fadeIn 1s ease-out 3s reverse running 1 forwards;
 }
 
 .prologue .pagination-acte .dots {
