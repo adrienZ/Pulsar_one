@@ -83,7 +83,11 @@ var data = {
     ]
         },
         'a1_2_1': {
+<<<<<<< HEAD
             mini_game: 'personality_test',
+=======
+            mini_game: 'personality test',
+>>>>>>> origin/master
             "choix": [
                 {
                     "text": "",
@@ -303,7 +307,11 @@ var data = {
             "choix": [
                 {
                     "text": "",
+<<<<<<< HEAD
 
+=======
+                     
+>>>>>>> origin/master
                     "data_event": "a1_13",
                     "naration": true
         }

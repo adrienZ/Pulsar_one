@@ -12,12 +12,10 @@ $.ui = $.el('.ui-panel');
 $.ui.menu_icons = $.ui.querySelectorAll('.menu li');
 $.histoire = $.el('.story');
 $.pad = $.el('.questions');
-$.mini_game = $.el('.mini-game');
 //icon hover helper
 var ui = {
     icon_help_text: ['changer la police', 'musique', 'son', 'plein écran'],
     skip: [],
-    finish_mini_game_redirect: undefined,
 };
         [].forEach.call($.ui.menu_icons, function (icon, index) {
     icon.addEventListener('mouseenter', function () {
@@ -191,18 +189,16 @@ function render(event) {
                         [].forEach.call($.all('.user-stats ul li'), function (element, index) {
                         if (capacity === element.querySelector('p').innerHTML) {
                             element.querySelector('p:last-child').style.opacity = 0;
-                            user.stats[capacity] += abilities_targeted[capacity];
-                            savegame.erase_save('user_save', user);
 
                             setTimeout(function () {
-
-                                element.querySelector('p:last-child').innerHTML = user.stats[capacity];
+                                element.querySelector('p:last-child').innerHTML = abilities_targeted[capacity];
                                 element.querySelector('p:last-child').style.opacity = '';
                             }, 300);
 
                         }
                     });
                 });
+
             }
             console.log(current_act[this.getAttribute('data-event')], this.getAttribute('data-event'));
             render(current_act[this.getAttribute('data-event')]);
@@ -216,25 +212,28 @@ function render(event) {
     });
 
     console.log(Object.keys(event.choix).length);
-    var answer_realign = $.pad.querySelector('ul li:not(.arrow_naration):nth-child(2)');
+    var answer_realign = $.el('.main .questions ul li:not(.arrow_naration):nth-child(2)');
+
     if (Object.keys(event.choix).length <= 2) {
         console.log('hide arrows');
-        $.pad.querySelector('.arrows').classList.add('hide');
-        if (answer_realign && !answer_realign.classList.contains('realign')) {
-            answer_realign.classList.add('realign');
-        }
+        if (!$.el('.main .questions .arrows').classList.contains('hide')) {
+            $.el('.main .questions .arrows').classList.add('hide');
+            if (answer_realign && !answer_realign.classList.contains('realign')) {
+                answer_realign.classList.add('realign');
+                console.log('realign');
 
+            }
+        }
     } else {
         console.log('show arrows');
-        if ($.pad.querySelector('.arrows').classList.contains('hide')) {
-            $.pad.querySelector('.arrows').classList.remove('hide');
+        if ($.el('.main .questions .arrows').classList.contains('hide')) {
+            $.el('.main .questions .arrows').classList.remove('hide');
+            if (answer_realign && answer_realign.classList.contains('realign')) {
+                //answer_realign.classList.remove('realign');
+                console.log('no realign');
+            }
         }
-        if (answer_realign && answer_realign.classList.contains('realign')) {
-            answer_realign.classList.remove('realign');
-        }
-
     }
-
 
 
     if (event.hasOwnProperty('change_img')) {
@@ -263,7 +262,10 @@ function render(event) {
         }
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
     // remove unused timers
     if ($.pad.querySelector('.timer')) {
         $.pad.querySelector('.timer').remove();
@@ -381,13 +383,11 @@ function write(txt, parent) {
 
                 index_text++;
                 content.innerHTML += txt[index_text];
-                $.histoire.scrollTop = $.histoire.scrollHeight;
-
             }
 
             if (index_text === txt.length - 1) {
                 clearInterval(writing);
-                // $.histoire.scrollTop = $.histoire.scrollHeight;
+                $.histoire.scrollTop = $.histoire.scrollHeight;
 
             }
         }, 15);
@@ -413,31 +413,6 @@ function write(txt, parent) {
 function pulsar_game_over() {
     var game_over_dom = document.createElement('section');
     game_over_dom.className = "game-over";
-    game_over_dom.innerHTML = '<article><h2>Fin de <span>partie<span></h2><p>Le destin a eu raison de vous.</p><a href="#" onclick="user.set_progress(\'a1_8\');window.location.reload()">Recommencer (-2 pulsars)</a><a href="index.html">Quitter la partie</a><p class="pulars-left">Il vous reste ' + user.pulsars + ' pulsars</p></article>';
+    game_over_dom.innerHTML = '<article><h2>Fin de <span>partie<span></h2><p>Le destin a eu raison de vous.</p><a href="#">Recommencer (-2 pulsars)</a><a href="index.html">Quitter la partie</a><p class="pulars-left">Il vous reste ' + user.pulsars + ' pulsars</p></article>';
     document.body.appendChild(game_over_dom);
-}
-
-
-function render_mini_game(gamename) {
-    var request = new XMLHttpRequest();
-    request.open('GET', '/src/games/' + gamename + '/', true);
-    request.onload = function () {
-        if (request.status >= 200 && request.status < 400) {
-            // Success!
-            var resp = request.responseText;
-            $.mini_game.innerHTML = resp;
-            $.mini_game.classList.add('active', gamename);
-            mini_games[gamename]();
-
-        } else {
-            // We reached our target server, but it returned an error
-            return 'we got it but nope';
-        }
-    };
-
-    request.onerror = function () {
-        // There was a connection error of some sort
-        return 'netword error';
-    };
-    request.send();
 }
