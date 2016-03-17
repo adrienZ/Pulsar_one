@@ -46,14 +46,10 @@ for (var browser in browsers) {
 }
 
 
-//var current_act = data.act_1;
-//var current_act = data.act_1;
 var skip = false;
 
 
 
-
-//render(current_act.a2_0);
 
 // all the data i need to stop the typed effect with write()
 //function render
@@ -67,7 +63,6 @@ function render(event) {
         return false;
     } else if (event.hasOwnProperty('mini_game')) {
         ui.finish_mini_game_redirect = event.choix[0].data_event;
-        console.log('here we go bibibibibibbitch!');
         render_mini_game(event.mini_game);
     } else {
         //pushing story's text in the div
@@ -77,7 +72,7 @@ function render(event) {
 
     user.game = event.parent;
     savegame.erase_save('user_save', user);
-    console.log(event.parent, user.game);
+    //console.log(event.parent, user.game);
 
     //cleaning previous answers
     $.pad.querySelector('ul').innerHTML = "";
@@ -248,7 +243,6 @@ function render(event) {
             $.el('#encima').style.animationPlayState = 'running';
             var delay = window.getComputedStyle($.el('#encima')).getPropertyValue('animation-duration');
             var new_img = window.getComputedStyle($.el('#encima.' + event.change_img), ':before').getPropertyValue('background-image');
-            console.log(window.getComputedStyle($.el('#encima.' + event.change_img), ':before'));
             window.setTimeout(function () {
                 $.el('#fondo').style.background = new_img + ' no-repeat center center';
                 $.el('#encima').style.animationPlayState = 'paused';
@@ -343,7 +337,6 @@ function create_success(str) {
 
 
 function write(txt, parent) {
-    console.log(txt);
     if (txt.length === 0) return false;
     else if (typeof txt === "string") {
         var content = document.createElement('p');

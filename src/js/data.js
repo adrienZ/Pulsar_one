@@ -155,7 +155,7 @@ var data = {
 
         'a1_4': {
             "question": "",
-            //    mini_game: 'roll_dice',
+            mini_game: 'catch_bus',
             "choix": [
                 {
                     "text": "",
@@ -369,6 +369,7 @@ var data = {
         },
         'a2_1': {
             question: user.name + token + ' est à terre, le joueur doit appuyer sur espace au bon moment pour se réveiller.',
+            mini_game: 'wake_up',
             choix: [
                 {
                     text: "",
@@ -2398,8 +2399,8 @@ function update_data(username) {
     var target = user.name + token;
     var regex = new RegExp(target, "g");
     if (new_data.match(regex) !== null) {
-        console.log('LETS GO : ' + new_data.match(regex).length + ' LEFT');
-        console.log('CURRENT NAME -> ' + target + ' // NEW NAME ->' + username);
+        //  console.log('LETS GO : ' + new_data.match(regex).length + ' LEFT');
+        // console.log('CURRENT NAME -> ' + target + ' // NEW NAME ->' + username);
         new_data = new_data.replace(target, username);
         while (regex.exec(new_data) !== null) {
 
@@ -2408,7 +2409,7 @@ function update_data(username) {
 
 
         new_data = JSON.parse(new_data);
-        console.log(new_data);
+        //console.log(new_data);
 
         user.name = username;
         savegame.erase_save('user_save', user);

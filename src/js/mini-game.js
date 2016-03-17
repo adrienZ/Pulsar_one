@@ -467,4 +467,132 @@ mini_games.hacking = function () {
             hacking.setScore();
         }); // build dynamic screen
 
+};
+
+
+mini_games.catch_bus = function () {
+    var bar = document.querySelector('.catch_bus .bar');
+    var title_motivation = document.querySelector('.catch_bus .title_motivation');
+    var bar_width = 1;
+    var main = window.setInterval(function () {
+        downScale();
+        clampBar();
+        colorBar();
+    }, 1);
+    iterateKeyboard();
+
+    function downScale() {
+        bar_width -= 0.001;
+        bar.style.transform = 'scaleX(' + bar_width + ')';
+    }
+
+    function clampBar() {
+        if (bar_width < 0) {
+            bar_width = 0;
+            clearInterval(main);
+            console.log('End');
+            bar_width = 1;
+            if (user.pulsars >= 0) {
+                console.log(user.pulsars);
+                main = window.setInterval(function () {
+                    downScale();
+                    clampBar();
+                    colorBar();
+                }, 1);
+                user.pulsars--;
+
+                savegame.erase_save('user_save', user);
+                $.el('.ui-panel .pulsars span').innerHTML = '[' + user.pulsars + ']';
+
+
+            } else {
+                alert('pauvre');
+                //game over
+            }
+        }
+        if (bar_width > 1) {
+            clearInterval(main);
+            console.log('You won');
+            window.setTimeout(function () {
+                $.mini_game.className = 'mini-game';
+                render(current_act[ui.finish_mini_game_redirect]);
+                ui.finish_mini_game_redirect = undefined;
+            }, 1000);
+        };
+    }
+
+    function colorBar() {
+        if (bar_width >= 0.7) {
+            title_motivation.innerHTML = '<h2 class=\'green\'>Vous êtes au top !</h2>'
+            bar.style.backgroundColor = 'green';
+        } else if (bar_width < 0.7 && bar_width >= 0.4) {
+            title_motivation.innerHTML = '<h2 class=\'yellow\'>Vous ralentissez !</h2>'
+            bar.style.backgroundColor = 'yellow';
+        } else if (bar_width < 0.4 && bar_width >= 0.2) {
+            title_motivation.innerHTML = '<h2 class=\'orange\'>Plus vite !</h2>'
+            bar.style.backgroundColor = 'orange';
+        } else if (bar_width < 0.2 && bar_width >= 0.01) {
+            title_motivation.innerHTML = '<h2 class=\'red\'>ALLEZ PLUS VITE !</h2>'
+            bar.style.backgroundColor = 'red';
+        } else {
+            title_motivation.innerHTML = '<h2 class=\'red\'>FIN</h2>'
+            bar.style.backgroundColor = 'black';
+        }
+    }
+
+    function iterateKeyboard() {
+        window.addEventListener('keypress', function (e) {
+            console.log(e.keyCode);
+            switch (e.keyCode) {
+            case 102:
+                bar_width += 0.025;
+                break;
+            case 106:
+                bar_width += 0.03;
+                break;
+            case 112:
+                bar_width = 1.01;
+                console.log('PAUSE');
+                break;
+            default:
+                break;
+            }
+        });
+    }
+};
+
+mini_games.wake_up = function () {
+    var square_move = document.querySelector('.wake_up .square-move');
+    var win_windows = document.querySelector('.wake_up .win');
+
+
+    window.addEventListener('keydown', function (e) {
+        var square_position = square_move.offsetLeft;
+        if (e.keyCode == 32) {
+            square_move.style.border = '4px solid red';
+        }
+        if ((e.keyCode == 32) && ((square_position > 50) && (square_position < 200))) {
+            console.log("win");
+            console.log(square_position);
+            square_move.style.border = '4px solid rgb(44, 175, 38)';
+            square_move.style.animation = 'catchMe 2.5s ease-in-out 0s alternate infinite paused forwards';
+            square_move.classList.add('fade');
+            win_windows.classList.toggle('fade');
+            console.log(win_windows.classList.contains('fade'));
+            console.log(win_windows.classList.contains('fade'));
+            window.setTimeout(function () {
+                $.mini_game.className = 'mini-game';
+                //render(current_act[ui.finish_mini_game_redirect]);
+                //ui.finish_mini_game_redirect = undefined;
+            }, 3000);
+        } else {
+            //   square_move.style.border = '4px solid red';
+        }
+    });
+    window.addEventListener('keyup', function (e) {
+        if (e.keyCode == 32) {
+            square_move.style.border = '4px solid rgb(238, 207, 23)';
+        }
+    });
+
 }
