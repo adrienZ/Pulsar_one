@@ -134,11 +134,29 @@
                         -webkit-mask-size: 3000% 100%;
                         -webkit-animation: mask-playzero-1 2s steps(29) paused infinite;
                     }
-                    #encima.chan:before {
-                        background: url(http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2016/03/maxresdefault.jpg) no-repeat center center;
+                    #encima.bedroom:before {
+                        background: url(../img/acte/acte1/bedroom.jpg) no-repeat center center;
                     }
-                    #encima.illu:before {
-                        background: url(https://cdn-images-1.medium.com/max/2000/1*1RteQIQxKKt0SVnZ8bh0pg.jpeg) no-repeat center center;
+                    #encima.kitchen:before {
+                        background: url(../img/acte/acte1/Kitchen.jpg) no-repeat center center;
+                    }
+                    #encima.mag:before {
+                        background: url(../img/acte/acte1/Magazine2.jpg) no-repeat center center;
+                    }
+                    #encima.bus:before {
+                        background: url(../img/acte/acte1/outside.jpg) no-repeat center center;
+                    }
+                    #encima.class:before {
+                        background: url('../img/acte/acte1/Classroom.jpg') no-repeat center center;
+                    }
+                    #encima.chemin:before {
+                        background: url('../img/acte/acte1/Sunset.jpg') no-repeat center center;
+                    }
+                    #encima.limbes:before {
+                        background: url('../img/acte/acte2/limbes.jpg') no-repeat center center;
+                    }
+                    #encima.nuage:before{
+                        background: url('../img/acte/acte2/tumblr_noqydabxdn1tayn6co1_1280.jpg');
                     }
                     #encima:before {
                         content: '';
