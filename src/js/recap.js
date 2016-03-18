@@ -9,13 +9,30 @@
      var badge_img = document.createElement('img');
      badge_img.setAttribute('src', achiv.img);
      result.achivements.appendChild(badge);
-
      badge.className = 'badges won';
      badge.appendChild(badge_img);
-
-
  });
+ data.backstory.success.forEach(function (success) {
+     var already_there = false;
+     for (var i = 0; i < user.success.length; i++) {
 
+         if (user.success[i].id === success.id) {
+             already_there = true;
+         }
+     }
+     if (already_there) {
+         console.log('already ' + success.id);
+     } else {
+         var badge = document.createElement('div');
+         var badge_img = document.createElement('img');
+         badge_img.setAttribute('src', success.img);
+         result.achivements.appendChild(badge);
+         badge.className = 'badges';
+         badge.appendChild(badge_img);
+     }
+
+
+ })
 
  //console.log(current_act, user.new);
  //        if (current_act === user.new - 1) {
