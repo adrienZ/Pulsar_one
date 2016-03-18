@@ -164,6 +164,12 @@ var data = {
                 }
             ]
         },
+
+        'a1_4_a': {
+            "data_event": "a1_0",
+            force_game_over: true,
+        },
+
         'a1_5': {
             "question": "Jour 01, 09h45, année 2016.Vous prenez place dans votre salle et aujourd’hui, c’est cours d’espagnol. Parallèlement à la situation, vous êtes sur votre PC. Qu’il y a-t-il sur votre écran ?",
             change_img: 'class',
@@ -215,6 +221,11 @@ var data = {
                     "naration": true
                 }
             ]
+        },
+
+        'a1_7_1': {
+            "data_event": "a1_0",
+            force_game_over: true,
         },
 
         'a1_8': {
@@ -316,6 +327,11 @@ var data = {
     ]
         },
 
+        'a1_12_a': {
+            data_event: 'a1_0',
+            force_game_over: true,
+        },
+
         'a1_13': {
             "question": "En rentrant chez vous, vous êtes toujours choqué(e) par cette journée. Tant d’émotions en si peu de temps. Mais attention, ce n’est pas encore terminé. \nEn voulant déverrouiller la porte de votre maison, une étrange sensation se ressent à l’intérieur de votre corps. Comme si votre esprit divaguait et essayait de sortir de votre corps. Vous tremblez. Vous entendez des voix à l’intérieur de votre tête d’une langue étrange. Vous ne pouvez plus tenir sur vos jambes. \nEt d’un coup, une force mystérieuse stoppe le temps. Les feuilles des arbres soufflées par un vent violent se retrouvent figées. Les oiseaux en vol sont immobiles dans les airs. \nVous regardez à côté de vous, pétrifié(e) par la situation et D’UN COUP UNE SORTE DE BALLE INVISIBLE TRAVERSE VOTRE CORPS COMME UNE GROSSE ONDE DE CHOC D’UNE TELLE ENVERGURE QUE VOUS VOUS ÉVANOUISSEZ. BLACKOUT. KO.\n",
 
@@ -378,6 +394,12 @@ var data = {
                 },
             ],
         },
+
+        'a2_1_a': {
+            "data_event": 'a2_0',
+            force_game_over: true,
+        },
+
         'a2_2': {
             question: 'Vous ouvrez le yeux. Au dessus de vous, une entité divine vous guette. C’est Chronos.',
             choix: [
