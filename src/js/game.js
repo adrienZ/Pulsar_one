@@ -5,9 +5,6 @@ if (user.game !== 'intro') {
     data = update_data(user.name);
 }
 
-
-
-
 if (user.game === "prologue") {
     if (typeof current_act === 'undefined') {
         console.log('on vient dun prologue');
@@ -32,6 +29,9 @@ if (user.game === "prologue") {
     alert(' UNDEFINED');
     document.location = '/';
 }
+
+
+
 
 
 
@@ -66,6 +66,7 @@ $.el('.ui-panel #fullscreen').addEventListener('click', function () {
         }
     }
 });
+
 
 $.el('.ui-panel #fonts_change').addEventListener('click', function () {
 

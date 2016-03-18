@@ -733,7 +733,7 @@ section.mini-game {
     transition: opacity 1s;
     animation: fadeOut 1s ease-in-out;
     &.active {
-       // opacity: 1;
+        // opacity: 1;
         position: absolute;
         // background: red;
         animation: fadeIn 1s ease-in-out;

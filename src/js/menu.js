@@ -11,6 +11,7 @@ var menu = {
     audio: 'src/medias/sfx_click.wav',
 }
 
+
 //loader disapear when page is loaded
 window.addEventListener('load', function () {
     window.setTimeout(function () {

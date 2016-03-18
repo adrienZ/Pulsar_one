@@ -175,11 +175,12 @@ function render(event) {
                 user.travel = elem.getAttribute('data-travel');
             }
             if (elem.getAttribute('data-success')) {
-                user.success.push(data.backstory.success[this.getAttribute('data-success') - 1]);
+                console.log(user.pulsars);
+                // user.success.push(data.backstory.success[this.getAttribute('data-success') - 1]);
                 create_success(data.backstory.success[this.getAttribute('data-success') - 1].img);
-                user.pulsars += data.backstory.success[this.getAttribute('data-success') - 1].rewards_pulsar;
-                $.el('.ui-panel .pulsars span').innerHTML = '[' + user.pulsars + ']';
-                savegame.erase_save('user_save', user);
+                // user.pulsars += data.backstory.success[this.getAttribute('data-success') - 1].rewards_pulsar;
+                //$.el('.ui-panel .pulsars span').innerHTML = '[' + user.pulsars + ']';
+                //savegame.erase_save('user_save', user);
                 var trophy_sound = new Audio('src/medias/success-sound.mp3');
                 trophy_sound.play();
             }
@@ -430,7 +431,6 @@ function pulsar_game_over(reboot_event) {
             window.setTimeout(function () {
                 user.game = reboot_event;
                 savegame.erase_save('user_save', user);
-
                 window.location = '/';
             }, 1000)
         }
