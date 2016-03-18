@@ -1063,7 +1063,20 @@ var data = {
 
         'a3_1_13': {
             "question": "Vous avez sans doute fait un mauvais choix.",
-            get_success: 6,
+
+
+            "choix": [
+                {
+                    get_success: 6,
+                    "text": "",
+                    "data_event": "a3_1_13_1",
+                    game_over: true,
+                    "naration": true
+        }
+    ]
+        },
+        'a3_1_13_1': {
+            "question": "",
 
             "choix": [
                 {
@@ -1154,14 +1167,14 @@ var data = {
 
         'a3_1_12_1_0': {
             "question": "Vous ne faites rien, la Pythie meurt... Vous avez échouez à votre mission. ",
-            stats_change: {
-                strenght: -1,
-                agility: -1,
-                luck: -1,
-            },
-            get_success: 6,
             "choix": [
                 {
+                    stats_change: {
+                        strenght: -1,
+                        agility: -1,
+                        luck: -1,
+                    },
+                    get_success: 6,
                     "text": "",
                     game_over: true,
                     "data_event": "a3_1_12_1_1",
@@ -2139,8 +2152,8 @@ var data = {
             change_img: 'cosmos',
             "choix": [
                 {
-                    "text": "2012",
-                    "data_event": "a3_4_1"
+                    "text": "2000",
+                    "data_event": "a3_4_4"
         },
                 {
                     "text": "3123",
@@ -2151,8 +2164,8 @@ var data = {
                     "data_event": "a3_4_3"
         },
                 {
-                    "text": "2000 ",
-                    "data_event": "a3_4_4"
+                    "text": "2012 ",
+                    "data_event": "a3_4_1"
         }
     ]
         },
