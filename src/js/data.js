@@ -166,6 +166,7 @@ var data = {
         },
 
         'a1_4_a': {
+            question: "",
             "data_event": "a1_0",
             force_game_over: true,
         },

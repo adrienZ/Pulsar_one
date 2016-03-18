@@ -221,18 +221,26 @@ mini_games.roll_dice = function () {
                 }, 2800);
 
                 if (player_1.victory > player_2.victory) {
+                    //you win
                     console.log(player_1.name + ' avez gagné la partie ' + player_1.victory + ' à ' + player_2.victory);
-                    results.innerHTML = player_1.name + ' avez gagné la partie ' + player_1.victory + ' à ' + player_2.victory;
+                    results.innerHTML = player_1.name + ' a gagné la partie ' + player_1.victory + ' à ' + player_2.victory;
+                    window.setTimeout(function () {
+                        $.mini_game.className = 'mini-game';
+                        render(current_act[ui.finish_mini_game_redirect]);
+                        ui.finish_mini_game_redirect = undefined;
+                    }, 3000);
 
                 } else {
+                    //you lose
                     console.log(player_2.name + ' a gagné la partie ' + player_2.victory + ' à ' + player_1.victory);
                     results.innerHTML = player_2.name + ' a gagné la partie ' + player_2.victory + ' à ' + player_1.victory;
+                    window.setTimeout(function () {
+                        $.mini_game.className = 'mini-game';
+                        render(current_act['a1_12_a']);
+                        ui.finish_mini_game_redirect = undefined;
+                    }, 5000);
                 }
-                window.setTimeout(function () {
-                    $.mini_game.className = 'mini-game';
-                    render(current_act[ui.finish_mini_game_redirect]);
-                    ui.finish_mini_game_redirect = undefined;
-                }, 4000);
+
 
             } else {
                 var newRound = function () {
@@ -399,7 +407,12 @@ mini_games.hacking = function () {
 
                 if (this.life < 1) this.alert("ACCESS REFUSED", "Wrong password.", function () {
                     // Put here what happen when access is refused and user push "ok" button
-                    //savegame.reset_game('user_save');
+                    window.setTimeout(function () {
+                        $.mini_game.className = 'mini-game';
+                        render(current_act['a1_7_1']);
+                        ui.finish_mini_game_redirect = undefined;
+                    }, 1000);
+
                     //GAME OVER
                 });
             }
@@ -492,22 +505,26 @@ mini_games.catch_bus = function () {
             clearInterval(main);
             console.log('End');
             bar_width = 1;
-            if (user.pulsars >= 0) {
+            if (user.pulsars > 0) {
                 console.log(user.pulsars);
                 main = window.setInterval(function () {
                     downScale();
                     clampBar();
                     colorBar();
                 }, 1);
-                user.pulsars--;
 
+                user.pulsars--;
                 savegame.erase_save('user_save', user);
                 $.el('.ui-panel .pulsars span').innerHTML = '[' + user.pulsars + ']';
 
 
             } else {
-                alert('pauvre');
-                //game over
+                //alert('game over');
+                window.setTimeout(function () {
+                    render(current_act['a1_4_a']);
+                    $.mini_game.className = 'mini-game';
+                    ui.finish_mini_game_redirect = undefined;
+                }, 1000);
             }
         }
         if (bar_width > 1) {
@@ -583,7 +600,8 @@ mini_games.wake_up = function () {
             window.setTimeout(function () {
                 $.mini_game.className = 'mini-game';
                 render(current_act[ui.finish_mini_game_redirect]);
-                ui.finish_mini_game_redirect = undefined;            }, 3000);
+                ui.finish_mini_game_redirect = undefined;
+            }, 3000);
         } else {
             //   square_move.style.border = '4px solid red';
         }

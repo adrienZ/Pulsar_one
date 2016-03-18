@@ -64,6 +64,11 @@ function render(event) {
     } else if (event.hasOwnProperty('mini_game')) {
         ui.finish_mini_game_redirect = event.choix[0].data_event;
         render_mini_game(event.mini_game);
+    } else if (event.hasOwnProperty('force_game_over')) {
+        pulsar_game_over(event.data_event);
+        user.game = event.data_event;
+        //savegame.erase_save('user_save', user);
+        return false;
     } else {
         //pushing story's text in the div
         write(event.question, $.histoire);
@@ -408,11 +413,28 @@ function write(txt, parent) {
 }
 
 
-function pulsar_game_over() {
+function pulsar_game_over(reboot_event) {
     var game_over_dom = document.createElement('section');
     game_over_dom.className = "game-over";
-    game_over_dom.innerHTML = '<article><h2>Fin de <span>partie<span></h2><p>Le destin a eu raison de vous.</p><a href="#" onclick="user.set_progress(\'a1_8\');window.location.reload()">Recommencer (-2 pulsars)</a><a href="index.html">Quitter la partie</a><p class="pulars-left">Il vous reste ' + user.pulsars + ' pulsars</p></article>';
+    game_over_dom.innerHTML = '<article><h2>Fin de <span>partie<span></h2><p>Le destin a eu raison de vous.</p><a class="replay" href="#">Recommencer (-2 pulsars)</a><a href="index.html">Quitter la partie</a><p class="pulsars-left">Il vous reste ' + user.pulsars + ' pulsars</p></article>';
+
     document.body.appendChild(game_over_dom);
+    $.el('.game-over a.replay').onclick = function () {
+        if (user.pulsars >= 2) {
+            console.log('replay the game');
+            user.pulsars -= 2;
+            window.location = 'template.html'
+        } else {
+            console.log('you dont have enought pulsarsn, game over');
+            $.el('.game-over .pulsars-left').style.color = 'red';
+            window.setTimeout(function () {
+                user.game = reboot_event;
+                savegame.erase_save('user_save', user);
+
+                window.location = '/';
+            }, 1000)
+        }
+    }
 }
 
 
