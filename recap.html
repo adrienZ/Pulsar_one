@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="src/css/recap.css">
 </head>
 
-<body>
+<body style="overflow:auto">
     <!--[if lt IE 8]>
  <![endif]-->
     <header>
@@ -87,12 +87,14 @@
     </section>
     <section class="achievements">
         <h1>Récompenses débloquées</h1>
-        <div class="badges won"><img src="src/img/success/success_badge_1.svg" alt=""></div>
-        <div class="badges"><img src="src/img/success/success_badge_2.svg" alt=""></div>
-        <div class="badges"><img src="src/img/success/success_badge_3.svg" alt=""></div>
-        <div class="badges"><img src="src/img/success/success_badge_4.svg" alt=""></div>
-        <div class="badges"><img src="src/img/success/success_badge_5.svg" alt=""></div>
-        <div class="badges"><img src="src/img/success/success_badge_6.svg" alt=""></div>
+        <!--
+<div class="badges won"><img src="src/img/success/success_badge_1.svg" alt=""></div>
+<div class="badges"><img src="src/img/success/success_badge_2.svg" alt=""></div>
+<div class="badges"><img src="src/img/success/success_badge_3.svg" alt=""></div>
+ <div class="badges"><img src="src/img/success/success_badge_4.svg" alt=""></div>
+<div class="badges"><img src="src/img/success/success_badge_5.svg" alt=""></div>
+<div class="badges"><img src="src/img/success/success_badge_6.svg" alt=""></div>
+-->
     </section>
     <div class="return_menu">
         <a href="index.html">
@@ -107,38 +109,8 @@
     </div>
     <script src="src/js/selector.js"></script>
     <script src="src/js/cookie.js"></script>
-
     <script src="src/js/data.js"></script>
-    <script>
-        var compteur = $.el('#compteur');
-        var number = 0;
-        var current_act = parseInt(user.game[1]);
-
-        console.log(current_act, user.new);
-//        if (current_act === user.new - 1) {
-            console.log('check ok');
-            $.el('.nextAct').addEventListener('click', function () {
-                console.log(current_act);
-                user.new = parseInt(current_act) + 1;
-                user.game = 'prologue';
-                savegame.erase_save('user_save', user);
-                window.location = '/template.html';
-
-            });
-
-            function clampFunction(number, limit, nameInterval) {
-                if (number == limit + 1) {
-                    clearInterval(nameInterval);
-                }
-            }
-
-            var numberIncrementation = window.setInterval(function () {
-                compteur.innerText = number;
-                number++;
-                clampFunction(number, 76, numberIncrementation);
-            }, 30);
-//        } else { // console.log('check NOT OK'); // window.location = '/template.html' // }
-    </script>
+    <script src="src/js/recap.js"></script>
 </body>
 
 </html>

@@ -175,14 +175,30 @@ function render(event) {
                 user.travel = elem.getAttribute('data-travel');
             }
             if (elem.getAttribute('data-success')) {
-                console.log(user.pulsars);
-                // user.success.push(data.backstory.success[this.getAttribute('data-success') - 1]);
-                create_success(data.backstory.success[this.getAttribute('data-success') - 1].img);
-                // user.pulsars += data.backstory.success[this.getAttribute('data-success') - 1].rewards_pulsar;
-                //$.el('.ui-panel .pulsars span').innerHTML = '[' + user.pulsars + ']';
-                //savegame.erase_save('user_save', user);
-                var trophy_sound = new Audio('src/medias/success-sound.mp3');
-                trophy_sound.play();
+                var unlocked = data.backstory.success[this.getAttribute('data-success') - 1];
+                var already_there = false;
+                console.log(user.success.length)
+
+                for (var i = 0; i < user.success.length; i++) {
+
+                    if (user.success[i].id === unlocked.id) {
+                        already_there = true;
+                    }
+                }
+
+                if (already_there) {
+                    console.log('already');
+                } else {
+                    user.success.push(unlocked);
+                    create_success(unlocked.img);
+                    user.pulsars += unlocked.rewards_pulsar;
+                    $.el('.ui-panel .pulsars span').innerHTML = '[' + user.pulsars + ']';
+                    savegame.erase_save('user_save', user);
+                    var trophy_sound = new Audio('src/medias/success-sound.mp3');
+                    trophy_sound.play();
+                }
+
+                console.log(user.success, data.backstory.success);
             }
 
             if (elem.getAttribute('data-stats')) {

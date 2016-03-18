@@ -202,9 +202,14 @@ header {
   margin: 0.5rem 0;
 }
 
+.achievements .badges img {
+  width: 99%;
+}
+
 .achievements .badges:not(.won) {
   opacity: 0.1;
   -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 .return_menu {
