@@ -213,9 +213,13 @@ body {
         overflow: auto;
         padding: 40px 0;
         font-size: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.35);
         line-height: 1.5;
         font-family: 'Libre Baskerville', serif;
         color: white;
+        &.no-scroll {
+            overflow: hidden;
+        }
         p {
             padding: 7.5px 30px;
         }
@@ -239,9 +243,12 @@ body {
         .arrows {
             position: absolute;
             left: calc(75% / 2 - 10px - 5px);
-            top: calc(275px + 40vh + 15px + 20px);
+            top: calc(275px + 35vh + 15px + 20px);
+            animation: fadeIn 1s 0.15s;
+            opacity: 1;
             &.hide {
                 display: none;
+                animation: fadeIn 1s reverse 0.15s;
             }
             .circle {
                 height: 10px;
@@ -278,7 +285,8 @@ body {
             }
         }
         width: 100%;
-        height: 500px;
+        //height: 500px;
+        height: calc(100vh - 275px - 35vh - 40px);
         padding: 15px;
         font-family: 'Gotham Book',
         'Arial',
@@ -289,10 +297,10 @@ body {
         0.0);
         .arrow_naration {
             position: absolute;
-            right: calc(25% + 30px);
-            bottom: 100px;
-            font-size: 35px;
-            animation: animationArrow 1s ease-in-out 0s alternate running infinite forwards;
+            right: calc(25% + 145px);
+            margin-top: 20px;
+            font-size: 37.5px;
+            animation: animationArrow 0.75s ease-in 2s alternate running infinite forwards;
             a {
                 background-image: url('../img/arrow_next.svg');
                 color: transparent;
@@ -310,8 +318,9 @@ body {
         ul {
             text-align: center;
             li:not(.arrow_naration) {
-                font-size: 1rem;
+                font-size: 0.9rem;
                 margin: 5px 0px;
+                animation: fadeIn 1s;
                 vertical-align: baseline;
                 a {
                     text-decoration: none;
@@ -628,12 +637,16 @@ body {
     position: absolute;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
+    img {
+        margin-top: 5px;
+    }
     span {
-        height: 4px;
-        margin: 10px 0;
+        height: 2px;
+        margin: 12.5px 0;
         display: inline-block;
         width: calc(50% - 30px);
         float: left;
+        bottom: 0;
         background: white;
         &:last-child {
             margin-left: 30px;

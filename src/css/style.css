@@ -456,13 +456,18 @@ body {
 
 .main .story {
   width: 100%;
-  height: 40vh;
+  height: 35vh;
   overflow: auto;
   padding: 40px 0;
   font-size: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
   line-height: 1.5;
   font-family: 'Libre Baskerville', serif;
   color: white;
+}
+
+.main .story.no-scroll {
+  overflow: hidden;
 }
 
 .main .story p {
@@ -484,12 +489,12 @@ body {
   left: 0;
   box-shadow: inset 0px 30px 80px rgba(0, 0, 0, 0.75), inset 0px -30px 80px rgba(0, 0, 0, 0.75);
   width: 75vw;
-  height: 40vh;
+  height: 35vh;
 }
 
 .main .questions {
   width: 100%;
-  height: 500px;
+  height: calc(100vh - 275px - 35vh - 40px);
   padding: 15px;
   font-family: 'Gotham Book', 'Arial', sans-serif;
   border-top: 1px solid rgba(255, 255, 255, 0);
@@ -498,11 +503,16 @@ body {
 .main .questions .arrows {
   position: absolute;
   left: calc(75% / 2 - 10px - 5px);
-  top: calc(275px + 40vh + 15px + 20px);
+  top: calc(275px + 35vh + 15px + 20px);
+  -webkit-animation: fadeIn 1s 0.15s;
+          animation: fadeIn 1s 0.15s;
+  opacity: 1;
 }
 
 .main .questions .arrows.hide {
   display: none;
+  -webkit-animation: fadeIn 1s reverse 0.15s;
+          animation: fadeIn 1s reverse 0.15s;
 }
 
 .main .questions .arrows .circle {
@@ -554,11 +564,11 @@ body {
 
 .main .questions .arrow_naration {
   position: absolute;
-  right: calc(25% + 30px);
-  bottom: 100px;
-  font-size: 35px;
-  -webkit-animation: animationArrow 1s ease-in-out 0s alternate running infinite forwards;
-          animation: animationArrow 1s ease-in-out 0s alternate running infinite forwards;
+  right: calc(25% + 145px);
+  margin-top: 20px;
+  font-size: 37.5px;
+  -webkit-animation: animationArrow 0.75s ease-in 2s alternate running infinite forwards;
+          animation: animationArrow 0.75s ease-in 2s alternate running infinite forwards;
 }
 
 .main .questions .arrow_naration a {
@@ -582,8 +592,10 @@ body {
 }
 
 .main .questions ul li:not(.arrow_naration) {
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin: 5px 0px;
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
   vertical-align: baseline;
 }
 
@@ -967,12 +979,17 @@ body {
   background: rgba(0, 0, 0, 0.5);
 }
 
+.bottom-bar img {
+  margin-top: 5px;
+}
+
 .bottom-bar span {
-  height: 4px;
-  margin: 10px 0;
+  height: 2px;
+  margin: 12.5px 0;
   display: inline-block;
   width: calc(50% - 30px);
   float: left;
+  bottom: 0;
   background: white;
 }
 

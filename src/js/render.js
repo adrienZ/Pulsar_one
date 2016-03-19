@@ -426,7 +426,7 @@ function write(txt, parent) {
                 }
 
             } else {
-
+                $.histoire.classList.add('no-scroll');
                 index_text++;
                 content.innerHTML += txt[index_text];
                 $.histoire.scrollTop = $.histoire.scrollHeight;
@@ -436,6 +436,7 @@ function write(txt, parent) {
             if (index_text === txt.length - 1) {
                 clearInterval(writing);
                 // $.histoire.scrollTop = $.histoire.scrollHeight;
+                $.histoire.classList.remove('no-scroll');
 
             }
         }, 15);
