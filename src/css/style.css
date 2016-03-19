@@ -320,8 +320,8 @@ body {
 .main .illustration {
   width: 100%;
   height: 275px;
-  background: #4b6cb7;
-  background: linear-gradient(to right, #4b6cb7, #182848);
+  background: #000000;
+  background: linear-gradient(#000000, #434343);
 }
 
 .main .illustration:before {
@@ -331,8 +331,6 @@ body {
   left: 0;
   width: 75%;
   height: 275px;
-  background: #4b6cb7;
-  background: linear-gradient(to right, #4b6cb7, #182848);
   opacity: 1;
   -moz-animation: fadeIn 1s infinite;
 }
@@ -459,7 +457,7 @@ body {
   height: 35vh;
   overflow: auto;
   padding: 40px 0;
-  font-size: 15px;
+  font-size: 0.85rem;
   border: 1px solid rgba(255, 255, 255, 0.35);
   line-height: 1.5;
   font-family: 'Libre Baskerville', serif;
@@ -472,6 +470,7 @@ body {
 
 .main .story p {
   padding: 7.5px 30px;
+  line-height: 1.65;
 }
 
 .main .story.sans-serif {

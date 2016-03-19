@@ -95,9 +95,9 @@ body {
     .illustration {
         width: 100%;
         height: $_panel_act_height + $_panel_date_day_height +$_panel_date_hour_height +$_panel_remappage_height +$_panel_pulsars_height;
-        background: #4b6cb7;
-        background: -webkit-linear-gradient(to right, #4b6cb7, #182848);
-        background: linear-gradient(to right, #4b6cb7, #182848);
+        background: #000000;
+        background: -webkit-linear-gradient(to top, #000000, #434343);
+        background: linear-gradient( #000000, #434343);
         &:before {
             content: "";
             position: absolute;
@@ -105,9 +105,9 @@ body {
             left: 0;
             width: 75%;
             height: $_panel_act_height + $_panel_date_day_height +$_panel_date_hour_height +$_panel_remappage_height +$_panel_pulsars_height;
-            background: #4b6cb7;
-            background: -webkit-linear-gradient(to right, #4b6cb7, #182848);
-            background: linear-gradient(to right, #4b6cb7, #182848);
+            //background: #4b6cb7;
+            //background: -webkit-linear-gradient(to right, #4b6cb7, #182848);
+            //background: linear-gradient(to right, #4b6cb7, #182848);
             opacity: 1;
             -moz-animation: fadeIn 1s infinite;
         }
@@ -212,7 +212,7 @@ body {
         height: $_game_story_height;
         overflow: auto;
         padding: 40px 0;
-        font-size: 15px;
+        font-size: 0.85rem;
         border: 1px solid rgba(255, 255, 255, 0.35);
         line-height: 1.5;
         font-family: 'Libre Baskerville', serif;
@@ -222,6 +222,7 @@ body {
         }
         p {
             padding: 7.5px 30px;
+            line-height: 1.65;
         }
         &.sans-serif {
             font-family: 'Gotham Book', Arial, sans-serif;
@@ -301,6 +302,7 @@ body {
             margin-top: 20px;
             font-size: 37.5px;
             animation: animationArrow 0.75s ease-in 2s alternate running infinite forwards;
+
             a {
                 background-image: url('../img/arrow_next.svg');
                 color: transparent;
