@@ -5,8 +5,10 @@ body {
     font-family: "Arial";
     color: #fff;
     background: url('../img/background_ingame.jpg') no-repeat center center;
+    background-color: black;
     background-size: cover;
-    overflow: hidden;
+    width: 100vw;
+    //overflow: hidden;
 }
 
 .intro {
@@ -91,7 +93,7 @@ body {
 .main {
     width: 75vw;
     float: left;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     .illustration {
         width: 100%;
         height: $_panel_act_height + $_panel_date_day_height +$_panel_date_hour_height +$_panel_remappage_height +$_panel_pulsars_height;
@@ -237,6 +239,21 @@ body {
             left: 0;
             box-shadow: inset 0px 30px 80px rgba(0, 0, 0, 0.75), inset 0px -30px 80px rgba(0, 0, 0, 0.75);
             width: 75vw;
+            z-index: 1;
+            height: $_game_story_height;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: $_panel_act_height + $_panel_date_day_height +$_panel_date_hour_height +$_panel_remappage_height +$_panel_pulsars_height;
+            left: 0;
+            /* fallback for old browsers */
+            opacity: 0.2;
+            background: -webkit-linear-gradient(to bottom, #7474BF, #348AC7);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to bottom, #7474BF, #348AC7);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            width: 75vw;
             height: $_game_story_height;
         }
     }
@@ -245,7 +262,7 @@ body {
             position: absolute;
             left: calc(75% / 2 - 10px - 5px);
             top: calc(275px + 35vh + 15px + 20px);
-            animation: fadeIn 1s 0.15s;
+            animation: fadeIn 0.5s;
             opacity: 1;
             &.hide {
                 display: none;
@@ -302,7 +319,6 @@ body {
             margin-top: 20px;
             font-size: 37.5px;
             animation: animationArrow 0.75s ease-in 2s alternate running infinite forwards;
-
             a {
                 background-image: url('../img/arrow_next.svg');
                 color: transparent;
@@ -324,6 +340,10 @@ body {
                 margin: 5px 0px;
                 animation: fadeIn 1s;
                 vertical-align: baseline;
+                transition: 0.15s ease-out;
+                &:hover {
+                    text-shadow: 0px 5px 10px white, 0px -5px 10px white;
+                }
                 a {
                     text-decoration: none;
                 }
@@ -467,7 +487,7 @@ body {
             background: rgba(26, 59, 92, 1);
             color: rgba(225, 223, 225, 1);
             & img {
-                opacity: 0.7;
+                opacity: 0.3;
             }
         }
         overflow: hidden;
@@ -638,6 +658,8 @@ body {
     height: 40px;
     position: absolute;
     bottom: 0;
+    opacity: 0.75;
+    z-index: -1;
     background: rgba(0, 0, 0, 0.5);
     img {
         margin-top: 5px;
@@ -744,10 +766,11 @@ body {
 section.mini-game {
     width: 100vw;
     height: 100vh;
-    //opacity: 0;
+    z-index: -1;
     transition: opacity 1s;
     animation: fadeOut 1s ease-in-out;
     &.active {
+        z-index: 2;
         // opacity: 1;
         position: absolute;
         // background: red;
@@ -759,6 +782,7 @@ section.mini-game {
     width: 100vw;
     position: absolute;
     top: 0;
+    z-index: 2;
     height: 100vh;
     font-family: 'Gotham Book', 'Arial', sans-serif;
     //  position: relative;
@@ -817,4 +841,35 @@ section.mini-game {
             display: block;
         }
     }
+}
+
+.white {
+    background: url("../img/white-bg.jpg") no-repeat center center, #fafafa;
+    filter: invert(95%);
+    transition: 2s ease-in;
+}
+
+.white #encima {
+    filter: invert(100%);
+}
+
+.white #fondo {
+    filter: invert(100%);
+}
+
+.white .ui-panel .pulsars img {
+    filter: invert(100%);
+}
+
+.white .pop_up {
+    filter: invert(100%);
+}
+
+.white section.mini-game {
+    filter: invert(100%);
+    visibility: hidden;
+}
+
+.white section.mini-game.active {
+    visibility: visible;
 }

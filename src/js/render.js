@@ -67,9 +67,17 @@ function render(event) {
     } else if (event.hasOwnProperty('force_game_over')) {
         pulsar_game_over(event.data_event);
         user.game = event.data_event;
-        //savegame.erase_save('user_save', user);
+        savegame.erase_save('user_save', user);
         return false;
     } else {
+        if (current_act == data.act_2)
+            document.body.className = "white";
+
+
+        else {
+            document.body.className = "";
+
+        }
         //pushing story's text in the div
         write(event.question, $.histoire);
     }
@@ -439,7 +447,7 @@ function write(txt, parent) {
                 $.histoire.classList.remove('no-scroll');
 
             }
-        }, 15);
+        }, 12.5);
 
 
 

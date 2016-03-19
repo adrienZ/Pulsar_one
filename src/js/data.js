@@ -822,6 +822,7 @@ var data = {
         'a2_32': {
             "question": "CHRONOS : Tu as réussi l’épreuve finale. L’initiation est dorénavant terminé. Fais attention, tout de même. Dans cette aventure chaque choix que tu prendras aura des conséquences sur ton avenir. Utilise ce pulsar quantum pour réaliser ton premier remappage temporel.\nROSE : Hey" + user.name + token + "profite ! On dit toujours que le premier voyage temporel est celui que l’on se souvient le plus !\nCHONOS :  Remappage temporel Rose. Utilise les bons termes.\nROSE : Roh si tu veux.\n",
             change_img: 'galaxy',
+            important_choice: true,
             "choix": [
                 {
                     "text": "Remappage temporel vers La Grèce Antique ",
@@ -2102,13 +2103,14 @@ var data = {
         },
         'a3_3_6_2_1_2': {
             "question": "Vous longez ce couloir jusqu’à l’angle où vous jetez un regard discret sur le prochain couloir. Rien, ni personne.",
+            timer: 3,
             "choix": [
                 {
                     "text": "Vous faites demi-tour ",
                     "data_event": "a3_3_6_2_1"
         },
                 {
-                    "text": "Vous continuez. Dans un renforcement, à votre droite se trouve une porte. Vous l’ouvrez et vous vous retrouvez face à l'assassin se tenant prêt à tirer avec un mousquet. [Timer très rapide 3/5 seconde ? Si pas de choix alors choix par défaut : impassible]",
+                    "text": "Vous continuez. Dans un renforcement, à votre droite se trouve une porte. Vous l’ouvrez et vous vous retrouvez face à l'assassin se tenant prêt à tirer avec un mousquet.",
                     "data_event": "a3_3_6_3"
         }
     ]
@@ -2448,7 +2450,24 @@ var data = {
 
             },
                    ],
-            act_2: [],
+            act_2: [{
+                fact1: {
+                    title: 'Nom de Zeus !',
+                    explanation: 'Vous avez décidé de partir en Grèce',
+                    percentage: Math.ceil(Math.random() * 100),
+                },
+                fact2: {
+                    title: 'Walk like an egyptian',
+                    explanation: 'Vous avez décidé de partir en Égypte',
+                    percentage: Math.ceil(Math.random() * 100),
+                },
+                fact3: {
+                    title: '“ Baguette ”',
+                    explanation: 'Vous avez décidé de partir en France',
+                    percentage: Math.ceil(Math.random() * 100),
+                },
+
+            }, ],
             act3: [],
 
         }

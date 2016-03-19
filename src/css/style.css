@@ -209,8 +209,9 @@ body {
   font-family: "Arial";
   color: #fff;
   background: url("../img/background_ingame.jpg") no-repeat center center;
+  background-color: black;
   background-size: cover;
-  overflow: hidden;
+  width: 100vw;
 }
 
 .intro {
@@ -314,7 +315,7 @@ body {
 .main {
   width: 75vw;
   float: left;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .main .illustration {
@@ -488,6 +489,21 @@ body {
   left: 0;
   box-shadow: inset 0px 30px 80px rgba(0, 0, 0, 0.75), inset 0px -30px 80px rgba(0, 0, 0, 0.75);
   width: 75vw;
+  z-index: 1;
+  height: 35vh;
+}
+
+.main .story:after {
+  content: '';
+  position: absolute;
+  top: 275px;
+  left: 0;
+  /* fallback for old browsers */
+  opacity: 0.2;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #7474BF, #348AC7);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width: 75vw;
   height: 35vh;
 }
 
@@ -503,8 +519,8 @@ body {
   position: absolute;
   left: calc(75% / 2 - 10px - 5px);
   top: calc(275px + 35vh + 15px + 20px);
-  -webkit-animation: fadeIn 1s 0.15s;
-          animation: fadeIn 1s 0.15s;
+  -webkit-animation: fadeIn 0.5s;
+          animation: fadeIn 0.5s;
   opacity: 1;
 }
 
@@ -596,6 +612,11 @@ body {
   -webkit-animation: fadeIn 1s;
           animation: fadeIn 1s;
   vertical-align: baseline;
+  transition: 0.15s ease-out;
+}
+
+.main .questions ul li:not(.arrow_naration):hover {
+  text-shadow: 0px 5px 10px white, 0px -5px 10px white;
 }
 
 .main .questions ul li:not(.arrow_naration) a {
@@ -767,7 +788,7 @@ body {
 }
 
 .ui-panel .remappage:hover img {
-  opacity: 0.7;
+  opacity: 0.3;
 }
 
 .ui-panel .remappage img {
@@ -921,8 +942,8 @@ body {
   color: white;
   text-align: left;
   padding-left: 30px;
-  height: 30px;
-  line-height: 30px;
+  height: 50px;
+  line-height: 50px;
   border: none;
   transition: all 0.3s;
   -webkit-transform: translateY(0px);
@@ -941,7 +962,7 @@ body {
 .ui-panel .menu ul li {
   cursor: pointer;
   display: inline-block;
-  height: 30px;
+  height: 50px;
   background: rgba(255, 255, 255, 0.04);
   width: calc(100% / 4);
   float: left;
@@ -966,7 +987,7 @@ body {
 }
 
 .ui-panel .menu ul li img {
-  margin: 5px;
+  margin: 15px;
   transition: opacity 0.3s;
 }
 
@@ -975,6 +996,8 @@ body {
   height: 40px;
   position: absolute;
   bottom: 0;
+  opacity: 0.75;
+  z-index: -1;
   background: rgba(0, 0, 0, 0.5);
 }
 
@@ -1085,12 +1108,14 @@ body {
 section.mini-game {
   width: 100vw;
   height: 100vh;
+  z-index: -1;
   transition: opacity 1s;
   -webkit-animation: fadeOut 1s ease-in-out;
           animation: fadeOut 1s ease-in-out;
 }
 
 section.mini-game.active {
+  z-index: 2;
   position: absolute;
   -webkit-animation: fadeIn 1s ease-in-out;
           animation: fadeIn 1s ease-in-out;
@@ -1100,6 +1125,7 @@ section.mini-game.active {
   width: 100vw;
   position: absolute;
   top: 0;
+  z-index: 2;
   height: 100vh;
   font-family: 'Gotham Book', 'Arial', sans-serif;
   background: #060607;
@@ -1164,4 +1190,41 @@ section.mini-game.active {
   font-size: 0.875em;
   margin: 0.9375em;
   display: block;
+}
+
+.white {
+  background: url("../img/white-bg.jpg") no-repeat center center, #fafafa;
+  -webkit-filter: invert(95%);
+          filter: invert(95%);
+  transition: 2s ease-in;
+}
+
+.white #encima {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.white #fondo {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.white .ui-panel .pulsars img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.white .pop_up {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.white section.mini-game {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  visibility: hidden;
+}
+
+.white section.mini-game.active {
+  visibility: visible;
 }
