@@ -2,11 +2,84 @@ body {
 	background-color: #222;
 }
 
-.container {
+.breathe {
+    position: relative;
+    overflow: hidden;
+}
+
+.breathe .container {
+    position: relative;
+    padding: 0rem 0rem;
+    text-align: center;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+.breathe .container h1 {
+    position: absolute;
+    color: black;
+    font-family: 'Gotham', Arial, sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    width: 100%;
+    top: 20vh;
+}
+
+.breathe .blur {
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+    -webkit-filter: blur(5px);
+}
+
+.breathe .windows-panel {
+    font-family: 'Gotham', Arial, sans-serif;
+    z-index: 99;
+    opacity: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    padding-top: 45vh;
+    text-align: center;
+}
+
+.breathe .windows-panel.animation {
+    -webkit-animation: slideUp 1s ease 0s normal running 1 forwards;
+    animation: slideUp 1s ease 0s normal running 1 forwards;
+}
+
+.breathe .windows-panel h1 {
+    opacity: 0;
+    color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+}
+
+.breathe .windows-panel h1.animation {
+    -webkit-animation: firstTitle 0.5s ease 1s normal running 1 forwards, slideUpTitle 1s ease 2s normal running 1 forwards;
+    animation: firstTitle 0.5s ease 1s normal running 1 forwards, slideUpTitle 1s ease 2s normal running 1 forwards;
+}
+
+.breathe .windows-panel h2 {
+    opacity: 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    width: 60%;
+    margin: auto;
+}
+
+.breathe .windows-panel h2.animation {
+    -webkit-animation: firstTitle 0.5s ease 1.5s normal running 1 forwards, slideUpTitle 1s ease 2s normal running 1 forwards;
+    animation: firstTitle 0.5s ease 1.5s normal running 1 forwards, slideUpTitle 1s ease 2s normal running 1 forwards;
+}
+
+
+.wrapper {
 	width: 300px;
 	height: 300px;
 	margin: auto;
-	margin-top: calc(50vh - 150px);
+	margin-top: -12rem;
 	position: relative;
 }
 
@@ -55,4 +128,143 @@ body {
 	text-align: center;
 	padding: 10px;
 	font-size: 25px;
+}
+
+
+@-webkit-keyframes slideUp {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+        transform: translateY(0%);
+    }
+}
+
+@-webkit-keyframes slideUpTitle {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(-30vh);
+        transform: translateY(-30vh);
+    }
+}
+
+@keyframes slideUpTitle {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(-30vh);
+        transform: translateY(-30vh);
+    }
+}
+
+@-webkit-keyframes firstTitle {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(1.25) translateZ(0px) translateY(70px);
+        transform: scale(1.25) translateZ(0px) translateY(70px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1) translateZ(0px) translateY(0px);
+        transform: scale(1) translateZ(0px) translateY(0px);
+    }
+}
+
+@keyframes firstTitle {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(1.25) translateZ(0px) translateY(70px);
+        transform: scale(1.25) translateZ(0px) translateY(70px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1) translateZ(0px) translateY(0px);
+        transform: scale(1) translateZ(0px) translateY(0px);
+    }
+}
+
+
+/* Questions qui arrivent */
+
+@-webkit-keyframes fade {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(100px);
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
+
+
+/* Questions qui partent */
+
+@-webkit-keyframes fadeGone {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(-100px);
+        transform: translateY(-100px);
+        visibility: hidden;
+    }
+}
+
+@keyframes fadeGone {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(-100px);
+        transform: translateY(-100px);
+        visibility: hidden;
+    }
 }

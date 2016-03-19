@@ -1,3 +1,30 @@
+var container = document.querySelector('.breathe .container');
+var windowsPanel = document.querySelector('.breathe .windows-panel');
+var title = windowsPanel.querySelector('.breathe h1');
+var subTitle = windowsPanel.querySelector('.breathe h2');
+var question = windowsPanel.querySelector('.breathe .question1');
+var answers = windowsPanel.querySelectorAll('.breathe input');
+var div_reponse = windowsPanel.querySelector('.breathe .reponse');
+var index = 1;
+var results = [0, 0, 0];
+
+console.log('obj');
+/* ---------- Slide window -------------*/
+
+var slideFunction = function (event) {
+    if (event.keyCode == 32) {
+        container.classList.toggle('blur');
+        windowsPanel.classList.toggle('animation');
+        title.classList.toggle('animation');
+        subTitle.classList.toggle('animation');
+        window.removeEventListener('keydown', slideFunction, false);
+    }
+}
+
+window.addEventListener('keydown', slideFunction, false);
+
+
+
 
 
 var date = new Date();
