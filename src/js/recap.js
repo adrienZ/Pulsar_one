@@ -4,40 +4,39 @@
 
  var result = {};
 
+ console.log(current_act, user.new);
 
 
  $.el('h1').innerHTML = 'Acte ' + user.game[1] + ' - ' + data['act_' + current_act].prologue.title + ' : <span id="compteur"></span>'
  $.el('.text h1').innerHTML = 'Passage à l\'acte suivant : Acte ' + (current_act + 1);
  result.choices = $.el('.sectionEvaluation');
- if (!user.important_decisions) {
+ if (!user.important_decisions || user.important_decisions.length === 0) {
      console.log('error');
+     window.location = 'template.html'
  } else {
      user.important_decisions.forEach(function (decision, index) {
-         var dat_data = data.backstory.choice_comparaison['act_' + user.game[1]][index]['fact' + decision];
-         console.log(dat_data);
-         var new_viz = document.createElement('div');
-         new_viz.className = 'evaluation';
-         var choice_color = document.createElement('p');
-         if (dat_data.percentage > 50) {
-             choice_color.className = 'good';
-         } else {
-             choice_color.className = 'bad';
+         console.log(decision, index);
+         console.log(data.backstory.choice_comparaison['act_' + user.game[1]][index]);
+         if (data.backstory.choice_comparaison['act_' + user.game[1]][index]) {
+
+             var dat_data = data.backstory.choice_comparaison['act_' + user.game[1]][index]['fact' + decision];
+             var new_viz = document.createElement('div');
+             new_viz.className = 'evaluation';
+             var choice_color = document.createElement('p');
+             if (dat_data.percentage > 50) {
+                 choice_color.className = 'good';
+             } else {
+                 choice_color.className = 'bad';
+             }
+             choice_color.innerHTML = dat_data.explanation;
+             var percentage_text = dat_data.percentage += "%";
+             new_viz.innerHTML = '<div class="layerOne"><h1>' + dat_data.title + '</h1><h2>' + percentage_text + '</h2></div><div class="layerTwo"><div class="bar"><div class="progress-bar"></div></div>';
+             result.choices.appendChild(new_viz);
+             new_viz.querySelector('.layerTwo').appendChild(choice_color);
+             new_viz.querySelector('.progress-bar').style.width = percentage_text;
          }
-         choice_color.innerHTML = dat_data.explanation;
-         var percentage_text = dat_data.percentage += "%";
-         new_viz.innerHTML = '<div class="layerOne"><h1>' + dat_data.title + '</h1><h2>' + percentage_text + '</h2></div><div class="layerTwo"><div class="bar"><div class="progress-bar"></div></div>';
-         result.choices.appendChild(new_viz);
-         new_viz.querySelector('.layerTwo').appendChild(choice_color);
-         new_viz.querySelector('.progress-bar').style.width = percentage_text;
      });
  }
-
-
-
-
-
-
-
 
 
  //show succès unclocked 
@@ -59,9 +58,7 @@
              already_there = true;
          }
      }
-     if (already_there) {
-         console.log('already ' + success.id);
-     } else {
+     if (already_there) {} else {
          var badge = document.createElement('div');
          var badge_img = document.createElement('img');
          badge_img.setAttribute('src', success.img);
@@ -72,15 +69,13 @@
 
  });
 
- //console.log(current_act, user.new);
- //        if (current_act === user.new - 1) {
- //console.log('check ok');
+
  $.el('.nextAct').addEventListener('click', function () {
-     console.log(current_act);
      user.new = parseInt(current_act) + 1;
      user.game = 'prologue';
+     user.important_decisions = [];
      savegame.erase_save('user_save', user);
-     window.location = '/template.html';
+     window.location = 'template.html';
 
  });
 
@@ -95,4 +90,3 @@
      number++;
      clampFunction(number, 100, numberIncrementation);
  }, 30);
- //        } else { // console.log('check NOT OK'); // window.location = '/template.html' // }
