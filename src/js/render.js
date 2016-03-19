@@ -237,7 +237,6 @@ function render(event) {
 
     });
 
-    console.log(Object.keys(event.choix).length);
     var answer_realign = $.pad.querySelector('ul li:not(.arrow_naration):nth-child(2)');
     if (Object.keys(event.choix).length <= 2) {
         console.log('hide arrows');
@@ -284,7 +283,36 @@ function render(event) {
         }
     }
 
+    if (event.hasOwnProperty('important_choice')) {
+        console.log('last rush bro !!');
+        update_data_important_choice();
+        var dilema = data.backstory.choice_comparaison['act_' + user.game[1]];
+        for (var i = 0; i < Object.keys(dilema).length; i++) {
+            if (!dilema.hasOwnProperty('checked')) {
+                console.log(dilema[i]);
+                [].forEach.call($.commands, function (elem, index) {
+                    console.log(elem, index);
+                    $.commands[index].setAttribute('data-important-choice', index + 1);
+                    $.commands[index].addEventListener('click', function () {
+                        if (!user.important_decisions) {
+                            user.important_decisions = [];
+                        }
+                        user.important_decisions.push(index + 1);
+                        dilema[i].checked = true;
+                        savegame.erase_save('user_save', user);
+                        update_data_important_choice();
 
+                    });
+
+                })
+
+                break;
+            } else {
+                console.log('checked');
+
+            }
+        }
+    }
     // remove unused timers
     if ($.pad.querySelector('.timer')) {
         $.pad.querySelector('.timer').remove();
@@ -476,4 +504,15 @@ function render_mini_game(gamename) {
         return 'netword error';
     };
     request.send();
+}
+
+function update_data_important_choice() {
+    if (user.important_decisions && user.important_decisions.length > 0) {
+        user.important_decisions.forEach(function (key, index) {
+            // console.log(user.important_decisions, index, data.backstory.choice_comparaison['act_' + user.game[1]][index]);
+            data.backstory.choice_comparaison['act_' + user.game[1]][index].checked = true;
+        });
+        //console.log("update data", data.backstory.choice_comparaison['act_' + user.game[1]]);
+
+    }
 }

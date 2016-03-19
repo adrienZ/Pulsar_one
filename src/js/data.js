@@ -7,7 +7,7 @@ var data = {
             citation: null,
             author: null,
             number: 1,
-            title: 'Le début de la fin',
+            title: 'La Réminiscence du destin',
         },
         'a1_0': {
             "question": "Vous êtes au lit les yeux fermés dans votre chambre. Au loin, on entend une télévision. Qu’entendez-vous ?",
@@ -98,6 +98,7 @@ var data = {
         'a1_3': {
             "question": "Jour 01, 09h02, année 2016. Il est temps d’aller en cours. Vous mettez vos chaussures, votre manteau et vous prenez vos clés dans le bol de clés sur la table basse à côté de la porte de sortie.",
             change_img: 'mag',
+            important_choice: true,
             "choix": [
                 {
                     "text": "Luna ? Tu veux qu’on aille en cours ensemble ?",
@@ -231,12 +232,12 @@ var data = {
 
         'a1_8': {
             "question": "Votre PC se met à émettre du bruit de manière pestilentielle, vous vous faites remarquer et le professeur se tourne vers vous…\n Hey " + user.name + token + ", on ne vous dérange pas ? Sortez du cours maintenant s’il vous plaît.\n",
+            important_choice: true,
             "choix": [
                 {
                     "text": "Vous protestez et vous êtes envoyé chez le directeur.",
                     get_success: 6,
                     "data_event": "a1_9",
-                    game_over: true,
                     stats_change: {
                         luck: -5,
                     },
@@ -342,18 +343,6 @@ var data = {
 
                     "text": "",
                     get_success: 4,
-                    "data_event": "a1_14",
-                    "naration": true
-        }
-    ]
-        },
-
-        'a1_14': {
-            "question": "",
-            "choix": [
-                {
-                    "text": "",
-
                     "data_event": "end1",
                     "naration": true
         }
@@ -2427,7 +2416,44 @@ var data = {
         },
 
                  ],
+        //       percentage : Math.ceil(Math.random*100),
+        choice_comparaison: {
+            act_1: [{
+                    fact1: {
+                        title: 'Le grand frère',
+                        explanation: 'Vous avez décidé d\' accompagner Luna',
+                        percentage: Math.ceil(Math.random() * 100),
+                    },
+                    fact2: {
+                        title: 'Gors bêta',
+                        explanation: 'Vous avez décidé de ne pas accompagner Luna',
+                        percentage: Math.ceil(Math.random() * 100),
+                    },
+            }, {
+                    fact1: {
+                        title: 'Le rebelle',
+                        explanation: 'Vous avez décidé de tenir tête au professeur',
+                        percentage: Math.ceil(Math.random() * 100),
+                    },
+                    fact2: {
+                        title: 'La sourde oreille',
+                        explanation: 'Vous avez décidé de ne pas écouter le professeur',
+                        percentage: Math.ceil(Math.random() * 100),
+                    },
+                    fact3: {
+                        title: 'Mouton de panurge',
+                        explanation: 'Vous avez décidé de ne pas contrarier le professeur',
+                        percentage: Math.ceil(Math.random() * 100),
+                    },
+
+            },
+                   ],
+            act_2: [],
+            act3: [],
+
+        }
     },
+
 };
 
 function update_data(username) {

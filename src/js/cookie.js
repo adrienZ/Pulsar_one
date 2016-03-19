@@ -63,6 +63,7 @@ if (document.cookie.indexOf("user_save") >= 0) { //detect the cookie we want
     if ($.el('.welcome-screen')) {
         $.el('.welcome-screen .menu a:nth-child(2)').classList.add('unavailable');
     }
+    user = {};
     user.stats = {
         strenght: 0,
         perception: 0,

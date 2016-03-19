@@ -20,7 +20,6 @@ if (user.game === "prologue") {
 
 } else if (user.game[0] === 'a') {
     window.addEventListener('load', function () {
-
         console.log('hey a frendly non-buggy event !');
         current_act = data['act_' + user.game[1]];
         render(current_act[user.game]);
