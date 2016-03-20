@@ -75,7 +75,7 @@ var data = {
         },
 
         'a1_2': {
-            "question": "Vous vous asseyez à côté de Luna et vous lisez le journal “35 minutes” (on voit la page 35 minutes en image). À la fin du journal, vous tombez sur un questionnaire amusant : “Timide ? Susceptible ? Dynamique ? Enthousiaste ? Nos tests vous aident à mettre en valeur tous les aspects de votre personnalité ! Complétez ce test immédiatement et vous saurez qui vous êtes réellement.",
+            "question": "Vous vous asseyez à côté de Luna et vous lisez le journal “35 minutes”. <br> À la fin du journal, vous tombez sur un questionnaire amusant : “Timide ? Susceptible ? Dynamique ? Enthousiaste ? Nos tests vous aident à mettre en valeur tous les aspects de votre personnalité ! Complétez ce test immédiatement et vous saurez qui vous êtes réellement.",
             change_img: 'mag',
             "choix": [
                 {
@@ -123,7 +123,7 @@ var data = {
         },
 
         'a1_3_0': {
-            "question": "LUNA : Oh ne t’inquiète pas. J’attend Rosaline. On a cours à 09h45. Par contre, je dois te passer mon nouveau numéro de téléphone, j’ai perdu l’ancien. Papa m’en a acheté un nouveau : 06-72-91-04-93.\nElle termine son bol de céréales et se dirige vers vous pour vous donner un petit câlin.\nLUNA : À ce soir ! \n",
+            "question": "LUNA : Oh ne t’inquiète pas. J’attend Rosaline. On a cours à 09h45. Par contre, je dois te passer mon nouveau numéro de téléphone, j’ai perdu l’ancien. Papa m’en a acheté un nouveau : 06-72-91-04-93. <br> Elle termine son bol de céréales et se dirige vers vous pour vous donner un petit câlin. <br> LUNA : À ce soir ! ",
             "choix": [
                 {
                     "text": "",
@@ -134,7 +134,7 @@ var data = {
         },
 
         'a1_3_1': {
-            "question": "LUNA : Ça marche ! À ce soir ! Par contre, je dois te passer mon nouveau numéro de téléphone, j’ai perdu l’ancien. Papa m’en a acheté un nouveau : 06-72-91-04-93.\n",
+            "question": "LUNA : Ça marche ! À ce soir ! Par contre, je dois te passer mon nouveau numéro de téléphone, j’ai perdu l’ancien. Papa m’en a acheté un nouveau : 06-72-91-04-93.",
             "choix": [
                 {
                     "text": "",
@@ -234,7 +234,7 @@ var data = {
         },
 
         'a1_8': {
-            "question": "Votre PC se met à émettre du bruit de manière pestilentielle, vous vous faites remarquer et le professeur se tourne vers vous…\n Hey " + user.name + token + ", on ne vous dérange pas ? Sortez du cours maintenant s’il vous plaît.\n",
+            "question": "Votre PC se met à émettre du bruit de manière pestilentielle, vous vous faites remarquer et le professeur se tourne vers vous… <br> Hey " + user.name + token + ", on ne vous dérange pas ? Sortez du cours maintenant s’il vous plaît.",
             important_choice: true,
             timer: 10,
             "choix": [
@@ -264,7 +264,7 @@ var data = {
         },
 
         'a1_9': {
-            "question": "Jour 01, 17h15, année 2016.\nVous êtes sur le chemin de retour. Vous décidez de marcher tout seul avec vos écouteurs devant ce beau coucher de soleil. Vous avez lancé votre playlist préférée et une petite musique chill se lance dans vos écouteurs.\nVous êtes à une intersection, quel chemin prenez-vous ?\n",
+            "question": "Jour 01, 17h15, année 2016. <br> Vous êtes sur le chemin de retour. Vous décidez de marcher tout seul avec vos écouteurs devant ce beau coucher de soleil. Vous avez lancé votre playlist préférée et une petite musique chill se lance dans vos écouteurs. <br> Vous êtes à une intersection, quel chemin prenez-vous ?",
             change_img: 'chemin',
             timer: 5,
             "choix": [
@@ -280,7 +280,7 @@ var data = {
         },
 
         'a1_10': {
-            "question": "Le chemin de la routine. Vous décidez de marcher vers le chemin de la maison. Un bon dîner vous attend chez vous...\n",
+            "question": "Le chemin de la routine. Vous décidez de marcher vers le chemin de la maison. Un bon dîner vous attend chez vous...",
             "choix": [
                 {
                     "text": "",
@@ -291,7 +291,7 @@ var data = {
         },
 
         'a1_11': {
-            "question": "Spontanément, vous vous sentez aventureux aujourd’hui. Vous décidez alors de prendre le chemin de gauche et de voir de nouvelles maisons que vous ne connaissez pas.\nVous apercevez au loin une personne devant un homme assez menaçant. Cette pauvre personne a sûrement dû ne rien demander. Qu’est-ce que vous faites ?\n",
+            "question": "Spontanément, vous vous sentez aventureux aujourd’hui. Vous décidez alors de prendre le chemin de gauche et de voir de nouvelles maisons que vous ne connaissez pas. <br> Vous apercevez au loin une personne devant un homme assez menaçant. Cette pauvre personne a sûrement dû ne rien demander. Qu’est-ce que vous faites ?",
             timer: 7,
             "choix": [
                 {
@@ -312,7 +312,7 @@ var data = {
         },
 
         'a1_11_0': {
-            "question": "HOMME : C’est à moi que tu parles comme ça ? Haha, voilà quelqu’un qui essaye d’être un héros et qui veut se la jouer. Eh bien, héros, montre moi de quoi tu es capable.\n",
+            "question": "HOMME : C’est à moi que tu parles comme ça ? Haha, voilà quelqu’un qui essaye d’être un héros et qui veut se la jouer. Eh bien, héros, montre moi de quoi tu es capable.",
             "choix": [
                 {
                     "text": "",
@@ -341,7 +341,7 @@ var data = {
         },
 
         'a1_13': {
-            "question": "En rentrant chez vous, vous êtes toujours choqué(e) par cette journée. Tant d’émotions en si peu de temps. Mais attention, ce n’est pas encore terminé. \nEn voulant déverrouiller la porte de votre maison, une étrange sensation se ressent à l’intérieur de votre corps. Comme si votre esprit divaguait et essayait de sortir de votre corps. Vous tremblez. Vous entendez des voix à l’intérieur de votre tête d’une langue étrange. Vous ne pouvez plus tenir sur vos jambes. \nEt d’un coup, une force mystérieuse stoppe le temps. Les feuilles des arbres soufflées par un vent violent se retrouvent figées. Les oiseaux en vol sont immobiles dans les airs. \nVous regardez à côté de vous, pétrifié(e) par la situation et D’UN COUP UNE SORTE DE BALLE INVISIBLE TRAVERSE VOTRE CORPS COMME UNE GROSSE ONDE DE CHOC D’UNE TELLE ENVERGURE QUE VOUS VOUS ÉVANOUISSEZ. BLACKOUT. KO.\n",
+            "question": "En rentrant chez vous, vous êtes toujours choqué(e) par cette journée. Tant d’émotions en si peu de temps. Mais attention, ce n’est pas encore terminé. <br> En voulant déverrouiller la porte de votre maison, une étrange sensation se ressent à l’intérieur de votre corps. Comme si votre esprit divaguait et essayait de sortir de votre corps. Vous tremblez. Vous entendez des voix à l’intérieur de votre tête d’une langue étrange. Vous ne pouvez plus tenir sur vos jambes. <br> Et d’un coup, une force mystérieuse stoppe le temps. Les feuilles des arbres soufflées par un vent violent se retrouvent figées. Les oiseaux en vol sont immobiles dans les airs. \nVous regardez à côté de vous, pétrifié(e) par la situation et D’UN COUP UNE SORTE DE BALLE INVISIBLE TRAVERSE VOTRE CORPS COMME UNE GROSSE ONDE DE CHOC D’UNE TELLE ENVERGURE QUE VOUS VOUS ÉVANOUISSEZ. BLACKOUT. KO.",
 
             change_img: 'bus',
             "choix": [
@@ -686,7 +686,7 @@ var data = {
         },
 
         'a2_21': {
-            "question": "ROSE : Bon maintenant, il faut que je t’explique comment tu peux traverser les dimensions. Ce que tu crées ce sont des réalités alternatives qui ont pour but d’organiser tout le chaos du temps. Dès lors où tu initialiseras un saut, tu dois utiliser des pulsars, ce sont des particules d’énergies qui synchronise tes sauts et garde tes propriétés métaphysiques. La règle de Chronos est : 3 pulsars pour ne pas rester dans le blizzard. C’est 1 pulsar d’entrée, 1 pulsar de parcours et 1 pulsar de sortie. Et attention ! Ce ne sont pas des jouets ! Tu dois jamais les laisser tomber, ce sont des éléments très toxique. Donc ne mange pas les pulsars. Je ne l’ai jamais fait, mais on m’a dit que ça ferait un effet plutôt sympathique.\n(3 pulsars = 1 retour temporel conscient. 1 pulsar pour initialiser, 1 pulsar pour modifier les événements et garder son esprit, 1 pulsar pour retourner dans notre lignée temporelle)\n\nTu dois à tout prix sortir de tes bulles temporelles ou sinon tu devras rester dans ce temps où tu n’existerais même pas. Comme un fantôme. Mais ça je t’expliquerai plus tard. Garde l’Appareil d'Eclaircissement Biologique, ce sera ton appareil pour faire les sauts temporels. Je l’ai modifié pour toi. Souviens-toi, tu fais des sauts temporels, aux yeux de Destinée tu remappes le temps. Est-ce que tu as tout compris ?\n",
+            "question": "ROSE : Bon maintenant, il faut que je t’explique comment tu peux traverser les dimensions. Ce que tu crées ce sont des réalités alternatives qui ont pour but d’organiser tout le chaos du temps. Dès lors où tu initialiseras un saut, tu dois utiliser des pulsars, ce sont des particules d’énergies qui synchronise tes sauts et garde tes propriétés métaphysiques. La règle de Chronos est : 3 pulsars pour ne pas rester dans le blizzard. C’est 1 pulsar d’entrée, 1 pulsar de parcours et 1 pulsar de sortie. Et attention ! Ce ne sont pas des jouets ! Tu dois jamais les laisser tomber, ce sont des éléments très toxique. Donc ne mange pas les pulsars. Je ne l’ai jamais fait, mais on m’a dit que ça ferait un effet plutôt sympathique. <br> (3 pulsars = 1 retour temporel conscient. 1 pulsar pour initialiser, 1 pulsar pour modifier les événements et garder son esprit, 1 pulsar pour retourner dans notre lignée temporelle) <br> Tu dois à tout prix sortir de tes bulles temporelles ou sinon tu devras rester dans ce temps où tu n’existerais même pas. Comme un fantôme. Mais ça je t’expliquerai plus tard. Garde l’Appareil d'Eclaircissement Biologique, ce sera ton appareil pour faire les sauts temporels. Je l’ai modifié pour toi. Souviens-toi, tu fais des sauts temporels, aux yeux de Destinée tu remappes le temps. Est-ce que tu as tout compris ?\n",
             "choix": [
                 {
                     "text": "Ouais ! Allons sauver le monde ! ",
@@ -703,7 +703,7 @@ var data = {
         },
 
         'a2_22': {
-            "question": "ROSE : Haha j’aime cette détermination. Ne bouge pas, je vais appeler Chronos.\n",
+            "question": "ROSE : Haha j’aime cette détermination. Ne bouge pas, je vais appeler Chronos.",
             "choix": [
                 {
                     "text": "",
@@ -714,7 +714,7 @@ var data = {
         },
 
         'a2_23': {
-            "question": "ROSE : Pour te faire court, tu as le pouvoir de voyager dans le temps. Ces 3 pulsars sont pour le voyage. Tâche de sortir du temps que tu as modifié au risque de te faire effacer. Compris ?\n",
+            "question": "ROSE : Pour te faire court, tu as le pouvoir de voyager dans le temps. Ces 3 pulsars sont pour le voyage. Tâche de sortir du temps que tu as modifié au risque de te faire effacer. Compris ?",
             "choix": [
                 {
                     "text": "Ouais, maintenant c’est plus clair !",
@@ -749,7 +749,7 @@ var data = {
         },
 
         'a2_26': {
-            "question": "Chronos arrive d’un coup. Une onde de choc d’air vous blaste avec Rose aussi.\nCHRONOS : … *cough* Bon alors tu as découvert ton pouvoir ?\n",
+            "question": "Chronos arrive d’un coup. Une onde de choc d’air vous blaste avec Rose aussi. <br> CHRONOS : … *cough* Bon alors tu as découvert ton pouvoir ?",
             timer: 8,
             "choix": [
                 {
@@ -795,7 +795,7 @@ var data = {
         },
 
         'a2_29': {
-            "question": "CHRONOS : Maintenant je dois t’expliquer la partie la plus importante du topo. Il y a cinq siècles, après la création de la régence des disciples, j’ai accueilli un disciple au potentiel similaire au tien, il s'appelait Rainmaker. Il était très doué et pouvait assimiler tout en un rien de temps. C’était un vrai prodige. Mais petit à petit, sa soif de pouvoir a pris le dessus et voilà maintenant qu’il veut siéger sur le trône des Limbes. Je ne peux pas tolérer ça. Il est en train de tout faire pour me détruire, quitte à sacrifier des personnes innocentes.\nTu es mon seul espoir, tu possèdes le même potentiel que Rainmaker et tu est le seul à posséder un pouvoir capable de détruire Rainmaker. Il faut que tu m’aides. En échange, je modifierai ton destin tragique.\n",
+            "question": "CHRONOS : Maintenant je dois t’expliquer la partie la plus importante du topo. Il y a cinq siècles, après la création de la régence des disciples, j’ai accueilli un disciple au potentiel similaire au tien, il s'appelait Rainmaker. Il était très doué et pouvait assimiler tout en un rien de temps. C’était un vrai prodige. Mais petit à petit, sa soif de pouvoir a pris le dessus et voilà maintenant qu’il veut siéger sur le trône des Limbes. Je ne peux pas tolérer ça. Il est en train de tout faire pour me détruire, quitte à sacrifier des personnes innocentes. <br> Tu es mon seul espoir, tu possèdes le même potentiel que Rainmaker et tu est le seul à posséder un pouvoir capable de détruire Rainmaker. Il faut que tu m’aides. En échange, je modifierai ton destin tragique.",
             "choix": [
                 {
                     "text": "D’accord, je vous aiderai.",
@@ -828,7 +828,7 @@ var data = {
         },
 
         'a2_32': {
-            "question": "CHRONOS : Tu as réussi l’épreuve finale. L’initiation est dorénavant terminé. Fais attention, tout de même. Dans cette aventure chaque choix que tu prendras aura des conséquences sur ton avenir. Utilise ce pulsar quantum pour réaliser ton premier remappage temporel.\nROSE : Hey" + user.name + token + "profite ! On dit toujours que le premier voyage temporel est celui que l’on se souvient le plus !\nCHONOS :  Remappage temporel Rose. Utilise les bons termes.\nROSE : Roh si tu veux.\n",
+            "question": "CHRONOS : Tu as réussi l’épreuve finale. L’initiation est dorénavant terminé. Fais attention, tout de même. Dans cette aventure chaque choix que tu prendras aura des conséquences sur ton avenir. Utilise ce pulsar quantum pour réaliser ton premier remappage temporel. <br> ROSE : Hey" + user.name + token + "profite ! On dit toujours que le premier voyage temporel est celui que l’on se souvient le plus ! <br> CHONOS :  Remappage temporel Rose. Utilise les bons termes.\nROSE : Roh si tu veux.",
             change_img: 'galaxy',
             important_choice: true,
             timer: 20,
@@ -976,7 +976,7 @@ var data = {
         },
 
         'a3_1_2': {
-            "question": "CHRONOS : Tu devras peut être affronter Rainmaker alors sois prudent. Il est encore jeune, mais il est déjà démoniaque, il a toujours été un disciple doué tu as peu de chance de le vaincre… Ce qui risque de le retenir indéfiniment dans les Limbes.\n",
+            "question": "CHRONOS : Tu devras peut être affronter Rainmaker alors sois prudent. Il est encore jeune, mais il est déjà démoniaque, il a toujours été un disciple doué tu as peu de chance de le vaincre… Ce qui risque de le retenir indéfiniment dans les Limbes.",
             "choix": [
                 {
                     "text": "Wooooow ! C’est bien beau tout ça, mais comment je reviens dans le présent ? ",
@@ -986,7 +986,7 @@ var data = {
         },
 
         'a3_1_3': {
-            "question": "CHRONOS : Ne t’en fais pas, tu reviendras de la même manière que tu y arriveras : grâce a ton flux quantique, veille à économiser tes pulsars ! Et à ne pas rester coincer dans les Limbes…\n",
+            "question": "CHRONOS : Ne t’en fais pas, tu reviendras de la même manière que tu y arriveras : grâce a ton flux quantique, veille à économiser tes pulsars ! Et à ne pas rester coincer dans les Limbes…",
             "choix": [
                 {
                     "text": "Rester dans les Limbes ? C’est une blague ?",
@@ -996,7 +996,7 @@ var data = {
         },
 
         'a3_1_4': {
-            "question": "CHRONOS : Eh bien… Si par malheur tu es vaincu pendant le voyage temporel, tu perdras tes pulsars et tu resteras coincé dans l’époque à laquelle tu as été vaincu, fais donc attention.\n",
+            "question": "CHRONOS : Eh bien… Si par malheur tu es vaincu pendant le voyage temporel, tu perdras tes pulsars et tu resteras coincé dans l’époque à laquelle tu as été vaincu, fais donc attention.",
             "choix": [
                 {
                     "text": "",
@@ -1007,7 +1007,7 @@ var data = {
         },
 
         'a3_1_5': {
-            "question": "Le joueur arrive à Delphes, la cité est en effervescence. Les passants ne parlent que de l’évènement qui va avoir lieu aujourd’hui (nous sommes le 7 du mois de Bysios, jour de l’anniversaire de la naissance d'Apollon) : la Pytie va consulter l’oracle et prédire le dénouement de la bataille de Salamine contre les Perses, d’autres crient à l’arnaque et les esprits s’échauffent. Certains citoyens décident de monter au temple s’expliquer avec la protégée d’Apollon.\nLe joueur se rend alors compte qu’il est un esclave car un homme en toge tire sur son collier...\n CITOYEN : Dépêche toi Menesthes ! Allons régler son compte à cette vierge !",
+            "question": "Vous arrivez à Delphes, la cité est en effervescence. Les passants ne parlent que de l’évènement qui va avoir lieu aujourd’hui (nous sommes le 7 du mois de Bysios, jour de l’anniversaire de la naissance d'Apollon) : la Pytie va consulter l’oracle et prédire le dénouement de la bataille de Salamine contre les Perses, d’autres crient à l’arnaque et les esprits s’échauffent. Certains citoyens décident de monter au temple s’expliquer avec la protégée d’Apollon. <br> Vous vous rendez alors compte que vous êtes un esclave car un homme en toge tire sur votre collier... <br> CITOYEN : Dépêche toi Menesthes ! Allons régler son compte à cette vierge !",
             "choix": [
                 {
                     "text": "Nom d’un pégase je suis un esclave !",
@@ -1027,7 +1027,7 @@ var data = {
         },
 
         'a3_1_7': {
-            "question": "Peu de temps après, vous vous retrouvez dans une petite ruelle seul avec votre maître, il doit reprendre son souffle, que faites vous ? \n",
+            "question": "Peu de temps après, vous vous retrouvez dans une petite ruelle seul avec votre maître, il doit reprendre son souffle, que faites vous ?",
             timer: 10,
 
             "choix": [
@@ -1051,7 +1051,7 @@ var data = {
         },
 
         'a3_1_8': {
-            "question": "C’est ici que tu meurs Citoyen. (Vos chaînes se brisent durant l'affrontement). Oh mon dieu qu’ai-je fais… Bon pas le temps de réfléchir, je dois retrouver la Pytie avant Rainmaker. (Vous suivez la foule en colère).",
+            "question": "C’est ici que tu meurs Citoyen. (Vos chaînes se brisent durant l'affrontement). <br> Oh mon dieu qu’ai-je fais… Bon pas le temps de réfléchir, je dois retrouver la Pytie avant Rainmaker. (Vous suivez la foule en colère).",
             "choix": [
                 {
                     "text": "",
@@ -1115,7 +1115,7 @@ var data = {
         },
 
         'a3_1_10': {
-            "question": "CITOYEN : Voyons Menesthes, ton seul droit est de me suivre… Hahaha ! Allons dépêchons !\n",
+            "question": "CITOYEN : Voyons Menesthes, ton seul droit est de me suivre… Hahaha ! Allons dépêchons !",
             timer: 5,
 
             "choix": [
@@ -1141,7 +1141,7 @@ var data = {
         },
 
         'a3_1_12': {
-            "question": "Vous arrivez finalement au temple de Delphes, le temple est déjà pris d’assaut par la foule. Vous tentez de la traverser. \n Vous arrivez enfin dans le temple, au centre se trouve Pytie, des vapeurs s'échappent d'une faille qui s'ouvrait dans le sol, elle trône assise sur un haut trépied placé au-dessus de la fissure, elle respire les vapeurs et prophétise.\n\nUn homme armé sort de la foule, il se présente sous le nom de Rainmaker et annonce vouloir tuer la Pythie et cesser cette duperie.\n",
+            "question": "Vous arrivez finalement au temple de Delphes, le temple est déjà pris d’assaut par la foule. Vous tentez de la traverser. <br> Vous arrivez enfin dans le temple, au centre se trouve Pytie, des vapeurs s'échappent d'une faille qui s'ouvrait dans le sol, elle trône assise sur un haut trépied placé au-dessus de la fissure, elle respire les vapeurs et prophétise. <br> Un homme armé sort de la foule, il se présente sous le nom de Rainmaker et annonce vouloir tuer la Pythie et cesser cette duperie.",
             change_img: 'temple',
             timer: 5,
 
@@ -1198,7 +1198,7 @@ var data = {
         },
 
         'a3_1_12_1_0': {
-            "question": "Vous ne faites rien, la Pythie meurt... Vous avez échouez à votre mission. ",
+            "question": "Vous ne faites rien, la Pythie meurt... Vous avez échoué à votre mission. ",
             "choix": [
                 {
                     stats_change: {
@@ -1365,10 +1365,6 @@ var data = {
         },
 
 
-
-
-
-
         'a3_2': {
             "question": "Bienvenue en Egypte",
             change_img: 'egypt',
@@ -1454,7 +1450,7 @@ var data = {
         },
 
         'a3_2_4': {
-            "question": "Vous marchez avec lui dans une ville assez chaotique. Vous entendez des bruits qui parlent de révolution, de massacre. Rien ne vous dit que tout va aller bien. PARAGYNOM vous amène chez lui. C'est une tanière relativement modeste. Vous prenez un petit tabouret et vous vous asseyez. Il fait très très chaud. Vous suez à grosses gouttes.",
+            "question": "Vous marchez avec lui dans une ville assez chaotique. Vous entendez des bruits qui parlent de révolution, de massacre. Rien ne vous dit que tout va aller bien. <br> PARAGYNOM vous amène chez lui. C'est une tanière relativement modeste. Vous prenez un petit tabouret et vous vous asseyez. Il fait très très chaud. Vous suez à grosses gouttes.",
             "choix": [
                 {
                     "text": "",
@@ -1482,7 +1478,7 @@ var data = {
         },
 
         'a3_2_6': {
-            "question": "PARAGYNOM : Tenez. Ce vieil homme vous sert un verre avec une eau très trouble, elle est jaunâtre. Vous ne pouvez pas refuser ce geste. Vous buvez l'eau dégueulasse. Elle a un goût sableuse. Vous avalez en même temps du sable et une possibilité de maladie par la même occasion.",
+            "question": "PARAGYNOM : Tenez. Ce vieil homme vous sert un verre avec une eau très trouble, elle est jaunâtre. <br> Vous ne pouvez pas refuser ce geste. <br> Vous buvez l'eau dégueulasse. Elle a un goût sableuse. Vous avalez en même temps du sable et une possibilité de maladie par la même occasion.",
             "choix": [
                 {
                     "text": "",
@@ -1634,7 +1630,7 @@ var data = {
         },
 
         'a3_2_9_10': {
-            "question": "\nJour 04, année -3000 avant J-C, Egypte ancienne.\nIl est 07h00, ou presque. Le discours de Rhea Magnus est tenu dans une heure. Vous vous habillez comme un citoyen égyptien et partez avec PARAGYNOM à la place de la ville.\nTout le monde est là, il y a une foule incroyable. Devant se trouve une place plus haute, ce sera là que Rhea Magnus va donner son discours. Tout le monde chahute sur ce qui va se passer. Quand tout à coup.",
+            "question": "Jour 04, année -3000 avant J-C, Egypte ancienne. <br> Il est 07h00, ou presque. Le discours de Rhea Magnus est tenu dans une heure. Vous vous habillez comme un citoyen égyptien et partez avec PARAGYNOM à la place de la ville. <br> Tout le monde est là, il y a une foule incroyable. Devant se trouve une place plus haute, ce sera là que Rhea Magnus va donner son discours. Tout le monde chahute sur ce qui va se passer. Quand tout à coup.",
             "choix": [
                 {
                     "text": "",
@@ -1697,7 +1693,7 @@ var data = {
     ]
         },
         'a3_2_9_16': {
-            "question": "Le monde craint de ce moment. Un chuchotement se fait entendre.\nRHEA MAGNUS : SILENCE.\nTout le monde se tait. Toujours à cause de cette voix extrêmement puissante.\nRHEA MAGNUS : Bon comme vous êtes assez dissipé, il est temps de vous montrer un peu mes soldats. Rhea Magnus se retire et laisse son armée divine rentrer dans la scène.\nRHEA MAGNUS : Comme vous pouvez le voir, voilà mon armée. Pas mal non ? Il est temps de vous montrer de quel bois je me CHAUFFE. Si quelqu'un s'oppose à cette action qu'il vienne ou se sacrifie à jamais.",
+            "question": "Le monde craint de ce moment. Un chuchotement se fait entendre. <br> RHEA MAGNUS : SILENCE. <br> Tout le monde se tait. Toujours à cause de cette voix extrêmement puissante. <br> RHEA MAGNUS : Bon comme vous êtes assez dissipé, il est temps de vous montrer un peu mes soldats. Rhea Magnus se retire et laisse son armée divine rentrer dans la scène.\nRHEA MAGNUS : Comme vous pouvez le voir, voilà mon armée. Pas mal non ? Il est temps de vous montrer de quel bois je me CHAUFFE. Si quelqu'un s'oppose à cette action qu'il vienne ou se sacrifie à jamais.",
             "choix": [
                 {
                     "text": "",
@@ -1825,7 +1821,7 @@ var data = {
     ]
         },
         'a3_2_17_2': {
-            "question": "Hahaha. C'est la première fois que je vois ça. Mais tu ne me connais pas. Tu m'as suffisamment diverti. Allez salut. ",
+            "question": "RHEA MAGNUS : Hahaha. C'est la première fois que je vois ça. Mais tu ne me connais pas. Tu m'as suffisamment diverti. Allez salut. ",
             "choix": [
                 {
                     "text": "",
@@ -1835,7 +1831,7 @@ var data = {
     ]
         },
         'a3_2_18': {
-            "question": "Choqué et déçu par la situation vous restez bouche bée. Comme si la fin de la bataille vous avez frustré. Un gros silence religieux se fait dans la cour. Quand tout à coup.\nVENTURANA : ...Il nous a sauvé.\nC'est une jeune femme blonde qui a percé le silence. VENTURANA : ...Ce héros...Merci... Pharaon...Pharaon...\nTout le monde commence à chuchoter \"Pharaon\" de plus en plus fort comme un chant du peuple. Vous sentez une énergie très forte qui vous est destiné. Vous tiltez maintenant que le premier pharaon qui a percé dans l'Histoire c’est... vous.\nVous avez rectifié l'histoire, mais il est temps de retrouver ce Rainmaker. Vous sortez de la scène et consommez le restant des pulsars que vous avez pour continuer à sauver le temps.\n        Incroyable, vous cassez la mâchoire d'un sbire ! (Restant : 65%)\n  Wow, vous évitez deux sbires, vous continuez le chemin ! (Restant : 35%)\nQuel talent ! Vous donnez un uppercut au plus fort de l'armée ! (Restant : 10%)\nC'est toi Rain..Maker.\n  Vous êtes devant Rhea Magnus, un peu choqué par la situation. Vous êtes essouflé par la bataille. Vous regarder Rhea Magnus d'un regard très haineux.\nHahaha, c'est la première fois que je vois ça. Mais tu ne me connais pas. Tu m'as suffisamment diverti. Allez salut.\n   C'est fini pour toi Rhea Magnus.\n  Rhea Magnus sort de la scène et d'un coup... Disparaît.\nIl est temps de partir.",
+            "question": "Choqué et déçu par la situation vous restez bouche bée. Comme si la fin de la bataille vous avez frustré. Un gros silence religieux se fait dans la cour. Quand tout à coup. <br> ENTURANA : ...Il nous a sauvé. <br> C'est une jeune femme blonde qui a percé le silence. <br> VENTURANA : ...Ce héros...Merci... Pharaon...Pharaon... <br> Tout le monde commence à chuchoter \"Pharaon\" de plus en plus fort comme un chant du peuple. Vous sentez une énergie très forte qui vous est destiné. Vous tiltez maintenant que le premier pharaon qui a percé dans l'Histoire c’est... vous. <br> Vous avez rectifié l'histoire, mais il est temps de retrouver ce Rainmaker. Vous sortez de la scène et consommez le restant des pulsars que vous avez pour continuer à sauver le temps.",
             "choix": [
                 {
                     "text": "",
@@ -1873,7 +1869,7 @@ var data = {
     ]
         },
         'a3_3_1_1': {
-            "question": "Vous vous dirigez vers elles et vous les entendez parler :\n COURTISANE 1 : “Vous avez entendu parler de ce qu’il risque de se passer aujourd’hui ?\nCOURTISANES : “Non, raconte.”\nCOURTISANE 1 : “Eh bien à en croire les rumeurs qui circule. Il parait que des dignitaires vont se réunir sans l’accord du Roi pour décider de le renverser et signer je ne sais quoi. Mais le pire dans tout ça, c’est qu’un dignitaire serait en danger de mort.”\nCOURTISANE 2 : “Comment as-tu eu vent de ces rumeurs ?”\nCOURTISANE 1 : “C’est ce qu’on entend à la maison des plaisirs.”",
+            "question": "Vous vous dirigez vers elles et vous les entendez parler : <br> COURTISANE 1 : “Vous avez entendu parler de ce qu’il risque de se passer aujourd’hui ? <br> COURTISANES : “Non, raconte.” <br> COURTISANE 1 : “Eh bien à en croire les rumeurs qui circule. Il parait que des dignitaires vont se réunir sans l’accord du Roi pour décider de le renverser et signer je ne sais quoi. Mais le pire dans tout ça, c’est qu’un dignitaire serait en danger de mort.” <br> COURTISANE 2 : “Comment as-tu eu vent de ces rumeurs ?” <br> COURTISANE 1 : “C’est ce qu’on entend à la maison des plaisirs.”",
             "choix": [
                 {
                     "text": "",
@@ -1883,7 +1879,7 @@ var data = {
     ]
         },
         'a_3_3_1_2': {
-            "question": "Vous vous dirigez vers le crieur\n CRIEUR : “Oyez, oyez ! Les dernières nouvelles ne sont pas bonnes ! Des rumeurs circulent sur un supposé complot pour renverser notre Roi. Il est donc recommandé de ne pas s’aventurer trop loin de vos chaumières.”",
+            "question": "Vous vous dirigez vers le crieur <br> CRIEUR : “Oyez, oyez ! Les dernières nouvelles ne sont pas bonnes ! Des rumeurs circulent sur un supposé complot pour renverser notre Roi. Il est donc recommandé de ne pas s’aventurer trop loin de vos chaumières.”",
             "choix": [
                 {
                     "text": "",
@@ -1947,7 +1943,7 @@ var data = {
     ]
         },
         'a3_3_3_1': {
-            "question": "- Vous : “Excusez-moi, pouvez-vous m’indiquer où sommes-nous ?”\n- Passant : “Eh bien, mon brave vous êtes à Vincennes. Auriez-vous bu quelques sortes de boissons alcoolisées ? C’est écrit devant vous.”",
+            "question": "- Vous : “Excusez-moi, pouvez-vous m’indiquer où sommes-nous ?” <br> - Passant : “Eh bien, mon brave vous êtes à Vincennes. Auriez-vous bu quelques sortes de boissons alcoolisées ? C’est écrit devant vous.”",
             "choix": [
                 {
                     "text": "",
@@ -1983,7 +1979,7 @@ var data = {
     ]
         },
         'a3_3_4_1': {
-            "question": "CALÈCHE 1 : - “Je n’ai pas de temps à perdre avec vous pleutre...”\nCALÈCHE 2 : - “Vous avez des Louis d’or ?”\nOui : - “Oui. Je vous donne 5 Louis d’or une fois à destination. (vous mentez)",
+            "question": "CALÈCHE 1 : - “Je n’ai pas de temps à perdre avec vous pleutre...” <br> CALÈCHE 2 : - “Vous avez des Louis d’or ?” <br> Oui : - “Oui. Je vous donne 5 Louis d’or une fois à destination.",
             "choix": [
                 {
                     "text": "",
@@ -2003,7 +1999,7 @@ var data = {
     ]
         },
         'a3_3_4_1_1': {
-            "question": "\n> CALÈCHE 3 : - “On dirait que c’est votre jour de chance, c’est justement ma destination. Montez ! Je vous y amène.”\n- “Merveilleux !”",
+            "question": " <br> > CALÈCHE 3 : - “On dirait que c’est votre jour de chance, c’est justement ma destination. Montez ! Je vous y amène.” <br> - “Merveilleux !”",
             "choix": [
                 {
                     "text": "",
@@ -2026,7 +2022,7 @@ var data = {
     ]
         },
         'a3_3_5': {
-            "question": "Le château de Versailles est devant vous. Le soleil commence à décliner sur l’horizon. Vous êtes dans le château, vous apercevez de nombreuses personnes qui convergent en un lieu commun. Vous décidez de les suivre.\nVous entrez dans la salle où le jeu de paume est joué. De nombreuses personnes sont présentes bien plus que vous ne l’avez imaginé.\nC’est une belle cour que vous voyez. Tout est en or comme vous avez vu dans les livres d’Histoire ou dans les documentaires. Au loin, vous apercevez un petit groupe d’une dizaine de personnes qui se distingue des autres. On dirait des nobles. Ils ne se mélangent pas et ne participent pas au débat houleux qui a lieu. Mais vous remarquez que le groupe se sépare. Quelques personnes se dirigent vers la sortie.",
+            "question": "Le château de Versailles est devant vous. Le soleil commence à décliner sur l’horizon. Vous êtes dans le château, vous apercevez de nombreuses personnes qui convergent en un lieu commun. Vous décidez de les suivre. <br> Vous entrez dans la salle où le jeu de paume est joué. De nombreuses personnes sont présentes bien plus que vous ne l’avez imaginé. <br> C’est une belle cour que vous voyez. Tout est en or comme vous avez vu dans les livres d’Histoire ou dans les documentaires. Au loin, vous apercevez un petit groupe d’une dizaine de personnes qui se distingue des autres. On dirait des nobles. Ils ne se mélangent pas et ne participent pas au débat houleux qui a lieu. Mais vous remarquez que le groupe se sépare. Quelques personnes se dirigent vers la sortie.",
             change_img: 'versailles',
             "choix": [
                 {
@@ -2095,7 +2091,7 @@ var data = {
         },
 
         'a3_3_6_2': {
-            "question": "- Homme au fauteuil (Rainmaker) : “La personne que vous devrez tuer est le marquis de Brézé. Sans lui la signature du serment du Jeu de Paume ne se fera pas. Et ainsi nous pourrons prendre le pouvoir au Roi Louis XVI.”\n- Comploteur 1 : “Vous nous assurez de notre place dans votre futur règne ?”\n- Homme au fauteuil (Rainmaker) : “Bien sûr mes chers amis ! Bien sûr ! Tout travail mérite salaire. Vous serez en plus généreusement récompensé. Argents, courtisanes et alcools couleront à flots pour vous. Puis sans vous je n’en serai jamais arrivé là. Vous avez ma parole.”\n- Comploteur 2 : “Très bien alors, nous allons tuer ce Marquis.”\n- Homme au fauteuil (Rainmaker) : “Assurez-vous qu’il soit bel et bien mort ! C’est important. Sans cela vous pouvez dire adieu à vos futurs privilèges”\n- Comploteur 3 : “Nous avons engagé un des meilleurs assassins d’Europe pour cette occasion. Nous allons ordonner à l’assassin de tuer le marquis d’un des balcons vide de la salle comme vous l’avez demandé.”\n- Homme au fauteuil (Rainmaker) : “Très bien. Me voilà un peu plus réconforté. Vous pouvez partir, votre absence ne doit pas être remarquée plus longtemps.”\nLes comploteurs quittent la pièce.",
+            "question": "- Homme au fauteuil (Rainmaker) : “La personne que vous devrez tuer est le marquis de Brézé. Sans lui la signature du serment du Jeu de Paume ne se fera pas. Et ainsi nous pourrons prendre le pouvoir au Roi Louis XVI.” <br> - Comploteur 1 : “Vous nous assurez de notre place dans votre futur règne ?” <br>- Homme au fauteuil (Rainmaker) : “Bien sûr mes chers amis ! Bien sûr ! Tout travail mérite salaire. Vous serez en plus généreusement récompensé. Argents, courtisanes et alcools couleront à flots pour vous. Puis sans vous je n’en serai jamais arrivé là. Vous avez ma parole.” <br> - Comploteur 2 : “Très bien alors, nous allons tuer ce Marquis.” <br> - Homme au fauteuil (Rainmaker) : “Assurez-vous qu’il soit bel et bien mort ! C’est important. Sans cela vous pouvez dire adieu à vos futurs privilèges” <br> - Comploteur 3 : “Nous avons engagé un des meilleurs assassins d’Europe pour cette occasion. Nous allons ordonner à l’assassin de tuer le marquis d’un des balcons vide de la salle comme vous l’avez demandé.” <br> - Homme au fauteuil (Rainmaker) : “Très bien. Me voilà un peu plus réconforté. Vous pouvez partir, votre absence ne doit pas être remarquée plus longtemps.” <br> Les comploteurs quittent la pièce.",
             change_img: 'réunion',
             timer: 10,
             "choix": [
@@ -2152,7 +2148,7 @@ var data = {
                     "data_event": "a3_3_6_3"
         },
                 {
-                    "text": " Vous prenez le mousquet déjà armé et tirez sur l’assassin. Vous le touchez il tombe raide mort. Les gens sont affolés par le coup de feu. Vous leur criez : “Soyez tranquille ! Cet homme a tenté de porter atteinte à la vie du marquis.",
+                    "text": " Vous prenez le mousquet déjà armé et tirez sur l’assassin. Vous le touchez il tombe raide mort. Les gens sont affolés par le coup de feu. <br> Vous leur criez : “Soyez tranquille ! Cet homme a tenté de porter atteinte à la vie du marquis.",
                     get_success: 6,
                     game_over: true,
                     "data_event": "a3_3_6_3"
@@ -2188,7 +2184,7 @@ var data = {
                     "data_event": "a3_3_7"
         },
                 {
-                    "text": "Vous restez impassible. Le coup de feu retentit. L’assassin ayant terminé son travail se retourne et vous aperçoit. Il vous bouscule et s’enfuit à travers le couloir. Vous vous approchez de la balustrade. Vous voyez un homme étendu sur le sol, sans vie. Tout le monde regarde dans votre direction. - “Il a tué le marquis ! Attrapez-le !” Vous ne vous faites pas attendre pour emboîter le pas de l’assassin. Pour vous cacher dans les pièces dont vous avez écouté la conversation.",
+                    "text": "Vous restez impassible. Le coup de feu retentit. L’assassin ayant terminé son travail se retourne et vous aperçoit. Il vous bouscule et s’enfuit à travers le couloir. Vous vous approchez de la balustrade. Vous voyez un homme étendu sur le sol, sans vie. Tout le monde regarde dans votre direction. <br> - “Il a tué le marquis ! Attrapez-le !” Vous ne vous faites pas attendre pour emboîter le pas de l’assassin. Pour vous cacher dans les pièces dont vous avez écouté la conversation.",
                     stats_change: {
                         luck: -2,
                         strenght: -1,
@@ -2199,7 +2195,7 @@ var data = {
     ]
         },
         'a3_3_7': {
-            "question": "Vous avez quand même sauvez le marquis d’une mort certaine.\nVous avez participer un événement majeur de la France.\nIl est temps de partir pour vous.",
+            "question": "Vous avez quand même sauvez le marquis d’une mort certaine. <br> Vous avez participer un événement majeur de la France. <br> Il est temps de partir pour vous.",
             "choix": [
                 {
                     "text": "",
@@ -2275,7 +2271,7 @@ var data = {
     ]
         },
         'a3_4_4': {
-            "question": "Vous êtes à Time Square, vous rencontrez un prophète qui vous raconte une histoire... Il l'a vu de nombreuses fois dans ses visions. \nPROPHÈTE : La personne que vous voulez se trouve ici, c'est une personne hors du temps. Vous avez obtenu des indices lors de vos voyages, vous devez vous en souvenir pour retrouver celui que vous cherchez.",
+            "question": "Vous êtes à Time Square, vous rencontrez un prophète qui vous raconte une histoire... Il l'a vu de nombreuses fois dans ses visions. <br> PROPHÈTE : La personne que vous voulez se trouve ici, c'est une personne hors du temps. Vous avez obtenu des indices lors de vos voyages, vous devez vous en souvenir pour retrouver celui que vous cherchez.",
             "choix": [
                 {
                     "text": "",
@@ -2329,7 +2325,7 @@ var data = {
     ]
         },
         'a3_4_8_1': {
-            "question": "Vous tentez de le tuez. Mais vous êtes encore trop faible. Il vous contre.\nRAINMAKER : Tu ne connais pas mes pouvoirs, espère de sot. ",
+            "question": "Vous tentez de le tuez. Mais vous êtes encore trop faible. Il vous contre. <br> RAINMAKER : Tu ne connais pas mes pouvoirs, espère de sot. ",
             "choix": [
                 {
                     "text": "",
@@ -2339,7 +2335,7 @@ var data = {
     ]
         },
         'a3_4_8_1_1': {
-            "question": "Rainmaker a shapeshifté sur une autre personne qui regarde la scène. Vous venez de vous rendre compte qu'il allait tuer une jeune femme apeurée par la situation et qu'elle n'avait rien demandé.\nRAINMAKER : Tu n'as pas vraiment de coeur toi. Tu as voulu mettre fin à ma vie. Tu ne connais pas le prix d'une vie. On va voir ce qui se passe quand on s'attaque aux gens qui te sont chères.",
+            "question": "Rainmaker a shapeshifté sur une autre personne qui regarde la scène. Vous venez de vous rendre compte qu'il allait tuer une jeune femme apeurée par la situation et qu'elle n'avait rien demandé. <br> RAINMAKER : Tu n'as pas vraiment de coeur toi. Tu as voulu mettre fin à ma vie. Tu ne connais pas le prix d'une vie. On va voir ce qui se passe quand on s'attaque aux gens qui te sont chères.",
             "choix": [
                 {
                     "text": "",
