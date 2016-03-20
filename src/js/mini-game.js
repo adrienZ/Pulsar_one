@@ -349,19 +349,15 @@ mini_games.hacking = function () {
         this.setScore = function () {
 
                 var node = this.game.childNodes[3];
+                node.innerHTML = node.innerHTML.replace("[SCORE]", "<span id='hackingScore'>6</span>").replace("[TRY]", "<span id='hackingTry'>0 good letters</span>");
+
                 console.log(node);
                 if ($.el('#hackingZone .alert a.button')) {
                     $.el('#hackingZone .alert a.button').addEventListener('click', function () {
                         this.parentElement.remove();
                     });
                 }
-                node.innerHTML = node.innerHTML.replace("[SCORE]", "<span id='hackingScore'>6</span>");
-                node.innerHTML = node.innerHTML.replace("[TRY]", "<span id='hackingTry'></span>");
-                //debug scope bug
-                window.setTimeout(function () {
-                    node.innerHTML = node.innerHTML.replace("[TRY]", "<span id='hackingTry'></span>");
-
-                }, 1000)
+                node.innerHTML = node.innerHTML.replace("[SCORE]", "<span id='hackingScore'>6</span>").replace("[TRY]", "<span id='hackingTry'>0 good letters</span>");
 
             }
             /* Create fake line with random caract and place the selected word into it at a random place */
@@ -449,8 +445,7 @@ mini_games.hacking = function () {
 
     hacking.password = "KILL"; //Set the good password
 
-    hacking.alert("Bonjour " + user.name, "Les règles du jeu sont simples : vous devez trouver le mot de passe en 6 tentatives maximales. La console vous avertira de la similiarité du mot de passe au niveau de l'en-tête (good letters). Attention, au bout de 6 tentatives échouées, votre processeur pourrait bien rendre l'âme. À vos risques et périls ! Bonne chance !");
-
+    hacking.alert("Bonjour " + user.name, "Selectionnez aun des mot de passe avec votre souris. <br> Les règles du jeu sont simples : vous devez trouver le mot de passe en 6 tentatives maximales. La console vous avertira de la similiarité du mot de passe au niveau de l'en-tête (good letters). Attention, au bout de 6 tentatives échouées, votre processeur pourrait bien rendre l'âme. À vos risques et périls ! Bonne chance !");
     hacking.write(["Welcome to ROBCO Industries (TM) Teralink",
 			   "Password Required",
 			   "-------------------------------------",
@@ -483,6 +478,7 @@ mini_games.hacking = function () {
         function () {
             hacking.setWord();
             hacking.setScore();
+
         }); // build dynamic screen
 
 };

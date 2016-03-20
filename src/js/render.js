@@ -229,7 +229,6 @@ function render(event) {
                     });
                 });
             }
-            console.log(current_act[this.getAttribute('data-event')], this.getAttribute('data-event'));
             render(current_act[this.getAttribute('data-event')]);
             // SKIP HERE / be careful with this global
             skip = true;
