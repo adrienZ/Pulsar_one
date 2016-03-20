@@ -212,6 +212,7 @@ body {
   background-color: black;
   background-size: cover;
   width: 100vw;
+  overflow: hidden;
 }
 
 .intro {
@@ -616,7 +617,7 @@ body {
 }
 
 .main .questions ul li:not(.arrow_naration):hover {
-  text-shadow: 0px 5px 10px white, 0px -5px 10px white;
+  text-shadow: 0px 5px 10px rgba(255, 255, 255, 0.5), 0px -5px 10px rgba(255, 255, 255, 0.5);
 }
 
 .main .questions ul li:not(.arrow_naration) a {

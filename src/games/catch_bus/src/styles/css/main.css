@@ -15,6 +15,12 @@
     font-weight: 500;
 }
 
+.catch_bus header h2 span {
+    color: green;
+    font-size: 32px;
+    vertical-align: baseline;
+}
+
 .catch_bus header h2 {
     padding-top: 1rem;
     font-size: 15px;

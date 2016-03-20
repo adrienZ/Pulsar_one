@@ -1,0 +1,19 @@
+{
+  "name": "pulsar_one",
+  "version": "1.0.0",
+  "description": "video game",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AudeFi/Pulsar_one.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AudeFi/Pulsar_one/issues"
+  },
+  "homepage": "https://github.com/AudeFi/Pulsar_one#readme"
+}

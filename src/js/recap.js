@@ -12,7 +12,9 @@
  result.choices = $.el('.sectionEvaluation');
  if (!user.important_decisions || user.important_decisions.length === 0) {
      console.log('error');
-     window.location = 'template.html'
+     if (current_act === 3) {} else {
+         window.location = 'template.html';
+     }
  } else {
      user.important_decisions.forEach(function (decision, index) {
          console.log(decision, index);

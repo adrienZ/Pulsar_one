@@ -1514,14 +1514,14 @@ var data = {
                     stats_change: {
                         strenght: 1,
                     },
-                    "data_event": "a3_9_3"
+                    "data_event": "a3_2_9_3"
         },
                 {
                     "text": "À quoi il ressemble ?",
                     stats_change: {
                         perception: 1,
                     },
-                    "data_event": "a3_9_4"
+                    "data_event": "a3_2_9_4"
         },
                 {
                     "text": "Ce n'est pas possible, on doit réagir. Votre peuple ne doit pas se soumettre.",
@@ -1529,7 +1529,7 @@ var data = {
                         loyalty: 1,
                         intelligence: 1,
                     },
-                    "data_event": "a3_9_5"
+                    "data_event": "a3_2_9_5"
         }
     ]
         },
@@ -1588,7 +1588,7 @@ var data = {
             "choix": [
                 {
                     "text": "",
-                    "data_event": "a3_2_9_8",
+                    "data_event": "a3_2_9_9",
                     "naration": true
         }
     ]
