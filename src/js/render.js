@@ -477,13 +477,13 @@ function pulsar_game_over(reboot_event) {
         if (user.pulsars >= 2) {
             console.log('replay the game');
             user.pulsars -= 2;
-            window.location = 'template.html'
+            savegame.erase_save('user_save', user);
+            window.location = 'template.html';
         } else {
             console.log('you dont have enought pulsarsn, game over');
             $.el('.game-over .pulsars-left').style.color = 'red';
             window.setTimeout(function () {
-                user.game = reboot_event;
-                savegame.erase_save('user_save', user);
+                savegame.delete_save('user_save');
                 window.location = '/';
             }, 1000)
         }
