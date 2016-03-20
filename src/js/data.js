@@ -2060,18 +2060,40 @@ var data = {
             "question": "Vous devez choisir entre deux pièces : ",
             "choix": [
                 {
-                    "text": "Celle de gauche : vous arrivez dans une pièce où par chance une porte donnant sur la pièce à côté vous permet d'écouter la conversation sans être découvert.",
+                    "text": "Celle de gauche",
                     stats_change: {
                         luck: 2,
                     },
-                    "data_event": "a3_3_6_2"
+                    "data_event": "a3_3_6_1_1"
         },
                 {
-                    "text": "Celle de droite : vous entrez dans la pièce où vous apercevez un balcon mitoyen avec la pièce où sont présent les comploteurs. Ce balcon vous permet d’entendre distinctement et discrètement la discussion. De plus il vous donne une vue partielle de la pièce. C’est alors que vous apercevez les comploteurs ainsi qu’une personne assise dans un fauteuil. Les mains croisées, proche de son visage, parlant d’une voix forte et distincte. Immédiatement, une sensation bizarre vous envahie. Et une sensation de déjà vu. C’est comme si vous le connaissiez sans le connaître.",
-                    "data_event": "a3_3_6_2"
+                    "text": "Celle de droite",
+                    "data_event": "a3_3_6_1_2"
         }
     ]
         },
+
+        'a3_3_6_1_1': {
+            "question": "Vous arrivez dans une pièce où par chance une porte donnant sur la pièce à côté vous permet d'écouter la conversation sans être découvert.",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a3_3_6_2",
+                    "naration": true
+        }
+    ]
+        },
+        'a3_3_6_1_2': {
+            "question": "Vous entrez dans la pièce où vous apercevez un balcon mitoyen avec la pièce où sont présent les comploteurs. Ce balcon vous permet d’entendre distinctement et discrètement la discussion. De plus il vous donne une vue partielle de la pièce. C’est alors que vous apercevez les comploteurs ainsi qu’une personne assise dans un fauteuil. Les mains croisées, proche de son visage, parlant d’une voix forte et distincte. Immédiatement, une sensation bizarre vous envahie. Et une sensation de déjà vu. C’est comme si vous le connaissiez sans le connaître.",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a3_3_6_2",
+                    "naration": true
+        }
+    ]
+        },
+
         'a3_3_6_2': {
             "question": "- Homme au fauteuil (Rainmaker) : “La personne que vous devrez tuer est le marquis de Brézé. Sans lui la signature du serment du Jeu de Paume ne se fera pas. Et ainsi nous pourrons prendre le pouvoir au Roi Louis XVI.”\n- Comploteur 1 : “Vous nous assurez de notre place dans votre futur règne ?”\n- Homme au fauteuil (Rainmaker) : “Bien sûr mes chers amis ! Bien sûr ! Tout travail mérite salaire. Vous serez en plus généreusement récompensé. Argents, courtisanes et alcools couleront à flots pour vous. Puis sans vous je n’en serai jamais arrivé là. Vous avez ma parole.”\n- Comploteur 2 : “Très bien alors, nous allons tuer ce Marquis.”\n- Homme au fauteuil (Rainmaker) : “Assurez-vous qu’il soit bel et bien mort ! C’est important. Sans cela vous pouvez dire adieu à vos futurs privilèges”\n- Comploteur 3 : “Nous avons engagé un des meilleurs assassins d’Europe pour cette occasion. Nous allons ordonner à l’assassin de tuer le marquis d’un des balcons vide de la salle comme vous l’avez demandé.”\n- Homme au fauteuil (Rainmaker) : “Très bien. Me voilà un peu plus réconforté. Vous pouvez partir, votre absence ne doit pas être remarquée plus longtemps.”\nLes comploteurs quittent la pièce.",
             change_img: 'réunion',
