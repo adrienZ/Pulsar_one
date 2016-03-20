@@ -10,7 +10,7 @@ var data = {
             title: 'La Réminiscence du destin',
         },
         'a1_0': {
-            "question": "Vous êtes au lit les yeux fermés dans votre chambre. Au loin, on entend une télévision. Qu’entendez-vous ?",
+            "question": "Vous êtes au lit les yeux fermés dans votre chambre.  Au loin, on entend une télévision. Qu’entendez-vous ?",
             change_img: 'bedroom',
             "choix": [
                 {

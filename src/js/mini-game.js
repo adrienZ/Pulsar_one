@@ -42,7 +42,6 @@ mini_games.personality_test = function () {
                 results[1]++;
             else
                 results[2]++;
-            console.log(this.value);
             question.classList.toggle('gone');
             question = windowsPanel.querySelector('.personality_test .question' + index);
             question.classList.toggle('animation');
@@ -78,7 +77,6 @@ mini_games.personality_test = function () {
                     user.stats.agility += 1;
                     user.stats.loyalty += 2;
                 }
-                console.log("Jeu fini !");
                 savegame.erase_save('user_save', user);
 
                 window.setTimeout(function () {
@@ -197,12 +195,12 @@ mini_games.roll_dice = function () {
             //who win
             if (player_1.value > player_2.value) {
                 player_1.add_victory();
-                console.log(player_1.name + " à gagné", player_1.victory);
+                //console.log(player_1.name + " à gagné", player_1.victory);
                 state--;
                 roll_dice.round = state;
             } else if (player_2.value > player_1.value) {
                 player_2.add_victory();
-                console.log(player_2.name + " à gagné", player_2.victory);
+                //console.log(player_2.name + " à gagné", player_2.victory);
                 state--;
                 roll_dice.round = state;
             }
@@ -222,7 +220,7 @@ mini_games.roll_dice = function () {
 
                 if (player_1.victory > player_2.victory) {
                     //you win
-                    console.log(player_1.name + ' avez gagné la partie ' + player_1.victory + ' à ' + player_2.victory);
+                    //console.log(player_1.name + ' avez gagné la partie ' + player_1.victory + ' à ' + player_2.victory);
                     results.innerHTML = player_1.name + ' a gagné la partie ' + player_1.victory + ' à ' + player_2.victory;
                     window.setTimeout(function () {
                         $.mini_game.className = 'mini-game';
@@ -232,7 +230,7 @@ mini_games.roll_dice = function () {
 
                 } else {
                     //you lose
-                    console.log(player_2.name + ' a gagné la partie ' + player_2.victory + ' à ' + player_1.victory);
+                    //console.log(player_2.name + ' a gagné la partie ' + player_2.victory + ' à ' + player_1.victory);
                     results.innerHTML = player_2.name + ' a gagné la partie ' + player_2.victory + ' à ' + player_1.victory;
                     window.setTimeout(function () {
                         $.mini_game.className = 'mini-game';
@@ -359,6 +357,12 @@ mini_games.hacking = function () {
                 }
                 node.innerHTML = node.innerHTML.replace("[SCORE]", "<span id='hackingScore'>6</span>");
                 node.innerHTML = node.innerHTML.replace("[TRY]", "<span id='hackingTry'></span>");
+                //debug scope bug
+                window.setTimeout(function () {
+                    node.innerHTML = node.innerHTML.replace("[TRY]", "<span id='hackingTry'></span>");
+
+                }, 1000)
+
             }
             /* Create fake line with random caract and place the selected word into it at a random place */
         this.encode = function (word) {
@@ -396,6 +400,7 @@ mini_games.hacking = function () {
                         if (t.charAt(v) == this.password.charAt(w)) {
                             if (!reg[this.password.charAt(w)]) {
                                 reg[this.password.charAt(w)] = true;
+                                console.log(this.password.charAt(w));
                                 cpt++;
                             }
                         }
@@ -503,10 +508,10 @@ mini_games.catch_bus = function () {
         if (bar_width < 0) {
             bar_width = 0;
             clearInterval(main);
-            console.log('End');
+            //console.log('End');
             bar_width = 1;
             if (user.pulsars > 0) {
-                console.log(user.pulsars);
+                //  console.log(user.pulsars);
                 main = window.setInterval(function () {
                     downScale();
                     clampBar();
@@ -529,7 +534,7 @@ mini_games.catch_bus = function () {
         }
         if (bar_width > 1) {
             clearInterval(main);
-            console.log('You won');
+            //  console.log('You won');
             window.setTimeout(function () {
                 $.mini_game.className = 'mini-game';
                 render(current_act[ui.finish_mini_game_redirect]);
@@ -559,7 +564,7 @@ mini_games.catch_bus = function () {
 
     function iterateKeyboard() {
         window.addEventListener('keypress', function (e) {
-            console.log(e.keyCode);
+            // console.log(e.keyCode);
             switch (e.keyCode) {
             case 102:
                 bar_width += 0.025;
@@ -589,14 +594,10 @@ mini_games.wake_up = function () {
             square_move.style.border = '4px solid red';
         }
         if ((e.keyCode == 32) && ((square_position > 50) && (square_position < 200))) {
-            console.log("win");
-            console.log(square_position);
             square_move.style.border = '4px solid rgb(44, 175, 38)';
             square_move.style.animation = 'catchMe 2.5s ease-in-out 0s alternate infinite paused forwards';
             square_move.classList.add('fade');
             win_windows.classList.toggle('fade');
-            console.log(win_windows.classList.contains('fade'));
-            console.log(win_windows.classList.contains('fade'));
             window.setTimeout(function () {
                 $.mini_game.className = 'mini-game';
                 render(current_act[ui.finish_mini_game_redirect]);

@@ -49,7 +49,6 @@ menu.link[0].addEventListener('click', function () {
 
     //redirect to game at the end of the animation
     window.setTimeout(function () {
-        console.log(menu.background_music.currentTime);
         user.continue_intro_music = menu.background_music.currentTime;
         savegame.erase_save('user_save', user);
         window.location = 'template.html';

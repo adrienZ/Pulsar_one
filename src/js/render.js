@@ -41,8 +41,7 @@ browsers.isChrome = !!window.chrome && !!window.chrome.webstore;
 browsers.isBlink = (browsers.isChrome || browsers.isOpera) && !!window.CSS;
 
 for (var browser in browsers) {
-    if (browsers[browser])
-        console.log(browser);
+    //if (browsers[browser])
 }
 
 
@@ -54,7 +53,6 @@ var skip = false;
 // all the data i need to stop the typed effect with write()
 //function render
 function render(event) {
-    console.log(event);
 
 
     if (event.hasOwnProperty('stop_act')) {
@@ -99,7 +97,6 @@ function render(event) {
         if (user.game === 'a3_0') {
             switch (user.travel) {
             case 'greece':
-                console.log('Selected area : ' + user.travel);;
 
                 choice.data_event = 'a3_1';
                 break;
@@ -185,7 +182,6 @@ function render(event) {
             if (elem.getAttribute('data-success')) {
                 var unlocked = data.backstory.success[this.getAttribute('data-success') - 1];
                 var already_there = false;
-                console.log(user.success.length)
 
                 for (var i = 0; i < user.success.length; i++) {
 
@@ -195,7 +191,7 @@ function render(event) {
                 }
 
                 if (already_there) {
-                    console.log('already');
+                    // console.log('already');
                 } else {
                     user.success.push(unlocked);
                     create_success(unlocked.img);
@@ -206,7 +202,6 @@ function render(event) {
                     trophy_sound.play();
                 }
 
-                console.log(user.success, data.backstory.success);
             }
 
             if (elem.getAttribute('data-stats')) {
@@ -247,14 +242,12 @@ function render(event) {
 
     var answer_realign = $.pad.querySelector('ul li:not(.arrow_naration):nth-child(2)');
     if (Object.keys(event.choix).length <= 2) {
-        console.log('hide arrows');
         $.pad.querySelector('.arrows').classList.add('hide');
         if (answer_realign && !answer_realign.classList.contains('realign')) {
             answer_realign.classList.add('realign');
         }
 
     } else {
-        console.log('show arrows');
         if ($.pad.querySelector('.arrows').classList.contains('hide')) {
             $.pad.querySelector('.arrows').classList.remove('hide');
         }
@@ -279,7 +272,7 @@ function render(event) {
             }, parseInt(delay[0]) * 1000);
 
         } else {
-            console.log('cant do the reebook effect');
+            //  console.log('cant do the reebook effect');
             $.el('#encima').className = event.change_img;
             $.el('#encima').style.animationPlayState = 'running';
             window.setTimeout(function () {
@@ -292,14 +285,13 @@ function render(event) {
     }
 
     if (event.hasOwnProperty('important_choice')) {
-        console.log('last rush bro !!');
         update_data_important_choice();
         var dilema = data.backstory.choice_comparaison['act_' + user.game[1]];
         for (var i = 0; i < Object.keys(dilema).length; i++) {
             if (!dilema.hasOwnProperty('checked')) {
-                console.log(dilema[i]);
+                //console.log(dilema[i]);
                 [].forEach.call($.commands, function (elem, index) {
-                    console.log(elem, index);
+                    //  console.log(elem, index);
                     $.commands[index].setAttribute('data-important-choice', index + 1);
                     $.commands[index].addEventListener('click', function () {
                         if (!user.important_decisions) {
@@ -316,7 +308,7 @@ function render(event) {
 
                 break;
             } else {
-                console.log('checked');
+                //  console.log('checked');
 
             }
         }
@@ -436,9 +428,14 @@ function write(txt, parent) {
             } else {
                 $.histoire.classList.add('no-scroll');
                 index_text++;
-                content.innerHTML += txt[index_text];
-                $.histoire.scrollTop = $.histoire.scrollHeight;
-
+                if (txt[index_text] === "<") {
+                    index_text += 3;
+                    var return_line = document.createElement('br');
+                    content.innerHTML += '<br>';
+                } else {
+                    content.innerHTML += txt[index_text];
+                    $.histoire.scrollTop = $.histoire.scrollHeight;
+                }
             }
 
             if (index_text === txt.length - 1) {

@@ -8,11 +8,16 @@ var order = 0;
 var evolution_position = -100;
 var evolution_offset = 0;
 
-
-window.addEventListener('keydown', function(e){
-    if(e.keyCode === 39) {
+var background_audio = document.createElement('audio');
+background_audio.setAttribute('autoplay', 'true');
+background_audio.setAttribute('src', 'src/medias/background_space.mp3');
+background_audio.setAttribute('loop', 'true');
+background_audio.currentTime = user.continue_intro_music;
+document.body.appendChild(background_audio);
+window.addEventListener('keydown', function (e) {
+    if (e.keyCode === 39) {
         arrow_next.click();
-    } else if (e.keyCode === 37){
+    } else if (e.keyCode === 37) {
         arrow_prev.click();
     }
 });
@@ -23,35 +28,35 @@ window.addEventListener('keydown', function(e){
 
 
 arrow_prev.addEventListener('click', function (e) {
-if (order < limit_characters.length && order <= 0) {
-    order = 0;
-    character_base.style.transform = 'translateX('+evolution_position+'vw)';
-} else {
-    order--;
-    character_base.style.transform = 'translateX('+evolution_position*order+'vw)';
-    window.setTimeout(function () {
+    if (order < limit_characters.length && order <= 0) {
+        order = 0;
+        character_base.style.transform = 'translateX(' + evolution_position + 'vw)';
+    } else {
+        order--;
+        character_base.style.transform = 'translateX(' + evolution_position * order + 'vw)';
         window.setTimeout(function () {
-            description_char[order].style.transform = 'translateX(' + 1.5 + 'vw)';
-        }, 100)
-        image_char[order].style.transform = 'translateX(' + -1 + 'vw)';
-    }, 300);
-}
+            window.setTimeout(function () {
+                description_char[order].style.transform = 'translateX(' + 1.5 + 'vw)';
+            }, 100)
+            image_char[order].style.transform = 'translateX(' + -1 + 'vw)';
+        }, 300);
+    }
     console.log(evolution_position);
     console.log(order);
 });
 arrow_next.addEventListener('click', function (e) {
-if (order < limit_characters.length) {
-    order++;
-    character_base.style.transform = 'translateX('+evolution_position*order+'vw)';
-    window.setTimeout(function () {
+    if (order < limit_characters.length) {
+        order++;
+        character_base.style.transform = 'translateX(' + evolution_position * order + 'vw)';
         window.setTimeout(function () {
-            description_char[order].style.transform = 'translateX(' + -1.5 + 'vw)';
-        }, 100)
-        image_char[order].style.transform = 'translateX(' + 1 + 'vw)';
-    }, 300);
-} else {
-    character_base.style.transform = 'translateX('+evolution_position*limit_characters.length+'vw)';
-}
+            window.setTimeout(function () {
+                description_char[order].style.transform = 'translateX(' + -1.5 + 'vw)';
+            }, 100)
+            image_char[order].style.transform = 'translateX(' + 1 + 'vw)';
+        }, 300);
+    } else {
+        character_base.style.transform = 'translateX(' + evolution_position * limit_characters.length + 'vw)';
+    }
     console.log(evolution_position);
     console.log(order);
 });

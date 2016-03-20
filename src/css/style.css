@@ -473,6 +473,7 @@ body {
 .main .story p {
   padding: 7.5px 30px;
   line-height: 1.65;
+  white-space: pre-line;
 }
 
 .main .story.sans-serif {
