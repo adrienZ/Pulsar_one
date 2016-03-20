@@ -23,7 +23,7 @@ var data = {
                     },
         },
                 {
-                    "text": "Une série TV : c’est l’épisode 03 de Sense : the prequel.",
+                    "text": "Une série TV. C’est l’épisode 03 de Sense : The prequel.",
                     "data_event": "a1_1",
                     timer: 5,
                     stats_change: {
@@ -33,7 +33,7 @@ var data = {
     ]
         },
         'a1_1': {
-            "question": "Cette nuisance sonore vous a réveillé un peu. On dirait qu’il est temps de se lever. Vous vous levez avec une affreuse migraine.Vous vous souvenez de tout et de rien. C’est le néant. Les seuls mots qui se répètent dans votre tête sont: ‘histoire’, ‘sacrifice’, ‘destin’. Vous êtes en pyjama.Vous vous habillez, prenez votre sac de cours et décidez de descendre. Vous apercevez votre sœur Luna mangeant un bol de céréales dans la cuisine. LUNA : Salut ! Tu as vu l'épisode de Sense : the prequel ?",
+            "question": "Cette nuisance sonore vous a réveillé un peu. On dirait qu’il est temps de se lever. Vous vous levez avec une affreuse migraine. Vous vous souvenez de tout et de rien. C’est le néant. Les seuls mots qui se répètent dans votre tête sont : ‘histoire’, ‘sacrifice’, ‘destin’. Vous êtes en pyjama. Vous vous habillez, prenez votre sac de cours et décidez de descendre. Vous apercevez votre sœur Luna mangeant un bol de céréales dans la cuisine. LUNA : Salut ! Tu as vu l'épisode de Sense : the prequel ?",
             change_img: 'kitchen',
             timer: 7,
             "choix": [
@@ -54,7 +54,7 @@ var data = {
     ]
         },
         'a1_1_0': {
-            "question": "LUNA : Tu as vu comment Jean s’est battu ! Moment épique ! C’était dingue ! Je me demande comment on va finir à la fin haha. Toutes ses guerres, je ne comprends pas.",
+            "question": "LUNA : Tu aurais dû voir comment Jean s’est battu ! Moment épique, c’était dingue !",
             "choix": [
                 {
                     "text": "",
@@ -97,7 +97,7 @@ var data = {
         },
 
         'a1_3': {
-            "question": "Jour 01, 09h02, année 2016. Il est temps d’aller en cours. Vous mettez vos chaussures, votre manteau et vous prenez vos clés dans le bol de clés sur la table basse à côté de la porte de sortie.",
+            "question": "Jour 01, 09h02, année 2016. Il est temps d’aller en cours. Vous mettez vos chaussures, votre manteau et vous prenez vos clés pour aller en cours.",
             change_img: 'mag',
             important_choice: true,
             timer: 10,
@@ -145,7 +145,7 @@ var data = {
         },
 
         'a1_3_2': {
-            "question": "Vous sortez de chez vous, et vous voyez le bus passer !",
+            "question": "Vous sortez de chez vous... Non ! Vous voyez le bus passer devant vous ! Il est temps de faire un petit sprint à la Usain Bolt !",
             change_img: 'bus',
             "choix": [
                 {
@@ -175,7 +175,7 @@ var data = {
         },
 
         'a1_5': {
-            "question": "Jour 01, 09h45, année 2016.Vous prenez place dans votre salle et aujourd’hui, c’est cours d’espagnol. Parallèlement à la situation, vous êtes sur votre PC. Qu’il y a-t-il sur votre écran ?",
+            "question": "Jour 01, 07h52, année 2016. Vous prenez place dans votre salle et aujourd’hui, c’est cours d’espagnol. Parallèlement à la situation, vous êtes sur votre PC. Qu’il y a-t-il sur votre écran ?",
             change_img: 'class',
             timer: 5,
             "choix": [

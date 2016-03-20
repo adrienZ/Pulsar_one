@@ -48,7 +48,7 @@
 
       var form_name = document.createElement('section');
       form_name.className = 'intro';
-      form_name.innerHTML = '<div class="container"><div class="motion-glow"><video src="/src/medias/glow-intro.webm" autoplay loop></video></div><p>Réveillez-vous.<br>Je suis Chronos, le dieu du temps.Votre histoire n’est pas terminée.</p><input type="text" id="user-name" onfocus="this.placeholder=\'\'" placeholder="Quel est votre nom ?" onblur="this.placeholder=\'Quel est votre nom ?\'" required></div>';
+      form_name.innerHTML = '<div class="container"><div class="motion-glow"><video src="/src/medias/glow-intro.webm" autoplay loop></video></div><p>Réveillez-vous.<br>Je suis Chronos, le dieu du temps. Votre histoire n’est pas terminée.</p><input type="text" id="user-name" onfocus="this.placeholder=\'\'" placeholder="Quel est votre nom ?" onblur="this.placeholder=\'Quel est votre nom ?\'" required></div>';
 
       form_name.querySelector('input').addEventListener('keyup', function (e) {
           //UX for the input
