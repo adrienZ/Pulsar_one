@@ -2078,8 +2078,9 @@ var data = {
             "choix": [
                 {
                     "text": "",
-                    "data_event": "a3_3_6_2"
-        },
+                    "data_event": "a3_3_6_2",
+                    "naration": true
+        }
     ]
         },
         'a3_3_6_1_2': {
@@ -2087,8 +2088,9 @@ var data = {
             "choix": [
                 {
                     "text": "",
-                    "data_event": "a3_3_6_2"
-        },
+                    "data_event": "a3_3_6_2",
+                    "naration": true
+        }
     ]
         },
 
