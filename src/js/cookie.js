@@ -72,6 +72,8 @@ if (document.cookie.indexOf("user_save") >= 0) { //detect the cookie we want
         agility: 0,
         loyalty: 0,
     };
+    user.important_decisions = [];
+
     user.game = 'intro';
     user.success = [];
     user.name = null;

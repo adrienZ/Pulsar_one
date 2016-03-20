@@ -15,7 +15,7 @@ $.pad = $.el('.questions');
 $.mini_game = $.el('.mini-game');
 //icon hover helper
 var ui = {
-    icon_help_text: ['changer la police', 'musique', 'son', 'plein écran'],
+    icon_help_text: ['changer la police', 'musique', 'quitter la partie', 'plein écran'],
     skip: [],
     finish_mini_game_redirect: undefined,
 };
@@ -312,10 +312,26 @@ function render(event) {
             }
         }
     }
+
+
+    if (event.hasOwnProperty('change_music')) {
+        if (background_audio) {
+            sound_fade_out(background_audio);
+            window.setTimeout(function () {
+                background_audio.src = event.change_music;
+                background_audio.play();
+                sound_fade_in(background_audio, 0.8);
+            }, 1000)
+
+
+        }
+    }
+
     // remove unused timers
     if ($.pad.querySelector('.timer')) {
         $.pad.querySelector('.timer').remove();
     }
+
 
 
     if (event.hasOwnProperty('timer')) {

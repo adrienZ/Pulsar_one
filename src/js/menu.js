@@ -38,6 +38,7 @@ menu.link[0].addEventListener('click', function () {
     user.game = 'intro';
     user.success = [];
     user.name = null;
+    user.important_decisions = [];
     user.pulsars = 5;
     savegame.erase_save('user_save', user);
     //intro animation

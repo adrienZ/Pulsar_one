@@ -11,6 +11,7 @@ var data = {
         },
         'a1_0': {
             "question": "Vous êtes au lit les yeux fermés dans votre chambre.  Au loin, on entend une télévision. Qu’entendez-vous ?",
+            change_music: "src/medias/talk_intro.mp3",
             change_img: 'bedroom',
             "choix": [
                 {
@@ -34,6 +35,8 @@ var data = {
         },
         'a1_1': {
             "question": "Cette nuisance sonore vous a réveillé un peu. On dirait qu’il est temps de se lever. Vous vous levez avec une affreuse migraine. Vous vous souvenez de tout et de rien. C’est le néant. Les seuls mots qui se répètent dans votre tête sont : ‘histoire’, ‘sacrifice’, ‘destin’. Vous êtes en pyjama. Vous vous habillez, prenez votre sac de cours et décidez de descendre. Vous apercevez votre sœur Luna mangeant un bol de céréales dans la cuisine. LUNA : Salut ! Tu as vu l'épisode de Sense : the prequel ?",
+            change_music: "src/medias/home_jazz.mp3",
+
             change_img: 'kitchen',
             timer: 7,
             "choix": [
@@ -177,6 +180,7 @@ var data = {
         'a1_5': {
             "question": "Jour 01, 07h52, année 2016. Vous prenez place dans votre salle et aujourd’hui, c’est cours d’espagnol. Parallèlement à la situation, vous êtes sur votre PC. Qu’il y a-t-il sur votre écran ?",
             change_img: 'class',
+            change_music: 'src/medias/cours.mp3',
             timer: 5,
             "choix": [
                 {
@@ -266,6 +270,7 @@ var data = {
         'a1_9': {
             "question": "Jour 01, 17h15, année 2016. <br> Vous êtes sur le chemin de retour. Vous décidez de marcher tout seul avec vos écouteurs devant ce beau coucher de soleil. Vous avez lancé votre playlist préférée et une petite musique chill se lance dans vos écouteurs. <br> Vous êtes à une intersection, quel chemin prenez-vous ?",
             change_img: 'chemin',
+            change_music: 'src/medias/return_home.mp3',
             timer: 5,
             "choix": [
                 {
@@ -313,11 +318,12 @@ var data = {
 
         'a1_11_0': {
             "question": "HOMME : C’est à moi que tu parles comme ça ? Haha, voilà quelqu’un qui essaye d’être un héros et qui veut se la jouer. Eh bien, héros, montre moi de quoi tu es capable.",
+            change_music: 'src/medias/roll_dice.mp3',
             "choix": [
                 {
                     "text": "",
                     "data_event": "a1_12",
-                    "naration": true
+                    "naration": true,
         }
     ]
         },
@@ -367,10 +373,13 @@ var data = {
             "number": 2,
             "title": "Un réveil trouble",
             data_event: 'a2_0',
+
         },
         'a2_0': {
             "question": "Vous êtes à terre, les yeux fermés avec une très grosse migraine. Tout autour de vous semble être que du vide. Vous ne pouvez que sentir un sol très lisse avec vos mains. Il est temps de se lever. Vous essayez d’ouvrir vos yeux...",
             change_img: 'limbes',
+            change_music: 'src/medias/limbes.mp3',
+
             "choix": [
                 {
                     "text": "",
@@ -939,6 +948,8 @@ var data = {
         'a3_1': {
             "question": "Bienvenue en Grèce",
             change_img: 'grece',
+            change_music: 'src/medias/welcome_greece.mp3',
+
             "choix": [
                 {
                     "text": "",
@@ -1144,6 +1155,7 @@ var data = {
             "question": "Vous arrivez finalement au temple de Delphes, le temple est déjà pris d’assaut par la foule. Vous tentez de la traverser. <br> Vous arrivez enfin dans le temple, au centre se trouve Pytie, des vapeurs s'échappent d'une faille qui s'ouvrait dans le sol, elle trône assise sur un haut trépied placé au-dessus de la fissure, elle respire les vapeurs et prophétise. <br> Un homme armé sort de la foule, il se présente sous le nom de Rainmaker et annonce vouloir tuer la Pythie et cesser cette duperie.",
             change_img: 'temple',
             timer: 5,
+            change_music: 'src/medias/rainmaker_greece.mp3',
 
             "choix": [
                 {
@@ -1168,7 +1180,6 @@ var data = {
         'a3_1_12_1': {
             "question": "Rainmaker sort une arme et se dirige vers la Pythie pour l'attaquer. ",
             timer: 5,
-
             "choix": [
                 {
                     "text": "Ne rien faire... ",
@@ -1368,6 +1379,7 @@ var data = {
         'a3_2': {
             "question": "Bienvenue en Egypte",
             change_img: 'egypt',
+            change_music: 'src/medias/welcome_egypt.mp3',
             "choix": [
                 {
                     "text": "",
@@ -1642,6 +1654,8 @@ var data = {
 
         'a3_2_9_11': {
             "question": "RHEA MAGNUS : Bonjour tout le monde",
+            change_music: 'src/medias/rainmaker_speech.mp3',
+
             "choix": [
                 {
                     "text": "",
@@ -1744,6 +1758,8 @@ var data = {
         },
         'a3_2_12': {
             "question": "RHEA MAGNUS : Oh. Mais quel grossier personnage. Armée divine, donnez moi son corps. Je le veux mort. ",
+            change_music: 'src/medias/rainmaker_egypt.mp3',
+
             "choix": [
                 {
                     "text": "",
@@ -1795,6 +1811,8 @@ var data = {
         },
         'a3_2_17': {
             "question": "Vous êtes devant Rhea Magnus, un peu choqué par la situation. Vous êtes essoufflé par la bataille. Vous regardez Rhea Magnus d'un regard rempli de haine. ",
+            change_music: 'src/medias/choc_egypt.mp3',
+
             timer: 5,
             "choix": [
                 {
@@ -1847,6 +1865,7 @@ var data = {
         'a3_3': {
             "question": "Bienvenue en France",
             change_img: 'france',
+            change_music: 'src/medias/welcome_paris.mp3',
             "choix": [
                 {
                     "text": "",
@@ -1857,6 +1876,8 @@ var data = {
         },
         'a3_3_1': {
             "question": "Vous vous retrouvez abasourdi. Selon la couleur du ciel, le soleil vient seulement de se lever. D’après l’architecture des bâtiments et l’odeur nauséabonde qui règne, vous êtes à coup sûr arrivé à votre destination. Vous avancez dans l'impasse en direction d’une rue. La rue n’est pas très peuplée, mais déjà à cette heure matinale.",
+            change_music: 'src/medias/paris_travel.mp3',
+
             "choix": [
                 {
                     "text": "Vous apercevez un groupe de courtisanes.",
@@ -2023,6 +2044,8 @@ var data = {
         },
         'a3_3_5': {
             "question": "Le château de Versailles est devant vous. Le soleil commence à décliner sur l’horizon. Vous êtes dans le château, vous apercevez de nombreuses personnes qui convergent en un lieu commun. Vous décidez de les suivre. <br> Vous entrez dans la salle où le jeu de paume est joué. De nombreuses personnes sont présentes bien plus que vous ne l’avez imaginé. <br> C’est une belle cour que vous voyez. Tout est en or comme vous avez vu dans les livres d’Histoire ou dans les documentaires. Au loin, vous apercevez un petit groupe d’une dizaine de personnes qui se distingue des autres. On dirait des nobles. Ils ne se mélangent pas et ne participent pas au débat houleux qui a lieu. Mais vous remarquez que le groupe se sépare. Quelques personnes se dirigent vers la sortie.",
+            change_music: 'src/medias/versailles.mp3',
+
             change_img: 'versailles',
             "choix": [
                 {
@@ -2040,6 +2063,8 @@ var data = {
         'a3_3_6': {
             "question": "Vous suivez le groupe. Ils montent les escaliers rapidement et cela vous semble vraiment suspect. Ils longent un grand couloir et rentrent dans une pièce. Vous courez rapidement et discrètement vers la salle. Vous ne pouvez pas entrer et si vous écoutez à travers la porte vous pouvez être découvert.",
             change_img: 'salle',
+            change_music: 'src/medias/paris_stairs.mp3',
+
             timer: 5,
             "choix": [
                 {
@@ -2107,7 +2132,10 @@ var data = {
         },
         'a3_3_6_2_1': {
             "question": "Vous parcourez alors le couloir d'où vous êtes venu. Vous vous arrêtez devant les escaliers où vous remarquez cette fois deux couloirs à votre gauche et un à votre droite, c’est alors qu’il vous semble avoir aperçu le temps d’un instant une ombre tournée à l’angle du prochain couloir.",
+
             change_img: 'salle',
+            change_music: 'src/medias/rainmaker_paris.mp3',
+
             timer: 10,
             "choix": [
                 {

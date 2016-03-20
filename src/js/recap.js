@@ -12,10 +12,17 @@
  result.choices = $.el('.sectionEvaluation');
  if (!user.important_decisions || user.important_decisions.length === 0) {
      console.log('error');
-     if (current_act === 3) {} else {
+     if (current_act === 3) {
+         var win = new Audio(['src/medias/victory.mp3']);
+         win.volume = 0.7;
+         win.play();
+     } else {
          window.location = 'template.html';
      }
  } else {
+     var win = new Audio(['src/medias/victory.mp3']);
+     win.volume = 0.7;
+     win.play();
      user.important_decisions.forEach(function (decision, index) {
          console.log(decision, index);
          console.log(data.backstory.choice_comparaison['act_' + user.game[1]][index]);

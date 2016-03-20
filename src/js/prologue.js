@@ -96,6 +96,11 @@ function render_intro() {
                             new_prologue.remove();
                             form_name.remove();
                             render(data.act_1.a1_0);
+                            window.setTimeout(function () {
+                                background_audio.src = 'src/medias/talk_intro.mp3';
+                                sound_fade_in(background_audio, 0.8);
+                            }, 500);
+
                         }, 4000)
                     }, fade_out_delay * 1000);
                 }, 2000);
@@ -146,7 +151,6 @@ user.set_progress = function (new_event) {
 
 
 function sound_fade_out(music) {
-    console.log('go audio', music);
     // Set the point in playback that fadeout begins. This is for a 2 second fade out.
 
     var fadeAudio = setInterval(function () {
@@ -159,5 +163,23 @@ function sound_fade_out(music) {
         if (music.volume <= 0.1) {
             clearInterval(fadeAudio);
         }
-    }, 300);
+    }, 200);
+}
+
+function sound_fade_in(music, volume_limit) {
+    console.log('go audio', music);
+
+    // Set the point in playback that fadeout begins. This is for a 2 second fade out.
+    music.volume = 0;
+    var fadeAudio = setInterval(function () {
+        console.log(music.volume);
+        // Only fade if past the fade out point or not at zero already
+        if (music.volume < 1) {
+            music.volume += 0.1;
+        }
+        // When volume at zero stop all the intervalling
+        if (music.volume >= volume_limit - 0.1) {
+            clearInterval(fadeAudio);
+        }
+    }, 200);
 }

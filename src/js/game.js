@@ -3,6 +3,16 @@
 if (user.game !== 'intro') {
     console.log('ENLEVE LE TOKEN');
     data = update_data(user.name);
+    var background_audio = document.createElement('audio');
+    if (!background_audio || !background_audio.hasOwnProperty('src')) {
+        console.log('no music');
+        background_audio.setAttribute('loop', 'true');
+        background_audio.setAttribute('autoplay', 'true');
+        background_audio.src = 'src/medias/background_space.mp3';
+        document.body.appendChild(background_audio);
+        sound_fade_in(background_audio, 0.75);
+    }
+
 }
 
 if (user.game === "prologue") {
@@ -40,6 +50,21 @@ for (var key in user.stats) {
 //display user pulsars
 $.el('.ui-panel .pulsars span').innerHTML = '[' + user.pulsars + ']';
 
+$.ui.querySelector('#mute').addEventListener('click', function () {
+    if ($.ui.querySelector('#mute').className === 'muted') {
+        $.ui.querySelector('#mute').className = '';
+        $.ui.querySelector('#mute img').setAttribute('src', 'src/img/icons/sound.png');
+        user.mute = false;
+    } else {
+        $.ui.querySelector('#mute').className = 'muted';
+        $.ui.querySelector('#mute img').setAttribute('src', 'src/img/icons/mute.png');
+        user.mute = true;
+    }
+    background_audio.muted = !background_audio.muted;
+    savegame.erase_save('user_save', user);
+});
+if (user.mute)
+    $.ui.querySelector('#mute').click();
 //Full screen mode
 $.el('.ui-panel #fullscreen').addEventListener('click', function () {
     if (document.body.classList.contains('expand')) {
