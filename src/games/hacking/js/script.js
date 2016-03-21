@@ -6,42 +6,42 @@ function HackingGame(){
 	this.life = 5; //Number of life
 	this.randomCaracs = "^¨$£¤%*!§/:.;?,&~#'{([-|`_\^@)]=}+°<>"; //Random caracters
 	this.randomLength = 30; // length of random line
-	
+
 	this.wordList = []; // list of all word you've pushed through encode function
-	
+
 	/* Create an alert box */
 	this.alert = function(title, msg, callback){
 		var div = document.createElement("div"),
 			h1 = document.createElement("h1"),
 			p = document.createElement("p"),
 			a = document.createElement("a");
-		
+
 		h1.innerHTML = title;
 		p.innerHTML = msg;
 		a.innerHTML = "OK";
-		
+
 		div.className = "alert";
 		a.className = "button";
-		
+
 		a.onclick = function(){
 			div.remove();
 		}
-		
+
 		div.appendChild(h1);
 		div.appendChild(p);
 		div.appendChild(a);
 		this.game.appendChild(div);
-		
+
 		if(typeof callback == "function") callback();
 	}
 	/* Write a simple line */
 	this.writeLine = function(txt, callback){
 		var p = document.createElement("p"),
 			i = 0;
-		
+
 		this.game.appendChild(p);
-		
-		var timer = setInterval(function(){	
+
+		var timer = setInterval(function(){
 			p.innerHTML += txt.charAt(i);
 			i++;
 		}, this.delay);
@@ -57,7 +57,7 @@ function HackingGame(){
 		var that = this;
 		that.writeLine(txt[0]);
 		var total = 0;
-		
+
 		for(var i = 1; i < txt.length; i++){
 			total += that.delay*txt[i-1].length;
 			setTimeout((function(i) {
@@ -66,7 +66,7 @@ function HackingGame(){
 				};
 			})(i), total);
 		}
-		
+
 		setTimeout(function(){
 			if(typeof callback == "function") callback();
 		}, total+this.delay*txt[i-1].length);
@@ -107,7 +107,7 @@ function HackingGame(){
 	this.try = function(t){
 		var cpt = 0,
 			reg = {};
-		
+
 		// If you've selected the good password
 		if(t == this.password){
 			this.alert("ACCESS ACCEPTED", "Good password.", function(){
@@ -130,7 +130,7 @@ function HackingGame(){
 			document.getElementById("hackingTry").innerHTML = cpt + " good letters"; //give an hint
 			this.life--; // loose a life
 			document.getElementById("hackingScore").innerHTML = this.life; //display life
-			
+
 			if(this.life < 1) this.alert("ACCESS REFUSED", "Wrong password.", function(){
 				// Put here what happen when access is refused and user push "ok" button
 				//GAME OVER
@@ -164,10 +164,10 @@ var hacking = new HackingGame(); // Init game
 
 hacking.password = "KILL"; //Set the good password
 
-hacking.alert("Bonjour" + user.name, "Les règles du jeu sont simples : vous devez trouver le mot de passe en 4 tentatives maximales. La console vous avertira de la similiarité du mot de passe au niveau de l'en-tête (good letters). Attention, au bout de 4 tentatives échouées, votre processeur pourrait bien rendre l'âme. À vos risques et périls ! Bonne chance !");
+hacking.alert("Bonjour" + user.name, " [En cas de problème, actualisez la page.] Les règles du jeu sont simples : vous devez trouver le mot de passe en 6 tentatives maximales. La console vous avertira de la similiarité du mot de passe au niveau de l'en-tête (good letters). Attention, au bout de 6 tentatives échouées, votre processeur pourrait bien rendre l'âme.");
 
 hacking.write(["Welcome to ROBCO Industries (TM) Teralink",
-			   "Password Required", 
+			   "Password Required",
 			   "-------------------------------------",
 			   "Attempts Remaining : [SCORE] - [TRY] -",
 			   "-------------------------------------",
@@ -194,5 +194,5 @@ hacking.write(["Welcome to ROBCO Industries (TM) Teralink",
 			   "0x9414  " + hacking.encode("BOOM"),
 			   "0x9420  " + hacking.encode("WEIGHT")
 			  ],
-			  
+
 			  function(){ hacking.setWord(); hacking.setScore(); }); // build dynamic screen
