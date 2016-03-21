@@ -33,12 +33,12 @@ function render_prologue(event) {
 };
 
 function render_intro() {
-//    var background_audio = document.createElement('audio');
- //    background_audio.setAttribute('autoplay', 'true');
- //    background_audio.setAttribute('src', 'src/medias/background_space.mp3');
- //    background_audio.setAttribute('loop', 'true');
- //    background_audio.currentTime = user.continue_intro_music;
- //    document.body.appendChild(background_audio);
+    //    var background_audio = document.createElement('audio');
+    //    background_audio.setAttribute('autoplay', 'true');
+    //    background_audio.setAttribute('src', 'src/medias/background_space.mp3');
+    //    background_audio.setAttribute('loop', 'true');
+    //    background_audio.currentTime = user.continue_intro_music;
+    //    document.body.appendChild(background_audio);
     var new_prologue = document.createElement('section');
     new_prologue.className = 'new_game prologue showtime';
     new_prologue.innerHTML = '<div class="citation hide"> <p>« J’aime la science-fiction, j’aime la fantaisie, j’aime le voyage dans le temps, c’est pourquoi j’ai eu cette idée : et si vous aviez la possibilité de retourner dans votre passé par un simple coup de fil. <br>Que changerez-vous ? »</p> <p>- Rainbow Rowell</p> </div>';
@@ -150,7 +150,7 @@ function sound_fade_out(music) {
 
     var fadeAudio = setInterval(function () {
         // Only fade if past the fade out point or not at zero already
-        if (music.volume > 0.0) {
+        if (music.volume > 0.1) {
             music.volume -= 0.1;
         }
         // When volume at zero stop all the intervalling
