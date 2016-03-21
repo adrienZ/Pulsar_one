@@ -1,0 +1,92 @@
+    @include keyframes(pulsar-blink) {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0.5;
+        }
+    }
+    
+    @include keyframes(fade-in) {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    @include keyframes(remove) {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            display: none;
+            visibility: hidden;
+        }
+    }
+    
+    @include keyframes(pop-up) {
+        0% {
+            opacity: 0;
+            transform: translate3d(-100px, 0, 0);
+        }
+        15% {
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+        }
+        80% {
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            transform: translate3d(0, -200px, 0);
+        }
+    }
+    
+    @include keyframes(pop-up-success) {
+        0% {
+            opacity: 0;
+            transform: translate3d(100px, 0, 0);
+        }
+        15% {
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+        }
+        80% {
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            transform: translate3d(0, -200px, 0);
+        }
+    }
+    
+    @include keyframes(mask-playzero-1) {
+        from {
+            -webkit-mask-position: 0 0;
+            -ms-mask-position: 0 0;
+            -moz-mask-position: 0 0;
+            -o-mask-position: 0 0;
+            mask-position: 0 0;
+        }
+        to {
+            -webkit-mask-position: 100% 0;
+            -ms-mask-position: 100% 0;
+            -moz-mask-position: 100% 0;
+            -o-mask-position: 100% 0;
+            mask-position: 100% 0;
+        }
+    }
+
+    @include keyframes(animationArrow) {
+        0% {
+            transform:translateY(-10px);
+        }
+        100% {
+            transform:translateY(0px);
+        }
+    }

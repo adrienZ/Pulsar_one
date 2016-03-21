@@ -1,0 +1,53 @@
+//ui-panel//
+$_panel_act_height: 65px;
+$_panel_date_day_height: 30px;
+$_panel_date_hour_height: 60px;
+$_panel_remappage_height: 60px;
+$_panel_pulsars_height: 60px;
+$_panel_button_height: 50px;
+//ui-panel-delay//
+$_ui_stats_delay: 0.15s;
+//ui-game (main)//
+$_game_story_height: 35vh;
+$pop_up_height: 50px;
+$arrow_size: 20px; //function to em
+$browser-context: 16;
+@function em($pixels, $context: $browser-context) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+    @return $pixels / $context * 1em;
+}
+
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation: $animations;
+    -o-animation: $animations;
+    animation: $animations;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}

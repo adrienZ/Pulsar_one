@@ -1,0 +1,54 @@
+body {
+    background-color: #181818;
+    color: white;
+    font-family: 'Gotham', Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    h1 {
+        padding-top: 3rem;
+        text-transform: uppercase;
+        font-size: 30px;
+        font-weight: 500;
+    }
+    h2 {
+        padding-top: 1rem;
+        font-size: 15px;
+        span {
+            transform: scale(2)
+        }
+    }
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    margin-top: 10rem;
+    h2 {
+        margin-top: -2rem;
+        float: right;
+        font-weight: bold;
+        &.green {
+            color: green;
+        }
+        &.yellow {
+            color: yellow;
+        }
+        &.orange {
+            color: orange;
+        }
+        &.red {
+            color: red;
+        }
+    }
+}
+
+.bar {
+    width: 100%;
+    height: 4rem;
+    background-color: green;
+    transform-origin: 0% 50%;
+    transform: translateZ(0) scaleX(1);
+    transition: background-color 0.3s ease-in-out;
+}

@@ -1,0 +1,18 @@
+body{
+  background-color: #bbb;
+}
+
+.container{
+  height: 490px;
+  width: 490px;
+  background-color: white;
+  margin: auto;
+  padding: 10px;
+}
+
+.color {
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  margin-left: 3px;
+}

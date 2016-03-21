@@ -1,0 +1,170 @@
+$fade_out_citation_delay: 6s;
+.prologue {
+    // Style citation
+    height: 100vh;
+    width: 100vw;
+    float: left;
+    background: black;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+    &.showtime {
+        z-index: 2;
+        opacity: 1;
+    }
+    video {
+        min-width: 100%;
+        min-height: 100%;
+    }
+    .citation,
+    .splash-screen {
+        position: absolute;
+    }
+    .citation {
+        color: white;
+        width: 70%;
+        left: 15%;
+        margin-top: 35vh;
+        p {
+            font-family: 'Baskerville', Times, serif;
+            font-style: italic;
+            font-size: 31px;
+            line-height: 1.48;
+            letter-spacing: 1px;
+            animation: fadeIn 3.5s ease-out 0s normal running 1 forwards, fadeIn 1.5s ease-in-out $fade_out_citation_delay reverse running 1 forwards;
+            &:nth-child(2) {
+                opacity: 0;
+                margin-top: 1rem;
+                font-style: normal;
+                animation: fadeInAuthor 1s ease-out 1s normal running 1 forwards, fadeInAuthor 1.5s ease-in-out $fade_out_citation_delay reverse running 1 forwards;
+            }
+        }
+    }
+    // Style splash-screen
+    .hide {
+        transform: translate3d(0, -100%, 0);
+        * {
+            animation-play-state: paused!important;
+        }
+    }
+    .splash-screen {
+        opacity: 1;
+        margin: auto;
+        margin-top: 40vh;
+        text-align: center;
+        width: 100%;
+        visibility: visible;
+        color: white;
+        transform: translate3d(0px, 0, 0);
+        font-family: 'Gotham', Arial, sans-serif;
+        text-transform: uppercase;
+        font-size: 2rem;
+        //        * {
+        //            animation-play-state: running;
+        //        }
+        h1 {
+            font-weight: bold;
+            animation: slideLeft 1s ease-in-out 0s normal running 1 forwards, slideLeft 1s ease-in-out 3s reverse running 1 forwards;
+        }
+        .bar {
+            width: 500px;
+            height: 3px;
+            margin: 1rem auto;
+            background-color: white;
+            // animation: expandBar 1s ease-in-out 0s normal paused 1 forwards, expandBar 1s ease-in-out 3s reverse running 1 forwards;
+            animation: expandBar 1s ease-in-out 0s normal running, expandBar 1s ease-in-out 3s reverse running 1;
+        }
+        h2 {
+            margin-top: 1.5rem;
+            font-weight: 200;
+            animation: slideRight 1s ease-in-out 0s normal running 1 forwards, slideRight 1s ease-in-out 3s reverse running 1 forwards;
+        }
+    }
+    .pagination-acte {
+        transform: translate3d(0px, 0, 0);
+        opacity: 0;
+        width: 100%;
+        animation: fadeIn 1s ease-out .75s normal running 1 forwards, fadeIn 1s ease-out 3s reverse running 1 forwards;
+        .dots {
+            display: inline-block;
+            height: .75rem;
+            width: .75rem;
+            border: 1px solid white;
+            border-radius: 20px;
+            &.active {
+                animation: blinkDot 1.5s ease-in-out 0s normal running infinite forwards;
+            }
+        }
+    }
+}
+
+// Functions animation
+// For Citation
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInAuthor {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+// For Splash Screen
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transform: translate3d(-50px, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0px, 0, 0);
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        transform: translate3d(50px, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0px, 0, 0);
+    }
+}
+
+@keyframes expandBar {
+    0% {
+        opacity: 0;
+        transform: scaleX(0) translate3d(-50px, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: scaleX(1) translate3d(-50px, 0, 0);
+    }
+}
+
+@keyframes blinkDot {
+    0% {
+        transform: translate3d(0px, 0, 0);
+        background-color: rgba(255, 255, 255, 1);
+    }
+    50% {
+        transform: translate3d(0px, 0, 0);
+        background-color: rgba(255, 255, 255, 0);
+    }
+    100% {
+        transform: translate3d(0px, 0, 0);
+        background-color: rgba(255, 255, 255, 1);
+    }
+}
