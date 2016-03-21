@@ -440,7 +440,7 @@ mini_games.hacking = function () {
 
     hacking.password = "KILL"; //Set the good password
 
-    hacking.alert("Bonjour " + user.name, "Selectionnez aun des mot de passe avec votre souris. <br> Les règles du jeu sont simples : vous devez trouver le mot de passe en 6 tentatives maximales. La console vous avertira de la similiarité du mot de passe au niveau de l'en-tête (good letters). Attention, au bout de 6 tentatives échouées, votre processeur pourrait bien rendre l'âme. À vos risques et périls ! Bonne chance !");
+    hacking.alert("Bonjour " + user.name, "[En cas de problème, actualisez la page.] Selectionnez un des mot de passe avec votre souris. <br> Les règles du jeu sont simples : vous devez trouver le mot de passe en 6 tentatives maximales. La console vous avertira de la similiarité du mot de passe au niveau de l'en-tête (good letters). Attention, au bout de 6 tentatives échouées, votre processeur pourrait bien rendre l'âme. À vos risques et périls ! Bonne chance !");
     hacking.write(["Welcome to ROBCO Industries (TM) Teralink",
 			   "Password Security",
 			   "-------------------------------------",
