@@ -41,7 +41,7 @@ function render_intro() {
     //    document.body.appendChild(background_audio);
     var new_prologue = document.createElement('section');
     new_prologue.className = 'new_game prologue showtime';
-    new_prologue.innerHTML = '<div class="citation hide"> <p>« J’aime la science-fiction, j’aime la fantaisie, j’aime le voyage dans le temps, c’est pourquoi j’ai eu cette idée : et si vous aviez la possibilité de retourner dans votre passé par un simple coup de fil. <br>Que changerez-vous ? »</p> <p>- Rainbow Rowell</p> </div>';
+    new_prologue.innerHTML = '<div class="citation hide"> <p>L\'histoire s\'adapte selon votre profil psychologique. En fonction du choix effectué, les conséquences modifient la suite de l\'histoire... Tâchez de faire le bon choix.</p> <p>- Destinée</p> </div>';
     document.body.appendChild(new_prologue);
 
 
