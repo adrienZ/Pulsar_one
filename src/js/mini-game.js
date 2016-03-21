@@ -206,7 +206,7 @@ mini_games.roll_dice = function () {
             //if equality reload
             else {
                 /*document.write('égalité !!!! <br>');*/
-               // console.log('égalité');
+                // console.log('égalité');
                 // roll_dice.match(roll_dice.opponents, roll_dice.hero, roll_dice.round);
             }
             if (state === 0) {
@@ -494,6 +494,10 @@ mini_games.catch_bus = function () {
 
     function downScale() {
         bar_width -= 0.001;
+        bar.style.webkitTransform = 'scaleX(' + bar_width + ')';
+        bar.style.mozTransform = 'scaleX(' + bar_width + ')';
+        bar.style.oTransform = 'scaleX(' + bar_width + ')';
+        bar.style.msTransform = 'scaleX(' + bar_width + ')';
         bar.style.transform = 'scaleX(' + bar_width + ')';
     }
 

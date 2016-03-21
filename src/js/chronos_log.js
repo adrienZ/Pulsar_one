@@ -30,14 +30,26 @@ window.addEventListener('keydown', function (e) {
 arrow_prev.addEventListener('click', function (e) {
     if (order < limit_characters.length && order <= 0) {
         order = 0;
+        character_base.style.webkitTransform = 'translateX(' + evolution_position + 'vw)';
+        character_base.style.mozTransform = 'translateX(' + evolution_position + 'vw)';
+        character_base.style.oTransform = 'translateX(' + evolution_position + 'vw)';
+        character_base.style.msTransform = 'translateX(' + evolution_position + 'vw)';
         character_base.style.transform = 'translateX(' + evolution_position + 'vw)';
     } else {
         order--;
         character_base.style.transform = 'translateX(' + evolution_position * order + 'vw)';
         window.setTimeout(function () {
             window.setTimeout(function () {
+                description_char[order].style.webkitTransform = 'translateX(' + 1.5 + 'vw)';
+                description_char[order].style.mozTransform = 'translateX(' + 1.5 + 'vw)';
+                description_char[order].style.oTransform = 'translateX(' + 1.5 + 'vw)';
+                description_char[order].style.msTransform = 'translateX(' + 1.5 + 'vw)';
                 description_char[order].style.transform = 'translateX(' + 1.5 + 'vw)';
             }, 100)
+            image_char[order].style.webkitTransform = 'translateX(' + -1 + 'vw)';
+            image_char[order].style.mozTransform = 'translateX(' + -1 + 'vw)';
+            image_char[order].style.oTransform = 'translateX(' + -1 + 'vw)';
+            image_char[order].style.msTransform = 'translateX(' + -1 + 'vw)';
             image_char[order].style.transform = 'translateX(' + -1 + 'vw)';
         }, 300);
     }
@@ -46,14 +58,30 @@ arrow_prev.addEventListener('click', function (e) {
 arrow_next.addEventListener('click', function (e) {
     if (order < limit_characters.length) {
         order++;
+        character_base.style.webkitTransform = 'translateX(' + evolution_position * order + 'vw)';
+        character_base.style.mozTransform = 'translateX(' + evolution_position * order + 'vw)';
+        character_base.style.oTransform = 'translateX(' + evolution_position * order + 'vw)';
+        character_base.style.msTransform = 'translateX(' + evolution_position * order + 'vw)';
         character_base.style.transform = 'translateX(' + evolution_position * order + 'vw)';
         window.setTimeout(function () {
             window.setTimeout(function () {
+                description_char[order].style.webkitTransform = 'translateX(' + -1.5 + 'vw)';
+                description_char[order].style.mozTransform = 'translateX(' + -1.5 + 'vw)';
+                description_char[order].style.oTransform = 'translateX(' + -1.5 + 'vw)';
+                description_char[order].style.msTransform = 'translateX(' + -1.5 + 'vw)';
                 description_char[order].style.transform = 'translateX(' + -1.5 + 'vw)';
-            }, 100)
+            }, 100);
+            image_char[order].style.webkitTransform = 'translateX(' + 1 + 'vw)';
+            image_char[order].style.mozTransform = 'translateX(' + 1 + 'vw)';
+            image_char[order].style.oTransform = 'translateX(' + 1 + 'vw)';
+            image_char[order].style.msTransform = 'translateX(' + 1 + 'vw)';
             image_char[order].style.transform = 'translateX(' + 1 + 'vw)';
         }, 300);
     } else {
+        character_base.style.webkitTransform = 'translateX(' + evolution_position * limit_characters.length + 'vw)';
+        character_base.style.oTransform = 'translateX(' + evolution_position * limit_characters.length + 'vw)';
+        character_base.style.mozTransform = 'translateX(' + evolution_position * limit_characters.length + 'vw)';
+        character_base.style.msTransform = 'translateX(' + evolution_position * limit_characters.length + 'vw)';
         character_base.style.transform = 'translateX(' + evolution_position * limit_characters.length + 'vw)';
     }
 

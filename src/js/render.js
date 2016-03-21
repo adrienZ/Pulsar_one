@@ -349,6 +349,8 @@ function render(event) {
             time_left--;
             //display time //Yay there is prefix
             $.pad.querySelector('.timer span').style.webkitTransform = ' scale(' + (time_left / event.timer) + ',1) translate3D(0,0,0)';
+            $.pad.querySelector('.timer span').style.mozTransform = ' scale(' + (time_left / event.timer) + ',1) translate3D(0,0,0)';
+            $.pad.querySelector('.timer span').style.oTransform = ' scale(' + (time_left / event.timer) + ',1) translate3D(0,0,0)';
             $.pad.querySelector('.timer span').style.msTransform = ' scale(' + (time_left / event.timer) + ',1) translate3D(0,0,0)';
             $.pad.querySelector('.timer span').style.transform = ' scale(' + (time_left / event.timer) + ',1) translate3D(0,0,0)';
 
