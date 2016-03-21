@@ -34,7 +34,7 @@ var data = {
     ]
         },
         'a1_1': {
-            "question": "Cette nuisance sonore vous a réveillé un peu. On dirait qu’il est temps de se lever. Vous vous levez avec une affreuse migraine. Vous vous souvenez de tout et de rien. C’est le néant. Les seuls mots qui se répètent dans votre tête sont : ‘histoire’, ‘sacrifice’, ‘destin’. Vous êtes en pyjama. Vous vous habillez, prenez votre sac de cours et décidez de descendre. Vous apercevez votre sœur Luna mangeant un bol de céréales dans la cuisine. LUNA : Salut ! Tu as vu l'épisode de Sense : The prequel ?",
+            "question": "Cette nuisance sonore vous a réveillé un peu. On dirait qu’il est temps de se lever. Vous vous levez avec une affreuse migraine. Vous vous souvenez de tout et de rien. C’est le néant. Les seuls mots qui se répètent dans votre tête sont : ‘histoire’, ‘sacrifice’, ‘destin’. Vous êtes en pyjama. Vous vous habillez, prenez votre sac de cours et décidez de descendre. Vous apercevez votre sœur Luna mangeant un bol de céréales dans la cuisine. <br> LUNA : Salut ! Tu as vu l'épisode de Sense : The prequel ?",
             change_music: "src/medias/home_jazz.mp3",
 
             change_img: 'kitchen',
