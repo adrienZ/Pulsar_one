@@ -17,7 +17,7 @@ var data = {
                 {
                     "text": "Les nouvelles du jour : le président Wilson est sur le point de déclencher une guerre mondiale.",
                     "data_event": "a1_1",
-                    timer: 5,
+                    timer: 16,
 
                     stats_change: {
                         intelligence: 1,
@@ -26,7 +26,7 @@ var data = {
                 {
                     "text": "Une série TV. C’est l’épisode 03 de Sense : The prequel.",
                     "data_event": "a1_1",
-                    timer: 5,
+                    timer: 16,
                     stats_change: {
                         perception: 2,
                     },
@@ -34,11 +34,11 @@ var data = {
     ]
         },
         'a1_1': {
-            "question": "Cette nuisance sonore vous a réveillé un peu. On dirait qu’il est temps de se lever. Vous vous levez avec une affreuse migraine. Vous vous souvenez de tout et de rien. C’est le néant. Les seuls mots qui se répètent dans votre tête sont : ‘histoire’, ‘sacrifice’, ‘destin’. Vous êtes en pyjama. Vous vous habillez, prenez votre sac de cours et décidez de descendre. Vous apercevez votre sœur Luna mangeant un bol de céréales dans la cuisine. LUNA : Salut ! Tu as vu l'épisode de Sense : the prequel ?",
+            "question": "Cette nuisance sonore vous a réveillé un peu. On dirait qu’il est temps de se lever. Vous vous levez avec une affreuse migraine. Vous vous souvenez de tout et de rien. C’est le néant. Les seuls mots qui se répètent dans votre tête sont : ‘histoire’, ‘sacrifice’, ‘destin’. Vous êtes en pyjama. Vous vous habillez, prenez votre sac de cours et décidez de descendre. Vous apercevez votre sœur Luna mangeant un bol de céréales dans la cuisine. LUNA : Salut ! Tu as vu l'épisode de Sense : The prequel ?",
             change_music: "src/medias/home_jazz.mp3",
 
             change_img: 'kitchen',
-            timer: 7,
+            timer: 16,
             "choix": [
                 {
                     "text": "Euh ouais, c'est ouf !",
@@ -103,7 +103,7 @@ var data = {
             "question": "Jour 01, 09h02, année 2016. Il est temps d’aller en cours. Vous mettez vos chaussures, votre manteau et vous prenez vos clés pour aller en cours.",
             change_img: 'mag',
             important_choice: true,
-            timer: 10,
+            timer: 16,
             "choix": [
                 {
                     "text": "Luna ? Tu veux qu’on aille en cours ensemble ?",
@@ -181,7 +181,7 @@ var data = {
             "question": "Jour 01, 07h52, année 2016. Vous prenez place dans votre salle et aujourd’hui, c’est cours d’espagnol. Parallèlement à la situation, vous êtes sur votre PC. Qu’il y a-t-il sur votre écran ?",
             change_img: 'class',
             change_music: 'src/medias/cours.mp3',
-            timer: 5,
+            timer: 16,
             "choix": [
                 {
                     "text": "Vos prises de notes",
@@ -240,7 +240,7 @@ var data = {
         'a1_8': {
             "question": "Votre PC se met à émettre du bruit de manière pestilentielle, vous vous faites remarquer et le professeur se tourne vers vous… <br> Hey " + user.name + token + ", on ne vous dérange pas ? Sortez du cours maintenant s’il vous plaît.",
             important_choice: true,
-            timer: 10,
+            timer: 16,
             "choix": [
                 {
                     "text": "Vous protestez et vous êtes envoyé chez le directeur.",
@@ -271,7 +271,7 @@ var data = {
             "question": "Jour 01, 17h15, année 2016. <br> Vous êtes sur le chemin de retour. Vous décidez de marcher tout seul avec vos écouteurs devant ce beau coucher de soleil. Vous avez lancé votre playlist préférée et une petite musique chill se lance dans vos écouteurs. <br> Vous êtes à une intersection, quel chemin prenez-vous ?",
             change_img: 'chemin',
             change_music: 'src/medias/return_home.mp3',
-            timer: 5,
+            timer: 16,
             "choix": [
                 {
                     "text": "Celui de droite, votre chemin habituel.",
@@ -297,7 +297,7 @@ var data = {
 
         'a1_11': {
             "question": "Spontanément, vous vous sentez aventureux aujourd’hui. Vous décidez alors de prendre le chemin de gauche et de voir de nouvelles maisons que vous ne connaissez pas. <br> Vous apercevez au loin une personne devant un homme assez menaçant. Cette pauvre personne a sûrement dû ne rien demander. Qu’est-ce que vous faites ?",
-            timer: 7,
+            timer: 16,
             "choix": [
                 {
                     "text": "Vous ne faites rien. Vous continuez votre chemin sans croiser des yeux ce « potentiel » racket.",
@@ -418,7 +418,7 @@ var data = {
 
         'a2_3': {
             question: 'CHRONOS : ' + user.name + token + ' ! Destinée m’a annoncée ta fin prochaine. J’ai besoin de ton aide. Je veux te laisser une seconde chance.',
-            timer: 10,
+            timer: 16,
             choix: [
                 {
                     text: "Je suis déjà mort ?",
@@ -452,7 +452,7 @@ var data = {
         },
         'a2_4_1': {
             question: 'CHRONOS : Je suis Chronos, le dieu du temps. Je règne dans un monde où le temps et l’espace sont réunis dans des milliers de mondes parallèles. Ce que tu vois en ce moment est mon royaume : les Limbes. Un espace blanc, vide de sens et de physique. C’est l’origine du cosmos, la signification de toutes les vies.',
-            timer: 10,
+            timer: 16,
             choix: [
                 {
                     text: "Quel est le problème alors ?",
@@ -759,7 +759,7 @@ var data = {
 
         'a2_26': {
             "question": "Chronos arrive d’un coup. Une onde de choc d’air vous blaste avec Rose aussi. <br> CHRONOS : … *cough* Bon alors tu as découvert ton pouvoir ?",
-            timer: 8,
+            timer: 16,
             "choix": [
                 {
                     "text": "Ouais, je suis capable de manipuler le temps, c’est bien ça ?",
@@ -840,7 +840,7 @@ var data = {
             "question": "CHRONOS : Tu as réussi l’épreuve finale. L’initiation est dorénavant terminé. Fais attention, tout de même. Dans cette aventure chaque choix que tu prendras aura des conséquences sur ton avenir. Utilise ce pulsar quantum pour réaliser ton premier remappage temporel. <br> ROSE : Hey" + user.name + token + "profite ! On dit toujours que le premier voyage temporel est celui que l’on se souvient le plus ! <br> CHONOS :  Remappage temporel Rose. Utilise les bons termes.\nROSE : Roh si tu veux.",
             change_img: 'galaxy',
             important_choice: true,
-            timer: 20,
+            timer: 30,
             "choix": [
                 {
                     "text": "Remappage temporel vers La Grèce Antique ",
@@ -1039,7 +1039,7 @@ var data = {
 
         'a3_1_7': {
             "question": "Peu de temps après, vous vous retrouvez dans une petite ruelle seul avec votre maître, il doit reprendre son souffle, que faites vous ?",
-            timer: 10,
+            timer: 16,
 
             "choix": [
                 {
@@ -1084,7 +1084,7 @@ var data = {
 
         'a3_1_11': {
             "question": "CITOYEN : Du futur ? Par Zeus, cet esclave est devenu fou, tu vas rester ici je n’ai plus besoin de toi.",
-            timer: 5,
+            timer: 16,
 
             "choix": [
                 {
@@ -1127,7 +1127,7 @@ var data = {
 
         'a3_1_10': {
             "question": "CITOYEN : Voyons Menesthes, ton seul droit est de me suivre… Hahaha ! Allons dépêchons !",
-            timer: 5,
+            timer: 16,
 
             "choix": [
                 {
@@ -1154,7 +1154,7 @@ var data = {
         'a3_1_12': {
             "question": "Vous arrivez finalement au temple de Delphes, le temple est déjà pris d’assaut par la foule. Vous tentez de la traverser. <br> Vous arrivez enfin dans le temple, au centre se trouve Pytie, des vapeurs s'échappent d'une faille qui s'ouvrait dans le sol, elle trône assise sur un haut trépied placé au-dessus de la fissure, elle respire les vapeurs et prophétise. <br> Un homme armé sort de la foule, il se présente sous le nom de Rainmaker et annonce vouloir tuer la Pythie et cesser cette duperie.",
             change_img: 'temple',
-            timer: 5,
+            timer: 16,
             change_music: 'src/medias/rainmaker_greece.mp3',
 
             "choix": [
@@ -1179,7 +1179,7 @@ var data = {
 
         'a3_1_12_1': {
             "question": "Rainmaker sort une arme et se dirige vers la Pythie pour l'attaquer. ",
-            timer: 5,
+            timer: 16,
             "choix": [
                 {
                     "text": "Ne rien faire... ",
@@ -1275,7 +1275,7 @@ var data = {
 
         'a3_1_12_2': {
             "question": "RAINMAKER : Qui es-tu étranger ? ",
-            timer: 5,
+            timer: 16,
 
             "choix": [
                 {
@@ -1302,7 +1302,7 @@ var data = {
 
         'a3_1_12_2_1': {
             "question": "RAINMAKER : Haha c'est ce qu'on va voir. Tu veux vraiment te battre contre un dieu ? ",
-            timer: 5,
+            timer: 16,
 
             "choix": [
                 {
@@ -1324,7 +1324,7 @@ var data = {
 
         'a3_1_12_2_2': {
             "question": "RAINMAKER : Je me disais bien. Dans ce cas reste à l'écart",
-            timer: 7,
+            timer: 16,
 
             "choix": [
                 {
@@ -1416,7 +1416,7 @@ var data = {
 
         'a3_2_1_2': {
             "question": "PARAGYNOM : Vous êtes d'ici ? Je n'ai jamais vu des vêtements comme les vôtres ici... ",
-            timer: 7,
+            timer: 16,
 
             "choix": [
                 {
@@ -1571,7 +1571,7 @@ var data = {
 
         'a3_2_9_2': {
             "question": "Des échos me disent que Rhea Magnus veut régner sur notre royaume et contrôler l'Egypte. Il est prêt à sacrifier beaucoup de monde pour parvenir à ses fins. On dit qu'il est en train de créer une armée très très volumineuse : l'armée divine.",
-            timer: 12,
+            timer: 16,
 
             "choix": [
                 {
@@ -1728,7 +1728,7 @@ var data = {
         },
         'a3_2_10': {
             "question": "RHEA MAGNUS : Oh ! Mais qu'est ce que nous avons la ?",
-            timer: 5,
+            timer: 16,
 
             "choix": [
                 {
@@ -1813,7 +1813,7 @@ var data = {
             "question": "Vous êtes devant Rhea Magnus, un peu choqué par la situation. Vous êtes essoufflé par la bataille. Vous regardez Rhea Magnus d'un regard rempli de haine. ",
             change_music: 'src/medias/choc_egypt.mp3',
 
-            timer: 5,
+            timer: 16,
             "choix": [
                 {
                     "text": "C'est toi... Rainmaker... ",
@@ -2065,7 +2065,7 @@ var data = {
             change_img: 'salle',
             change_music: 'src/medias/paris_stairs.mp3',
 
-            timer: 5,
+            timer: 16,
             "choix": [
                 {
                     "text": "Vous allez dans une des pièces adjacentes.",
@@ -2118,7 +2118,7 @@ var data = {
         'a3_3_6_2': {
             "question": "- Homme au fauteuil (Rainmaker) : “La personne que vous devrez tuer est le marquis de Brézé. Sans lui la signature du serment du Jeu de Paume ne se fera pas. Et ainsi nous pourrons prendre le pouvoir au Roi Louis XVI.” <br> - Comploteur 1 : “Vous nous assurez de notre place dans votre futur règne ?” <br>- Homme au fauteuil (Rainmaker) : “Bien sûr mes chers amis ! Bien sûr ! Tout travail mérite salaire. Vous serez en plus généreusement récompensé. Argents, courtisanes et alcools couleront à flots pour vous. Puis sans vous je n’en serai jamais arrivé là. Vous avez ma parole.” <br> - Comploteur 2 : “Très bien alors, nous allons tuer ce Marquis.” <br> - Homme au fauteuil (Rainmaker) : “Assurez-vous qu’il soit bel et bien mort ! C’est important. Sans cela vous pouvez dire adieu à vos futurs privilèges” <br> - Comploteur 3 : “Nous avons engagé un des meilleurs assassins d’Europe pour cette occasion. Nous allons ordonner à l’assassin de tuer le marquis d’un des balcons vide de la salle comme vous l’avez demandé.” <br> - Homme au fauteuil (Rainmaker) : “Très bien. Me voilà un peu plus réconforté. Vous pouvez partir, votre absence ne doit pas être remarquée plus longtemps.” <br> Les comploteurs quittent la pièce.",
             change_img: 'réunion',
-            timer: 10,
+            timer: 20,
             "choix": [
                 {
                     "text": "Vous quitter aussi les lieux.",
@@ -2136,7 +2136,7 @@ var data = {
             change_img: 'salle',
             change_music: 'src/medias/rainmaker_paris.mp3',
 
-            timer: 10,
+            timer: 16,
             "choix": [
                 {
                     "text": " Vous prenez le couloir de gauche.",
@@ -2150,7 +2150,7 @@ var data = {
         },
         'a3_3_6_2_1_1': {
             "question": "Vous longez ce couloir jusqu’à l’angle où vous jetez un regard discret sur le prochain couloir. Rien, ni personne.",
-            timer: 10,
+            timer: 16,
             "choix": [
                 {
                     "text": "Vous faites demi-tour.",
@@ -2167,7 +2167,7 @@ var data = {
         },
         'a3_3_6_2_1_1_1': {
             "question": "Que décidez-vous ? ",
-            timer: 10,
+            timer: 16,
             "choix": [
                 {
                     "text": "Vous ne faites rien. Le coup de feu retentit. L’assassin se retourne et s’enfuit à travers le couloir d'où il est venu. Vous vous approchez de la balustrade. Vous voyez le marquis étendu sur le sol, sans vie. Tout le monde regarde dans la direction du coup de feu.",
@@ -2185,8 +2185,8 @@ var data = {
         },
         'a3_3_6_2_1_2': {
             "question": "Vous longez ce couloir jusqu’à l’angle où vous jetez un regard discret sur le prochain couloir. Rien, ni personne.",
-            timer: 7,
-            timer: 4,
+            timer: 16,
+            timer: 16,
             "choix": [
                 {
                     "text": "Vous faites demi-tour ",
