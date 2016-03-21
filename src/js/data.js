@@ -1609,6 +1609,14 @@ var data = {
         }
     ]
         },
+        'a3_2_9_6': {
+            "question": "VOUS : Si jamais je le vois, je vous jure qu'il se souviendra de moi.",
+            "choix": [
+                {
+                    "text": "",
+                    "data_event": "a3_2_9_10",
+                    "naration": true
+        }
         'a3_2_9_5': {
             "question": "PARAGYNOM : Je veux bien, mais le problème c'est que c'est un dieu. Personne ne peut le vaincre.",
             "choix": [
