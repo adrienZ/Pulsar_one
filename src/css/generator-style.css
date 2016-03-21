@@ -1,306 +1,309 @@
 body {
-  background-color: #212121;
-  margin: 0rem 0rem 1rem 0rem;
+    background-color: #212121;
+    margin: 0rem 0rem 1rem 0rem;
 }
 
 .container {
-  margin: 0rem 2rem;
+    margin: 0rem 2rem;
 }
 
 .clear {
-  clear: both;
+    clear: both;
 }
 
 header {
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding-left: 1rem;
-  padding-bottom: 1rem;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-left: 1rem;
+    padding-bottom: 1rem;
 }
 
 .badge {
-  color: white;
-  text-transform: uppercase;
-  font-family: 'Gotham', Arial, sans-serif;
-  font-weight: 300;
-  border: 1px solid white;
-  padding: .75rem 4rem;
-  position: absolute;
-  top: 2.5rem;
-  right: 3rem;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Gotham', Arial, sans-serif;
+    font-weight: 300;
+    border: 1px solid white;
+    padding: .75rem 4rem;
+    position: absolute;
+    top: 2.5rem;
+    right: 3rem;
 }
 
 .icon {
-  float: left;
-  margin-top: 1.5rem;
-  width: 5%;
+    float: left;
+    margin-top: 1.5rem;
+    width: 5%;
 }
 
 .icon svg {
-  width: 4.9vw;
+    width: 4.9vw;
 }
 
 .texte {
-  float: right;
-  width: 95%;
+    float: right;
+    width: 95%;
 }
 
 .texte h1 {
-  color: white;
-  font-family: 'Gotham', Arial, sans-serif;
-  text-transform: uppercase;
-  font-weight: 300;
-  margin-top: 1.1rem;
-  margin-bottom: 0;
-  margin-left: 1rem;
+    color: white;
+    font-family: 'Gotham', Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top: 1.1rem;
+    margin-bottom: 0;
+    margin-left: 1rem;
 }
 
 .texte h2 {
-  color: white;
-  font-family: 'Gotham', Arial, sans-serif;
-  text-transform: uppercase;
-  font-weight: 300;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  margin-left: 1rem;
-  font-size: 1rem;
+    color: white;
+    font-family: 'Gotham', Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+    font-size: 1rem;
 }
 
 .texte h3 {
-  color: white;
-  font-family: 'Gotham', Arial, sans-serif;
-  text-transform: uppercase;
-  font-weight: 300;
-  margin-top: 1rem;
-  margin-left: 1rem;
-  font-size: .7rem;
-  opacity: 0.5;
+    color: white;
+    font-family: 'Gotham', Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-size: .7rem;
+    opacity: 0.5;
 }
 
 .note {
-  font-family: 'Gotham', Arial, sans-serif;
-  color: white;
-  border: 1px solid white;
-  width: 70%;
-  margin: auto;
-  margin-top: 1.5rem;
-  padding: 1rem 2rem;
-  margin-bottom: 5rem;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.05);
+    font-family: 'Gotham', Arial, sans-serif;
+    color: white;
+    border: 1px solid white;
+    width: 70%;
+    margin: auto;
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .note h4 {
-  color: #88cccb;
-  padding-bottom: .3rem;
-  text-transform: uppercase;
-  font-weight: 400;
-  margin: 0;
-  border-bottom: 1px solid white;
-  font-size: 1.2rem;
+    color: #88cccb;
+    padding-bottom: .3rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0;
+    border-bottom: 1px solid white;
+    font-size: 1.2rem;
 }
 
 .note p {
-  margin: 0;
-  margin-top: .75rem;
-  font-weight: 200;
+    margin: 0;
+    margin-top: .75rem;
+    font-weight: 200;
 }
 
 .title_info {
-  color: white;
-  font-family: 'Gotham', Arial, sans-serif;
-  text-transform: uppercase;
-  border-bottom: 1px solid white;
-  font-size: 1rem;
-  font-weight: 300;
-  padding-left: .4rem;
+    color: white;
+    font-family: 'Gotham', Arial, sans-serif;
+    text-transform: uppercase;
+    border-bottom: 1px solid white;
+    font-size: 1rem;
+    font-weight: 300;
+    padding-left: .4rem;
 }
 
 fieldset {
-  padding: 1rem;
-  text-align: left;
+    padding: 1rem;
+    text-align: left;
 }
 
 fieldset label {
-  color: white;
-  text-transform: uppercase;
-  font-family: 'Gotham', Arial, sans-serif;
-  font-weight: 200;
-  vertical-align: middle;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Gotham', Arial, sans-serif;
+    font-weight: 200;
+    vertical-align: middle;
 }
 
 fieldset .question {
-  margin-left: .5rem;
-  width: 50vw;
+    margin-left: .5rem;
+    width: 50vw;
 }
 
 .prologue {
-  text-align: center;
-  margin: auto;
+    text-align: center;
+    margin: auto;
 }
 
 .prologue label {
-  text-transform: uppercase;
-  letter-spacing: .7px;
-  color: white;
-  font-family: 'Gotham', Arial, sans-serif;
-  font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: .7px;
+    color: white;
+    font-family: 'Gotham', Arial, sans-serif;
+    font-weight: 300;
 }
 
 .prologue input[type="radio"] {
-  display: inline-block;
-  color: white;
+    display: inline-block;
+    color: white;
 }
 
 .prologue .options {
-  display: inline-block;
-  margin-left: .5rem;
-  font-weight: 300;
+    display: inline-block;
+    margin-left: .5rem;
+    font-weight: 300;
 }
 
 .question_prologue {
-  margin-bottom: .5rem;
+    margin-bottom: .5rem;
 }
 
 textarea {
-  outline: none;
-  vertical-align: middle;
-  background-color: transparent;
-  border: 2px solid white;
-  color: white;
-  font-size: .75rem;
-  transition: all 0.2s;
+    outline: none;
+    vertical-align: middle;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: .75rem;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
 }
 
 textarea:focus {
-  border: 2px solid #ff8606;
-  background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid #ff8606;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 input {
-  color: white;
-  outline: none;
-  margin-top: 10px;
-  background-color: transparent;
-  border: 2px solid white;
-  transition: all 0.2s;
-  font-size: .75rem;
-  padding: .3rem .5rem;
-  height: 1.25em;
+    color: white;
+    outline: none;
+    margin-top: 10px;
+    background-color: transparent;
+    border: 2px solid white;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    font-size: .75rem;
+    padding: .3rem .5rem;
+    height: 1.25em;
 }
 
 input:focus {
-  border: 2px solid #ff8606;
-  background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid #ff8606;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .hide label {
-  width: 210px;
-  display: inline-block;
-  text-align: right;
-  margin-right: 1rem;
-  font-weight: 100;
+    width: 210px;
+    display: inline-block;
+    text-align: right;
+    margin-right: 1rem;
+    font-weight: 100;
 }
 
 input + input {
-  display: none;
+    display: none;
 }
 
 .stats {
-  display: none;
+    display: none;
 }
 
 .hide {
-  display: none;
+    display: none;
 }
 
 table {
-  margin-top: 2rem;
+    margin-top: 2rem;
 }
 
 table input {
-  width: 300px;
+    width: 300px;
 }
 
 table td {
-  width: 25vw;
-  color: white;
+    width: 25vw;
+    color: white;
 }
 
 .header_table {
-  font-family: 'Gotham', Arial, sans-serif;
-  text-transform: uppercase;
-  width: 100%;
-  color: white;
+    font-family: 'Gotham', Arial, sans-serif;
+    text-transform: uppercase;
+    width: 100%;
+    color: white;
 }
 
 button {
-  cursor: pointer;
-  outline: none;
-  width: 100%;
-  color: white;
-  background-color: transparent;
-  font-family: 'Gotham', Arial, sans-serif;
-  text-align: center;
-  text-transform: uppercase;
-  border: 0px;
-  padding: 30px 0px;
-  display: block;
-  margin: auto;
-  font-size: 1rem;
-  border: 3px solid white;
-  transition: all 0.3s;
-  margin-top: 1rem;
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+    color: white;
+    background-color: transparent;
+    font-family: 'Gotham', Arial, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    border: 0px;
+    padding: 30px 0px;
+    display: block;
+    margin: auto;
+    font-size: 1rem;
+    border: 3px solid white;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top: 1rem;
 }
 
 button:hover {
-  background-color: #1f9dbb;
+    background-color: #1f9dbb;
 }
 
 button:active {
-  background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 .choice {
-  font-family: 'Gotham', Arial, sans-serif;
-  padding-left: 1rem;
-  font-weight: 300;
+    font-family: 'Gotham', Arial, sans-serif;
+    padding-left: 1rem;
+    font-weight: 300;
 }
 
 .choice.choiceA {
-  color: #ffb253;
+    color: #ffb253;
 }
 
 .choice.choiceB {
-  color: #cc4e4b;
+    color: #cc4e4b;
 }
 
 .choice.choiceC {
-  color: #8e52a7;
+    color: #8e52a7;
 }
 
 .choice.choiceD {
-  color: #2484bf;
+    color: #2484bf;
 }
 
 .options {
-  font-family: 'Gotham', Arial, sans-serif;
-  font-weight: 300;
-  color: white;
+    font-family: 'Gotham', Arial, sans-serif;
+    font-weight: 300;
+    color: white;
 }
 
 .options p {
-  padding-left: .5rem;
-  text-transform: uppercase;
-  border-bottom: 1px solid white;
-  padding-bottom: .5rem;
+    padding-left: .5rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid white;
+    padding-bottom: .5rem;
 }
 
 pre {
-  border: 1px solid white;
-  padding: 1rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  background-color: rgba(139, 255, 184, 0.3);
-  color: white;
+    border: 1px solid white;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: rgba(139, 255, 184, 0.3);
+    color: white;
 }

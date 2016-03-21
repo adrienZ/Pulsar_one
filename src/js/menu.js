@@ -52,7 +52,7 @@ menu.link[0].addEventListener('click', function () {
     window.setTimeout(function () {
         user.continue_intro_music = menu.background_music.currentTime;
         savegame.erase_save('user_save', user);
-        window.location = 'template.html';
+        window.location = 'game.html';
     }, 1500);
 
 });

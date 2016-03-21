@@ -48,7 +48,7 @@ function render_intro() {
 
     var form_name = document.createElement('section');
     form_name.className = 'intro';
-    form_name.innerHTML = '<div class="container"><div class="motion-glow"><video autoplay loop><source  src="/src/medias/glow-intro.webm" type="video/webm"><source  src="/src/medias/glow-intro.mp4" type="video/mp4"></video></div><p>Réveillez-vous.<br>Je suis Chronos, le dieu du temps.Votre histoire n’est pas terminée.</p><input type="text" id="user-name" onfocus="this.placeholder=\'\'" placeholder="Quel est votre nom ?" onblur="this.placeholder=\'Quel est votre nom ?\'" required></div>';
+    form_name.innerHTML = '<div class="container"><div class="motion-glow"><video src="/src/medias/glow-intro.webm" autoplay loop></video></div><p>Réveillez-vous.<br>Je suis Chronos, le dieu du temps.Votre histoire n’est pas terminée.</p><input type="text" id="user-name" onfocus="this.placeholder=\'\'" placeholder="Quel est votre nom ?" onblur="this.placeholder=\'Quel est votre nom ?\'" required></div>';
 
     form_name.querySelector('input').addEventListener('keyup', function (e) {
         //UX for the input
@@ -96,11 +96,6 @@ function render_intro() {
                             new_prologue.remove();
                             form_name.remove();
                             render(data.act_1.a1_0);
-                            window.setTimeout(function () {
-                                background_audio.src = 'src/medias/talk_intro.mp3';
-                                sound_fade_in(background_audio, 0.8);
-                            }, 500);
-
                         }, 4000)
                     }, fade_out_delay * 1000);
                 }, 2000);
@@ -154,7 +149,6 @@ function sound_fade_out(music) {
     // Set the point in playback that fadeout begins. This is for a 2 second fade out.
 
     var fadeAudio = setInterval(function () {
-        console.log(music.volume);
         // Only fade if past the fade out point or not at zero already
         if (music.volume > 0.0) {
             music.volume -= 0.1;
@@ -167,12 +161,10 @@ function sound_fade_out(music) {
 }
 
 function sound_fade_in(music, volume_limit) {
-    console.log('go audio', music);
 
     // Set the point in playback that fadeout begins. This is for a 2 second fade out.
     music.volume = 0;
     var fadeAudio = setInterval(function () {
-        console.log(music.volume);
         // Only fade if past the fade out point or not at zero already
         if (music.volume < 1) {
             music.volume += 0.1;

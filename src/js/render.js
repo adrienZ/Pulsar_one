@@ -64,20 +64,20 @@ function render(event) {
         render_mini_game(event.mini_game);
     } else if (event.hasOwnProperty('force_game_over')) {
         pulsar_game_over(event.data_event);
-        user.game = event.data_event;
-        savegame.erase_save('user_save', user);
+        //user.game = event.data_event;
+        //savegame.erase_save('user_save', user);
         return false;
     } else {
         if (current_act == data.act_2)
             document.body.className = "white";
-
-
         else {
             document.body.className = "";
 
         }
         //pushing story's text in the div
         write(event.question, $.histoire);
+        $.el('.act-name').innerHTML = 'Acte ' + current_act.prologue.number + ' - <span>' + current_act.prologue.title + '</span>';
+
     }
 
 
@@ -486,13 +486,13 @@ function pulsar_game_over(reboot_event) {
 
     document.body.appendChild(game_over_dom);
     $.el('.game-over a.replay').onclick = function () {
+
         if (user.pulsars >= 2) {
-            console.log('replay the game');
+            //console.log('replay the game');
             user.pulsars -= 2;
             savegame.erase_save('user_save', user);
-            window.location = 'template.html';
+            window.location = 'game.html';
         } else {
-            console.log('you dont have enought pulsarsn, game over');
             $.el('.game-over .pulsars-left').style.color = 'red';
             window.setTimeout(function () {
                 savegame.delete_save('user_save');

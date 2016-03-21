@@ -12,8 +12,8 @@ var results = div_dice.querySelector('.results');
 
 /* ---------- Slide window -------------*/
 
-var slideFunction = function(event){
-    if(event.keyCode==32){
+var slideFunction = function (event) {
+    if (event.keyCode == 32) {
         container.classList.toggle('blur');
         windowsPanel.classList.toggle('animation');
         title.classList.toggle('animation');
@@ -58,32 +58,30 @@ var roll_dice = {
                 divplay1.appendChild(newdiv);
                 newdiv.classList.add('rounds');
                 var theresult1 = arguments[i].value;
-                var lance = setInterval(function(){
+                var lance = setInterval(function () {
                     newdiv.innerHTML = Math.ceil(Math.random() * 6);
-                },150);
-                setTimeout(function(){
+                }, 150);
+                setTimeout(function () {
                     clearInterval(lance);
                     newdiv.innerHTML = theresult1;
                     if (state != 0)
                         button.classList.remove('unusable');
-                },2500);
-                
-            }
+                }, 2500);
 
-            else {
+            } else {
                 var newdiv2 = document.createElement('div');
                 divplay2.appendChild(newdiv2);
                 newdiv2.classList.add('rounds');
                 var theresult2 = arguments[i].value;
-                var lance2 = setInterval(function(){
+                var lance2 = setInterval(function () {
                     newdiv2.innerHTML = Math.ceil(Math.random() * 6);
-                },150);
-                setTimeout(function(){
+                }, 150);
+                setTimeout(function () {
                     clearInterval(lance2);
                     newdiv2.innerHTML = theresult2;
                     if (state != 0)
                         button.classList.remove('unusable');
-                },2500);
+                }, 2500);
             }
         };
         //who win
@@ -105,13 +103,13 @@ var roll_dice = {
             // roll_dice.match(roll_dice.opponents, roll_dice.hero, roll_dice.round);
         }
         if (state === 0) {
-             button.classList.add('unusable');
-            var resultdiv = setTimeout(function(){
-                    results.classList.remove("invisible");
-                    results.classList.add("visible");
-                    clearTimeout(resultdiv);
-                },2800);
-            
+            button.classList.add('unusable');
+            var resultdiv = setTimeout(function () {
+                results.classList.remove("invisible");
+                results.classList.add("visible");
+                clearTimeout(resultdiv);
+            }, 2800);
+
             if (player_1.victory > player_2.victory) {
                 console.log(player_1.name + ' avez gagné la partie ' + player_1.victory + ' à ' + player_2.victory);
                 results.innerHTML = player_1.name + ' avez gagné la partie ' + player_1.victory + ' à ' + player_2.victory;
@@ -120,7 +118,7 @@ var roll_dice = {
                 results.innerHTML = player_2.name + ' a gagné la partie ' + player_2.victory + ' à ' + player_1.victory;
             }
         } else {
-            var newRound = function(){
+            var newRound = function () {
                 button.removeEventListener('click', newRound, false);
                 button.classList.add('unusable');
                 roll_dice.match(roll_dice.opponents, roll_dice.hero, roll_dice.round);
@@ -133,7 +131,7 @@ var roll_dice = {
 roll_dice.opponents = new roll_dice.dice_player('Vous');
 roll_dice.hero = new roll_dice.dice_player('Bastardo');
 
-var newRound = function(){
+var newRound = function () {
     button.removeEventListener('click', newRound, false);
     button.classList.add('unusable');
     roll_dice.match(roll_dice.opponents, roll_dice.hero, roll_dice.round);

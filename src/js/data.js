@@ -2566,8 +2566,7 @@ function update_data(username) {
     var target = user.name + token;
     var regex = new RegExp(target, "g");
     if (new_data.match(regex) !== null) {
-        //  console.log('LETS GO : ' + new_data.match(regex).length + ' LEFT');
-        // console.log('CURRENT NAME -> ' + target + ' // NEW NAME ->' + username);
+
         new_data = new_data.replace(target, username);
         while (regex.exec(new_data) !== null) {
 
@@ -2576,7 +2575,6 @@ function update_data(username) {
 
 
         new_data = JSON.parse(new_data);
-        //console.log(new_data);
 
         user.name = username;
         savegame.erase_save('user_save', user);

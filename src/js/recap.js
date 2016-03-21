@@ -4,7 +4,6 @@
 
  var result = {};
 
- console.log(current_act, user.new);
 
 
  $.el('h1').innerHTML = 'Acte ' + user.game[1] + ' - ' + data['act_' + current_act].prologue.title + ' : <span id="compteur"></span>'
@@ -17,15 +16,14 @@
          win.volume = 0.7;
          win.play();
      } else {
-         window.location = 'template.html';
+         window.location = 'game.html';
      }
  } else {
      var win = new Audio(['src/medias/victory.mp3']);
      win.volume = 0.7;
      win.play();
      user.important_decisions.forEach(function (decision, index) {
-         console.log(decision, index);
-         console.log(data.backstory.choice_comparaison['act_' + user.game[1]][index]);
+
          if (data.backstory.choice_comparaison['act_' + user.game[1]][index]) {
 
              var dat_data = data.backstory.choice_comparaison['act_' + user.game[1]][index]['fact' + decision];
@@ -84,7 +82,7 @@
      user.game = 'prologue';
      user.important_decisions = [];
      savegame.erase_save('user_save', user);
-     window.location = 'template.html';
+     window.location = 'game.html';
 
  });
 

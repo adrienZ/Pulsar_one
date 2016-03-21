@@ -1,5 +1,5 @@
 body {
-	background-color: #222;
+    background-color: #222;
 }
 
 .breathe {
@@ -74,62 +74,60 @@ body {
     animation: firstTitle 0.5s ease 1.5s normal running 1 forwards, slideUpTitle 1s ease 2s normal running 1 forwards;
 }
 
-
 .wrapper {
-	width: 300px;
-	height: 300px;
-	margin: auto;
-	margin-top: -12rem;
-	position: relative;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    margin-top: -12rem;
+    position: relative;
 }
 
 .first-circle {
-	z-index: 5;
-	width: 100px;
-	height: 100px;
-	border-radius: 100%;
-	background-color: #eee;
-	border: 3px solid #eee;
-	margin: auto;
-	margin-left: 100px;
-	margin-top: 100px;
-	position: absolute;
-
+    z-index: 5;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: #eee;
+    border: 3px solid #eee;
+    margin: auto;
+    margin-left: 100px;
+    margin-top: 100px;
+    position: absolute;
 }
 
 .second-circle {
-	z-index: 1;
-	width: 200px;
-	height: 200px;
-	border-radius: 100%;
-	border: 3px solid red;
-	background-color: rgba(252,250,250,0.1);
-	margin-left:50px;
-	margin-top: 50px;
-	position: absolute;
-	transform: scale(0.5);
-	transition: all 0.2s ease;
+    z-index: 1;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: 3px solid red;
+    background-color: rgba(252, 250, 250, 0.1);
+    margin-left: 50px;
+    margin-top: 50px;
+    position: absolute;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
 .second-circle.heart {
-	transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
 }
-
-
 
 .stats {
-	width: 200px;
-	height: 100px;
-	border: 1px solid #eee;
-	position: absolute;
-	top:30px;
-	left: 30px;
-	color: #eee;
-	text-align: center;
-	padding: 10px;
-	font-size: 25px;
+    width: 200px;
+    height: 100px;
+    border: 1px solid #eee;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #eee;
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
 }
-
 
 @-webkit-keyframes slideUp {
     0% {

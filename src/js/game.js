@@ -1,14 +1,14 @@
 //user.game = 'intro';
 
 if (user.game !== 'intro') {
-    console.log('ENLEVE LE TOKEN');
     data = update_data(user.name);
     var background_audio = document.createElement('audio');
     if (!background_audio || !background_audio.hasOwnProperty('src')) {
-        console.log('no music');
         background_audio.setAttribute('loop', 'true');
         background_audio.setAttribute('autoplay', 'true');
         background_audio.src = 'src/medias/background_space.mp3';
+        background_audio.currentTime = user.continue_intro_music;
+
         document.body.appendChild(background_audio);
         sound_fade_in(background_audio, 0.75);
     }
@@ -17,12 +17,22 @@ if (user.game !== 'intro') {
 
 if (user.game === "prologue") {
     if (typeof current_act === 'undefined') {
-        console.log('on vient dun prologue');
+        // console.log('on vient dun prologue');
         var current_act = data['act_' + user.new];
+
     }
     render_prologue(current_act.prologue);
-
+    $.el('.act-name').innerHTML = 'Acte ' + current_act.prologue.number + ' - ' + current_act.prologue.title;
 } else if (user.game === 'intro') {
+    var background_audio = document.createElement('audio');
+
+    background_audio.setAttribute('loop', 'true');
+    background_audio.setAttribute('autoplay', 'true');
+    background_audio.src = 'src/medias/background_space.mp3';
+    background_audio.currentTime = user.continue_intro_music;
+
+    document.body.appendChild(background_audio);
+    sound_fade_in(background_audio, 0.75);
     current_act = data.act_1;
     render_intro();
 } else if (user.game === 'end') {
@@ -30,7 +40,7 @@ if (user.game === "prologue") {
 
 } else if (user.game[0] === 'a') {
     window.addEventListener('load', function () {
-        console.log('hey a frendly non-buggy event !');
+        // console.log('hey a frendly non-buggy event !');
         current_act = data['act_' + user.game[1]];
         render(current_act[user.game]);
     });
